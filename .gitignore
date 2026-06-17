@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# transient / local-only (NOT published)
+data/daily_run.log
+data/pending_judgments.json
+data/judgments.json
+data/pending_review.json
+data/review.json
+
+# published (needed by the dashboard + cloud cron): tracked on purpose
+!data/apex.db
+!data/state.json
+!data/lab.json

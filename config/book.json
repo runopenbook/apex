@@ -1,0 +1,22 @@
+{
+  "_note": "HONEST June-2024 reconstruction. Names chosen from what a thematic investor could defensibly pick in mid-2024 WITHOUT knowing 2024-2026 outcomes. Deliberately includes consensus picks that later lagged (AMD, LMT, NOC) and keeps speculative names (RKLB) at the small weight the framework prescribes rather than hindsight-loading the known winners. Replaces the original hindsight book (NVDA/AVGO/PLTR/BWXT/RKLB-heavy).",
+  "initial_deposit": 100000,
+  "positions": [
+    { "ticker": "NVDA", "theme": "AI / Semiconductors", "conviction": "high",   "target_weight": 0.14, "thesis": "AI compute leader; hyperscaler capex cycle still early in mid-2024." },
+    { "ticker": "AMD",  "theme": "AI / Semiconductors", "conviction": "high",   "target_weight": 0.12, "thesis": "Consensus #2 AI accelerator on the MI300 ramp — the obvious 2024 'second horse'." },
+    { "ticker": "MU",   "theme": "AI / Semiconductors", "conviction": "medium", "target_weight": 0.08, "thesis": "Memory/HBM cyclical upturn driven by AI demand." },
+
+    { "ticker": "CEG",  "theme": "Energy Transition + Commodity", "conviction": "medium", "target_weight": 0.08, "thesis": "Nuclear/clean baseload; the 'AI needs power' thesis just emerging in 2024." },
+    { "ticker": "XOM",  "theme": "Energy Transition + Commodity", "conviction": "medium", "target_weight": 0.08, "thesis": "Oil major; energy security and geopolitical exposure." },
+    { "ticker": "IAU",  "theme": "Energy Transition + Commodity", "conviction": "medium", "target_weight": 0.07, "thesis": "Gold safe-haven hedge; baseline ~7%, scales on Rules 4/5.", "is_gold_hedge": true },
+
+    { "ticker": "LMT",  "theme": "Defense / Nuclear", "conviction": "medium", "target_weight": 0.07, "thesis": "Defense prime; multi-year backlog into a rising-spend cycle. (Consensus, modest expectations.)" },
+    { "ticker": "NOC",  "theme": "Defense / Nuclear", "conviction": "medium", "target_weight": 0.06, "thesis": "Defense prime; B-21 + nuclear modernization. (Stable, not a flyer.)" },
+    { "ticker": "BWXT", "theme": "Defense / Nuclear", "conviction": "lower",  "target_weight": 0.05, "thesis": "Sole-source naval nuclear propulsion; structural moat." },
+
+    { "ticker": "ETN",  "theme": "Industrial", "conviction": "lower", "target_weight": 0.08, "thesis": "Electrical infrastructure / data-center power build-out; pricing power." },
+
+    { "ticker": "RKLB", "theme": "Space", "conviction": "lower", "target_weight": 0.05, "thesis": "Small speculative space sleeve; event-gated on launch cadence (Rules 6/7). Kept small on purpose.", "catalyst_gated": true }
+  ],
+  "cash_target": 0.0
+}

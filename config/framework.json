@@ -1,0 +1,54 @@
+{
+  "description": "Apex Portfolio framework constants, encoded from the Strategy Thesis (Sections 03-04).",
+  "policy": {
+    "fully_invested": true,
+    "_note": "No idle cash. Freed cash is swept back into positions each day (proportional to target weight, capped at the soft cap). Rule 9's cash-raise is paused under this policy."
+  },
+  "review": {
+    "cadence": "quarterly",
+    "retarget": "free",
+    "_note": "Strategic theme/allocation review every calendar quarter. Free re-target within each theme's min/max range; may add/drop themes. Forward-mode judgment (Claude Code); logged as held checkpoints in backtest."
+  },
+  "ruleset": "v2",
+  "_ruleset_note": "v2 = patience-first. Default state is HOLD. Only three tactical actions, all rare and judgment-based: exit on a CONFIRMED broken thesis, rotate on a matured thesis (Rule 10), add to confirmed strength (contract/milestone). The churn rules from v1 (daily dip-buy, soft-cap winner-trim, bear cash-raise, gold-hedge scaling) are removed because the honest backtest showed they destroyed value vs buy-and-hold. Set to 'v1' to restore the original 11 rules.",
+  "instruments": {
+    "benchmark": "^GSPC",
+    "benchmark_label": "S&P 500",
+    "gold_spot": "GC=F",
+    "gold_holding": "IAU",
+    "crude": "CL=F"
+  },
+  "themes": {
+    "AI / Semiconductors": { "min": 0.30, "max": 0.40 },
+    "Energy Transition + Commodity": { "min": 0.20, "max": 0.25 },
+    "Defense / Nuclear": { "min": 0.15, "max": 0.20 },
+    "Industrial": { "min": 0.05, "max": 0.10 },
+    "Space": { "min": 0.00, "max": 0.12 },
+    "Cash": { "min": 0.05, "max": 0.15 }
+  },
+  "sizing": {
+    "max_single_stock": 0.14,
+    "soft_cap_single": 0.20,
+    "min_meaningful_position": 0.02,
+    "conviction": {
+      "high":   { "min": 0.11, "max": 0.14 },
+      "medium": { "min": 0.05, "max": 0.08 },
+      "lower":  { "min": 0.02, "max": 0.05 }
+    }
+  },
+  "rules": {
+    "dip_buy_pct": 0.05,
+    "dip_buy_add_pp": 0.025,
+    "hard_stop_drawdown": 0.20,
+    "thesis_break_drawdown": 0.50,
+    "gold_add_above": 5100,
+    "gold_add_to": 0.13,
+    "gold_trim_below": 4500,
+    "gold_trim_to": 0.05,
+    "catalyst_add_to": 0.11,
+    "catalyst_cut_to": 0.04,
+    "contract_add_pp": 0.025,
+    "bear_index_drawdown": 0.10,
+    "bear_raise_cash_to": 0.20
+  }
+}

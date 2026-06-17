@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex — Strategy Lab</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{--bg:#0b0e14;--panel:#131825;--panel2:#0f131e;--line:#1e2636;--ink:#e6edf6;
+    --mut:#8a96ab;--dim:#5b6678;--up:#26d07c;--down:#ff5d6c;--accent:#6aa3ff;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:14px/1.5 ui-sans-serif,-apple-system,Segoe UI,Roboto,sans-serif}
+  .num{font-variant-numeric:tabular-nums}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 22px 80px}
+  h1{font-size:21px;margin:0 0 2px;letter-spacing:.1em}
+  h1 small{color:var(--dim);letter-spacing:.28em;font-size:11px}
+  .sub{color:var(--mut);font-size:12px;margin-bottom:4px}
+  .note{color:var(--dim);font-size:11.5px;max-width:820px;margin:8px 0 20px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
+  .panel h2{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:0}
+  .curve-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px}
+  .modetoggle{display:flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .mbtn{cursor:pointer;font-size:11px;font-weight:700;padding:4px 11px;color:var(--mut);background:var(--panel2);user-select:none}
+  .mbtn.on{background:#16243d;color:var(--accent)}
+  .mbtn+.mbtn{border-left:1px solid var(--line)}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:right;color:var(--dim);font-weight:500;font-size:11px;text-transform:uppercase;
+    letter-spacing:.05em;padding:0 10px 9px;border-bottom:1px solid var(--line)}
+  th:first-child{text-align:left}
+  td{padding:10px;border-bottom:1px solid var(--panel2);text-align:right}
+  td:first-child{text-align:left;font-weight:600}
+  tr:last-child td{border-bottom:none}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:middle}
+  .up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--mut)}
+  .tag{font-size:10px;color:var(--dim);border:1px solid var(--line);border-radius:5px;padding:1px 6px;margin-left:8px}
+  .clean{color:#56c4d6;border-color:#1d4650}
+  .bias{color:#e8b341;border-color:#4a3c1a}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>STRATEGY LAB <small>HONEST ENGINES</small></h1>
+  <div class="sub num" id="sub"></div>
+  <div class="note" id="note"></div>
+
+  <div class="panel">
+    <div class="curve-head">
+      <h2>Equity Curves ($100k start)</h2>
+      <div class="modetoggle" id="scaleToggle">
+        <span class="mbtn" data-s="lin">Linear</span>
+        <span class="mbtn on" data-s="log">Log</span>
+      </div>
+    </div>
+    <canvas id="chart" height="118"></canvas>
+  </div>
+
+  <div class="panel">
+    <h2 style="margin-bottom:14px">Scorecard</h2>
+    <table><thead><tr>
+      <th>Strategy</th><th>Total</th><th>CAGR</th><th>Max Drawdown</th><th>Vol</th><th>Sharpe</th><th>Turnover</th>
+    </tr></thead><tbody id="rows"></tbody></table>
+  </div>
+</div>
+
+<script>
+const pct=n=>(n>=0?'+':'')+(n*100).toFixed(1)+'%';
+async function main(){
+  let S;
+  try{ S=await (await fetch('../data/lab.json',{cache:'no-store'})).json(); }
+  catch(e){ document.body.innerHTML='<p style="color:#ff5d6c;padding:40px">Run: py -m apex.momentum_lab</p>'; return; }
+  document.getElementById('sub').textContent=`Monthly momentum + 200d trend filter · ${S.window.start} → ${S.window.end}`;
+  document.getElementById('note').textContent=S.note;
+
+  const biasClean=new Set(['ETF rotation','S&P 500 (SPY)']);
+  document.getElementById('rows').innerHTML=S.strategies.map(s=>{
+    const m=s.metrics;
+    const tag=biasClean.has(s.name)?'<span class="tag clean">bias-clean</span>'
+              :(s.name.includes('Thematic')||s.name.includes('Stock')||s.name.includes('Equal'))?'<span class="tag bias">survivorship bias</span>':'';
+    return `<tr>
+      <td><span class="dot" style="background:${s.color}"></span>${s.name}${tag}</td>
+      <td class="num ${m.total>=0?'up':'down'}">${pct(m.total)}</td>
+      <td class="num">${pct(m.cagr)}</td>
+      <td class="num down">${pct(m.maxdd)}</td>
+      <td class="num mut">${(m.vol*100).toFixed(1)}%</td>
+      <td class="num">${m.sharpe.toFixed(2)}</td>
+      <td class="num mut">${s.turnover!=null?s.turnover.toFixed(2):'—'}</td>
+    </tr>`;}).join('');
+
+  const ctx=document.getElementById('chart');
+  let chart;
+  function draw(scale){
+    if(chart) chart.destroy();
+    chart=new Chart(ctx,{type:'line',
+      data:{datasets:S.strategies.map(s=>({label:s.name,data:s.curve.map(p=>({x:p.date,y:p.value})),
+        borderColor:s.color,borderWidth:s.name.includes('SPY')?2:1.6,
+        borderDash:s.name.includes('SPY')?[5,4]:[],pointRadius:0,tension:.04,
+        fill:false}))},
+      options:{responsive:true,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{color:'#8a96ab',boxWidth:12,font:{size:11}}},
+          tooltip:{callbacks:{label:c=>c.dataset.label+': $'+Math.round(c.parsed.y).toLocaleString()}}},
+        scales:{x:{type:'category',ticks:{color:'#5b6678',maxTicksLimit:9},grid:{display:false}},
+          y:{type:scale==='log'?'logarithmic':'linear',
+             ticks:{color:'#5b6678',callback:v=>'$'+(v>=1e6?(v/1e6)+'M':(v/1000)+'k')},
+             grid:{color:'#161c29'}}}}
+    });
+  }
+  draw('log');
+  document.getElementById('scaleToggle').addEventListener('click',e=>{
+    const b=e.target.closest('.mbtn'); if(!b)return;
+    document.querySelectorAll('.mbtn').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); draw(b.dataset.s);
+  });
+}
+main();
+</script>
+</body>
+</html>

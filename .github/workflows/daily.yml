@@ -1,0 +1,43 @@
+name: Apex daily update
+
+on:
+  schedule:
+    # 21:30 UTC on weekdays — after the US market close year-round
+    # (4:30pm ET during EST, 5:30pm ET during EDT). Actions cron is best-effort.
+    - cron: "30 21 * * 1-5"
+  workflow_dispatch: {}   # lets you trigger it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apex-daily
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily momentum update
+        run: python -m apex.momentum_live run
+
+      - name: Commit & publish updated data
+        run: |
+          git config user.name "apex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/apex.db data/state.json
+          if git diff --cached --quiet; then
+            echo "No changes today (market closed / no new bar)."
+          else
+            git commit -m "Daily update $(date -u +%Y-%m-%d)"
+            git push
+          fi
