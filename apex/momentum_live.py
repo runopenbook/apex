@@ -19,7 +19,7 @@ import sys
 import pandas as pd
 import yfinance as yf
 
-from . import ledger, export, scout
+from . import ledger, export, scout, intraday
 from .paths import CONFIG_DIR
 
 try:
@@ -93,6 +93,7 @@ def init(capital=None):
                             "equal weight. Riding winners; exit on trend break.",
                             rule="Launch", judge="momentum")
     export.export_state()
+    intraday.attach()
     print(f"LIVE book launched {date} with ${capital:,.0f} across {len(book)} names.")
     return date
 
@@ -193,6 +194,7 @@ def run(end=None):
                                 "All holdings still trending up — holding. Let winners "
                                 "run.", rule="Hold", judge="momentum")
     export.export_state()
+    intraday.attach()
     print(f"{date}: {moves} move(s). Portfolio ${total:,.0f}.")
 
 

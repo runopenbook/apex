@@ -118,6 +118,26 @@
   .mtags{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
   .mtag{font-size:9px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);
     padding:2px 6px;color:var(--mut);font-weight:600}
+  /* recent trades (autopilot-style) */
+  .tday{border-bottom:1px solid var(--grid)}
+  .tday:last-child{border-bottom:none}
+  .tdhead{display:flex;align-items:center;gap:14px;padding:16px 0;cursor:pointer;user-select:none}
+  .tdhead .dt{font-size:14px;font-weight:700;letter-spacing:-0.02em;width:130px}
+  .tdhead .cnt{font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:3px 8px;font-weight:600}
+  .tdhead .th{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .tdhead .chev{margin-left:auto;color:var(--mut);font-size:18px;line-height:1;transition:transform .15s ease}
+  .tday.open .tdhead .chev{transform:rotate(90deg)}
+  .tdbody{max-height:0;overflow:hidden;transition:max-height .2s ease}
+  .tday.open .tdbody{max-height:600px}
+  .tdbody .inner{padding:0 0 18px}
+  .gl{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:500;
+    margin:8px 0 4px;border-top:1px solid var(--grid);padding-top:12px}
+  .trow{display:flex;align-items:center;gap:12px;padding:8px 0}
+  .trow .tt{font-weight:700;font-size:13px;width:84px;letter-spacing:-0.02em}
+  .trow .tsub{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);flex:1}
+  .trow .tw{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums}
+  .trow .tw b{color:var(--ink);font-weight:700}
+  .trow .tw .ax{margin:0 7px;color:var(--mut)}
   .foot{padding:22px 0 0;font-size:9.5px;letter-spacing:.08em;color:var(--mut);line-height:1.6}
   .empty{padding:40px 0;text-align:center;color:var(--mut);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 </style>
@@ -175,9 +195,16 @@
     <div class="alloc" id="themes"></div>
   </section>
 
-  <!-- 05 LEDGER -->
+  <!-- 05 RECENT TRADES -->
+  <section>
+    <div class="shead"><span class="sn">05</span><span class="st">Recent Trades</span>
+      <span class="meta" id="tradeMeta"></span></div>
+    <div id="tradeDays"></div>
+  </section>
+
+  <!-- 06 LEDGER -->
   <section style="border-bottom:none">
-    <div class="shead"><span class="sn">05</span><span class="st">Ledger</span></div>
+    <div class="shead"><span class="sn">06</span><span class="st">Ledger</span></div>
     <div class="filters" id="filters">
       <span class="chip on" data-f="trades">Trades</span>
       <span class="chip on" data-f="holds">Holds</span>
@@ -266,17 +293,27 @@ async function main(){
   window.__chart=chart; themeChart(chart);
 
   const RANGES=[['1D',1],['1W',7],['1M',30],['3M',90],['6M',180],['1Y',365],['2Y',730],['ALL',1e9]];
-  const full=S.curve;
-  const lastDate=full.length?new Date(full[full.length-1].date):new Date();
+  const daily=S.curve.map(p=>({x:p.date,t:new Date(p.date),value:p.value,benchmark:p.benchmark}));
+  const intra=(S.intraday||[]).map(p=>({x:p.t,t:new Date(p.t.replace(' ','T')),value:p.value,benchmark:p.benchmark}));
+  const intraSpan=intra.length>=2?(intra[intra.length-1].t-intra[0].t)/86400000:0;
+  // intraday is richer; use it for any range it can cover (short ranges, and ALL while history is young)
+  function pick(days){
+    const useIntra=intra.length>=2 && (days<=31 || (days>=1e9 && intraSpan<=45));
+    const src=useIntra?intra:daily;
+    const last=src[src.length-1].t;
+    let c=src;
+    if(days<1e9){const cut=new Date(last);cut.setDate(cut.getDate()-days);c=src.filter(p=>p.t>=cut);}
+    if(c.length<2) c=src.slice(-Math.min(src.length,Math.max(2, useIntra?14:2)));
+    return {c, intraday:useIntra};
+  }
+  function lbl(p,intraday){
+    return intraday? p.x.slice(5).replace('-','/').replace(' ',' ') : p.x;
+  }
   function applyRange(days){
     curDays=days;
-    let c=full;
-    if(days<1e9){const cut=new Date(lastDate);cut.setDate(cut.getDate()-days);
-      c=full.filter(p=>new Date(p.date)>=cut);}
-    if(c.length<2) c=full.slice(-2);
-    if(c.length<2) c=full;
+    const {c}=pick(days);
     const a0=c[0].value,b0=c[0].benchmark,a1=c[c.length-1].value,b1=c[c.length-1].benchmark;
-    chart.data.labels=c.map(p=>p.date);
+    chart.data.labels=c.map(p=>p.x);
     if(valueMode==='%'){
       chart.data.datasets[0].data=c.map(p=>(p.value/a0-1)*100);
       chart.data.datasets[1].data=c.map(p=>(b0&&p.benchmark!=null)?(p.benchmark/b0-1)*100:null);
@@ -286,8 +323,9 @@ async function main(){
     }
     chart.update();
     const ar=a1/a0-1,br=(b0&&b1)?b1/b0-1:null;
+    const span=c[0].x.slice(0,10)+' — '+c[c.length-1].x.slice(0,10);
     document.getElementById('rangeStat').innerHTML=
-      `${c[0].date} — ${c[c.length-1].date} &nbsp;/&nbsp; Apex <b>${pct(ar)}</b>`+
+      `${span} &nbsp;/&nbsp; Apex <b>${pct(ar)}</b>`+
       (br!=null?` &nbsp;/&nbsp; ${m.benchmark_label} <b>${pct(br)}</b>`:'');
   }
   document.getElementById('ranges').innerHTML=RANGES.map(([l,d])=>
@@ -325,6 +363,31 @@ async function main(){
       <div class="atrack"><i style="width:${t.weight/tmax*100}%"></i></div>
       <div class="ap num">${(t.weight*100).toFixed(1)}%</div>
     </div>`).join('');
+
+  /* recent trades (autopilot-style) */
+  const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDate(d){const[y,mo,da]=d.split('-');return `${MON[+mo-1]} ${+da}, ${y}`;}
+  const td=S.trade_days||[];
+  document.getElementById('tradeMeta').textContent=(m.num_trades||0)+' trades total';
+  document.getElementById('tradeDays').innerHTML=td.length?td.map((t,i)=>`
+    <div class="tday ${i===0?'open':''}">
+      <div class="tdhead">
+        <span class="dt">${fmtDate(t.date)}</span>
+        <span class="cnt">${t.n} ${t.n===1?'trade':'trades'}</span>
+        <span class="th">${t.theme||''}</span>
+        <span class="chev">›</span>
+      </div>
+      <div class="tdbody"><div class="inner">
+        ${t.closed.length?`<div class="gl">Closed</div>`+t.closed.map(c=>`
+          <div class="trow"><span class="tt">${c.ticker}</span><span class="tsub">${c.theme}</span>
+            <span class="tw"><b>${(c.weight*100).toFixed(1)}%</b><span class="ax">→</span><b>0%</b></span></div>`).join(''):''}
+        ${t.opened.length?`<div class="gl">Opened</div>`+t.opened.map(o=>`
+          <div class="trow"><span class="tt">${o.ticker}</span><span class="tsub">${o.theme}</span>
+            <span class="tw"><b>0%</b><span class="ax">→</span><b>${(o.weight*100).toFixed(1)}%</b></span></div>`).join(''):''}
+      </div></div>
+    </div>`).join(''):'<div class="empty">No trades yet</div>';
+  document.querySelectorAll('.tdhead').forEach(h=>
+    h.addEventListener('click',()=>h.parentElement.classList.toggle('open')));
 
   /* ledger */
   const st={trades:true,holds:true,nomove:false};

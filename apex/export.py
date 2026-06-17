@@ -79,6 +79,31 @@ def export_state():
             "SELECT COUNT(*) c FROM transactions WHERE rule != 'Seed'"
         ).fetchone()["c"]
 
+        # Grouped trade-days (Autopilot-style): each day's closes + opens, with
+        # the weight each name moved from/to (weight = trade $ / that day's value).
+        from collections import defaultdict, Counter
+        totals = {r["date"]: r["total_value"] for r in eq}
+        theme_of = {p["ticker"]: p["theme"] for p in ledger.all_positions(conn)}
+        txns = conn.execute(
+            "SELECT date, ticker, action, amount FROM transactions ORDER BY id"
+        ).fetchall()
+        tdmap = defaultdict(lambda: {"opened": [], "closed": []})
+        for tx in txns:
+            tot = totals.get(tx["date"]) or 1
+            item = {"ticker": tx["ticker"], "weight": round(abs(tx["amount"]) / tot, 4),
+                    "theme": theme_of.get(tx["ticker"], "")}
+            (tdmap[tx["date"]]["closed"] if tx["action"] == "SELL"
+             else tdmap[tx["date"]]["opened"]).append(item)
+        trade_days = []
+        for d in sorted(tdmap, reverse=True):
+            g = tdmap[d]
+            th = [x["theme"] for x in g["opened"] + g["closed"] if x["theme"]]
+            trade_days.append({
+                "date": d, "opened": g["opened"], "closed": g["closed"],
+                "n": len(g["opened"]) + len(g["closed"]),
+                "theme": Counter(th).most_common(1)[0][0] if th else "",
+            })
+
     final = curve[-1] if curve else {"ret": 0, "benchmark_ret": 0}
     state = {
         "meta": {
@@ -98,6 +123,7 @@ def export_state():
         "positions": positions,
         "themes": themes,
         "moves": moves,
+        "trade_days": trade_days,
     }
     STATE_JSON.write_text(json.dumps(state, indent=2))
     print(f"Exported {STATE_JSON} "
