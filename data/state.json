@@ -2,13 +2,13 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-06-17",
+    "last_date": "2026-06-18",
     "mode": "forward",
     "total_value": 103042.11,
     "cash": 0.0,
-    "total_return": -0.0014,
-    "benchmark_return": -0.0121,
-    "alpha": 0.0107,
+    "total_return": 0.0304,
+    "benchmark_return": -0.0014,
+    "alpha": 0.0318,
     "num_trades": 12,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
@@ -29,6 +29,14 @@
       "ret": -0.0014,
       "benchmark": 98785.17,
       "benchmark_ret": -0.0121,
+      "cash": 0.0
+    },
+    {
+      "date": "2026-06-18",
+      "value": 103042.11,
+      "ret": 0.0304,
+      "benchmark": 99856.62,
+      "benchmark_ret": -0.0014,
       "cash": 0.0
     }
   ],
@@ -197,6 +205,15 @@
     }
   ],
   "moves": [
+    {
+      "date": "2026-06-18",
+      "ticker": null,
+      "action": "NO_MOVE",
+      "rule": "Hold",
+      "rationale": "All holdings still trending up \u2014 holding. Let winners run.",
+      "judge": "momentum",
+      "price": null
+    },
     {
       "date": "2026-06-17",
       "ticker": "DELL",
@@ -612,13 +629,13 @@
     },
     {
       "t": "2026-06-18 18:00",
-      "value": 103172.45,
+      "value": 103168.67,
       "benchmark": 98999.28
     },
     {
       "t": "2026-06-18 18:30",
-      "value": 103174.29,
-      "benchmark": 99004.59
+      "value": 103046.42,
+      "benchmark": 98944.82
     }
   ]
 }
