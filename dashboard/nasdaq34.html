@@ -273,7 +273,7 @@ function themeChart(ch){
   const ink=cssv('--ink'),mut=cssv('--mut'),grid=cssv('--grid');
   ch.data.datasets[0].borderColor=ink;
   ch.data.datasets[1].borderColor=mut;
-  if(ch.data.datasets[2]) ch.data.datasets[2].borderColor=grid;
+  if(ch.data.datasets[2]) ch.data.datasets[2].borderColor=mut;
   ch.options.scales.x.ticks.color=mut; ch.options.scales.y.ticks.color=mut;
   ch.options.scales.y.grid.color=grid;
   ch.options.plugins.legend.labels.color=mut;
@@ -352,7 +352,7 @@ async function main(){
     data:{labels:[],datasets:[
       {label:'Top 34',data:[],borderWidth:2,pointRadius:0,tension:.02,fill:false},
       {label:m.benchmark_label,data:[],borderWidth:1.4,borderDash:[5,4],pointRadius:0,tension:.02,fill:false},
-      {label:'S&P 500',data:[],borderWidth:1.2,borderDash:[2,3],pointRadius:0,tension:.02,fill:false},
+      {label:'S&P 500',data:[],borderWidth:1.3,borderDash:[1,4],pointRadius:0,tension:.02,fill:false},
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
       plugins:{legend:{labels:{boxWidth:10,font:{family:'Helvetica Neue',size:10},
