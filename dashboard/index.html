@@ -55,7 +55,7 @@
   .shead .meta{margin-left:auto;font-size:10px;letter-spacing:.06em;color:var(--mut)}
 
   /* metrics grid */
-  .metrics{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line)}
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
   .metric{padding:18px 16px 22px;border-right:1px solid var(--line)}
   .metric:last-child{border-right:none}
   .metric .k{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:500}
@@ -292,7 +292,6 @@ async function main(){
     ['Total Return', sig(m.total_return), true],
     [m.benchmark_label, sig(m.benchmark_return), true],
     ['Alpha', sig(m.alpha), true],
-    ['Cash', (m.cash/m.total_value*100).toFixed(0)+'<small>%</small>', false],
     ['Moves', m.num_trades, false],
   ];
   document.getElementById('metrics').innerHTML=cards.map(([k,v,s])=>

@@ -65,9 +65,6 @@ def export_state():
             rng = ranges.get(name, {})
             themes.append({"theme": name, "weight": round(val / total, 4) if total else 0,
                            "min": rng.get("min"), "max": rng.get("max")})
-        themes.append({"theme": "Cash", "weight": round(cash / total, 4) if total else 0,
-                       "min": ranges.get("Cash", {}).get("min"),
-                       "max": ranges.get("Cash", {}).get("max")})
 
         decisions = conn.execute(
             """SELECT date, ticker, action, rule, rationale, judge, price
