@@ -40,16 +40,27 @@ def build(days=30, interval="30m"):
         txn_by_date[t["date"]].append(t)
     txn_dates = sorted(txn_by_date)
 
-    def holdings_entering(d):
+    launch = eq_dates[0]
+
+    def holdings_asof(d, inclusive):
         h = defaultdict(float)
         for dt in txn_dates:
-            if dt >= d:
+            if dt > d or (not inclusive and dt == d):
                 break
             for t in txn_by_date[dt]:
                 h[t["ticker"]] += t["shares"] if t["action"] == "BUY" else -t["shares"]
         return {k: v for k, v in h.items() if abs(v) > 1e-9}
 
-    def cash_entering(d):
+    def holdings_for(d):
+        # Launch day: value the seeded book from the open (else the line is flat
+        # at $100k all morning, since the seed executes at the close). Later days:
+        # use the book held *during* the session (pre-close trades) so a rotation
+        # at the close doesn't retroactively distort that whole day.
+        return holdings_asof(d, inclusive=(d == launch))
+
+    def cash_for(d):
+        if d == launch:
+            return cash_by_date[launch]
         prior = [x for x in eq_dates if x < d]
         return cash_by_date[prior[-1]] if prior else initial
 
@@ -80,8 +91,8 @@ def build(days=30, interval="30m"):
         if d < eq_dates[0]:
             continue
         if d not in hcache:
-            hcache[d] = holdings_entering(d)
-            ccache[d] = cash_entering(d)
+            hcache[d] = holdings_for(d)
+            ccache[d] = cash_for(d)
         h, cash = hcache[d], ccache[d]
         val = cash + sum(sh * row[tk] for tk, sh in h.items()
                          if tk in row and pd.notna(row[tk]))
