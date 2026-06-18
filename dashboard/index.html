@@ -287,11 +287,20 @@ async function main(){
   document.getElementById('disclaimer').textContent=m.disclaimer;
   document.getElementById('ovMeta').textContent=S.curve.length+' sessions';
 
+  // Overview reads from the SAME source as the chart (latest point vs inception),
+  // so the cards and the chart's ALL view always agree — incl. extended hours.
+  const _src=(S.intraday&&S.intraday.length)?S.intraday:S.curve;
+  const _inc=_src.find(p=>p.value!=null)||_src[0];
+  const _lat=[..._src].reverse().find(p=>p.value!=null)||_src[_src.length-1];
+  const navNow=_lat.value;
+  const totRet=_inc.value?_lat.value/_inc.value-1:0;
+  const benRet=(_inc.benchmark&&_lat.benchmark!=null)?_lat.benchmark/_inc.benchmark-1:(m.benchmark_return||0);
+  const alphaNow=totRet-benRet;
   const cards=[
-    ['Net Asset Value', fmt(m.total_value), false],
-    ['Total Return', sig(m.total_return), true],
-    [m.benchmark_label, sig(m.benchmark_return), true],
-    ['Alpha', sig(m.alpha), true],
+    ['Net Asset Value', fmt(navNow), false],
+    ['Total Return', sig(totRet), true],
+    [m.benchmark_label, sig(benRet), true],
+    ['Alpha', sig(alphaNow), true],
     ['Moves', m.num_trades, false],
   ];
   document.getElementById('metrics').innerHTML=cards.map(([k,v,s])=>
