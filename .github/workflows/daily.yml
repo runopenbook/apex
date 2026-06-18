@@ -30,11 +30,14 @@ jobs:
       - name: Run daily momentum update
         run: python -m apex.momentum_live run
 
+      - name: Rebuild Top-34 Nasdaq portfolio (buy & hold)
+        run: python -m apex.nasdaq34
+
       - name: Commit & publish updated data
         run: |
           git config user.name "apex-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/apex.db data/state.json
+          git add data/apex.db data/state.json data/nasdaq34_state.json
           if git diff --cached --quiet; then
             echo "No changes today (market closed / no new bar)."
           else
