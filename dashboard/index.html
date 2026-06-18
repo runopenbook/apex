@@ -11,11 +11,11 @@
   }
   html[data-theme="light"]{
     --bg:#eceae5; --paper:#f3f2ee; --ink:#0a0a0a; --line:#0a0a0a;
-    --mut:#8c887f; --grid:#d8d5cd; --inv-ink:#f3f2ee;
+    --mut:#8c887f; --grid:#d8d5cd; --inv-ink:#f3f2ee; --pulse:rgba(10,10,10,.35);
   }
   html[data-theme="dark"]{
     --bg:#0a0a0a; --paper:#0f0f0f; --ink:#ececec; --line:#ececec;
-    --mut:#6a6a6a; --grid:#1c1c1c; --inv-ink:#0a0a0a;
+    --mut:#6a6a6a; --grid:#1c1c1c; --inv-ink:#0a0a0a; --pulse:rgba(236,236,236,.4);
   }
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font)}
@@ -76,6 +76,20 @@
   .seg b.on{background:var(--ink);color:var(--inv-ink)}
   .rstat{font-size:10px;letter-spacing:.05em;color:var(--mut);margin:2px 0 10px;min-height:13px}
   .rstat b{color:var(--ink);font-weight:700}
+  .chartbox{position:relative;aspect-ratio:300/110}
+  .chartbox canvas{display:block}
+  .tdots{position:absolute;inset:0;pointer-events:none;z-index:3}
+  .tdot{position:absolute;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--paper);pointer-events:auto;cursor:pointer;
+    animation:tpulse 1.9s ease-out infinite}
+  @keyframes tpulse{0%{box-shadow:0 0 0 0 var(--pulse)}70%{box-shadow:0 0 0 9px transparent}
+    100%{box-shadow:0 0 0 0 transparent}}
+  .tdotTip{position:absolute;transform:translate(-50%,calc(-100% - 12px));pointer-events:none;
+    background:var(--ink);color:var(--inv-ink);font-size:10px;letter-spacing:.02em;
+    padding:6px 9px;white-space:nowrap;opacity:0;transition:opacity .12s;z-index:6}
+  .tdotTip .td{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:9px;
+    display:block;margin-bottom:2px;opacity:.6}
+  .tdotTip.on{opacity:1}
 
   /* table */
   table{width:100%;border-collapse:collapse;font-size:12.5px}
@@ -177,7 +191,11 @@
         <div class="seg" id="ranges"></div>
       </div>
       <div class="rstat" id="rangeStat"></div>
-      <canvas id="curve" height="110"></canvas>
+      <div class="chartbox">
+        <canvas id="curve" height="110"></canvas>
+        <div class="tdots" id="tdots"></div>
+        <div class="tdotTip" id="tdotTip"></div>
+      </div>
     </div>
   </section>
 
@@ -222,6 +240,14 @@ const fmt=n=>'$'+Math.round(n).toLocaleString();
 const pct=n=>(n>=0?'+':'−')+(Math.abs(n)*100).toFixed(1)+'%';
 const arr=n=>n>=0?'<span class="arrow">▲</span>':'<span class="arrow">▽</span>';
 const sig=n=>arr(n)+pct(n);
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtDate=d=>{const[y,mo,da]=d.split('-');return `${MON[+mo-1]} ${+da}, ${y}`;};
+function tradeSummary(td){
+  const p=[];
+  if(td.closed.length) p.push('Sold '+td.closed.map(c=>c.ticker).join(', '));
+  if(td.opened.length) p.push('Bought '+(td.opened.length>4?td.opened.length+' names':td.opened.map(o=>o.ticker).join(', ')));
+  return p.join('   ·   ');
+}
 
 /* theme */
 function setTheme(t){
@@ -272,16 +298,44 @@ async function main(){
   document.getElementById('metrics').innerHTML=cards.map(([k,v,s])=>
     `<div class="metric"><div class="k">${k}</div><div class="v num tight">${v}</div></div>`).join('');
 
+  /* blinking trade markers on the line + simple hover tooltip */
+  const tdByDate={}; (S.trade_days||[]).forEach(t=>tdByDate[t.date]=t);
+  const tdotsEl=document.getElementById('tdots'), tdTip=document.getElementById('tdotTip');
+  function positionTradeDots(){
+    const ch=window.__chart; if(!ch)return;
+    const meta=ch.getDatasetMeta(0); if(!meta||!meta.data)return;
+    tdotsEl.querySelectorAll('.tdot').forEach(dot=>{
+      const pt=meta.data[+dot.dataset.i]; if(!pt)return;
+      dot.style.left=pt.x+'px'; dot.style.top=pt.y+'px';
+    });
+  }
+  function buildTradeDots(c){
+    tdotsEl.innerHTML='';
+    const lastIdx={};
+    c.forEach((p,i)=>{const d=p.x.slice(0,10); if(tdByDate[d]) lastIdx[d]=i;});
+    Object.entries(lastIdx).forEach(([d,i])=>{
+      const dot=document.createElement('div'); dot.className='tdot'; dot.dataset.i=i;
+      dot.dataset.info=tradeSummary(tdByDate[d]); dot.dataset.date=fmtDate(d);
+      tdotsEl.appendChild(dot);
+    });
+    positionTradeDots();
+  }
+  tdotsEl.addEventListener('mouseover',e=>{const d=e.target.closest('.tdot');if(!d)return;
+    tdTip.innerHTML=`<span class="td">${d.dataset.date}</span>${d.dataset.info}`;
+    tdTip.style.left=d.style.left; tdTip.style.top=d.style.top; tdTip.classList.add('on');});
+  tdotsEl.addEventListener('mouseout',e=>{if(e.target.closest('.tdot'))tdTip.classList.remove('on');});
+
   /* chart */
   let valueMode='$',curDays=1e9;
   const pctTick=v=>(v>=0?'+':'−')+Math.abs(v).toFixed(v===0?0:1)+'%';
   const chart=new Chart(document.getElementById('curve'),{
     type:'line',
+    plugins:[{id:'tdotsPos',afterRender(){positionTradeDots();}}],
     data:{labels:[],datasets:[
       {label:'Apex',data:[],borderWidth:2,pointRadius:0,tension:.02,fill:false},
       {label:m.benchmark_label,data:[],borderWidth:1.4,borderDash:[4,4],pointRadius:0,tension:.02,fill:false},
     ]},
-    options:{responsive:true,interaction:{mode:'index',intersect:false},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
       plugins:{legend:{labels:{boxWidth:10,font:{family:'Helvetica Neue',size:10},
         usePointStyle:false}},
         tooltip:{displayColors:false,callbacks:{label:c=>c.dataset.label+'  '+
@@ -322,7 +376,8 @@ async function main(){
       chart.data.datasets[0].data=c.map(p=>1e5*p.value/a0);
       chart.data.datasets[1].data=c.map(p=>(b0&&p.benchmark!=null)?1e5*p.benchmark/b0:null);
     }
-    chart.update();
+    chart.update('none');
+    buildTradeDots(c);
     const ar=a1/a0-1,br=(b0&&b1)?b1/b0-1:null;
     const span=c[0].x.slice(0,10)+' — '+c[c.length-1].x.slice(0,10);
     document.getElementById('rangeStat').innerHTML=
@@ -366,8 +421,6 @@ async function main(){
     </div>`).join('');
 
   /* recent trades (autopilot-style) */
-  const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  function fmtDate(d){const[y,mo,da]=d.split('-');return `${MON[+mo-1]} ${+da}, ${y}`;}
   const td=S.trade_days||[];
   document.getElementById('tradeMeta').textContent=(m.num_trades||0)+' trades total';
   document.getElementById('tradeDays').innerHTML=td.length?td.map((t,i)=>`
