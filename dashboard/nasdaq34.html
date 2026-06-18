@@ -392,7 +392,13 @@ async function main(){
     const c=windowPoints(days);
     const nn=c.filter(p=>p.value!=null);
     if(!nn.length) return;
-    const a0=nn[0].value, b0=nn[0].benchmark, a1=nn[nn.length-1].value, b1=nn[nn.length-1].benchmark;
+    let a0=nn[0].value, b0=nn[0].benchmark;
+    if(days===1){   // 1D = change vs YESTERDAY'S close, so pre-market opens at its real gap (not 0%)
+      const today=nn[0].x.slice(0,10);
+      const prev=[...daily].reverse().find(p=>p.x<today && p.value!=null);
+      if(prev){ a0=prev.value; if(prev.benchmark!=null) b0=prev.benchmark; }
+    }
+    const a1=nn[nn.length-1].value, b1=nn[nn.length-1].benchmark;
     chart.data.labels=c.map(p=>p.x);
     if(valueMode==='%'){
       chart.data.datasets[0].data=c.map(p=>p.value!=null?(p.value/a0-1)*100:null);
