@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex — proposal 5</title>
+<style>
+:root{
+  --bg:#F1F0EA; --surf:#F7F6F1; --ink:#141312; --mut:#84837B; --faint:#BAB8AE; --line:#D9D6CC;
+  --accent:#E22219; --accent-ink:#F7F6F1; --up:#176A3A; --down:#E22219;
+  --fs:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --pad:clamp(18px,4.5vw,68px);
+}
+[data-theme="dark"]{
+  --bg:#0C0C0B; --surf:#161513; --ink:#F0EFE8; --mut:#807F76; --faint:#3C3B36; --line:#222119;
+  --accent:#FF433A; --accent-ink:#0C0C0B; --up:#54C684; --down:#FF433A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fs);
+  font-weight:400;letter-spacing:-.012em;-webkit-font-smoothing:antialiased}
+/* the move: ultra-tight tracking on display type — letters nearly touching */
+.tt{letter-spacing:-.05em}.tt2{letter-spacing:-.035em}
+.tnum{font-variant-numeric:tabular-nums}
+.up{color:var(--up)}.dn{color:var(--down)}
+.lbl{font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);font-weight:700}
+a{color:inherit;text-decoration:none}.rule{height:1px;background:var(--line);border:0;margin:0}
+.bull{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:50%;background:var(--ink);color:var(--bg);font-weight:700;font-size:13px;letter-spacing:-.02em;flex:none}
+.bull.r{background:var(--accent);color:var(--accent-ink)}
+
+/* nav */
+nav{display:flex;align-items:center;gap:18px;padding:16px var(--pad);border-bottom:1px solid var(--ink)}
+nav .brand{font-weight:700;font-size:22px;letter-spacing:-.05em;display:flex;align-items:center;gap:9px}
+nav .sw{display:flex;border:1px solid var(--ink);margin-left:10px}
+nav .sw b{font-size:11px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;padding:7px 14px;cursor:pointer;color:var(--mut)}
+nav .sw b.on{background:var(--ink);color:var(--bg)}
+nav .sw b+b{border-left:1px solid var(--ink)}
+nav .right{margin-left:auto;display:flex;gap:8px;align-items:center}
+nav .right .live{font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin-right:6px}
+nav .right .live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:0}
+nav .right button{font-family:var(--fs);font-size:10px;font-weight:700;letter-spacing:.02em;
+  text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 13px;cursor:pointer}
+nav .right button:hover{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{padding:clamp(34px,6vw,80px) var(--pad) clamp(26px,4vw,52px)}
+.hero .kick{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:18px}
+.hero .val{font-weight:700;font-size:clamp(66px,15vw,196px);line-height:.84;letter-spacing:-.06em;margin:0}
+.hero .sub{display:flex;align-items:baseline;gap:18px;margin-top:30px;flex-wrap:wrap}
+.hero .sub .ret{font-weight:700;font-size:clamp(28px,4vw,52px);letter-spacing:-.05em}
+.hero .sub .t{font-size:13px;font-weight:500;color:var(--mut);letter-spacing:-.01em}
+.hero .divn{margin-top:30px;font-size:12px;line-height:1.65;color:var(--mut);max-width:52ch;letter-spacing:-.005em}
+.hero .divn b{color:var(--ink);font-weight:700}
+
+/* chart — apex as a transit line */
+.chartwrap{padding:0 var(--pad) clamp(24px,4vw,44px)}
+.chead{display:flex;align-items:center;gap:18px;border-top:1px solid var(--ink);padding-top:14px;margin-bottom:20px}
+.chead h3{font-weight:700;font-size:14px;letter-spacing:-.03em;text-transform:uppercase;margin:0}
+.chead .leg{display:flex;gap:16px;font-size:10px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--mut)}
+.chead .leg i{display:inline-block;width:16px;height:3px;background:var(--accent);vertical-align:middle;margin-right:6px}
+.chead .leg .b i{background:transparent;border-top:2px dashed var(--mut);height:0}
+.chead .rng{margin-left:auto;display:flex;border:1px solid var(--ink)}
+.chead .rng b{font-size:10px;font-weight:700;letter-spacing:.01em;padding:6px 12px;cursor:pointer;color:var(--mut)}
+.chead .rng b.on{background:var(--ink);color:var(--bg)}
+.chead .rng b+b{border-left:1px solid var(--ink)}
+.chartbox{height:clamp(180px,24vw,300px);position:relative}
+.xax{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.02em;color:var(--faint);margin-top:10px;font-weight:700;text-transform:uppercase}
+
+/* stats grid */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.stats .c{padding:24px var(--pad);border-right:1px solid var(--line)}
+.stats .c:last-child{border-right:none}
+.stats .c .v{font-weight:700;font-size:clamp(28px,3.4vw,44px);margin-top:14px;letter-spacing:-.05em}
+
+/* sections */
+.sec{padding:clamp(40px,6vw,78px) var(--pad) 0}
+.sh{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:4px}
+.sh h2{font-weight:700;font-size:clamp(22px,3vw,32px);letter-spacing:-.05em;margin:0;text-transform:uppercase}
+.sh .m{margin-left:auto;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);font-weight:700}
+
+/* holdings */
+.hl .row{display:grid;grid-template-columns:30px 1.5fr 1.4fr 1fr 1fr;align-items:center;
+  gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.hl .row .i{font-size:11px;color:var(--faint);font-weight:700}
+.hl .row .tk{font-weight:700;font-size:19px;letter-spacing:-.045em}
+.hl .row .th{font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.hl .row .r{text-align:right;font-weight:700;font-size:15px;letter-spacing:-.03em}
+.hl .row .v{text-align:right;font-size:13px;color:var(--mut);letter-spacing:-.02em}
+.hl .row:hover .tk{color:var(--accent)}
+
+/* allocation */
+.alloc{margin-top:22px}
+.aseg{display:flex;height:42px;border:1px solid var(--ink)}
+.aseg i{display:flex;align-items:center;padding:0 12px;font-size:10px;font-weight:700;
+  letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;overflow:hidden;border-right:1px solid var(--ink)}
+.aseg i:last-child{border-right:none}
+.aseg i:nth-child(1){background:var(--accent);color:var(--accent-ink)}
+.aseg i:nth-child(2){background:var(--ink);color:var(--bg)}
+.aseg i:nth-child(3){background:var(--surf);color:var(--ink)}
+.aseg i:nth-child(4){background:transparent;color:var(--mut)}
+
+/* moves */
+.mv .m{display:grid;grid-template-columns:100px 140px 1fr;gap:20px;align-items:baseline;
+  padding:20px 0;border-bottom:1px solid var(--line)}
+.mv .m .d{font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.mv .m .a{font-weight:700;font-size:17px;letter-spacing:-.04em}
+.mv .m .a .tag{font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  padding:3px 8px;margin-right:10px;vertical-align:2px}
+.mv .m .tag.b{background:var(--accent);color:var(--accent-ink)}.mv .m .tag.s{border:1px solid var(--ink)}
+.mv .m p{margin:0;font-size:13px;line-height:1.6;color:var(--mut);letter-spacing:-.005em}.mv .m p b{color:var(--ink);font-weight:700}
+
+footer{padding:clamp(50px,7vw,90px) var(--pad) 54px;margin-top:40px;border-top:2px solid var(--ink);
+  font-size:10px;letter-spacing:.02em;text-transform:uppercase;color:var(--faint);line-height:2;font-weight:700}
+@media(max-width:820px){
+  nav{flex-wrap:wrap;gap:12px}
+  .stats{grid-template-columns:1fr 1fr}.stats .c:nth-child(2n){border-right:none}
+  .stats .c{border-bottom:1px solid var(--line)}
+  .hl .row{grid-template-columns:24px 1.4fr 1fr 1fr;gap:10px}.hl .row .th{display:none}
+  .mv .m{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="brand tt"><span class="bull r">1</span>APEX</span>
+  <span class="sw"><b class="on">Apex</b><b>Top 34</b></span>
+  <span class="right">
+    <span class="live">Live</span>
+    <button onclick="var h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'':'dark')">Invert</button>
+    <button>↻ Sync</button>
+  </span>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="kick">Net Asset Value — Price Return</div>
+  <div class="val tnum">$111,185</div>
+  <div class="sub">
+    <span class="ret up tnum">+11.1%</span>
+    <span class="t">▲ +$2,940 today &nbsp;·&nbsp; vs S&amp;P 500 +0.2% &nbsp;·&nbsp; since 22 May 2026</span>
+  </div>
+  <div class="divn">Net asset value is price return — it excludes dividends. Over the run the held positions would have paid you <b>$86</b> in dividend cash, tracked apart and never folded into NAV.</div>
+</div>
+
+<!-- CHART -->
+<div class="chartwrap">
+  <div class="chead">
+    <h3>Performance</h3>
+    <span class="leg"><span><i></i>Apex</span><span class="b"><i></i>S&amp;P 500</span></span>
+    <span class="rng"><b>1D</b><b>1W</b><b>1M</b><b class="on">All</b></span>
+  </div>
+  <div class="chartbox">
+    <svg viewBox="0 0 1000 290" width="100%" height="100%" preserveAspectRatio="none" style="display:block">
+      <line x1="0" y1="252" x2="1000" y2="252" stroke="var(--line)" stroke-width="1"/>
+      <path d="M12 246 L140 247 L270 242 L405 238 L530 233 L660 228 L790 224 L990 218" fill="none" stroke="var(--mut)" stroke-width="1.4" stroke-dasharray="4 5"/>
+      <path d="M12 246 L80 238 L140 254 L210 226 L270 234 L340 198 L405 206 L470 168 L530 186 L600 128 L660 158 L725 112 L790 130 L855 86 L915 106 L965 62 L990 46" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="600" cy="128" r="5" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"/>
+      <circle cx="855" cy="86" r="5" fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"/>
+      <circle cx="990" cy="46" r="5" fill="var(--accent)"/>
+    </svg>
+  </div>
+  <div class="xax"><span>22 May</span><span>30 May</span><span>06 Jun</span><span>12 Jun</span><span>18 Jun</span></div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="c"><div class="lbl">Total Return</div><div class="v up tnum">+11.1%</div></div>
+  <div class="c"><div class="lbl">S&amp;P 500</div><div class="v tnum">+0.2%</div></div>
+  <div class="c"><div class="lbl">Alpha</div><div class="v up tnum">+10.9%</div></div>
+  <div class="c"><div class="lbl">Dividends</div><div class="v tnum">$86</div></div>
+</div>
+
+<!-- HOLDINGS -->
+<div class="sec">
+  <div class="sh"><span class="bull">01</span><h2>Holdings</h2><span class="m">10 names · equal weight</span></div>
+  <div class="hl">
+    <div class="row"><span class="i">01</span><span class="tk">NVDA</span><span class="th">AI / Semiconductors</span><span class="r up tnum">+13.0%</span><span class="v tnum">$12,640</span></div>
+    <div class="row"><span class="i">02</span><span class="tk">AVGO</span><span class="th">AI / Semiconductors</span><span class="r up tnum">+11.1%</span><span class="v tnum">$11,090</span></div>
+    <div class="row"><span class="i">03</span><span class="tk">GOOGL</span><span class="th">Megacap Tech</span><span class="r up tnum">+10.5%</span><span class="v tnum">$11,140</span></div>
+    <div class="row"><span class="i">04</span><span class="tk">META</span><span class="th">Megacap Tech</span><span class="r up tnum">+9.4%</span><span class="v tnum">$10,920</span></div>
+    <div class="row"><span class="i">05</span><span class="tk">DELL</span><span class="th">AI / Hardware</span><span class="r up tnum">+6.2%</span><span class="v tnum">$10,310</span></div>
+    <div class="row"><span class="i">06</span><span class="tk">PLTR</span><span class="th">AI / Software</span><span class="r dn tnum">−2.6%</span><span class="v tnum">$9,740</span></div>
+  </div>
+</div>
+
+<!-- ALLOCATION -->
+<div class="sec">
+  <div class="sh"><span class="bull">02</span><h2>Allocation</h2><span class="m">by theme</span></div>
+  <div class="alloc">
+    <div class="aseg">
+      <i style="width:46%">AI / Semis · 46%</i><i style="width:28%">Megacap · 28%</i>
+      <i style="width:16%">Software · 16%</i><i style="width:10%">HW · 10%</i>
+    </div>
+  </div>
+</div>
+
+<!-- MOVES -->
+<div class="sec">
+  <div class="sh"><span class="bull">03</span><h2>Recent Moves</h2><span class="m">decided 15:00 ET</span></div>
+  <div class="mv">
+    <div class="m"><span class="d">17 Jun 26</span><span class="a"><span class="tag b">Buy</span>DELL</span><p>Rotated into <b>DELL</b> — hottest available in AI / Hardware, up 18% over six months.</p></div>
+    <div class="m"><span class="d">17 Jun 26</span><span class="a"><span class="tag s">Sell</span>LUNR</span><p><b>LUNR</b> fell 50% from its high — the trend broke. Exit, lock it in.</p></div>
+  </div>
+</div>
+
+<footer>
+  Apex — Paper Index N°1 · Not investment advice · No brokerage connection · You execute your own trades · NAV is price return, excludes dividends · Proposal 5 — placeholder data
+</footer>
+</body>
+</html>
