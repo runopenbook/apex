@@ -9,26 +9,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#E9E2D0; --surf:#F0EADB; --ink:#1B1812; --mut:#8B8370; --faint:#B9B19C; --line:#D7CDB6;
-  --accent:#B23A28; --accent-ink:#F0EADB; --up:#3F5C3A; --down:#B23A28;
-  --stamp-bg:#D8CEB3; --stamp-ink:#231E14; --grain-op:.32;
+  --bg:#E8E1CE; --surf:#ECE5D0; --ink:#1B1812; --mut:#8B8370; --faint:#B9B19C; --line:#D7CDB6;
+  --accent:#B23A28; --accent-ink:#E9E0C9; --up:#3F5C3A; --down:#B23A28; --cream:#E9E0C9;
+  --stamp-bg:#D8CEB3; --stamp-ink:#231E14; --stamp-accent:#B23A28; --grain-op:.32;
   --fs:'Helvetica Neue',Helvetica,Arial,sans-serif; --mono:ui-monospace,Menlo,Consolas,monospace;
   --pad:clamp(20px,5vw,72px);
 }
 [data-theme="dark"]{
   --bg:#15120C; --surf:#1D1A12; --ink:#EDE6D5; --mut:#857C68; --faint:#4B4636; --line:#2A2619;
-  --accent:#D4543C; --accent-ink:#F2E9D6; --up:#86A87E; --down:#D4543C;
-  --stamp-bg:#2C2519; --stamp-ink:#E7DDC7; --grain-op:.12;
+  --accent:#D4543C; --accent-ink:#F2E9D6; --up:#86A87E; --down:#D4543C; --cream:#F2E9D6;
+  --stamp-bg:#2C2519; --stamp-ink:#E7DDC7; --stamp-accent:#D4543C; --grain-op:.12;
 }
 [data-theme="green"]{
-  --bg:#108053; --surf:#0E7249; --ink:#F1ECDC; --mut:#8FB7A1; --faint:#3E8062; --line:#2C9069;
-  --accent:#0A4D2E; --accent-ink:#F4EEDE; --up:#D2ECCF; --down:#9C3324;
-  --stamp-bg:#0B5C3C; --stamp-ink:#EFE6CF; --grain-op:.27;
+  --bg:#108053; --surf:#0E7249; --ink:#E6DDC6; --mut:#8FB7A1; --faint:#79AE93; --line:#2C9069;
+  --accent:#0A4D2E; --accent-ink:#E9E0C9; --up:#D2ECCF; --down:#9C3324; --cream:#E9E0C9;
+  --stamp-bg:#0B5C3C; --stamp-ink:#EFE6CF; --stamp-accent:#2FA06A; --grain-op:.27;
 }
 [data-theme="red"]{
-  --bg:#781113; --surf:#671012; --ink:#F1E7D6; --mut:#C49A8C; --faint:#9A4A40; --line:#94322E;
-  --accent:#520B0D; --accent-ink:#F4EEDE; --up:#EAD3A6; --down:#F0A98F;
-  --stamp-bg:#560C0E; --stamp-ink:#EFE2C9; --grain-op:.14;
+  --bg:#781113; --surf:#671012; --ink:#E6DCC5; --mut:#C49A8C; --faint:#B5685C; --line:#94322E;
+  --accent:#520B0D; --accent-ink:#E9E0C9; --up:#EAD3A6; --down:#F0A98F; --cream:#E9E0C9;
+  --stamp-bg:#560C0E; --stamp-ink:#EFE2C9; --stamp-accent:#D4654E; --grain-op:.14;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fs);font-weight:400;
@@ -52,16 +52,16 @@ a{color:inherit;text-decoration:none}.rule{height:1px;background:var(--line);bor
   75%{background-position:16px -14px}87%{background-position:-18px 8px}100%{background-position:0 0}}
 
 /* marquee */
-.ann{background:var(--accent);color:#F4EEDE;overflow:hidden;white-space:nowrap}
+.ann{background:var(--accent);color:var(--cream);overflow:hidden;white-space:nowrap}
 .ann .run{display:inline-block;padding:8px 0;font-size:11px;font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;animation:slide 30s linear infinite}
 .ann .run span{margin:0 26px}.ann .run span::before{content:"✦";margin-right:26px;opacity:.7}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* nav */
-nav{display:flex;align-items:center;gap:26px;padding:10px var(--pad)}
+nav{display:flex;align-items:center;gap:26px;padding:14px var(--pad) 20px}
 nav .brand{display:flex;align-items:baseline}
-nav .brand .bx{font-size:46px;line-height:.7;letter-spacing:0}
+nav .brand .bx{font-size:46px;line-height:.8;letter-spacing:0}
 nav .brand sup{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-left:3px}
 nav .sw{display:flex;gap:4px;margin-left:14px;border:1px solid var(--ink);border-radius:999px;padding:3px}
 nav .sw b{font-size:11px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;
@@ -110,7 +110,7 @@ nav .right button.sync:hover{border-color:var(--ink)}
 .stamp svg{display:block;width:100%;height:auto}
 .st-T{font-family:'Imperial Script',cursive;font-weight:400;font-size:46px;fill:var(--stamp-ink)}
 .st-S{font:700 7.5px var(--fs);fill:var(--stamp-ink);letter-spacing:2.4px;opacity:.65}
-.st-N{font:700 9px var(--fs);fill:var(--accent);letter-spacing:0}
+.st-N{font:700 9px var(--fs);fill:var(--stamp-accent);letter-spacing:0}
 .st-B{font:700 8px var(--fs);fill:var(--accent-ink);letter-spacing:1.6px}
 @media(max-width:1080px){.stamp{display:none}.top{justify-content:flex-start}}
 
@@ -184,11 +184,6 @@ nav .right button.sync:hover{border-color:var(--ink)}
 .prose{flex:1 1 0;max-width:52ch;margin-top:26px}
 .prose p{font-size:14.5px;line-height:1.7;letter-spacing:-.008em;color:var(--mut);margin:0 0 20px}
 .prose p:last-child{margin-bottom:0}.prose p b{color:var(--ink);font-weight:700}
-.ascwrap{flex:0 0 auto;margin-top:26px;text-align:left}
-.asccap{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:12px}
-.ascii{font-family:var(--mono);font-size:16px;line-height:1.02;white-space:pre;margin:0;text-align:left}
-#asc1{color:var(--accent)}#asc2{color:var(--ink)}
-@media(max-width:1000px){.secbody{display:block}.ascwrap{display:none}}
 
 footer{padding:clamp(46px,6vw,80px) var(--pad) 52px;margin-top:clamp(40px,5vw,70px);border-top:2px solid var(--ink)}
 footer .big{font-weight:600;font-size:clamp(24px,3.4vw,44px);line-height:1.04;max-width:16ch;letter-spacing:-.055em;margin:0}
@@ -259,17 +254,17 @@ footer .fine .script{text-transform:none;font-size:21px;color:var(--mut);letter-
       <text x="202" y="52" text-anchor="end" class="st-N">2026</text>
       <text x="120" y="92" text-anchor="middle" class="st-T">Apex</text>
       <text x="120" y="108" text-anchor="middle" class="st-S">PAPER · INDEX</text>
-      <circle cx="120" cy="170" r="27" fill="var(--accent)"/>
-      <g stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+      <circle cx="120" cy="170" r="27" fill="var(--stamp-accent)"/>
+      <g stroke="var(--stamp-accent)" stroke-width="2" stroke-linecap="round">
         <line x1="120" y1="130" x2="120" y2="139"/><line x1="96" y1="136" x2="101" y2="146"/>
         <line x1="144" y1="136" x2="139" y2="146"/><line x1="80" y1="153" x2="88" y2="159"/>
         <line x1="160" y1="153" x2="152" y2="159"/>
       </g>
       <path d="M40 218 L92 144 L128 186 L164 134 L200 218 Z" fill="var(--stamp-ink)"/>
-      <path d="M48 213 L80 197 L106 203 L140 174 L174 159 L196 136" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-      <circle cx="196" cy="136" r="3.4" fill="var(--accent)"/>
+      <path d="M48 213 L80 197 L106 203 L140 174 L174 159 L196 136" fill="none" stroke="var(--stamp-accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="196" cy="136" r="3.4" fill="var(--stamp-accent)"/>
       <line x1="40" y1="218" x2="200" y2="218" stroke="var(--stamp-ink)" stroke-width="1.4"/>
-      <rect x="25" y="240" width="190" height="24" fill="var(--accent)"/>
+      <rect x="25" y="240" width="190" height="24" fill="var(--stamp-accent)"/>
       <text x="120" y="256" text-anchor="middle" class="st-B">CONCENTRATED MOMENTUM</text>
     </svg>
   </div>
@@ -361,7 +356,6 @@ footer .fine .script{text-transform:none;font-size:21px;color:var(--mut);letter-
       <p><b><span class="script" style="font-size:1.9em;letter-spacing:0">Apex</span> is a concentrated, rules-based momentum portfolio — run in public.</b> Ten names, equal weight at entry, no hedging. Winners are held as long as they trend; a position is sold the moment it breaks — closing below its long-term moving average, or falling hard from its recent high. The freed cash rotates into the next hottest name in a confirmed uptrend.</p>
       <p>Every decision is dated and shown, the wins and the scars alike. It's paper-tracked: there's no brokerage connection, so you place your own trades. NAV is <b>price return</b> — it excludes dividends — to mirror how a copy-trading platform scores a portfolio. Dividends are tracked apart, never folded into the headline number.</p>
     </div>
-    <div class="ascwrap"><div class="asccap">Live tape</div><pre class="ascii" id="asc1" aria-hidden="true"></pre></div>
   </div>
 </div>
 
@@ -373,7 +367,6 @@ footer .fine .script{text-transform:none;font-size:21px;color:var(--mut);letter-
       <p>Names are chosen <b>mechanically, not by gut.</b> A universe of liquid, large-cap stocks is ranked by trend strength — recent momentum and whether the name trades above its long-term moving average. When a slot opens, it's filled by the highest-ranked stock in a confirmed uptrend that we don't already hold. Exits are just as mechanical: a trend break below the 200-day line, or a deep drawdown from the high.</p>
       <p>The <b>Top 34</b> book is deliberately simpler — the 34 largest Nasdaq-100 companies by market cap, equal-weighted and held, with a light rebalance once a month. One portfolio picks; the other just owns the giants. Side by side they answer one question: does concentration and timing beat simply holding the index leaders?</p>
     </div>
-    <div class="ascwrap"><div class="asccap">Momentum scan</div><pre class="ascii" id="asc2" aria-hidden="true"></pre></div>
   </div>
 </div>
 
@@ -385,24 +378,6 @@ footer .fine .script{text-transform:none;font-size:21px;color:var(--mut);letter-
 <script>
 function setTheme(t,el){document.documentElement.setAttribute('data-theme',t);
   document.querySelectorAll('.tcir').forEach(function(c){c.classList.remove('on');});if(el)el.classList.add('on');}
-function clamp(x,a,b){return Math.max(a,Math.min(b,x));}
-function rep(ch,n){return n>0?new Array(n+1).join(ch):'';}
-var BLK=[' ','▁','▂','▃','▄','▅','▆','▇','█'];
-function mountSpark(id,cfg){var el=document.getElementById(id);if(!el)return;
-  var v=cfg.rows*0.5,d=[],i;
-  for(i=0;i<cfg.cols;i++){v+=(Math.random()-0.45)*1.5;v=clamp(v,0.5,cfg.rows-0.3);d.push(v);}
-  function f(){d.shift();v+=(Math.random()-0.4)*1.8;v=clamp(v,0.5,cfg.rows-0.3);d.push(v);
-    var s='',r,c;for(r=cfg.rows;r>=1;r--){for(c=0;c<cfg.cols;c++){var val=d[c],fl=Math.floor(val);
-      if(r<=fl)s+='█';else if(r===fl+1)s+=BLK[Math.max(1,Math.round((val-fl)*8))];else s+=' ';}
-      s+='\n';}el.textContent=s;}
-  f();setInterval(f,cfg.ms);}
-function mountBars(id,syms){var el=document.getElementById(id);if(!el)return;
-  function f(){var s='',i;for(i=0;i<syms.length;i++){var o=syms[i];o.v+=(Math.random()-0.5)*2.4;
-    o.v=clamp(o.v,3,24);var n=Math.round(o.v);
-    s+=(o.t+'      ').slice(0,6)+' '+rep('█',n)+rep('░',24-n)+'\n';}el.textContent=s;}
-  f();setInterval(f,200);}
-mountSpark('asc1',{cols:38,rows:13,ms:170});
-mountBars('asc2',[{t:'NVDA',v:22},{t:'AVGO',v:19},{t:'GOOGL',v:16},{t:'META',v:14},{t:'AMD',v:11},{t:'DELL',v:9},{t:'ARM',v:7},{t:'PLTR',v:5}]);
 </script>
 </body>
 </html>
