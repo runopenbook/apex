@@ -62,9 +62,15 @@ MIN_HOLD = 5                      # hold a fresh name >=1 week before the lock /
 
 # Market-wide circuit breaker: if the S&P closes <= this on the day, it's a
 # broad risk-off session, not a thesis break. The book SKIPS trading entirely —
-# no stops, no rotations, no core swaps — and re-evaluates next session. A
-# genuinely broken name will still be down on a normal day and get sold then.
+# no stops, no rotations, no core swaps. A panic day also starts a cooling-off
+# window: the next COOL_SESSIONS sessions are skipped too, so the book doesn't
+# just dump the same broken-by-beta names the moment the panic day ends. Normal
+# rules resume once the dust settles. Another panic mid-cooloff resets the clock.
 PANIC_DROP = -0.02
+COOL_SESSIONS = 5   # ~1 trading week. Across 877 S&P panic days since 1927 the
+                    # median time to the post-panic BOTTOM is 5 sessions, so the
+                    # book resumes just past where the market typically troughs
+                    # rather than selling into the slide.
 
 # Once a name is sold (any sleeve), it can't be re-bought for this many trading
 # days (~1 month). Forces the book to give other candidates a turn instead of
@@ -263,6 +269,7 @@ def build():
 
     # ---- walk forward ----
     prev_bench = bench_seed
+    cooloff = 0                              # sessions still to skip after a panic
     for k in range(k0 + 1, len(dates)):
         d = dates[k]
         if pd.isna(px[BENCH].iloc[k]):
@@ -273,13 +280,21 @@ def build():
         val_held = cash + sum(h["shares"] * float(px[t].iloc[k])
                               for t, h in holdings.items() if pd.notna(px[t].iloc[k]))
 
-        # market-wide selloff → skip the day entirely (no panic selling)
+        # market-wide selloff → skip the day; then cool off for COOL_SESSIONS more
+        skip_reason = None
         if mkt <= PANIC_DROP:
+            cooloff = COOL_SESSIONS
+            skip_reason = (f"S&P {pct(mkt)} — a broad market selloff, not a thesis "
+                           "break. Held everything; no stops, no rotations.")
+        elif cooloff > 0:
+            n = COOL_SESSIONS - cooloff + 1
+            cooloff -= 1
+            skip_reason = (f"Cooling off after the selloff (session {n} of "
+                           f"{COOL_SESSIONS}) — still holding, letting the dust settle.")
+        if skip_reason:
             moves.append({"date": d, "ticker": None, "action": "HOLD",
-                          "rule": "Risk-off skip",
-                          "rationale": f"S&P {pct(mkt)} — a broad market selloff, not a "
-                          "thesis break. Held everything; no stops, no rotations. "
-                          "Re-evaluated next session.", "judge": "mechanical", "price": None})
+                          "rule": "Risk-off skip", "rationale": skip_reason,
+                          "judge": "mechanical", "price": None})
             curve.append({"date": d, "value": round(val_held, 2),
                           "ret": round(val_held / CAPITAL - 1, 4),
                           "benchmark": round(CAPITAL * bp / bench_seed, 2),
