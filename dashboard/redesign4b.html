@@ -8,7 +8,7 @@
 :root{
   --bg:#E9E2D0; --surf:#F0EADB; --ink:#1B1812; --mut:#8B8370; --faint:#B9B19C; --line:#D7CDB6;
   --accent:#B23A28; --accent-ink:#F0EADB; --up:#3F5C3A; --down:#B23A28;
-  --stamp-bg:#473A2B; --stamp-ink:#ECE2CC;
+  --stamp-bg:#D8CEB3; --stamp-ink:#231E14;
   --fs:'Helvetica Neue',Helvetica,Arial,sans-serif;
   --pad:clamp(20px,5vw,72px);
 }
@@ -21,8 +21,8 @@
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fs);font-weight:400;
   letter-spacing:-.012em;-webkit-font-smoothing:antialiased;
   font-kerning:normal;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;
-  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='11' cy='11' r='6.5' fill='none' stroke='%23B23A28' stroke-width='1.5'/%3E%3C/svg%3E") 11 11, auto}
-button,.sw b,.dhead,.hl .row,.alr,.rng b,a,[onclick]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='11' cy='11' r='5' fill='%23B23A28'/%3E%3C/svg%3E") 11 11, pointer}
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Cg stroke='%23B23A28' stroke-width='1.4'%3E%3Cline x1='13' y1='3' x2='13' y2='10'/%3E%3Cline x1='13' y1='16' x2='13' y2='23'/%3E%3Cline x1='3' y1='13' x2='10' y2='13'/%3E%3Cline x1='16' y1='13' x2='23' y2='13'/%3E%3C/g%3E%3C/svg%3E") 13 13, auto}
+button,.sw b,.dhead,.hl .row,.alr,.rng b,a,[onclick]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Cg stroke='%23B23A28' stroke-width='1.4'%3E%3Cline x1='13' y1='2' x2='13' y2='9'/%3E%3Cline x1='13' y1='17' x2='13' y2='24'/%3E%3Cline x1='2' y1='13' x2='9' y2='13'/%3E%3Cline x1='17' y1='13' x2='24' y2='13'/%3E%3C/g%3E%3Ccircle cx='13' cy='13' r='2.4' fill='%23B23A28'/%3E%3C/svg%3E") 13 13, pointer}
 .pn{font-variant-numeric:proportional-nums}
 .tn{font-variant-numeric:tabular-nums}
 .up{color:var(--up)}.dn{color:var(--down)}
@@ -30,9 +30,9 @@ button,.sw b,.dhead,.hl .row,.alr,.rng b,a,[onclick]{cursor:url("data:image/svg+
 a{color:inherit;text-decoration:none}.rule{height:1px;background:var(--line);border:0;margin:0}
 
 /* live film grain */
-.grain{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.3;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:200px 200px;animation:grain .5s steps(1) infinite}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.12;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:190px 190px;animation:grain .5s steps(1) infinite}
 @keyframes grain{
   0%{background-position:0 0}12%{background-position:-22px 14px}25%{background-position:18px -20px}
   37%{background-position:-14px -18px}50%{background-position:24px 16px}62%{background-position:-20px 20px}
@@ -62,7 +62,7 @@ nav .right button{font-family:var(--fs);font-size:10px;font-weight:700;letter-sp
 nav .right button:hover{border-color:var(--ink)}
 
 /* ===== TOP ===== */
-.top{display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(30px,3.4vw,58px);
+.top{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:clamp(30px,3.4vw,58px);
   padding:clamp(18px,2.6vw,34px) var(--pad) clamp(14px,2vw,24px)}
 .tl{flex:0 1 auto;min-width:0}
 .tl .kick{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:700}
@@ -82,13 +82,13 @@ nav .right button:hover{border-color:var(--ink)}
 .ovgrid .o:nth-child(even){padding-left:20px}
 .ovgrid .o:nth-child(-n+2){border-bottom:1px solid var(--line)}
 .ovgrid .o .v{font-weight:700;font-size:clamp(28px,3.2vw,44px);margin-top:10px;letter-spacing:-.05em}
-.stamp{flex:0 0 auto;margin-left:auto;width:clamp(176px,14vw,206px);transform:rotate(-2.5deg);align-self:flex-start;margin-top:2px}
+.stamp{flex:0 0 auto;width:clamp(176px,14vw,206px);transform:rotate(-2.5deg);align-self:flex-start;margin-top:2px}
 .stamp svg{display:block;width:100%;height:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.22))}
 .st-T{font:700 23px var(--fs);fill:var(--stamp-ink);letter-spacing:-1.2px}
 .st-S{font:700 7.5px var(--fs);fill:var(--stamp-ink);letter-spacing:2.4px;opacity:.7}
 .st-N{font:700 9px var(--fs);fill:var(--accent);letter-spacing:0}
 .st-B{font:700 8px var(--fs);fill:var(--stamp-ink);letter-spacing:1.6px}
-@media(max-width:1080px){.stamp{display:none}}
+@media(max-width:1080px){.stamp{display:none}.top{justify-content:flex-start}}
 
 /* ===== PERFORMANCE ===== */
 .perf{padding:0 var(--pad) clamp(26px,3vw,40px)}
@@ -133,7 +133,7 @@ nav .right button:hover{border-color:var(--ink)}
 .rat b{color:var(--ink);font-weight:700}
 
 /* holdings — 1D + total return */
-.hcols{display:grid;grid-template-columns:30px 1.4fr 1.25fr .72fr .82fr .9fr;gap:16px;padding:0 0 11px}
+.hcols{display:grid;grid-template-columns:30px 1.4fr 1.25fr .72fr .82fr .9fr;gap:16px;padding:20px 0 13px;border-bottom:1px solid var(--line)}
 .hcols .lbl{text-align:right}.hcols .lbl:nth-child(2),.hcols .lbl:nth-child(3){text-align:left}
 .hl .row{display:grid;grid-template-columns:30px 1.4fr 1.25fr .72fr .82fr .9fr;align-items:center;
   gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -288,7 +288,7 @@ footer .fine{margin-top:22px;font-size:10px;letter-spacing:.08em;text-transform:
 
 <!-- 02 HOLDINGS -->
 <div class="sec">
-  <div class="sh"><span class="no">02</span><h2>Holdings</h2><span class="m">10 names · equal weight</span></div>
+  <div class="sh"><span class="no">02</span><h2>Holdings</h2><span class="m">10 names</span></div>
   <div class="hcols">
     <span></span><span class="lbl">Position</span><span class="lbl">Theme</span><span class="lbl">1D</span><span class="lbl">Return</span><span class="lbl">Value</span>
   </div>
