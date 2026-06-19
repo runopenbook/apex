@@ -57,6 +57,8 @@
   /* metrics grid */
   .metrics{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
   .metric{padding:18px 16px 22px;border-right:1px solid var(--line)}
+  .divnote{font-size:10.5px;line-height:1.5;color:var(--mut);letter-spacing:.03em;border-top:1px solid var(--grid);padding:9px 2px 0;margin-top:-1px}
+  .divnote b{color:var(--ink);font-weight:600}
   .metric:last-child{border-right:none}
   .metric .k{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:500}
   .metric .v{font-size:30px;font-weight:700;letter-spacing:-0.05em;margin-top:12px;line-height:1}
@@ -182,6 +184,7 @@
     <div class="shead"><span class="sn">01</span><span class="st">Overview</span>
       <span class="meta num" id="ovMeta"></span></div>
     <div class="metrics" id="metrics"></div>
+    <div class="divnote" id="divNote"></div>
   </section>
 
   <!-- 02 PERFORMANCE -->
@@ -313,6 +316,11 @@ async function main(){
   ];
   document.getElementById('metrics').innerHTML=cards.map(([k,v,s])=>
     `<div class="metric"><div class="k">${k}</div><div class="v num tight">${v}</div></div>`).join('');
+
+  const dv=(S.dividends&&S.dividends.total)||0;
+  document.getElementById('divNote').innerHTML = dv>0
+    ? 'Net Asset Value is <b>price return</b> — it excludes dividends. The held positions would have paid you <b>'+fmt(dv)+'</b> in dividend cash, tracked separately (not added to NAV).'
+    : 'Net Asset Value is <b>price return</b> — it excludes dividends. No dividends have been paid yet.';
 
   /* blinking trade markers on the line + simple hover tooltip */
   const tdByDate={}; (S.trade_days||[]).forEach(t=>tdByDate[t.date]=t);

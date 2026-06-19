@@ -36,8 +36,11 @@ def _cfg():
 
 def _download(tickers, days=320, end=None):
     start = (pd.Timestamp.now("UTC") - pd.Timedelta(days=days)).strftime("%Y-%m-%d")
+    # auto_adjust=False -> PRICE return (split-adjusted, dividends NOT folded in),
+    # so NAV mirrors Autopilot's price-of-held-positions tracking. Dividends are
+    # surfaced separately via divs.py, never added to NAV.
     raw = yf.download(list(dict.fromkeys(tickers)), start=start, end=end,
-                      auto_adjust=True, progress=False, group_by="ticker")
+                      auto_adjust=False, progress=False, group_by="ticker")
     out = {}
     for t in dict.fromkeys(tickers):
         try:

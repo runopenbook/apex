@@ -17,6 +17,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
+from . import divs
 from .paths import DATA_DIR
 
 try:
@@ -207,6 +208,10 @@ def build():
 
     intraday = _intraday(shares)
 
+    # Dividend cash this buy & hold book would have collected (shown beside NAV,
+    # never inside it — NAV is price return, like Autopilot).
+    div_total, div_per = divs.dividends_since(shares, SEED_DATE)
+
     f = curve[-1]
     state = {
         "meta": {"initial_deposit": CAPITAL, "start_date": SEED_DATE,
@@ -218,6 +223,7 @@ def build():
                  "disclaimer": DISCLAIMER},
         "curve": curve, "positions": positions, "themes": themes,
         "moves": moves, "trade_days": trade_days, "intraday": intraday,
+        "dividends": {"total": div_total, "per": div_per},
     }
     STATE.write_text(json.dumps(state, indent=2))
     print(f"Built {STATE.name}: {len(curve)} days, {len(positions)} positions, "

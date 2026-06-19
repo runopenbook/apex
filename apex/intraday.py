@@ -16,7 +16,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
-from . import ledger
+from . import ledger, divs
 from .paths import STATE_JSON
 
 
@@ -65,8 +65,8 @@ def build(days=30, interval="30m"):
                 eq_dates[0])
     try:
         raw = yf.download(tickers + [bench], start=start, interval=interval,
-                          auto_adjust=True, progress=False, group_by="ticker",
-                          prepost=True)   # include pre-market + after-hours
+                          auto_adjust=False, progress=False, group_by="ticker",
+                          prepost=True)   # price return (no dividends); + pre/post-market
     except Exception:
         return []
 
@@ -121,5 +121,11 @@ def attach():
         return 0
     state = json.loads(STATE_JSON.read_text())
     state["intraday"] = series
+    # Dividend cash the current book would have collected since launch (shown
+    # beside NAV, never inside it).
+    holdings = {p["ticker"]: p.get("shares", 0) for p in state.get("positions", [])}
+    start = state.get("meta", {}).get("start_date")
+    total, per = divs.dividends_since(holdings, start) if start else (0.0, [])
+    state["dividends"] = {"total": total, "per": per}
     STATE_JSON.write_text(json.dumps(state, indent=2))
     return len(series)
