@@ -48,18 +48,18 @@ nav .right button{font-family:var(--fs);font-size:10px;font-weight:700;letter-sp
   border-radius:999px;padding:7px 13px;cursor:pointer}
 nav .right button:hover{border-color:var(--ink)}
 
-/* ===== TOP: NAV + Overview, left-packed (asymmetric, fits above fold) ===== */
-.top{display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(34px,5vw,76px);
+/* ===== TOP: NAV + Overview + Stamp ===== */
+.top{display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(30px,3.4vw,58px);
   padding:clamp(18px,2.6vw,34px) var(--pad) clamp(14px,2vw,24px)}
 .tl{flex:0 1 auto;min-width:0}
 .tl .kick{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:700}
-.tl .val{font-weight:700;font-size:clamp(54px,9vw,120px);line-height:.82;letter-spacing:-.065em;margin:10px 0 0}
+.tl .val{font-weight:700;font-size:clamp(54px,9vw,118px);line-height:.82;letter-spacing:-.065em;margin:10px 0 0}
 .tl .sub{display:flex;align-items:baseline;gap:16px;margin-top:18px;flex-wrap:wrap}
 .tl .sub .ret{font-weight:700;font-size:clamp(26px,3.4vw,42px);letter-spacing:-.055em}
 .tl .sub .t{font-size:12px;letter-spacing:-.005em;color:var(--mut);font-weight:500}
-.tl .divn{margin-top:16px;font-size:11px;line-height:1.6;color:var(--mut);max-width:46ch;letter-spacing:-.005em}
+.tl .divn{margin-top:16px;font-size:11px;line-height:1.6;color:var(--mut);max-width:44ch;letter-spacing:-.005em}
 .tl .divn b{color:var(--ink);font-weight:700}
-.tr{flex:1 1 360px;min-width:320px;max-width:560px}
+.tr{flex:1 1 340px;min-width:300px;max-width:500px}
 .tr .ovh{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:9px}
 .tr .ovh h3{font-weight:700;font-size:14px;letter-spacing:-.04em;text-transform:uppercase;margin:0}
 .tr .ovh span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
@@ -69,6 +69,13 @@ nav .right button:hover{border-color:var(--ink)}
 .ovgrid .o:nth-child(even){padding-left:20px}
 .ovgrid .o:nth-child(-n+2){border-bottom:1px solid var(--line)}
 .ovgrid .o .v{font-weight:700;font-size:clamp(28px,3.2vw,44px);margin-top:10px;letter-spacing:-.05em}
+.stamp{flex:0 0 auto;width:clamp(176px,14vw,206px);transform:rotate(-2.5deg);align-self:flex-start;margin-top:2px}
+.stamp svg{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 14px rgba(27,24,18,.12))}
+.st-T{font:700 23px var(--fs);fill:var(--ink);letter-spacing:-1.2px}
+.st-S{font:700 7.5px var(--fs);fill:var(--mut);letter-spacing:2.4px}
+.st-N{font:700 9px var(--fs);fill:var(--accent);letter-spacing:0}
+.st-B{font:700 8px var(--fs);fill:var(--accent-ink);letter-spacing:1.6px}
+@media(max-width:1080px){.stamp{display:none}}
 
 /* ===== PERFORMANCE ===== */
 .perf{padding:0 var(--pad) clamp(26px,3vw,40px)}
@@ -88,14 +95,27 @@ nav .right button:hover{border-color:var(--ink)}
 .sh h2{font-weight:700;font-size:clamp(22px,3vw,34px);margin:0;letter-spacing:-.05em;text-transform:uppercase}
 .sh .m{margin-left:auto;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
 
-/* recent trades */
-.rt{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.rtc{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--surf)}
-.rtc .h{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.rtc .tag{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
-.rtc .tag.b{background:var(--accent);color:var(--accent-ink)}.rtc .tag.s{border:1px solid var(--ink)}
-.rtc .tk{font-weight:700;font-size:20px;letter-spacing:-.05em}.rtc .d{margin-left:auto;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);font-weight:700}
-.rtc p{margin:0;font-size:13px;line-height:1.55;color:var(--mut);letter-spacing:-.005em}.rtc p b{color:var(--ink);font-weight:700}
+/* recent trades — accordion grouped by date */
+.rt{margin-top:4px}
+.day{border-bottom:1px solid var(--line)}
+.dhead{width:100%;display:grid;grid-template-columns:auto auto 1fr auto;gap:18px;align-items:center;
+  background:none;border:0;cursor:pointer;padding:20px 0;font-family:var(--fs);color:var(--ink);text-align:left}
+.dhead .dt{font-weight:700;font-size:17px;letter-spacing:-.04em}
+.dhead .cnt{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  border:1px solid var(--ink);border-radius:999px;padding:4px 11px}
+.dhead .thm{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.dhead .chev{justify-self:end;color:var(--mut);font-size:20px;font-weight:700;transition:transform .2s;line-height:1}
+.day.open .dhead .chev{transform:rotate(90deg)}
+.ddetail{display:none;padding:0 0 22px}
+.day.open .ddetail{display:block}
+.mv2{display:grid;grid-template-columns:104px 1fr auto;gap:16px;align-items:baseline;padding:8px 0 4px}
+.mv2 .side{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.mv2 .tk{font-weight:700;font-size:15px;letter-spacing:-.03em}
+.mv2 .tk .s{font-weight:500;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-left:9px}
+.mv2 .wt{font-weight:700;font-size:13px;color:var(--mut);letter-spacing:-.02em}
+.mv2 .wt b{color:var(--ink)}
+.rat{margin:2px 0 16px 120px;font-size:12.5px;line-height:1.5;color:var(--mut);letter-spacing:-.005em}
+.rat b{color:var(--ink);font-weight:700}
 
 /* holdings */
 .hl .row{display:grid;grid-template-columns:34px 1.5fr 1.4fr 1fr 1fr;align-items:center;
@@ -107,25 +127,15 @@ nav .right button:hover{border-color:var(--ink)}
 .hl .row .v{text-align:right;font-size:13px;color:var(--mut);letter-spacing:-.02em}
 .hl .row:hover{background:var(--surf)}
 
-/* allocation — ranked, % set in type sized by weight + proportion bar */
+/* allocation — ranked, % sized by weight + thicker bar */
 .alc{margin-top:18px}
 .alr{display:flex;align-items:center;gap:clamp(18px,3vw,40px);padding:14px 0;border-bottom:1px solid var(--line)}
 .alr .p{font-weight:700;letter-spacing:-.06em;line-height:.85;flex:none;width:clamp(96px,11vw,150px);text-align:right}
 .alr .info{flex:1}
 .alr .n{font-weight:700;font-size:14px;letter-spacing:-.02em}
-.alr .bar{height:3px;background:var(--line);margin-top:11px;border-radius:2px;overflow:hidden}
-.alr .bar i{display:block;height:100%;background:var(--ink)}
+.alr .bar{height:6px;background:var(--line);margin-top:12px;border-radius:3px;overflow:hidden}
+.alr .bar i{display:block;height:100%;background:var(--ink);border-radius:3px}
 .alr:first-child .bar i{background:var(--accent)}
-
-/* ledger */
-.lg{margin-top:8px}
-.lg .lr{display:grid;grid-template-columns:96px 96px 1fr;gap:18px;align-items:baseline;
-  padding:14px 0;border-bottom:1px solid var(--line)}
-.lg .lr .d{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);font-weight:700}
-.lg .lr .ac{font-weight:700;font-size:13px;letter-spacing:-.02em;text-transform:uppercase}
-.lg .lr .ac.buy{color:var(--up)}.lg .lr .ac.sell{color:var(--down)}.lg .lr .ac.hold{color:var(--mut)}
-.lg .lr p{margin:0;font-size:12.5px;line-height:1.55;color:var(--mut);letter-spacing:-.005em}
-.lg .lr p b{color:var(--ink);font-weight:700}
 
 footer{padding:clamp(46px,6vw,80px) var(--pad) 52px;margin-top:40px;border-top:2px solid var(--ink)}
 footer .big{font-weight:600;font-size:clamp(24px,3.2vw,40px);line-height:1.08;max-width:18ch;letter-spacing:-.05em;margin:0}
@@ -133,9 +143,9 @@ footer .fine{margin-top:22px;font-size:10px;letter-spacing:.08em;text-transform:
 
 @media(max-width:860px){
   .top{gap:26px}.tr{max-width:none}
-  .rt{grid-template-columns:1fr}
   .hl .row{grid-template-columns:26px 1.4fr 1fr 1fr;gap:10px}.hl .row .th{display:none}
-  .lg .lr{grid-template-columns:1fr;gap:5px}
+  .dhead{grid-template-columns:1fr auto auto;gap:12px}.dhead .thm{display:none}
+  .rat{margin-left:0}
 }
 </style>
 </head>
@@ -159,7 +169,7 @@ footer .fine{margin-top:22px;font-size:10px;letter-spacing:.08em;text-transform:
 </nav>
 <hr class="rule">
 
-<!-- TOP: NAV + OVERVIEW -->
+<!-- TOP -->
 <div class="top">
   <div class="tl">
     <div class="kick">Net Asset Value — Price Return</div>
@@ -178,6 +188,30 @@ footer .fine{margin-top:22px;font-size:10px;letter-spacing:.08em;text-transform:
       <div class="o"><div class="lbl">Alpha</div><div class="v up pn">+10.9%</div></div>
       <div class="o"><div class="lbl">Dividends</div><div class="v pn">$86</div></div>
     </div>
+  </div>
+  <div class="stamp">
+    <svg viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apex paper index stamp">
+      <rect x="12" y="12" width="216" height="276" rx="2" fill="var(--surf)"/>
+      <rect x="12" y="12" width="216" height="276" rx="2" fill="none" stroke="var(--bg)" stroke-width="11" stroke-linecap="round" stroke-dasharray="0 15"/>
+      <rect x="28" y="28" width="184" height="244" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+      <rect x="33" y="33" width="174" height="234" fill="none" stroke="var(--ink)" stroke-width=".6"/>
+      <text x="42" y="55" class="st-N">N°1</text>
+      <text x="198" y="55" text-anchor="end" class="st-N">2026</text>
+      <text x="120" y="78" text-anchor="middle" class="st-T">APEX</text>
+      <text x="120" y="92" text-anchor="middle" class="st-S">PAPER · INDEX</text>
+      <circle cx="120" cy="158" r="30" fill="var(--accent)"/>
+      <g stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+        <line x1="120" y1="112" x2="120" y2="124"/><line x1="92" y1="120" x2="98" y2="131"/>
+        <line x1="148" y1="120" x2="142" y2="131"/><line x1="72" y1="140" x2="82" y2="147"/>
+        <line x1="168" y1="140" x2="158" y2="147"/>
+      </g>
+      <path d="M38 214 L92 132 L128 178 L164 122 L202 214 Z" fill="var(--ink)"/>
+      <path d="M46 209 L78 192 L106 199 L140 167 L176 151 L198 124" fill="none" stroke="var(--surf)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="198" cy="124" r="3.4" fill="var(--surf)"/>
+      <line x1="38" y1="214" x2="202" y2="214" stroke="var(--ink)" stroke-width="1.4"/>
+      <rect x="33" y="236" width="174" height="24" fill="var(--ink)"/>
+      <text x="120" y="252" text-anchor="middle" class="st-B">CONCENTRATED MOMENTUM</text>
+    </svg>
   </div>
 </div>
 
@@ -205,14 +239,30 @@ footer .fine{margin-top:22px;font-size:10px;letter-spacing:.08em;text-transform:
   <div class="xax"><span>22 May</span><span>30 May</span><span>06 Jun</span><span>12 Jun</span><span>18 Jun</span></div>
 </div>
 
-<!-- 01 RECENT TRADES -->
+<!-- 01 RECENT TRADES (accordion + rationale) -->
 <div class="sec">
-  <div class="sh"><span class="no">01</span><h2>Recent Trades</h2><span class="m">decided 15:00 ET</span></div>
+  <div class="sh"><span class="no">01</span><h2>Recent Trades</h2><span class="m">12 moves · grouped by day</span></div>
   <div class="rt">
-    <div class="rtc"><div class="h"><span class="tag b">Buy</span><span class="tk">DELL</span><span class="d">17 Jun 26</span></div>
-      <p>Rotated into <b>DELL</b> — hottest available in AI / Hardware, up 18% over six months.</p></div>
-    <div class="rtc"><div class="h"><span class="tag s">Sell</span><span class="tk">LUNR</span><span class="d">17 Jun 26</span></div>
-      <p><b>LUNR</b> fell 50% from its high — the trend broke. Exit, lock it in.</p></div>
+    <div class="day open">
+      <button class="dhead" onclick="this.parentNode.classList.toggle('open')">
+        <span class="dt">Jun 17, 2026</span><span class="cnt">2 Trades</span><span class="thm">AI / Semis</span><span class="chev">›</span>
+      </button>
+      <div class="ddetail">
+        <div class="mv2"><span class="side">Closed</span><span class="tk">LUNR <span class="s">Space</span></span><span class="wt"><b>8.8%</b> → 0%</span></div>
+        <p class="rat"><b>Trend break.</b> LUNR fell 50% from its high — the trend snapped, so we exit and lock it in.</p>
+        <div class="mv2"><span class="side">Opened</span><span class="tk">DELL <span class="s">AI / Hardware</span></span><span class="wt">0% → <b>8.8%</b></span></div>
+        <p class="rat"><b>Rotation.</b> Freed cash into DELL — the hottest in-uptrend name available, up 18% over six months.</p>
+      </div>
+    </div>
+    <div class="day">
+      <button class="dhead" onclick="this.parentNode.classList.toggle('open')">
+        <span class="dt">Jun 16, 2026</span><span class="cnt">10 Trades</span><span class="thm">Launch</span><span class="chev">›</span>
+      </button>
+      <div class="ddetail">
+        <div class="mv2"><span class="side">Opened · 10</span><span class="tk">NVDA · AVGO · GOOGL · META · DELL · PLTR · AMD · MU · ARM · CRWD</span><span class="wt">→ <b>10% each</b></span></div>
+        <p class="rat"><b>Seed.</b> Launched the book — ten high-momentum AI &amp; megacap names, equal weight at entry. No hedging.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -237,17 +287,6 @@ footer .fine{margin-top:22px;font-size:10px;letter-spacing:.08em;text-transform:
     <div class="alr"><div class="p pn" style="font-size:clamp(34px,4.4vw,56px)">28%</div><div class="info"><div class="n">Megacap Tech</div><div class="bar"><i style="width:28%"></i></div></div></div>
     <div class="alr"><div class="p pn" style="font-size:clamp(28px,3.4vw,44px)">16%</div><div class="info"><div class="n">AI / Software</div><div class="bar"><i style="width:16%"></i></div></div></div>
     <div class="alr"><div class="p pn" style="font-size:clamp(25px,3vw,38px)">10%</div><div class="info"><div class="n">AI / Hardware</div><div class="bar"><i style="width:10%"></i></div></div></div>
-  </div>
-</div>
-
-<!-- 04 LEDGER -->
-<div class="sec">
-  <div class="sh"><span class="no">04</span><h2>Ledger</h2><span class="m">every decision, dated</span></div>
-  <div class="lg">
-    <div class="lr"><span class="d">17 Jun 26</span><span class="ac sell">Sell · LUNR</span><p><b>Trend Break.</b> LUNR fell 50% from its high — exit, lock it in.</p></div>
-    <div class="lr"><span class="d">17 Jun 26</span><span class="ac buy">Buy · DELL</span><p><b>Rotation.</b> Rotated into DELL — hottest available in AI / Hardware.</p></div>
-    <div class="lr"><span class="d">16 Jun 26</span><span class="ac hold">Hold</span><p><b>No move.</b> All ten holdings still trending up — let winners run.</p></div>
-    <div class="lr"><span class="d">16 Jun 26</span><span class="ac buy">Buy · Launch</span><p><b>Seed.</b> Launched the book — 10 hot names, equal weight at entry.</p></div>
   </div>
 </div>
 
