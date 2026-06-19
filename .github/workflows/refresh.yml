@@ -33,11 +33,13 @@ jobs:
         run: python -m apex.nasdaq34
       - name: Rebuild Bedrock portfolio (defensive buy & hold)
         run: python -m apex.bedrock
+      - name: Rebuild Slipstream portfolio (momentum ETF rotation)
+        run: python -m apex.slipstream
       - name: Publish updated dashboard data
         run: |
           git config user.name "apex-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/state.json data/nasdaq34_state.json data/bedrock_state.json
+          git add data/state.json data/nasdaq34_state.json data/bedrock_state.json data/slipstream_state.json
           if git diff --cached --quiet; then
             echo "No data change."
           else

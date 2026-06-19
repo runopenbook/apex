@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SWEET SPOT</title>
+<title>SLIPSTREAM</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root{
@@ -173,7 +173,7 @@
 
   <header>
     <div class="mast">
-      <h1 class="tight">SWEET SPOT</h1>
+      <h1 class="tight">SLIPSTREAM</h1>
       <div class="strat" id="strat">—</div>
       <div class="tagrow">
         <span class="tag inv" id="modeTag">—</span>
@@ -182,11 +182,11 @@
       </div>
     </div>
     <div class="hctl">
-      <div class="pfseg"><a href="margiela.html">Apex</a><a href="margiela-top34.html" class="on">Sweet Spot</a><a href="margiela-bedrock.html">Bedrock</a><a href="margiela-slipstream.html">Slipstream</a></div>
+      <div class="pfseg"><a href="margiela.html">Apex</a><a href="margiela-top34.html">Sweet Spot</a><a href="margiela-bedrock.html">Bedrock</a><a href="margiela-slipstream.html" class="on">Slipstream</a></div>
       <button class="ibtn" onclick="location.href=location.pathname+'?t='+Date.now()" title="Refresh">↻</button>
       <button class="ibtn" id="themeBtn"><span class="dotmark"></span><span id="themeLabel">Dark</span></button>
       <button class="ibtn" onclick="location.href='index.html'">← Editions</button>
-      <div class="no">N°2</div>
+      <div class="no">N°4</div>
     </div>
   </header>
 
@@ -240,8 +240,8 @@
   <section>
     <div class="shead"><span class="sn">06</span><span class="st">About</span></div>
     <div style="padding:14px 0 22px;max-width:66ch;font-size:13.5px;line-height:1.65;color:var(--mut);letter-spacing:-.01em">
-      <p style="margin:0 0 16px"><b style="color:var(--ink)">Sweet Spot is a buy &amp; hold of the Nasdaq-100's biggest names — run in public.</b> The 34 largest Nasdaq-100 companies by market cap, bought equal-weight and held, with a light token rebalance once a month. No picking, no timing — just owning the index leaders. The name fits the risk: the balanced middle between Apex's aggression and Bedrock's caution.</p>
-      <p style="margin:0">It's the deliberately-simple counterweight to Apex's concentrated momentum book. Paper-tracked, no brokerage connection. NAV is price return (excludes dividends) to mirror how a copy-trading platform scores a portfolio; dividends are tracked apart.</p>
+      <p style="margin:0 0 16px"><b style="color:var(--ink)">Slipstream is a momentum ETF rotation — medium risk, run in public.</b> It rides whatever global region- and sector-ETFs are running hottest and bails the moment the move tires. Two sleeves: a steady core of slow-growth international / dividend ETFs (~35%) held as ballast, and a rotation sleeve (~65%) that chases the leaders.</p>
+      <p style="margin:0">Every rotation name lives or dies by four mechanical doors, measured from its entry: a <b style="color:var(--ink)">−8%</b> stop; once it crosses <b style="color:var(--ink)">+13%</b> it's "armed" — then it's sold if it slips back below +13% (lock the gain), pushes past <b style="color:var(--ink)">+21%</b> (target), or sits in the +13–21% hallway for two weeks without resolving. When a name dies, the cash rotates straight into the next-hottest ETF. Paper-tracked, no brokerage connection. NAV is price return; dividends tracked apart.</p>
     </div>
   </section>
 
@@ -249,8 +249,8 @@
   <section style="border-bottom:none">
     <div class="shead"><span class="sn">07</span><span class="st">Where the positions come from</span></div>
     <div style="padding:14px 0 22px;max-width:66ch;font-size:13.5px;line-height:1.65;color:var(--mut);letter-spacing:-.01em">
-      <p style="margin:0 0 16px">No selection logic — the book is simply the 34 largest Nasdaq-100 companies by market cap on the start date, equal-weighted. The only ongoing move is a small monthly rebalance that trims the most-overweight name into the most-underweight, so the book stays roughly even without churning gains away.</p>
-      <p style="margin:0">Set against Apex, it answers one question: does concentration and timing actually beat just holding the giants?</p>
+      <p style="margin:0 0 16px">Names are ranked off a fixed, broad universe of liquid regional and sector ETFs — single-country funds, regions, and sectors, strong and weak alike — scored by trailing 1-month and 3-month trend. At the seed and at every rotation the rank uses <b style="color:var(--ink)">only the prices available on that date</b>: no name is ever chosen with data that hadn't happened yet, and the universe is fixed in advance so it can't be cherry-picked after the fact.</p>
+      <p style="margin:0">This book is simulated as if it began roughly a month ago and walked forward honestly from there. Set against Apex, it answers a different question: can a disciplined, rules-based rotation through the world's hottest ETFs beat just owning the US market?</p>
       <div class="foot" id="disclaimer" style="margin-top:22px"></div>
     </div>
   </section>
@@ -303,7 +303,7 @@ function themeChart(ch){
 
 async function main(){
   let S;
-  try{ S=await (await fetch('../data/nasdaq34_state.json',{cache:'no-store'})).json(); }
+  try{ S=await (await fetch('../data/slipstream_state.json',{cache:'no-store'})).json(); }
   catch(e){ document.getElementById('metrics').innerHTML='<div class="metric">No data. Run the engine.</div>'; return; }
   const m=S.meta;
 
@@ -377,7 +377,7 @@ async function main(){
     type:'line',
     plugins:[{id:'tdotsPos',afterRender(){positionTradeDots();}}],
     data:{labels:[],datasets:[
-      {label:'Sweet Spot',data:[],borderWidth:2,pointRadius:0,tension:.02,fill:false},
+      {label:'Slipstream',data:[],borderWidth:2,pointRadius:0,tension:.02,fill:false},
       {label:m.benchmark_label,data:[],borderWidth:1.4,borderDash:[5,4],pointRadius:0,tension:.02,fill:false},
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},

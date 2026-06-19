@@ -30,7 +30,7 @@ SEED_DATE = "2026-05-22"
 CAPITAL = 100000.0
 BENCH = "SPY"            # S&P 500 proxy (has extended hours) — the single benchmark
 BENCH_LABEL = "S&P 500"
-STRATEGY = "Top 34 Nasdaq-100 · equal-weight buy & hold"
+STRATEGY = "Sweet Spot · Nasdaq-100 mega-caps, equal weight"
 REBAL_AMOUNT = 150.0   # tiny monthly trim->add: registers as an Autopilot move,
                        # negligible return drag (drift-sized, not a full rebalance)
 

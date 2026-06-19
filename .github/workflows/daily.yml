@@ -36,11 +36,14 @@ jobs:
       - name: Rebuild Bedrock portfolio (defensive buy & hold)
         run: python -m apex.bedrock
 
+      - name: Rebuild Slipstream portfolio (momentum ETF rotation)
+        run: python -m apex.slipstream
+
       - name: Commit & publish updated data
         run: |
           git config user.name "apex-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/apex.db data/state.json data/nasdaq34_state.json data/bedrock_state.json
+          git add data/apex.db data/state.json data/nasdaq34_state.json data/bedrock_state.json data/slipstream_state.json
           if git diff --cached --quiet; then
             echo "No changes today (market closed / no new bar)."
           else
