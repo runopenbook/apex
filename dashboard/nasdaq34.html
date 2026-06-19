@@ -99,6 +99,10 @@
   tbody td{padding:13px 4px;border-bottom:1px solid var(--grid);text-align:right}
   tbody td:first-child{text-align:left}
   tbody tr:last-child td{border-bottom:none}
+  .dbreak{margin-top:20px;border-top:1px solid var(--line);padding-top:4px}
+  .dbhead{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:500;padding:10px 0 2px}
+  #dailyTable tbody td{padding:10px 4px}
+  .livedot{font-size:7.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:1px 5px;margin-left:7px;vertical-align:1.5px;color:var(--mut)}
   .tk{font-weight:700;letter-spacing:-0.03em;font-size:14px}
   .sub{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:500}
   .wcell{display:inline-flex;align-items:center;gap:8px;justify-content:flex-end}
@@ -197,6 +201,10 @@
         <div class="tdots" id="tdots"></div>
         <div class="tdotTip" id="tdotTip"></div>
       </div>
+    </div>
+    <div class="dbreak">
+      <div class="dbhead">Day by day — what each close locked in</div>
+      <table id="dailyTable"><thead><tr><th>Date</th><th class="num">That day</th><th class="num">Overall</th></tr></thead><tbody></tbody></table>
     </div>
   </section>
 
@@ -312,6 +320,27 @@ async function main(){
   ];
   document.getElementById('metrics').innerHTML=cards.map(([k,v,s])=>
     `<div class="metric"><div class="k">${k}</div><div class="v num tight">${v}</div></div>`).join('');
+
+  // Day-by-day table — built from the SAME intraday series the chart uses, so it
+  // always ties to the header. Past days show their 4pm close; the latest day is live.
+  (function(){
+    const tb=document.querySelector('#dailyTable tbody'); if(!tb) return;
+    const pts=(S.intraday||[]).filter(p=>p.value!=null);
+    if(pts.length<2){ const w=document.querySelector('.dbreak'); if(w) w.style.display='none'; return; }
+    const inc=pts[0].value, byDay={}, order=[];
+    pts.forEach(p=>{const d=p.t.slice(0,10); if(!byDay[d]){byDay[d]=[];order.push(d);} byDay[d].push(p);});
+    const last=order[order.length-1]; let prev=inc;
+    tb.innerHTML=order.map((d,i)=>{
+      const day=byDay[d];
+      let close;
+      if(d===last){ close=day[day.length-1].value; }
+      else { const reg=day.filter(p=>p.t.slice(11)<='16:00'); close=(reg.length?reg[reg.length-1]:day[day.length-1]).value; }
+      const overall=close/inc-1, dayret=close/prev-1; prev=close;
+      const dcell=(i===0)?'<span class="num" style="color:var(--mut)">launch</span>':('<span class="num">'+sig(dayret)+'</span>');
+      const live=(d===last)?' <span class="livedot">live</span>':'';
+      return '<tr><td>'+fmtDate(d)+live+'</td><td>'+dcell+'</td><td class="num">'+sig(overall)+'</td></tr>';
+    }).join('');
+  })();
 
   /* blinking trade markers on the line + simple hover tooltip */
   const tdByDate={}; (S.trade_days||[]).forEach(t=>tdByDate[t.date]=t);
