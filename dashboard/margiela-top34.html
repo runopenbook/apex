@@ -176,13 +176,11 @@
       <div class="no">N°2</div>
       <button class="toggle" onclick="location.href=location.pathname+'?t='+Date.now()">↻ REFRESH</button>
       <button class="toggle" id="themeBtn"><span class="dotmark"></span><span id="themeLabel">DARK</span></button>
-      <div style="display:flex;gap:7px;margin-top:2px">
-        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','');location.href='index.html'" title="Cream" style="width:16px;height:16px;border-radius:50%;background:#E3DBC7;border:1px solid var(--line);cursor:pointer;padding:0"></button>
-        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','dark');location.href='index.html'" title="Brown" style="width:16px;height:16px;border-radius:50%;background:#2C2519;border:1px solid var(--line);cursor:pointer;padding:0"></button>
-        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','green');location.href='index.html'" title="Green" style="width:16px;height:16px;border-radius:50%;background:#108053;border:1px solid var(--line);cursor:pointer;padding:0"></button>
-        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','red');location.href='index.html'" title="Red" style="width:16px;height:16px;border-radius:50%;background:#781113;border:1px solid var(--line);cursor:pointer;padding:0"></button>
-        <button title="Maison Margiela" style="width:16px;height:16px;border-radius:50%;background:linear-gradient(90deg,#0a0a0a 50%,#f3f2ee 50%);border:1px solid var(--line);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--ink);padding:0;cursor:default"></button>
+      <div style="display:flex;border:1px solid var(--line);margin-top:2px">
+        <a href="margiela.html" style="padding:7px 13px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);border-right:1px solid var(--line)">Apex</a>
+        <a href="margiela-top34.html" style="padding:7px 13px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--ink);color:var(--inv-ink)">Top 34</a>
       </div>
+      <button class="toggle" onclick="location.href='index.html'">← Editions</button>
     </div>
   </header>
 
