@@ -300,7 +300,7 @@ function themeChart(ch){const ink=cssv('--ink'),mut=cssv('--mut'),grid=cssv('--l
 
 let curPF='apex';
 async function load(pf){
-  curPF=pf;
+  curPF=pf; localStorage.setItem('apexPF',pf);
   const url=pf==='top34'?'../data/nasdaq34_state.json':'../data/state.json';
   let S;try{S=await(await fetch(url,{cache:'no-store'})).json();}catch(e){document.getElementById('navVal').textContent='No data';return;}
   document.querySelectorAll('.sw b').forEach(b=>b.classList.toggle('on',b.dataset.pf===pf));
@@ -442,7 +442,7 @@ function buildTrades(S){
       '<div class="ddetail"><div class="ddin">'+closed+opened+changed+rats+'</div></div></div>';
   }).join(''):'<div class="empty">No trades yet</div>';
 }
-load('apex');
+load(localStorage.getItem('apexPF')||'apex');
 document.querySelector('.sw').addEventListener('click',e=>{const b=e.target.closest('b[data-pf]');if(b)load(b.dataset.pf);});
 </script>
 </body>

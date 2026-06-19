@@ -176,6 +176,13 @@
       <div class="no">N°2</div>
       <button class="toggle" onclick="location.href=location.pathname+'?t='+Date.now()">↻ REFRESH</button>
       <button class="toggle" id="themeBtn"><span class="dotmark"></span><span id="themeLabel">DARK</span></button>
+      <div style="display:flex;gap:7px;margin-top:2px">
+        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','');location.href='index.html'" title="Cream" style="width:16px;height:16px;border-radius:50%;background:#E3DBC7;border:1px solid var(--line);cursor:pointer;padding:0"></button>
+        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','dark');location.href='index.html'" title="Brown" style="width:16px;height:16px;border-radius:50%;background:#2C2519;border:1px solid var(--line);cursor:pointer;padding:0"></button>
+        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','green');location.href='index.html'" title="Green" style="width:16px;height:16px;border-radius:50%;background:#108053;border:1px solid var(--line);cursor:pointer;padding:0"></button>
+        <button onclick="localStorage.setItem('apexPF','top34');localStorage.setItem('apexTheme','red');location.href='index.html'" title="Red" style="width:16px;height:16px;border-radius:50%;background:#781113;border:1px solid var(--line);cursor:pointer;padding:0"></button>
+        <button title="Maison Margiela" style="width:16px;height:16px;border-radius:50%;background:linear-gradient(90deg,#0a0a0a 50%,#f3f2ee 50%);border:1px solid var(--line);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--ink);padding:0;cursor:default"></button>
+      </div>
     </div>
   </header>
 
@@ -225,17 +232,23 @@
     <div id="tradeDays"></div>
   </section>
 
-  <!-- 06 LEDGER -->
-  <section style="border-bottom:none">
-    <div class="shead"><span class="sn">06</span><span class="st">Ledger</span></div>
-    <div class="filters" id="filters">
-      <span class="chip on" data-f="trades">Trades</span>
-      <span class="chip on" data-f="holds">Holds</span>
-      <span class="chip" data-f="nomove">No-Move</span>
-      <span class="ct" id="moveCount"></span>
+  <!-- 06 ABOUT -->
+  <section>
+    <div class="shead"><span class="sn">06</span><span class="st">About</span></div>
+    <div style="padding:14px 0 22px;max-width:66ch;font-size:13.5px;line-height:1.65;color:var(--mut);letter-spacing:-.01em">
+      <p style="margin:0 0 16px"><b style="color:var(--ink)">Top 34 is a buy &amp; hold of the Nasdaq-100's biggest names — run in public.</b> The 34 largest Nasdaq-100 companies by market cap, bought equal-weight and held, with a light token rebalance once a month. No picking, no timing — just owning the index leaders.</p>
+      <p style="margin:0">It's the deliberately-simple counterweight to Apex's concentrated momentum book. Paper-tracked, no brokerage connection. NAV is price return (excludes dividends) to mirror how a copy-trading platform scores a portfolio; dividends are tracked apart.</p>
     </div>
-    <div id="moves"></div>
-    <div class="foot" id="disclaimer"></div>
+  </section>
+
+  <!-- 07 WHERE -->
+  <section style="border-bottom:none">
+    <div class="shead"><span class="sn">07</span><span class="st">Where the positions come from</span></div>
+    <div style="padding:14px 0 22px;max-width:66ch;font-size:13.5px;line-height:1.65;color:var(--mut);letter-spacing:-.01em">
+      <p style="margin:0 0 16px">No selection logic — the book is simply the 34 largest Nasdaq-100 companies by market cap on the start date, equal-weighted. The only ongoing move is a small monthly rebalance that trims the most-overweight name into the most-underweight, so the book stays roughly even without churning gains away.</p>
+      <p style="margin:0">Set against Apex, it answers one question: does concentration and timing actually beat just holding the giants?</p>
+      <div class="foot" id="disclaimer" style="margin-top:22px"></div>
+    </div>
   </section>
 
 </div>
@@ -503,35 +516,6 @@ async function main(){
   document.querySelectorAll('.tdhead').forEach(h=>
     h.addEventListener('click',()=>h.parentElement.classList.toggle('open')));
 
-  /* ledger */
-  const st={trades:true,holds:true,nomove:false};
-  const movesEl=document.getElementById('moves');
-  const exitActs=new Set(['SELL','TRIM']);
-  function render(){
-    const rows=S.moves.filter(d=>{
-      if(d.action==='NO_MOVE') return st.nomove;
-      if(d.action==='HOLD') return st.holds;
-      return st.trades;
-    });
-    document.getElementById('moveCount').textContent=rows.length+' / '+S.moves.length;
-    if(!rows.length){movesEl.innerHTML='<div class="empty">No entries</div>';return;}
-    movesEl.innerHTML=rows.slice(0,400).map(d=>`
-      <div class="move">
-        <div class="d num">${d.date}</div>
-        <div><span class="act ${exitActs.has(d.action)?'exit':''}">${d.action.replace('_',' ')}</span>
-             ${d.ticker?`<div class="mtk">${d.ticker}</div>`:''}</div>
-        <div><div class="rationale">${d.rationale}</div>
-          <div class="mtags">
-            ${d.rule?`<span class="mtag">${d.rule}</span>`:''}
-            ${d.price?`<span class="mtag num">@ $${d.price.toFixed(2)}</span>`:''}
-          </div></div>
-      </div>`).join('');
-  }
-  document.getElementById('filters').addEventListener('click',e=>{
-    const c=e.target.closest('.chip'); if(!c)return;
-    c.classList.toggle('on'); st[c.dataset.f]=c.classList.contains('on'); render();
-  });
-  render();
 }
 main();
 </script>
