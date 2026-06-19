@@ -16,7 +16,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
-from . import ledger, divs
+from . import ledger, divs, jsonio
 from .paths import STATE_JSON
 
 
@@ -127,5 +127,5 @@ def attach():
     start = state.get("meta", {}).get("start_date")
     total, per = divs.dividends_since(holdings, start) if start else (0.0, [])
     state["dividends"] = {"total": total, "per": per}
-    STATE_JSON.write_text(json.dumps(state, indent=2))
+    jsonio.dump(state, STATE_JSON)
     return len(series)

@@ -17,7 +17,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
-from . import divs
+from . import divs, jsonio
 from .paths import DATA_DIR
 
 try:
@@ -133,7 +133,10 @@ def build():
     shares = {t: per / seed_px[t] for t in TICKERS if seed_px.get(t)}
     bench_seed = _closeon(daily[BENCH], SEED_DATE)
 
-    dates = [d for d in daily.index if d >= SEED_DATE]
+    # Only real trading days. On a holiday yfinance can hand back an all-NaN row;
+    # including it produced a $0 / -100% curve point and NaN benchmark returns
+    # (NaN is truthy in Python, so the old guard let it through).
+    dates = [d for d in daily.index if d >= SEED_DATE and pd.notna(daily[BENCH].get(d))]
     held = list(shares)
     if not held or not dates:   # full fetch failure — keep the last good state
         print("WARN nasdaq34: empty price fetch; keeping existing state.")
@@ -183,7 +186,7 @@ def build():
         curve.append({"date": d, "value": round(val, 2),
                       "ret": round(val / CAPITAL - 1, 4),
                       "benchmark": round(bval, 2) if bval else None,
-                      "benchmark_ret": round(bp / bench_seed - 1, 4) if (bp and bench_seed) else None,
+                      "benchmark_ret": round(bp / bench_seed - 1, 4) if (pd.notna(bp) and bench_seed) else None,
                       "cash": 0})
 
     last = dates[-1]
@@ -238,7 +241,7 @@ def build():
         "moves": moves, "trade_days": trade_days, "intraday": intraday,
         "dividends": {"total": div_total, "per": div_per},
     }
-    STATE.write_text(json.dumps(state, indent=2))
+    jsonio.dump(state, STATE)
     print(f"Built {STATE.name}: {len(curve)} days, {len(positions)} positions, "
           f"return {f['ret']*100:+.1f}% vs {BENCH_LABEL} {(f['benchmark_ret'] or 0)*100:+.1f}%.")
     return state

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 
-from . import ledger
+from . import ledger, jsonio
 from .paths import STATE_JSON
 
 
@@ -122,7 +122,7 @@ def export_state():
         "moves": moves,
         "trade_days": trade_days,
     }
-    STATE_JSON.write_text(json.dumps(state, indent=2))
+    jsonio.dump(state, STATE_JSON)
     print(f"Exported {STATE_JSON} "
           f"({len(curve)} days, {len(positions)} positions, {len(moves)} decisions).")
     return state
