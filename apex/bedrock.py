@@ -1,12 +1,13 @@
-"""Top-34 Nasdaq-100 — equal-weight buy & hold.
+"""Bedrock — defensive, recession-resilient, equal-weight buy & hold.
 
-A second, deliberately simple portfolio: buy the 34 largest Nasdaq-100 names in
-equal weight on 2026-05-22 and hold. Stateless — the whole track record is
+The low-risk sleeve: staples, healthcare, auto-parts, discount retail, waste, a
+utility and gold — everyday businesses that hold up in downturns. Bought in
+equal weight on 2026-05-22 and held. Stateless — the whole track record is
 recomputed from fixed share counts + price history each run, then written to
-data/nasdaq34_state.json in the same format the dashboard reads.
+data/bedrock_state.json in the same format the dashboard reads.
 
-Benchmark: QQQ (the Nasdaq-100 itself) — the honest "did picking 34 of the 100
-beat just holding all of them" test.
+Goal: beat inflation comfortably, keep rough pace with the S&P over time, and
+hold its ground when the momentum names break.
 """
 from __future__ import annotations
 
@@ -25,34 +26,30 @@ try:
 except Exception:
     pass
 
-STATE = DATA_DIR / "nasdaq34_state.json"
+STATE = DATA_DIR / "bedrock_state.json"
 SEED_DATE = "2026-05-22"
 CAPITAL = 100000.0
 BENCH = "SPY"            # S&P 500 proxy (has extended hours) — the single benchmark
 BENCH_LABEL = "S&P 500"
-STRATEGY = "Top 34 Nasdaq-100 · equal-weight buy & hold"
+STRATEGY = "Bedrock · defensive, recession-resilient buy & hold"
 REBAL_AMOUNT = 150.0   # tiny monthly trim->add: registers as an Autopilot move,
                        # negligible return drag (drift-sized, not a full rebalance)
 
-TICKERS = ["NVDA", "GOOGL", "GOOG", "AAPL", "MSFT", "AMZN", "AVGO", "TSLA", "META",
-           "WMT", "MU", "AMD", "ASML", "INTC", "CSCO", "COST", "LRCX", "NFLX",
-           "AMAT", "PLTR", "ARM", "TXN", "QCOM", "LIN", "SNDK", "PANW", "TMUS",
-           "PEP", "ADI", "STX", "AMGN", "MRVL", "WDC", "KLAC"]
+TICKERS = ["WMT", "COST", "PG", "KO", "PEP", "CL", "MDLZ",
+           "JNJ", "UNH", "ABBV", "MRK", "LLY", "AMGN",
+           "AZO", "ORLY", "ROST", "TJX", "DG",
+           "WM", "RSG", "NEE", "DUK", "GLD"]
 
 SECTOR = {
-    "NVDA": "Semiconductors", "AVGO": "Semiconductors", "MU": "Semiconductors",
-    "AMD": "Semiconductors", "ASML": "Semiconductors", "INTC": "Semiconductors",
-    "AMAT": "Semiconductors", "LRCX": "Semiconductors", "TXN": "Semiconductors",
-    "QCOM": "Semiconductors", "KLAC": "Semiconductors", "MRVL": "Semiconductors",
-    "ADI": "Semiconductors", "ARM": "Semiconductors", "STX": "Semiconductors",
-    "WDC": "Semiconductors", "SNDK": "Semiconductors",
-    "MSFT": "Software", "PANW": "Software", "PLTR": "Software",
-    "GOOGL": "Communications", "GOOG": "Communications", "META": "Communications",
-    "NFLX": "Communications", "TMUS": "Communications",
-    "AMZN": "Consumer", "TSLA": "Consumer", "COST": "Consumer", "WMT": "Consumer",
-    "PEP": "Consumer",
-    "AAPL": "Hardware", "CSCO": "Hardware",
-    "AMGN": "Healthcare", "LIN": "Materials",
+    "WMT": "Staples", "COST": "Staples", "PG": "Staples", "KO": "Staples",
+    "PEP": "Staples", "CL": "Staples", "MDLZ": "Staples", "DG": "Staples",
+    "JNJ": "Healthcare", "UNH": "Healthcare", "ABBV": "Healthcare",
+    "MRK": "Healthcare", "LLY": "Healthcare", "AMGN": "Healthcare",
+    "AZO": "Auto Parts", "ORLY": "Auto Parts",
+    "ROST": "Discount Retail", "TJX": "Discount Retail",
+    "WM": "Waste", "RSG": "Waste",
+    "NEE": "Utilities", "DUK": "Utilities",
+    "GLD": "Gold",
 }
 
 DISCLAIMER = ("Paper-tracked. Not investment advice. No brokerage connection — "
@@ -139,12 +136,12 @@ def build():
     dates = [d for d in daily.index if d >= SEED_DATE and pd.notna(daily[BENCH].get(d))]
     held = list(shares)
     if not held or not dates:   # full fetch failure — keep the last good state
-        print("WARN nasdaq34: empty price fetch; keeping existing state.")
+        print("WARN bedrock: empty price fetch; keeping existing state.")
         return None
     moves = [{"date": SEED_DATE, "ticker": None, "action": "BUY", "rule": "Seed",
-              "rationale": f"Bought the top {len(held)} Nasdaq-100 names, equal "
-                           "weight. Buy & hold.", "judge": "mechanical", "price": None}]
-    trade_days = [{"date": SEED_DATE, "n": len(held), "theme": "Nasdaq-100",
+              "rationale": f"Bought {len(held)} defensive, recession-resilient "
+                           "names, equal weight. Buy & hold.", "judge": "mechanical", "price": None}]
+    trade_days = [{"date": SEED_DATE, "n": len(held), "theme": "Defensive",
                    "closed": [], "changed": [],
                    "opened": [{"ticker": t, "weight": round(1 / len(held), 4),
                                "theme": SECTOR[t]} for t in held]}]
@@ -200,7 +197,7 @@ def build():
         last_px = {t: float(daily[t].get(last)) for t in held if pd.notna(daily[t].get(last))}
     total = sum(shares[t] * last_px[t] for t in last_px)
     if not total:   # truly no data — keep the last good state.json, don't clobber it
-        print("WARN nasdaq34: no price data this run; keeping existing state.")
+        print("WARN bedrock: no price data this run; keeping existing state.")
         return None
     positions, theme_val = [], defaultdict(float)
     for t in held:
@@ -212,7 +209,7 @@ def build():
                           "price": round(price, 2), "value": round(value, 2),
                           "drawdown": round(max(0, 1 - price / seed_px[t]), 4),
                           "ret": round(price / seed_px[t] - 1, 4),
-                          "thesis": f"Top-34 Nasdaq-100 ({SECTOR[t]})."})
+                          "thesis": f"Defensive holding ({SECTOR[t]})."})
     for p in positions:
         p["weight"] = round(p["value"] / total, 4) if total else 0
     positions.sort(key=lambda x: -x["value"])
@@ -236,7 +233,7 @@ def build():
                  "total_return": f["ret"], "benchmark_return": f["benchmark_ret"],
                  "alpha": round((f["ret"] or 0) - (f["benchmark_ret"] or 0), 4),
                  "num_trades": n_rebal, "benchmark_label": BENCH_LABEL,
-                 "risk": "Medium", "disclaimer": DISCLAIMER},
+                 "risk": "Low", "disclaimer": DISCLAIMER},
         "curve": curve, "positions": positions, "themes": themes,
         "moves": moves, "trade_days": trade_days, "intraday": intraday,
         "dividends": {"total": div_total, "per": div_per},

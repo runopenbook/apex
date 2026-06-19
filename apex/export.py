@@ -113,6 +113,7 @@ def export_state():
             "num_trades": tx_count,
             "benchmark_label": framework.get("instruments", {}).get("benchmark_label", "Benchmark"),
             "strategy": strategy,
+            "risk": "High",
             "disclaimer": "Paper-tracked. Not investment advice. No brokerage "
                           "connection — you execute your own trades.",
         },

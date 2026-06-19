@@ -33,6 +33,8 @@ nav .sw b.on{background:var(--accent);color:#06140C}
 nav .ed{margin-left:auto;font-family:var(--disp);font-size:11px;letter-spacing:.04em;color:var(--mut);text-transform:uppercase}
 nav .ed:hover{color:var(--ink)}
 nav .meta{margin-left:18px;font-family:var(--disp);font-size:11px;letter-spacing:.04em;color:var(--mut);text-transform:uppercase}
+nav .risk{margin-left:12px;font-family:var(--disp);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid currentColor;line-height:1}
+@media(max-width:720px){nav .ed{margin-left:auto}nav .meta{display:none}}
 
 .hero{padding:clamp(18px,4vw,44px) 0 clamp(26px,4vw,40px)}
 .hero .kick{font-size:12px;letter-spacing:.04em;color:var(--mut);font-weight:500;margin-bottom:14px}
@@ -113,7 +115,8 @@ nav .meta{margin-left:18px;font-family:var(--disp);font-size:11px;letter-spacing
 
   <nav class="rev">
     <span class="brand"><span class="dot"></span><span id="brand">APEX</span></span>
-    <span class="sw"><b class="on" data-pf="apex">Apex</b><b data-pf="top34">Top 34</b></span>
+    <span class="sw"><b class="on" data-pf="apex">Apex</b><b data-pf="top34">Top 34</b><b data-pf="bedrock">Bedrock</b></span>
+    <span class="risk" id="risk"></span>
     <a href="index.html" class="ed">← Editions</a>
     <span class="meta" id="meta">Live</span>
   </nav>
@@ -197,22 +200,31 @@ const PLAY={
  top34:[{n:'01',t:'Own the giants',p:"The 34 largest Nasdaq-100 companies by market cap. The biggest names, nothing exotic."},
         {n:'02',t:'Equal weight',p:"Every name gets the same slice at entry — no concentration bets, no favourites."},
         {n:'03',t:'Buy & hold',p:"No timing, no trend calls. Bought once and held through the noise."},
-        {n:'04',t:'Light rebalance',p:"Once a month a small nudge trims the most-overweight into the most-underweight."}]
+        {n:'04',t:'Light rebalance',p:"Once a month a small nudge trims the most-overweight into the most-underweight."}],
+ bedrock:[{n:'01',t:'Own the essentials',p:"Staples, healthcare, auto-parts, discount retail, waste, a utility and gold — businesses people use in any economy."},
+        {n:'02',t:'Equal weight',p:"Every name gets the same slice at entry. No single bet can sink the book."},
+        {n:'03',t:'Buy & hold',p:"No timing, no trend chasing. Bought once on day one and held."},
+        {n:'04',t:'Built for storms',p:"Made to beat inflation, keep rough pace over time, and hold its ground when the momentum names break."}]
 };
+const NAMES={apex:'Apex',top34:'Top 34',bedrock:'Bedrock'};
 let curPF='apex', curS=null, drawn=false;
 async function load(pf){curPF=pf;localStorage.setItem('apexPF',pf);
-  var url=pf==='top34'?'../data/nasdaq34_state.json':'../data/state.json';
+  var url={top34:'../data/nasdaq34_state.json',bedrock:'../data/bedrock_state.json'}[pf]||'../data/state.json';
   try{curS=await(await fetch(url,{cache:'no-store'})).json();}catch(e){document.getElementById('alpha').textContent='No data';return;}
   document.querySelectorAll('.sw b').forEach(b=>b.classList.toggle('on',b.dataset.pf===pf));
   render(curS,pf);}
 
 function render(S,pf){
-  var m=S.meta, isT=pf==='top34', bench=m.benchmark_label;
-  document.getElementById('brand').textContent=isT?'TOP 34':'APEX';
-  document.getElementById('nmA').textContent=isT?'Top 34':'Apex';
+  var m=S.meta, isT=pf==='top34', bench=m.benchmark_label, name=NAMES[pf]||'Apex';
+  document.getElementById('brand').textContent=name.toUpperCase();
+  document.getElementById('nmA').textContent=name;
   document.getElementById('nmB').innerHTML=bench;document.getElementById('legB').innerHTML=bench;
-  document.getElementById('legA').textContent=isT?'Top 34':'Apex';
+  document.getElementById('legA').textContent=name;
   document.getElementById('kick').textContent='A public paper portfolio · since '+fmtD(m.start_date)+' '+m.start_date.slice(0,4);
+
+  // risk badge
+  var risk=m.risk||'—', rc={Low:'#28E08C',Medium:'#E0B528',High:'#FF6B6B'}[risk]||'var(--mut)';
+  var rEl=document.getElementById('risk');rEl.textContent=risk+' risk';rEl.style.color=rc;
 
   var src=(S.intraday&&S.intraday.length)?S.intraday:S.curve;
   var inc=src.find(p=>p.value!=null)||src[0];
@@ -262,7 +274,7 @@ function render(S,pf){
     '<span class="htag"><b>Price return</b> · dividends tracked apart</span>'+
     '<span class="htag"><b>Every move dated</b></span>'+
     '<span class="htag">'+(alpha>=0?'Beating':'Trailing')+' the '+bench+' by <b>'+pctn(alpha)+'</b></span>';
-  document.getElementById('fine').textContent=(isT?'Top 34':'Apex')+' — '+(m.disclaimer||'')+' NAV is price return and excludes dividends, to mirror how a copy-trading platform scores a portfolio.';
+  document.getElementById('fine').textContent=name+' — '+(m.disclaimer||'')+' NAV is price return and excludes dividends, to mirror how a copy-trading platform scores a portfolio.';
 
   drawn=false;buildRace(S, +document.querySelector('#rng b.on').dataset.d);
 }

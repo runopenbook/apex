@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TOP 34</title>
+<title>BEDROCK</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root{
@@ -173,7 +173,7 @@
 
   <header>
     <div class="mast">
-      <h1 class="tight">TOP 34</h1>
+      <h1 class="tight">BEDROCK</h1>
       <div class="strat" id="strat">—</div>
       <div class="tagrow">
         <span class="tag inv" id="modeTag">—</span>
@@ -182,11 +182,11 @@
       </div>
     </div>
     <div class="hctl">
-      <div class="pfseg"><a href="margiela.html">Apex</a><a href="margiela-top34.html" class="on">Top 34</a><a href="margiela-bedrock.html">Bedrock</a></div>
+      <div class="pfseg"><a href="margiela.html">Apex</a><a href="margiela-top34.html">Top 34</a><a href="margiela-bedrock.html" class="on">Bedrock</a></div>
       <button class="ibtn" onclick="location.href=location.pathname+'?t='+Date.now()" title="Refresh">↻</button>
       <button class="ibtn" id="themeBtn"><span class="dotmark"></span><span id="themeLabel">Dark</span></button>
       <button class="ibtn" onclick="location.href='index.html'">← Editions</button>
-      <div class="no">N°2</div>
+      <div class="no">N°3</div>
     </div>
   </header>
 
@@ -240,8 +240,8 @@
   <section>
     <div class="shead"><span class="sn">06</span><span class="st">About</span></div>
     <div style="padding:14px 0 22px;max-width:66ch;font-size:13.5px;line-height:1.65;color:var(--mut);letter-spacing:-.01em">
-      <p style="margin:0 0 16px"><b style="color:var(--ink)">Top 34 is a buy &amp; hold of the Nasdaq-100's biggest names — run in public.</b> The 34 largest Nasdaq-100 companies by market cap, bought equal-weight and held, with a light token rebalance once a month. No picking, no timing — just owning the index leaders.</p>
-      <p style="margin:0">It's the deliberately-simple counterweight to Apex's concentrated momentum book. Paper-tracked, no brokerage connection. NAV is price return (excludes dividends) to mirror how a copy-trading platform scores a portfolio; dividends are tracked apart.</p>
+      <p style="margin:0 0 16px"><b style="color:var(--ink)">Bedrock is a low-risk, recession-resilient book — run in public.</b> Consumer staples, healthcare, auto-parts, discount retail, waste, a utility and gold — everyday businesses that keep earning whatever the economy does. Bought equal-weight and held, with a light token rebalance once a month. No AI, no semiconductors, no chasing.</p>
+      <p style="margin:0">It's the defensive counterweight to Apex's concentrated momentum book. The goal isn't to win every bull market — it's to beat inflation comfortably, keep rough pace with the S&amp;P over time, and hold its ground when the high-fliers break. Paper-tracked, no brokerage connection. NAV is price return (excludes dividends) to mirror how a copy-trading platform scores a portfolio; dividends are tracked apart.</p>
     </div>
   </section>
 
@@ -249,8 +249,8 @@
   <section style="border-bottom:none">
     <div class="shead"><span class="sn">07</span><span class="st">Where the positions come from</span></div>
     <div style="padding:14px 0 22px;max-width:66ch;font-size:13.5px;line-height:1.65;color:var(--mut);letter-spacing:-.01em">
-      <p style="margin:0 0 16px">No selection logic — the book is simply the 34 largest Nasdaq-100 companies by market cap on the start date, equal-weighted. The only ongoing move is a small monthly rebalance that trims the most-overweight name into the most-underweight, so the book stays roughly even without churning gains away.</p>
-      <p style="margin:0">Set against Apex, it answers one question: does concentration and timing actually beat just holding the giants?</p>
+      <p style="margin:0 0 16px">Names are chosen by purpose, not by trend. The book is a fixed basket of defensive leaders — staples (Walmart, Costco, P&amp;G, Coke), healthcare (J&amp;J, UnitedHealth, Lilly, Merck), auto-parts (AutoZone, O'Reilly), discount retail (Ross, TJX), waste haulers (Waste Management, Republic), a utility, and gold as ballast — equal-weighted on the start date. The only ongoing move is a small monthly rebalance that trims the most-overweight name into the most-underweight.</p>
+      <p style="margin:0">Set against Apex, it answers a different question: how much of the market's return can you keep while taking far less risk — and pulling ahead when the momentum trade rolls over?</p>
       <div class="foot" id="disclaimer" style="margin-top:22px"></div>
     </div>
   </section>
@@ -303,7 +303,7 @@ function themeChart(ch){
 
 async function main(){
   let S;
-  try{ S=await (await fetch('../data/nasdaq34_state.json',{cache:'no-store'})).json(); }
+  try{ S=await (await fetch('../data/bedrock_state.json',{cache:'no-store'})).json(); }
   catch(e){ document.getElementById('metrics').innerHTML='<div class="metric">No data. Run the engine.</div>'; return; }
   const m=S.meta;
 
@@ -377,7 +377,7 @@ async function main(){
     type:'line',
     plugins:[{id:'tdotsPos',afterRender(){positionTradeDots();}}],
     data:{labels:[],datasets:[
-      {label:'Top 34',data:[],borderWidth:2,pointRadius:0,tension:.02,fill:false},
+      {label:'Bedrock',data:[],borderWidth:2,pointRadius:0,tension:.02,fill:false},
       {label:m.benchmark_label,data:[],borderWidth:1.4,borderDash:[5,4],pointRadius:0,tension:.02,fill:false},
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},

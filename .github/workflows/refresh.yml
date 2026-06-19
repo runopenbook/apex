@@ -31,11 +31,13 @@ jobs:
         run: python -m apex.momentum_live refresh
       - name: Rebuild Top-34 Nasdaq portfolio (buy & hold)
         run: python -m apex.nasdaq34
+      - name: Rebuild Bedrock portfolio (defensive buy & hold)
+        run: python -m apex.bedrock
       - name: Publish updated dashboard data
         run: |
           git config user.name "apex-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/state.json data/nasdaq34_state.json
+          git add data/state.json data/nasdaq34_state.json data/bedrock_state.json
           if git diff --cached --quiet; then
             echo "No data change."
           else
