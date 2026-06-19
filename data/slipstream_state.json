@@ -5,10 +5,10 @@
     "last_date": "2026-06-18",
     "mode": "forward",
     "strategy": "Slipstream \u00b7 momentum ETF rotation",
-    "total_value": 103731.62,
+    "total_value": 102947.38,
     "cash": 0.0,
-    "total_return": 0.0373,
-    "benchmark_return": 0.0177,
+    "total_return": 0.0295,
+    "benchmark_return": 0.0099,
     "alpha": 0.0196,
     "num_trades": 32,
     "benchmark_label": "S&P 500",
@@ -186,10 +186,10 @@
     },
     {
       "date": "2026-06-18",
-      "value": 103731.62,
-      "ret": 0.0373,
-      "benchmark": 101773.13,
-      "benchmark_ret": 0.0177,
+      "value": 102947.36,
+      "ret": 0.0295,
+      "benchmark": 100985.38,
+      "benchmark_ret": 0.0099,
       "cash": 0.0
     }
   ],
@@ -200,12 +200,12 @@
       "conviction": "core",
       "shares": 126.83,
       "avg_entry": 68.99,
-      "price": 72.31,
-      "value": 9171.08,
+      "price": 72.0,
+      "value": 9131.76,
       "drawdown": 0,
-      "ret": 0.0481,
+      "ret": 0.0436,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0884
+      "weight": 0.0887
     },
     {
       "ticker": "VXUS",
@@ -213,10 +213,10 @@
       "conviction": "core",
       "shares": 105.676,
       "avg_entry": 82.8,
-      "price": 86.77,
-      "value": 9169.53,
+      "price": 86.15,
+      "value": 9104.02,
       "drawdown": 0,
-      "ret": 0.0479,
+      "ret": 0.0405,
       "thesis": "Total Intl \u2014 core anchor.",
       "weight": 0.0884
     },
@@ -226,12 +226,12 @@
       "conviction": "core",
       "shares": 85.852,
       "avg_entry": 101.92,
-      "price": 104.41,
-      "value": 8963.77,
+      "price": 103.78,
+      "value": 8909.68,
       "drawdown": 0,
-      "ret": 0.0244,
+      "ret": 0.0182,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0864
+      "weight": 0.0865
     },
     {
       "ticker": "IEFA",
@@ -239,12 +239,12 @@
       "conviction": "core",
       "shares": 91.748,
       "avg_entry": 95.37,
-      "price": 97.29,
-      "value": 8926.16,
+      "price": 96.81,
+      "value": 8882.12,
       "drawdown": 0,
-      "ret": 0.0201,
+      "ret": 0.0151,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0861
+      "weight": 0.0863
     },
     {
       "ticker": "KBE",
@@ -252,12 +252,12 @@
       "conviction": "rotation",
       "shares": 104.98,
       "avg_entry": 65.27,
-      "price": 65.71,
-      "value": 6898.24,
+      "price": 65.36,
+      "value": 6861.49,
       "drawdown": 0,
-      "ret": 0.0067,
+      "ret": 0.0014,
       "thesis": "Banks \u2014 momentum rotation.",
-      "weight": 0.0665
+      "weight": 0.0667
     },
     {
       "ticker": "KRE",
@@ -265,25 +265,12 @@
       "conviction": "rotation",
       "shares": 95.646,
       "avg_entry": 71.64,
-      "price": 71.72,
-      "value": 6859.7,
-      "drawdown": 0,
-      "ret": 0.0011,
+      "price": 71.15,
+      "value": 6805.18,
+      "drawdown": 0.0068,
+      "ret": -0.0068,
       "thesis": "Regional Banks \u2014 momentum rotation.",
       "weight": 0.0661
-    },
-    {
-      "ticker": "EWN",
-      "theme": "Netherlands",
-      "conviction": "rotation",
-      "shares": 92.495,
-      "avg_entry": 66.64,
-      "price": 70.84,
-      "value": 6552.34,
-      "drawdown": 0,
-      "ret": 0.063,
-      "thesis": "Netherlands \u2014 momentum rotation.",
-      "weight": 0.0632
     },
     {
       "ticker": "GREK",
@@ -291,12 +278,25 @@
       "conviction": "rotation",
       "shares": 84.61,
       "avg_entry": 72.85,
-      "price": 77.19,
-      "value": 6531.07,
+      "price": 77.1,
+      "value": 6523.46,
       "drawdown": 0,
-      "ret": 0.0596,
+      "ret": 0.0583,
       "thesis": "Greece \u2014 momentum rotation.",
-      "weight": 0.063
+      "weight": 0.0634
+    },
+    {
+      "ticker": "EWN",
+      "theme": "Netherlands",
+      "conviction": "rotation",
+      "shares": 92.495,
+      "avg_entry": 66.64,
+      "price": 69.86,
+      "value": 6461.7,
+      "drawdown": 0,
+      "ret": 0.0483,
+      "thesis": "Netherlands \u2014 momentum rotation.",
+      "weight": 0.0628
     },
     {
       "ticker": "EWI",
@@ -304,10 +304,10 @@
       "conviction": "rotation",
       "shares": 105.096,
       "avg_entry": 58.65,
-      "price": 60.6,
-      "value": 6368.8,
+      "price": 60.16,
+      "value": 6322.56,
       "drawdown": 0,
-      "ret": 0.0332,
+      "ret": 0.0257,
       "thesis": "Italy \u2014 momentum rotation.",
       "weight": 0.0614
     },
@@ -317,12 +317,12 @@
       "conviction": "rotation",
       "shares": 156.404,
       "avg_entry": 39.41,
-      "price": 39.75,
-      "value": 6217.04,
+      "price": 40.23,
+      "value": 6292.12,
       "drawdown": 0,
-      "ret": 0.0086,
+      "ret": 0.0208,
       "thesis": "Poland \u2014 momentum rotation.",
-      "weight": 0.0599
+      "weight": 0.0611
     },
     {
       "ticker": "THD",
@@ -330,12 +330,12 @@
       "conviction": "rotation",
       "shares": 84.634,
       "avg_entry": 72.83,
-      "price": 72.31,
-      "value": 6119.85,
-      "drawdown": 0.0071,
-      "ret": -0.0071,
+      "price": 71.68,
+      "value": 6066.54,
+      "drawdown": 0.0158,
+      "ret": -0.0158,
       "thesis": "Thailand \u2014 momentum rotation.",
-      "weight": 0.059
+      "weight": 0.0589
     },
     {
       "ticker": "IYT",
@@ -343,10 +343,10 @@
       "conviction": "rotation",
       "shares": 72.696,
       "avg_entry": 84.79,
-      "price": 83.94,
-      "value": 6102.07,
-      "drawdown": 0.01,
-      "ret": -0.01,
+      "price": 83.32,
+      "value": 6057.0,
+      "drawdown": 0.0173,
+      "ret": -0.0173,
       "thesis": "Transport \u2014 momentum rotation.",
       "weight": 0.0588
     },
@@ -356,12 +356,12 @@
       "conviction": "rotation",
       "shares": 85.974,
       "avg_entry": 69.1,
-      "price": 70.79,
-      "value": 6086.1,
-      "drawdown": 0,
-      "ret": 0.0245,
+      "price": 68.56,
+      "value": 5894.38,
+      "drawdown": 0.0078,
+      "ret": -0.0078,
       "thesis": "Emerging Mkts \u2014 momentum rotation.",
-      "weight": 0.0587
+      "weight": 0.0573
     },
     {
       "ticker": "JETS",
@@ -369,12 +369,12 @@
       "conviction": "rotation",
       "shares": 160.879,
       "avg_entry": 30.46,
-      "price": 31.0,
-      "value": 4987.26,
-      "drawdown": 0,
-      "ret": 0.0177,
+      "price": 30.25,
+      "value": 4866.6,
+      "drawdown": 0.0069,
+      "ret": -0.0069,
       "thesis": "Airlines \u2014 momentum rotation.",
-      "weight": 0.0481
+      "weight": 0.0473
     },
     {
       "ticker": "ARGT",
@@ -382,18 +382,18 @@
       "conviction": "rotation",
       "shares": 49.213,
       "avg_entry": 97.5,
-      "price": 97.1,
-      "value": 4778.61,
-      "drawdown": 0.0041,
-      "ret": -0.0041,
+      "price": 96.9,
+      "value": 4768.77,
+      "drawdown": 0.0062,
+      "ret": -0.0062,
       "thesis": "Argentina \u2014 momentum rotation.",
-      "weight": 0.0461
+      "weight": 0.0463
     }
   ],
   "themes": [
     {
       "theme": "Developed Intl",
-      "weight": 0.2609
+      "weight": 0.2615
     },
     {
       "theme": "Total Intl",
@@ -401,19 +401,19 @@
     },
     {
       "theme": "Banks",
-      "weight": 0.0665
+      "weight": 0.0667
     },
     {
       "theme": "Regional Banks",
       "weight": 0.0661
     },
     {
-      "theme": "Netherlands",
-      "weight": 0.0632
+      "theme": "Greece",
+      "weight": 0.0634
     },
     {
-      "theme": "Greece",
-      "weight": 0.063
+      "theme": "Netherlands",
+      "weight": 0.0628
     },
     {
       "theme": "Italy",
@@ -421,11 +421,11 @@
     },
     {
       "theme": "Poland",
-      "weight": 0.0599
+      "weight": 0.0611
     },
     {
       "theme": "Thailand",
-      "weight": 0.059
+      "weight": 0.0589
     },
     {
       "theme": "Transport",
@@ -433,15 +433,15 @@
     },
     {
       "theme": "Emerging Mkts",
-      "weight": 0.0587
+      "weight": 0.0573
     },
     {
       "theme": "Airlines",
-      "weight": 0.0481
+      "weight": 0.0473
     },
     {
       "theme": "Argentina",
-      "weight": 0.0461
+      "weight": 0.0463
     }
   ],
   "moves": [
