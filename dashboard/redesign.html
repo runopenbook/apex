@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex — design proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECE7DC; --surf:#F6F2EA; --surf2:#FCFAF4; --ink:#191611; --mut:#928B7B;
+  --line:#DDD5C5; --accent:#E8501E; --accent2:#F7E1D4; --up:#0E7C46; --down:#C2402A;
+  --shadow:0 1px 2px rgba(25,22,17,.04),0 8px 24px rgba(25,22,17,.05);
+  --r:16px; --rs:11px;
+}
+[data-theme="dark"]{
+  --bg:#100F0D; --surf:#1A1815; --surf2:#211E1A; --ink:#F1ECE2; --mut:#867F71;
+  --line:#2A2722; --accent:#FF6A3D; --accent2:#3A241A; --up:#46D98E; --down:#FF6F5C;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.disp{font-family:'Space Grotesk',sans-serif}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+
+/* ===== top tape ===== */
+.tape{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;
+  font-size:12px;color:var(--mut);background:var(--surf)}
+.tape .run{display:inline-block;padding:9px 0;animation:slide 38s linear infinite}
+.tape b{color:var(--ink);font-weight:600}.tape .u{color:var(--up)}.tape .d{color:var(--down)}
+.tape span{margin:0 22px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== header ===== */
+header{padding:26px 0 22px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mark{font-family:'Space Grotesk';font-weight:700;font-size:30px;letter-spacing:-.02em}
+.brand .mark .dot{color:var(--accent)}
+.brand .sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.switch{margin-left:8px;display:flex;background:var(--surf);border:1px solid var(--line);
+  border-radius:999px;padding:3px}
+.switch b{font-size:12.5px;font-weight:500;padding:7px 16px;border-radius:999px;cursor:pointer;color:var(--mut)}
+.switch b.on{background:var(--ink);color:var(--bg)}
+.tools{margin-left:auto;display:flex;gap:10px;align-items:center}
+.pillbtn{font-size:12px;font-weight:500;border:1px solid var(--line);background:var(--surf);
+  color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;display:flex;gap:7px;align-items:center}
+.pillbtn:hover{border-color:var(--ink)}
+.live{display:flex;align-items:center;gap:7px;font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mut)}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;
+  box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,80,30,.4)}70%{box-shadow:0 0 0 7px rgba(232,80,30,0)}100%{box-shadow:0 0 0 0 rgba(232,80,30,0)}}
+
+/* ===== hero ===== */
+.hero{display:grid;grid-template-columns:1fr;gap:0;background:var(--surf);
+  border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.hgrid{display:grid;grid-template-columns:300px 1fr}
+.hleft{padding:30px 30px 26px;border-right:1px solid var(--line)}
+.kic{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+.nav-val{font-family:'Space Grotesk';font-weight:600;font-size:46px;letter-spacing:-.02em;line-height:1}
+.chg{margin-top:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.chgpill{display:inline-flex;align-items:center;gap:5px;font-weight:600;font-size:15px;
+  padding:5px 11px;border-radius:999px;background:rgba(14,124,70,.1);color:var(--up)}
+.chgpill.dn{background:rgba(194,64,43,.1);color:var(--down)}
+.chgsub{font-size:13px;color:var(--mut)}
+.divnote{margin-top:20px;font-size:11.5px;line-height:1.55;color:var(--mut);
+  border-top:1px solid var(--line);padding-top:14px}
+.divnote b{color:var(--ink);font-weight:600}
+.hright{padding:22px 26px 18px;display:flex;flex-direction:column}
+.cbar{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.ranges{display:flex;gap:2px;margin-left:auto;background:var(--bg);border-radius:999px;padding:3px}
+.ranges b{font-size:11.5px;font-weight:500;color:var(--mut);padding:5px 11px;border-radius:999px;cursor:pointer}
+.ranges b.on{background:var(--surf2);color:var(--ink);box-shadow:var(--shadow)}
+.legend{display:flex;gap:16px;font-size:11.5px;color:var(--mut)}
+.legend i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px;background:var(--ink)}
+.legend .b i{background:var(--mut);height:0;border-top:2px dashed var(--mut)}
+.chartbox{position:relative;flex:1;min-height:230px;margin-top:6px}
+.xlab{display:flex;justify-content:space-between;font-size:10.5px;color:var(--mut);margin-top:4px}
+
+/* ===== stat strip ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.stat{background:var(--surf);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px}
+.stat .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.stat .v{font-family:'Space Grotesk';font-weight:600;font-size:24px;margin-top:8px}
+.up{color:var(--up)}.down{color:var(--down)}
+
+/* ===== sections ===== */
+section.blk{margin-top:34px}
+.shead{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+.shead .n{font-family:'Space Grotesk';font-weight:700;font-size:13px;color:var(--accent)}
+.shead h2{font-family:'Space Grotesk';font-weight:600;font-size:17px;margin:0;letter-spacing:-.01em}
+.shead .meta{margin-left:auto;font-size:11.5px;color:var(--mut)}
+
+/* holdings */
+.hold{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.hrow{display:grid;grid-template-columns:1.4fr 1fr 1.4fr .9fr 1fr;align-items:center;
+  padding:15px 20px;border-bottom:1px solid var(--line)}
+.hrow:last-child{border-bottom:none}
+.hrow:hover{background:var(--surf2)}
+.tk{font-family:'Space Grotesk';font-weight:600;font-size:15px}
+.thm{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.wbar{height:6px;background:var(--bg);border-radius:999px;overflow:hidden;max-width:150px}
+.wbar i{display:block;height:100%;background:var(--ink);border-radius:999px}
+.hr-r{text-align:right;font-weight:600;font-size:14px}
+.hr-v{text-align:right;font-size:14px;color:var(--mut)}
+.hcap{font-size:11px;color:var(--mut);text-align:right;margin-top:2px}
+
+/* allocation */
+.alloc{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;
+  background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px}
+.arow .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px}
+.arow .top b{font-weight:600}.arow .top .pct{color:var(--mut)}
+.atrack{height:8px;background:var(--bg);border-radius:999px;overflow:hidden}
+.atrack i{display:block;height:100%;border-radius:999px;background:var(--accent)}
+.arow:nth-child(2) .atrack i{background:var(--ink)}
+.arow:nth-child(3) .atrack i{background:var(--up)}
+.arow:nth-child(4) .atrack i{background:var(--mut)}
+
+/* moves */
+.moves{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.move{background:var(--surf);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px}
+.move .mh{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.badge{font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px}
+.badge.buy{background:var(--accent2);color:var(--accent)}
+.badge.sell{background:var(--ink);color:var(--bg)}
+.move .mt{font-family:'Space Grotesk';font-weight:600;font-size:14px}
+.move .md{margin-left:auto;font-size:11.5px;color:var(--mut)}
+.move p{margin:0;font-size:13px;line-height:1.5;color:var(--mut)}
+.move p b{color:var(--ink);font-weight:600}
+
+footer{margin:40px 0 50px;font-size:11.5px;color:var(--mut);line-height:1.6;
+  border-top:1px solid var(--line);padding-top:20px}
+@media(max-width:780px){.hgrid{grid-template-columns:1fr}.hleft{border-right:none;border-bottom:1px solid var(--line)}
+  .stats{grid-template-columns:1fr 1fr}.moves,.alloc{grid-template-columns:1fr}
+  .hrow{grid-template-columns:1.2fr 1fr .8fr;gap:6px}.hrow .thm,.hrow .hr-v{display:none}}
+</style>
+</head>
+<body>
+
+<div class="tape"><div class="run">
+  <span>NVDA <b>$1,184</b> <b class="u">▲ 2.1%</b></span><span>GOOGL <b>$201</b> <b class="u">▲ 1.4%</b></span>
+  <span>AAPL <b>$236</b> <b class="d">▽ 0.6%</b></span><span>MSFT <b>$498</b> <b class="u">▲ 0.9%</b></span>
+  <span>AVGO <b>$1,742</b> <b class="u">▲ 3.2%</b></span><span>META <b>$721</b> <b class="u">▲ 1.1%</b></span>
+  <span>AMD <b>$172</b> <b class="d">▽ 0.4%</b></span><span>S&P 500 <b>+0.2%</b></span>
+  <span>NVDA <b>$1,184</b> <b class="u">▲ 2.1%</b></span><span>GOOGL <b>$201</b> <b class="u">▲ 1.4%</b></span>
+  <span>AAPL <b>$236</b> <b class="d">▽ 0.6%</b></span><span>MSFT <b>$498</b> <b class="u">▲ 0.9%</b></span>
+  <span>AVGO <b>$1,742</b> <b class="u">▲ 3.2%</b></span><span>META <b>$721</b> <b class="u">▲ 1.1%</b></span>
+  <span>AMD <b>$172</b> <b class="d">▽ 0.4%</b></span><span>S&P 500 <b>+0.2%</b></span>
+</div></div>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark disp">APEX<span class="dot">.</span></div>
+      <div class="sub">concentrated<br>momentum</div>
+    </div>
+    <div class="switch">
+      <b class="on">Apex</b><b>Top 34</b>
+    </div>
+    <div class="tools">
+      <span class="live"><i></i>Live</span>
+      <button class="pillbtn" onclick="document.documentElement.setAttribute('data-theme',document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')">◑ Theme</button>
+      <button class="pillbtn">↻ Refresh</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hgrid">
+      <div class="hleft">
+        <div class="kic">Net asset value</div>
+        <div class="nav-val num">$111,185</div>
+        <div class="chg">
+          <span class="chgpill">▲ +$2,940 (+2.7%)</span>
+          <span class="chgsub">today</span>
+        </div>
+        <div class="divnote">Price return — excludes dividends. Held positions would have paid you <b>$86</b> in dividend cash, tracked separately.</div>
+      </div>
+      <div class="hright">
+        <div class="cbar">
+          <div class="legend"><span><i></i>Apex</span><span class="b"><i></i>S&amp;P 500</span></div>
+          <div class="ranges"><b>1D</b><b>1W</b><b>1M</b><b class="on">ALL</b></div>
+        </div>
+        <div class="chartbox">
+          <svg viewBox="0 0 820 250" width="100%" height="100%" preserveAspectRatio="none" style="display:block">
+            <defs>
+              <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="var(--accent)" stop-opacity=".14"/>
+                <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line x1="0" y1="210" x2="820" y2="210" stroke="var(--line)" stroke-width="1"/>
+            <line x1="0" y1="140" x2="820" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 6"/>
+            <line x1="0" y1="70" x2="820" y2="70" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 6"/>
+            <path d="M20 206 L70 200 L110 214 L160 192 L205 198 L255 172 L300 178 L350 150 L395 164 L440 120 L485 142 L530 108 L575 120 L620 92 L665 106 L710 72 L755 86 L800 58 L800 240 L20 240 Z" fill="url(#fill)"/>
+            <path d="M20 206 L130 207 L240 203 L350 201 L460 198 L570 194 L680 191 L800 186" fill="none" stroke="var(--mut)" stroke-width="1.6" stroke-dasharray="5 5" stroke-linejoin="round"/>
+            <path d="M20 206 L70 200 L110 214 L160 192 L205 198 L255 172 L300 178 L350 150 L395 164 L440 120 L485 142 L530 108 L575 120 L620 92 L665 106 L710 72 L755 86 L800 58" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="440" cy="120" r="5.5" fill="var(--accent)" stroke="var(--surf)" stroke-width="2.5"/>
+            <circle cx="710" cy="72" r="5.5" fill="var(--accent)" stroke="var(--surf)" stroke-width="2.5"/>
+            <circle cx="800" cy="58" r="4" fill="var(--ink)"/>
+          </svg>
+        </div>
+        <div class="xlab"><span>May 22</span><span>May 30</span><span>Jun 6</span><span>Jun 12</span><span>Jun 18</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="k">Total return</div><div class="v up">+11.1%</div></div>
+    <div class="stat"><div class="k">S&amp;P 500</div><div class="v">+0.2%</div></div>
+    <div class="stat"><div class="k">Alpha</div><div class="v up">+10.9%</div></div>
+    <div class="stat"><div class="k">Dividends</div><div class="v">$86</div></div>
+  </div>
+
+  <!-- HOLDINGS -->
+  <section class="blk">
+    <div class="shead"><span class="n">01</span><h2 class="disp">Holdings</h2><span class="meta">10 positions · equal weight at entry</span></div>
+    <div class="hold">
+      <div class="hrow"><div><div class="tk">NVDA</div></div><div class="thm">AI / Semis</div><div><div class="wbar"><i style="width:100%"></i></div></div><div class="hr-r up">+13.0%</div><div class="hr-v">$12,640 <div class="hcap">11.4%</div></div></div>
+      <div class="hrow"><div><div class="tk">GOOGL</div></div><div class="thm">Megacap Tech</div><div><div class="wbar"><i style="width:92%"></i></div></div><div class="hr-r up">+10.5%</div><div class="hr-v">$11,140 <div class="hcap">10.0%</div></div></div>
+      <div class="hrow"><div><div class="tk">AVGO</div></div><div class="thm">AI / Semis</div><div><div class="wbar"><i style="width:90%"></i></div></div><div class="hr-r up">+11.1%</div><div class="hr-v">$11,090 <div class="hcap">10.0%</div></div></div>
+      <div class="hrow"><div><div class="tk">META</div></div><div class="thm">Megacap Tech</div><div><div class="wbar"><i style="width:88%"></i></div></div><div class="hr-r up">+9.4%</div><div class="hr-v">$10,920 <div class="hcap">9.8%</div></div></div>
+      <div class="hrow"><div><div class="tk">DELL</div></div><div class="thm">AI / Hardware</div><div><div class="wbar"><i style="width:80%"></i></div></div><div class="hr-r up">+6.2%</div><div class="hr-v">$10,310 <div class="hcap">9.3%</div></div></div>
+      <div class="hrow"><div><div class="tk">PLTR</div></div><div class="thm">AI / Software</div><div><div class="wbar"><i style="width:74%"></i></div></div><div class="hr-r down">−2.6%</div><div class="hr-v">$9,740 <div class="hcap">8.8%</div></div></div>
+    </div>
+  </section>
+
+  <!-- ALLOCATION -->
+  <section class="blk">
+    <div class="shead"><span class="n">02</span><h2 class="disp">Allocation</h2><span class="meta">by theme</span></div>
+    <div class="alloc">
+      <div class="arow"><div class="top"><b>AI / Semis</b><span class="pct">46%</span></div><div class="atrack"><i style="width:46%"></i></div></div>
+      <div class="arow"><div class="top"><b>Megacap Tech</b><span class="pct">28%</span></div><div class="atrack"><i style="width:28%"></i></div></div>
+      <div class="arow"><div class="top"><b>AI / Software</b><span class="pct">16%</span></div><div class="atrack"><i style="width:16%"></i></div></div>
+      <div class="arow"><div class="top"><b>Hardware</b><span class="pct">10%</span></div><div class="atrack"><i style="width:10%"></i></div></div>
+    </div>
+  </section>
+
+  <!-- MOVES -->
+  <section class="blk">
+    <div class="shead"><span class="n">03</span><h2 class="disp">Recent moves</h2><span class="meta">3:00pm ET decisions</span></div>
+    <div class="moves">
+      <div class="move"><div class="mh"><span class="badge buy">Buy</span><span class="mt">DELL</span><span class="md">Jun 17</span></div><p>Rotated into <b>DELL</b> — hottest available in AI / Hardware, +18% over 6 months.</p></div>
+      <div class="move"><div class="mh"><span class="badge sell">Sell</span><span class="mt">LUNR</span><span class="md">Jun 17</span></div><p><b>LUNR</b> fell 50% from its high — trend broke, exit and lock it in.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Paper-tracked. Not investment advice. No brokerage connection — you execute your own trades.
+    Net asset value is price return and excludes dividends. <b>Design proposal — placeholder data.</b>
+  </footer>
+</div>
+</body>
+</html>
