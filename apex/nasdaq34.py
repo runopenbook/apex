@@ -135,6 +135,9 @@ def build():
 
     dates = [d for d in daily.index if d >= SEED_DATE]
     held = list(shares)
+    if not held or not dates:   # full fetch failure — keep the last good state
+        print("WARN nasdaq34: empty price fetch; keeping existing state.")
+        return None
     moves = [{"date": SEED_DATE, "ticker": None, "action": "BUY", "rule": "Seed",
               "rationale": f"Bought the top {len(held)} Nasdaq-100 names, equal "
                            "weight. Buy & hold.", "judge": "mechanical", "price": None}]
@@ -185,7 +188,17 @@ def build():
 
     last = dates[-1]
     last_px = {t: float(daily[t].get(last)) for t in held if pd.notna(daily[t].get(last))}
+    # A transient empty fetch can leave the latest row all-NaN; walk back to the
+    # last day that actually has prices rather than crash on a zero total.
+    di = len(dates) - 1
+    while not last_px and di > 0:
+        di -= 1
+        last = dates[di]
+        last_px = {t: float(daily[t].get(last)) for t in held if pd.notna(daily[t].get(last))}
     total = sum(shares[t] * last_px[t] for t in last_px)
+    if not total:   # truly no data — keep the last good state.json, don't clobber it
+        print("WARN nasdaq34: no price data this run; keeping existing state.")
+        return None
     positions, theme_val = [], defaultdict(float)
     for t in held:
         price = last_px.get(t, seed_px[t])
