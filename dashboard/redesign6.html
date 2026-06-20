@@ -242,16 +242,26 @@ function render(S,pf){
   var navNow=lat.value, totRet=inc.value?lat.value/inc.value-1:0;
   var benRet=(inc.benchmark&&lat.benchmark!=null)?lat.benchmark/inc.benchmark-1:(m.benchmark_return||0);
   var alpha=totRet-benRet, init=m.initial_deposit||100000, dAlpha=navNow-init*(1+benRet);
+  var fresh=S.curve.filter(p=>p.value!=null).length<2;   // just launched — no full session yet
+  var aEl=document.getElementById('alpha');
 
-  countUp(document.getElementById('alpha'),alpha*100);
-  document.getElementById('sub').innerHTML=(alpha>=0?'ahead of the ':'behind the ')+bench+'. You\'d be sitting on <b>'+fmt(navNow)+'</b> — that\'s <b>'+(dAlpha>=0?'':'−')+'$'+Math.abs(Math.round(dAlpha)).toLocaleString()+'</b> '+(dAlpha>=0?'more':'less')+' than if you\'d just bought the index.';
-  document.getElementById('sApex').innerHTML=pctn(totRet);document.getElementById('sApex').className='rt tnum '+(totRet>=0?'up':'dn');
-  document.getElementById('sBench').innerHTML=pctn(benRet);
+  if(fresh){
+    aEl.classList.remove('neg'); aEl.textContent='LIVE';
+    document.getElementById('sub').innerHTML='Just launched — <b>'+fmt(init)+'</b> deployed across '+S.positions.length+' names. The race against the '+bench+' starts at the next close.';
+    document.getElementById('sApex').innerHTML='—';document.getElementById('sApex').className='rt tnum';
+    document.getElementById('sBench').innerHTML='—';
+  } else {
+    countUp(aEl,alpha*100);
+    document.getElementById('sub').innerHTML=(alpha>=0?'ahead of the ':'behind the ')+bench+'. Put in <b>'+fmt(init)+'</b> at the start and you\'d be sitting on <b>'+fmt(navNow)+'</b> today — <b>'+(dAlpha>=0?'':'−')+'$'+Math.abs(Math.round(dAlpha)).toLocaleString()+'</b> '+(dAlpha>=0?'more':'less')+' than just buying the index.';
+    document.getElementById('sApex').innerHTML=pctn(totRet);document.getElementById('sApex').className='rt tnum '+(totRet>=0?'up':'dn');
+    document.getElementById('sBench').innerHTML=pctn(benRet);
+  }
 
   document.getElementById('stNav').textContent=fmt(navNow);
   var best=S.positions.slice().sort((a,b)=>b.ret-a.ret)[0];
-  document.getElementById('stBest').innerHTML=best.ticker+' '+pctn(best.ret);
-  document.getElementById('stBest').className='v tnum '+(best.ret>=0?'up':'dn');
+  if(fresh){document.getElementById('stBest').innerHTML='—';document.getElementById('stBest').className='v tnum';}
+  else{document.getElementById('stBest').innerHTML=best.ticker+' '+pctn(best.ret);
+       document.getElementById('stBest').className='v tnum '+(best.ret>=0?'up':'dn');}
   document.getElementById('stMoves').textContent=m.num_trades||0;
   document.getElementById('stDiv').textContent=fmt((S.dividends&&S.dividends.total)||0);
 
@@ -294,7 +304,14 @@ function buildRace(S,days){
   var W=1000,H=340,T=20,Bm=46;
   var curve=S.curve.filter(p=>p.value!=null&&p.benchmark!=null);
   if(curve.length<2){curve=(S.intraday||[]).filter(p=>p.value!=null&&p.benchmark!=null).map(p=>({date:p.t,value:p.value,benchmark:p.benchmark}));}
-  if(curve.length<2)return;
+  if(curve.length<2){   // just launched — no line yet, show a clean placeholder
+    ['gapArea','spLine','apexLine'].forEach(id=>document.getElementById(id).setAttribute('d',''));
+    ['endDot','endDot2'].forEach(id=>document.getElementById(id).style.display='none');
+    var s0=(S.curve.find(p=>p.value!=null)||{date:''}).date.slice(0,10);
+    document.getElementById('xax').innerHTML='<span style="width:100%;text-align:center;color:var(--faint);letter-spacing:.04em">live since '+(s0?fmtD(s0):'today')+' · the line begins at the next close</span>';
+    return;
+  }
+  ['endDot','endDot2'].forEach(id=>document.getElementById(id).style.display='');
   var c=curve;
   if(days<1e9){var last=new Date(curve[curve.length-1].date.slice(0,10));var cut=new Date(last);cut.setDate(cut.getDate()-days);
     c=curve.filter(p=>new Date(p.date.slice(0,10))>=cut);if(c.length<2)c=curve.slice(-2);}
