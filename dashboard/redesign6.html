@@ -252,7 +252,8 @@ function render(S,pf){
     document.getElementById('sBench').innerHTML='—';
   } else {
     countUp(aEl,alpha*100);
-    document.getElementById('sub').innerHTML=(alpha>=0?'ahead of the ':'behind the ')+bench+'. Put in <b>'+fmt(init)+'</b> at the start and you\'d be sitting on <b>'+fmt(navNow)+'</b> today — <b>'+(dAlpha>=0?'':'−')+'$'+Math.abs(Math.round(dAlpha)).toLocaleString()+'</b> '+(dAlpha>=0?'more':'less')+' than just buying the index.';
+    var navCol=navNow>=init?'var(--accent)':'var(--down)', dCol=dAlpha>=0?'var(--accent)':'var(--down)';
+    document.getElementById('sub').innerHTML=(alpha>=0?'ahead of the ':'behind the ')+bench+'. Put in <b>'+fmt(init)+'</b> at the start and you\'d be sitting on <b style="color:'+navCol+'">'+fmt(navNow)+'</b> today — <b style="color:'+dCol+'">'+(dAlpha>=0?'':'−')+'$'+Math.abs(Math.round(dAlpha)).toLocaleString()+'</b> '+(dAlpha>=0?'more':'less')+' than just buying the index.';
     document.getElementById('sApex').innerHTML=pctn(totRet);document.getElementById('sApex').className='rt tnum '+(totRet>=0?'up':'dn');
     document.getElementById('sBench').innerHTML=pctn(benRet);
   }
