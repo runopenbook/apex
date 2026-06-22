@@ -497,6 +497,7 @@ async function main(){
 
   /* recent trades (autopilot-style) */
   const td=S.trade_days||[];
+  const whyBy={};(S.moves||[]).forEach(mv=>{if(mv.rationale)(whyBy[mv.date]=whyBy[mv.date]||[]).unshift(mv.rationale);});
   document.getElementById('tradeMeta').textContent=(m.num_trades||0)+' trades total';
   document.getElementById('tradeDays').innerHTML=td.length?td.map((t,i)=>`
     <div class="tday ${i===0?'open':''}">
@@ -516,6 +517,7 @@ async function main(){
         ${t.changed&&t.changed.length?`<div class="gl">Rebalanced</div>`+t.changed.map(c=>`
           <div class="trow"><span class="tt">${c.ticker}</span><span class="tsub">${c.theme}</span>
             <span class="tw"><b>${(c.from*100).toFixed(2)}%</b><span class="ax">→</span><b>${(c.to*100).toFixed(2)}%</b></span></div>`).join(''):''}
+        ${whyBy[t.date]&&whyBy[t.date].length?`<div class="gl">Why</div>`+whyBy[t.date].map(w=>`<div style="font-size:11.5px;line-height:1.5;color:var(--mut);padding:5px 0 2px;letter-spacing:-.01em">${w}</div>`).join(''):''}
       </div></div>
     </div>`).join(''):'<div class="empty">No trades yet</div>';
   document.querySelectorAll('.tdhead').forEach(h=>
