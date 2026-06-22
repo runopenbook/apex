@@ -34,7 +34,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
-from . import divs, jsonio
+from . import divs, jsonio, livebar
 from .paths import DATA_DIR
 
 try:
@@ -456,10 +456,10 @@ def build():
         div_total += dt or 0.0
         div_per.extend(dp or [])
 
-    # No intraday for a rotation book: the current holdings didn't exist at the
-    # seed, so an intraday curve can't be honestly anchored to inception the way
-    # the buy & hold books' can. The daily curve is the record of truth.
-    intraday = []
+    # Live intraday = honest daily history + today's session of the CURRENT book
+    # (so the 1D chart works without back-valuing rotated holdings to the seed).
+    intraday = livebar.stitch(curve, {t: h["shares"] for t, h in holdings.items()},
+                              BENCH, bench_seed, CAPITAL)
 
     moves = list(reversed(moves))
     trade_days = list(reversed(trade_days))

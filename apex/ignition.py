@@ -30,7 +30,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
-from . import jsonio
+from . import jsonio, livebar
 from .paths import DATA_DIR
 
 try:
@@ -200,7 +200,9 @@ def build():
                  "num_trades": n_trades, "benchmark_label": BENCH_LABEL,
                  "risk": RISK, "disclaimer": DISCLAIMER},
         "curve": curve, "positions": positions, "themes": themes,
-        "moves": moves, "trade_days": trade_days, "intraday": [],
+        "moves": moves, "trade_days": trade_days,
+        "intraday": livebar.stitch(curve, {t: h["shares"] for t, h in holdings.items()},
+                                   BENCH, bench_seed, CAPITAL),
         "dividends": {"total": 0.0, "per": []},   # moonshots don't pay dividends
     }
     jsonio.dump(state, STATE)
