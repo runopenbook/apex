@@ -463,6 +463,7 @@ async function main(){
     chart.data.labels=c.map(p=>p.x);
     chart.data.datasets[0].data=c.map(p=>p.value!=null?(p.value/a0-1)*100:null);
     chart.data.datasets[1].data=c.map(p=>(b0&&p.benchmark!=null)?(p.benchmark/b0-1)*100:null);
+    chart.data.datasets.forEach(d=>d.spanGaps=(days===1));   // sparse 1D = anchor@open + lone close; bridge the gap so a line draws
     chart.update('none');
     buildTradeDots(c);
     setHeadLatest();
