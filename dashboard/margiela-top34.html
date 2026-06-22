@@ -413,7 +413,7 @@ async function main(){
     if(x.length>10){const[H,M]=x.slice(11).split(':').map(Number);const h=((H+11)%12)+1;
       return d+' · '+h+':'+String(M).padStart(2,'0')+(H<12?'am':'pm');}
     return d;}
-  const sessionGrid=[...new Set(intra.map(p=>p.x.slice(11)))].sort();
+  const sessionGrid=(function(){var g=[];for(var h=4;h<=19;h++){var H=(h<10?'0':'')+h;g.push(H+':00',H+':30');}return g;})();  // full extended session (04:00–19:30), padded so 1D shows blank space for the rest of the day
   // 1D = the latest session, x-axis padded to the full session; line drawn only
   // up to the latest data (brokerage-style). Other ranges: richest series available.
   function windowPoints(days){
