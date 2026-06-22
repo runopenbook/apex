@@ -59,8 +59,23 @@ def session(shares, bench, bench_seed, capital, after_date, days=4):
 
 
 def stitch(curve, shares, bench, bench_seed, capital):
-    """Daily curve (one 16:00 point/day) + today's live session of `shares`."""
+    """Daily closes (one 16:00 point per *closed* day) + the latest day's live
+    intraday session.
+
+    The engines write a provisional point for the current day into `curve`, so
+    curve[-1]["date"] is usually today. Passing that as `after_date` made the
+    session — which keeps only bars STRICTLY AFTER it — drop all of today's bars,
+    leaving a flat open->close line. So the live session owns the latest day, and
+    the daily closes cover only the days before it (no overlap, no double 16:00).
+    """
+    if not curve:
+        return []
     base = [{"t": c["date"] + " 16:00", "value": c["value"], "benchmark": c["benchmark"]}
-            for c in curve]
-    sess = session(shares, bench, bench_seed, capital, curve[-1]["date"]) if curve else []
+            for c in curve[:-1]]
+    after = curve[-2]["date"] if len(curve) >= 2 else curve[0]["date"]
+    sess = session(shares, bench, bench_seed, capital, after)
+    if not sess:                       # market closed / fetch failed: keep the last close
+        last = curve[-1]
+        base.append({"t": last["date"] + " 16:00", "value": last["value"],
+                     "benchmark": last["benchmark"]})
     return base + sess
