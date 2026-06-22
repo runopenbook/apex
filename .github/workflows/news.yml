@@ -1,0 +1,39 @@
+name: Open Book news feed
+
+on:
+  schedule:
+    # A few times a day on weekdays (09:15–21:15 UTC, every 2h). 89 RSS pulls
+    # per run, so deliberately NOT every 30 min. No API key, no cost.
+    - cron: "15 9-21/2 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Shared queue with the data refresh so the two never push at the same instant.
+concurrency:
+  group: apex-publish
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch holdings news (Google News RSS, stdlib only — no deps)
+        run: python -m apex.news
+      - name: Publish news feed
+        run: |
+          git config user.name "apex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/news.json
+          if git diff --cached --quiet; then
+            echo "No news change."
+          else
+            git commit -m "News refresh $(date -u +'%Y-%m-%d %H:%M')"
+            git pull --rebase --autostash || true
+            git push
+          fi

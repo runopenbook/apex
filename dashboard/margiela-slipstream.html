@@ -423,8 +423,17 @@ async function main(){
     if(days===1 && intra.length){
       const lastDate=intra[intra.length-1].x.slice(0,10);
       const byTime={}; intra.filter(p=>p.x.slice(0,10)===lastDate).forEach(p=>byTime[p.x.slice(11)]=p);
-      return sessionGrid.map(hm=>{const p=byTime[hm];
+      const grid=sessionGrid.map(hm=>{const p=byTime[hm];
         return {x:lastDate+' '+hm, value:p?p.value:null, benchmark:p?p.benchmark:null};});
+      // A sparse day (only the daily close point, or a single early bar) is one dot —
+      // no visible line. Anchor the prior regular close at the open so 1D always has
+      // >=2 points and the line starts from the 0% baseline.
+      if(grid.filter(p=>p.value!=null).length<2){
+        const prev=intra.filter(p=>p.x.slice(0,10)<lastDate && p.x.slice(11)<'16:01' && p.value!=null).pop()
+                 || [...daily].reverse().find(p=>p.x<lastDate && p.value!=null);
+        if(prev && grid[0].value==null){ grid[0].value=prev.value; grid[0].benchmark=prev.benchmark; }
+      }
+      return grid;
     }
     const useIntra=intra.length>=2 && (days<=31 || (days>=1e9 && intraSpan<=45));
     const src=useIntra?intra:daily;
