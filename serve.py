@@ -1,7 +1,7 @@
 """Tiny static server for the dashboard. Serves the project root so the page
 can fetch ../data/state.json. Run:  py serve.py  then open the printed URL.
 """
-import http.server, socketserver, webbrowser, os, time
+import http.server, socketserver, webbrowser, os, sys, time
 from pathlib import Path
 
 PORT = 8765
@@ -28,9 +28,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     url = f"http://localhost:{PORT}/dashboard/index.html"
     print(f"Apex dashboard: {url}\nCtrl+C to stop.")
-    try:
-        webbrowser.open(url)
-    except Exception:
-        pass
+    if "noopen" not in sys.argv:          # the Studio launcher passes 'noopen'
+        try:
+            webbrowser.open(url)
+        except Exception:
+            pass
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
         httpd.serve_forever()
