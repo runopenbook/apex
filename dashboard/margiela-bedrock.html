@@ -432,7 +432,9 @@ async function main(){
       }
       return grid;
     }
-    const useIntra=intra.length>=2 && (days<=31 || (days>=1e9 && intraSpan<=45));
+    const daysInIntra=new Set(intra.map(p=>p.x.slice(0,10))).size;
+    const denseIntra=daysInIntra>=1 && intra.length>=daysInIntra*3;   // intraday spread across days, not a dense today on a sparse history
+    const useIntra=denseIntra && intra.length>=2 && (days<=31 || (days>=1e9 && intraSpan<=45));
     const src=useIntra?intra:daily;
     const last=src[src.length-1].t;
     let c=src;

@@ -13,6 +13,8 @@ that part is exact too.
 """
 from __future__ import annotations
 
+import statistics
+
 import pandas as pd
 import yfinance as yf
 
@@ -74,6 +76,20 @@ def stitch(curve, shares, bench, bench_seed, capital):
             for c in curve[:-1]]
     after = curve[-2]["date"] if len(curve) >= 2 else curve[0]["date"]
     sess = session(shares, bench, bench_seed, capital, after)
+    # Drop garbage pre/post-market ticks: thin/illiquid names (esp. int'l ETFs)
+    # print bad quotes at 4am that lurch then revert. Flag *extended-hours* bars
+    # that sit far from the day's median, scaled to the book's OWN volatility
+    # (median abs deviation) so a defensive book's 4% spike is caught while a
+    # moonshot's real 4% move is kept. Floor at 2.5% so a flat day with a couple
+    # of garbage ticks still gets cleaned. Regular-hours bars are ALWAYS kept —
+    # we never hide a real session move.
+    if len(sess) >= 6:
+        vals = [p["value"] for p in sess]
+        med = statistics.median(vals)
+        mad = statistics.median([abs(v - med) for v in vals])
+        tol = max(5 * mad, med * 0.025)
+        sess = [p for p in sess
+                if ("09:30" <= p["t"][11:] <= "16:00") or abs(p["value"] - med) <= tol]
     if not sess:                       # market closed / fetch failed: keep the last close
         last = curve[-1]
         base.append({"t": last["date"] + " 16:00", "value": last["value"],
