@@ -2,9 +2,10 @@ name: Open Book news feed
 
 on:
   schedule:
-    # A few times a day on weekdays (09:15–21:15 UTC, every 2h). 89 RSS pulls
-    # per run, so deliberately NOT every 30 min. No API key, no cost.
-    - cron: "15 9-21/2 * * 1-5"
+    # Hourly, ~8am–10pm ET, every day of the week. GitHub cron is UTC with no
+    # DST, so 12:00–02:00 UTC covers 8am–10pm during EDT (7am–9pm in EST).
+    - cron: "0 12-23 * * *"
+    - cron: "0 0-2 * * *"
   workflow_dispatch: {}
 
 permissions:

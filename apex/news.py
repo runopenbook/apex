@@ -49,26 +49,22 @@ def holdings():
     return out
 
 
-def rss(ticker):
-    """Top Google News RSS items for a ticker. Returns [] on any failure."""
-    q = urllib.parse.quote(f'"{ticker}" stock')
-    url = (f"https://news.google.com/rss/search?q={q}"
-           "&hl=en-US&gl=US&ceid=US:en")
+def _fetch(url, label):
+    """Parse a Google News RSS url into [{title, link, source, published}]."""
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=15) as r:
             root = ET.fromstring(r.read())
     except Exception as e:
-        print(f"  ! {ticker}: {e}")
-        return []
+        print(f"  ! {label}: {e}")
+        return None
     items = []
-    for it in root.findall(".//item")[:PER_TICKER]:
+    for it in root.findall(".//item"):
         title = (it.findtext("title") or "").strip()
         link = (it.findtext("link") or "").strip()
         pub = (it.findtext("pubDate") or "").strip()
         src_el = it.find("source")
         src = (src_el.text or "").strip() if src_el is not None else ""
-        # Google prefixes " - Source" on titles; strip it, we show source separately
         if src and title.endswith(" - " + src):
             title = title[: -(len(src) + 3)]
         if title and link:
@@ -76,8 +72,28 @@ def rss(ticker):
     return items
 
 
+def top_news(n=12):
+    """Top business/markets headlines of the day (Google News BUSINESS topic)."""
+    url = ("https://news.google.com/rss/headlines/section/topic/BUSINESS"
+           "?hl=en-US&gl=US&ceid=US:en")
+    items = _fetch(url, "top") or []
+    return items[:n]
+
+
+def rss(ticker):
+    """Top Google News RSS items for a ticker. Returns [] on any failure."""
+    q = urllib.parse.quote(f'"{ticker}" stock')
+    url = (f"https://news.google.com/rss/search?q={q}"
+           "&hl=en-US&gl=US&ceid=US:en")
+    items = _fetch(url, ticker)
+    return (items or [])[:PER_TICKER]
+
+
 def main():
     held = holdings()
+    print("Fetching top market headlines...")
+    top = top_news()
+    print(f"  top: {len(top)}")
     print(f"Fetching news for {len(held)} tickers...")
     by_ticker = {}
     flat = []
@@ -99,11 +115,13 @@ def main():
 
     out = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "top": top,
         "tickers": by_ticker,
         "items": flat[:TOTAL_CAP],
     }
     (DATA / "news.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
-    print(f"Wrote data/news.json — {len(out['items'])} items across {len(by_ticker)} tickers")
+    print(f"Wrote data/news.json — {len(top)} top + {len(out['items'])} holding items "
+          f"across {len(by_ticker)} tickers")
 
 
 if __name__ == "__main__":
