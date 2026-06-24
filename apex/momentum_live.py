@@ -19,7 +19,7 @@ import sys
 import pandas as pd
 import yfinance as yf
 
-from . import ledger, export, scout, intraday
+from . import ledger, export, scout, intraday, midday
 from .paths import CONFIG_DIR
 
 try:
@@ -113,6 +113,8 @@ def run(end=None):
     px = _download(holds + [BENCH], end=end).ffill()
     date = px.index[-1].strftime("%Y-%m-%d")
     last = px.iloc[-1]
+    # from the cutoff forward, trades fill in the 12:00-1:30pm ET window, not the close
+    _mid = midday.fetch(holds + [BENCH], px.index[0].strftime("%Y-%m-%d"))
 
     moves = 0
     sold_today = []
@@ -126,7 +128,7 @@ def run(end=None):
             s = px[t].dropna()
             if len(s) < exit_ma + 1:
                 continue
-            price = float(s.iloc[-1])
+            price = midday.at(_mid, t, date, s.iloc[-1])
             ma = float(s.tail(exit_ma).mean())
             high = float(s.tail(120).max())
             below_ma = price < ma
@@ -157,12 +159,13 @@ def run(end=None):
                  and r["ticker"] not in sold_today and r["ticker"] != BENCH]
         picks = cands[:empty]
         if picks:
+            _midb = midday.fetch([r["ticker"] for r in picks] + [BENCH], px.index[0].strftime("%Y-%m-%d"))
             with ledger.connect() as conn:
                 cash = ledger.get_cash(conn)
                 per = cash / len(picks)
                 for r in picks:
                     t = r["ticker"]
-                    price = float(r["price"])
+                    price = midday.at(_midb, t, date, r["price"])
                     shares = per / price
                     ledger.upsert_position(conn, t, r["theme"], "momentum",
                                            1.0 / target_n,

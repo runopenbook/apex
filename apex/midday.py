@@ -54,6 +54,17 @@ def fetch(tickers, start):
     return pd.DataFrame(cols) if cols else pd.DataFrame()
 
 
+def at(mid, t, date, fallback):
+    """Midday fill for (date, ticker) when date is on/after the cutoff and a 1pm
+    price exists; otherwise the fallback (the close). For the stateful engine."""
+    try:
+        if date >= FROM and t in mid.columns and date in mid.index and pd.notna(mid.at[date, t]):
+            return float(mid.at[date, t])
+    except Exception:
+        pass
+    return float(fallback)
+
+
 def blend(px, mid, cutoff):
     """A trade-price frame shaped like `px` (daily closes): rows on/after `cutoff`
     take the 1pm price from `mid` where available; everything else stays the close.

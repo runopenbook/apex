@@ -17,7 +17,7 @@ from collections import defaultdict
 import pandas as pd
 import yfinance as yf
 
-from . import divs, jsonio
+from . import divs, jsonio, midday
 from .paths import DATA_DIR
 
 try:
@@ -125,6 +125,14 @@ def _intraday(shares, end=None):
 
 def build():
     daily = _daily()
+    # midday trade prices (12:00-1:30pm ET) for rebalances from the cutoff forward
+    _mid = midday.fetch(TICKERS + [BENCH], SEED_DATE)
+
+    def _tp(t, d):
+        if d >= midday.FROM and d in _mid.index and t in _mid.columns and pd.notna(_mid.at[d, t]):
+            return float(_mid.at[d, t])
+        return float(daily[t].get(d))
+
     seed_px = {t: _closeon(daily[t], SEED_DATE) for t in TICKERS}
     missing = [t for t in TICKERS if not seed_px.get(t)]
     if missing:
@@ -162,7 +170,7 @@ def build():
                 over = max(vals, key=vals.get)
                 under = min(vals, key=vals.get)
                 if over != under:
-                    po, pu = float(daily[over].get(d)), float(daily[under].get(d))
+                    po, pu = _tp(over, d), _tp(under, d)
                     amt = min(REBAL_AMOUNT, vals[over] * 0.9)
                     fo, fu = vals[over] / tot, vals[under] / tot
                     shares[over] -= amt / po
