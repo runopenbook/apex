@@ -428,12 +428,15 @@ async function main(){
     }
     const daysInIntra=new Set(intra.map(p=>p.x.slice(0,10))).size;
     const denseIntra=daysInIntra>=1 && intra.length>=daysInIntra*3;   // intraday spread across days, not a dense today on a sparse history
-    const useIntra=denseIntra && intra.length>=2 && (days<=31 || (days>=1e9 && intraSpan<=45));
+    const useIntra=denseIntra && intra.length>=2;   // intra now spans the whole life (daily for old days + 30-min recent)
     const src=useIntra?intra:daily;
     const last=src[src.length-1].t;
     let c=src;
     if(days<1e9){const cut=new Date(last);cut.setDate(cut.getDate()-days);c=src.filter(p=>p.t>=cut);}
     if(c.length<2) c=src.slice(-Math.min(src.length,Math.max(2,useIntra?14:2)));
+    // resample to a consistent target so every frame + book has a similar density
+    const TGT=128;
+    if(c.length>TGT){const o=[],n=c.length;for(let i=0;i<TGT;i++)o.push(c[Math.round(i*(n-1)/(TGT-1))]);c=o;}
     return c;
   }
   const rangeStat=document.getElementById('rangeStat');

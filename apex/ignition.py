@@ -123,11 +123,14 @@ def build():
     cash = 0.0
     curve = [{"date": seed, "value": round(CAPITAL, 2), "ret": 0.0,
               "benchmark": round(CAPITAL, 2), "benchmark_ret": 0.0, "cash": 0}]
+    # pre-trade book held DURING each day, for honest dense intraday (livebar.history)
+    book_by_date = {seed: {"h": {t: holdings[t]["shares"] for t in holdings}, "cash": cash}}
 
     for k in range(k0 + 1, len(dates)):
         d = dates[k]
         if pd.isna(px[BENCH].iloc[k]):
             continue
+        book_by_date[d] = {"h": {t: holdings[t]["shares"] for t in holdings}, "cash": cash}
         price = {t: float(px[t].iloc[k]) for t in holdings if pd.notna(px[t].iloc[k])}
         pv = cash + sum(holdings[t]["shares"] * price.get(t, holdings[t]["entry_price"]) for t in holdings)
         for t in list(holdings):
@@ -201,8 +204,7 @@ def build():
                  "risk": RISK, "disclaimer": DISCLAIMER},
         "curve": curve, "positions": positions, "themes": themes,
         "moves": moves, "trade_days": trade_days,
-        "intraday": livebar.stitch(curve, {t: h["shares"] for t, h in holdings.items()},
-                                   BENCH, bench_seed, CAPITAL),
+        "intraday": livebar.history(curve, book_by_date, BENCH, bench_seed, CAPITAL),
         "dividends": {"total": 0.0, "per": []},   # moonshots don't pay dividends
     }
     jsonio.dump(state, STATE)

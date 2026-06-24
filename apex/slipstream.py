@@ -265,6 +265,8 @@ def build():
     cash = 0.0
     curve = [{"date": seed, "value": round(CAPITAL, 2), "ret": 0.0,
               "benchmark": round(CAPITAL, 2), "benchmark_ret": 0.0, "cash": 0}]
+    # pre-trade book held DURING each day, for honest dense intraday (livebar.history)
+    book_by_date = {seed: {"h": {t: holdings[t]["shares"] for t in holdings}, "cash": cash}}
 
     def pct(x):
         return f"{x*100:+.1f}%"
@@ -276,6 +278,7 @@ def build():
         d = dates[k]
         if pd.isna(px[BENCH].iloc[k]):
             continue
+        book_by_date[d] = {"h": {t: holdings[t]["shares"] for t in holdings}, "cash": cash}
         bp = float(px[BENCH].iloc[k])
         mkt = bp / prev_bench - 1.0          # S&P close-to-close move this session
         prev_bench = bp
@@ -456,10 +459,9 @@ def build():
         div_total += dt or 0.0
         div_per.extend(dp or [])
 
-    # Live intraday = honest daily history + today's session of the CURRENT book
-    # (so the 1D chart works without back-valuing rotated holdings to the seed).
-    intraday = livebar.stitch(curve, {t: h["shares"] for t, h in holdings.items()},
-                              BENCH, bench_seed, CAPITAL)
+    # Honest dense intraday: 30-min bars valued against the book held DURING each
+    # day (never back-valuing rotated holdings to the seed).
+    intraday = livebar.history(curve, book_by_date, BENCH, bench_seed, CAPITAL)
 
     moves = list(reversed(moves))
     trade_days = list(reversed(trade_days))
