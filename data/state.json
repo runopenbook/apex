@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-06-23",
+    "last_date": "2026-06-24",
     "mode": "forward",
-    "total_value": 96291.06,
+    "total_value": 96360.47,
     "cash": 0.0,
-    "total_return": -0.0163,
-    "benchmark_return": -0.0194,
-    "alpha": 0.0031,
-    "num_trades": 12,
+    "total_return": -0.0364,
+    "benchmark_return": -0.0204,
+    "alpha": -0.016,
+    "num_trades": 14,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
     "risk": "High",
@@ -55,6 +55,14 @@
       "benchmark": 98057.74,
       "benchmark_ret": -0.0194,
       "cash": 0.0
+    },
+    {
+      "date": "2026-06-24",
+      "value": 96360.47,
+      "ret": -0.0364,
+      "benchmark": 97961.35,
+      "benchmark_ret": -0.0204,
+      "cash": 0.0
     }
   ],
   "positions": [
@@ -69,7 +77,7 @@
       "drawdown": 0,
       "ret": 0.0767,
       "thesis": "Momentum leader in Energy / Power.",
-      "weight": 0.1118
+      "weight": 0.1117
     },
     {
       "ticker": "MU",
@@ -82,7 +90,7 @@
       "drawdown": 0,
       "ret": 0.0272,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.1067
+      "weight": 0.1066
     },
     {
       "ticker": "PANW",
@@ -95,7 +103,7 @@
       "drawdown": 0,
       "ret": 0.0025,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1041
+      "weight": 0.104
     },
     {
       "ticker": "RIOT",
@@ -108,7 +116,7 @@
       "drawdown": 0,
       "ret": 0.0015,
       "thesis": "Momentum leader in Crypto / Fintech.",
-      "weight": 0.104
+      "weight": 0.1039
     },
     {
       "ticker": "MRVL",
@@ -121,7 +129,7 @@
       "drawdown": 0.0071,
       "ret": -0.0071,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.1031
+      "weight": 0.103
     },
     {
       "ticker": "CRWD",
@@ -134,7 +142,7 @@
       "drawdown": 0.0287,
       "ret": -0.0287,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1009
+      "weight": 0.1008
     },
     {
       "ticker": "MARA",
@@ -147,7 +155,7 @@
       "drawdown": 0.0437,
       "ret": -0.0437,
       "thesis": "Momentum leader in Crypto / Fintech.",
-      "weight": 0.0993
+      "weight": 0.0992
     },
     {
       "ticker": "DELL",
@@ -160,7 +168,7 @@
       "drawdown": 0,
       "ret": 0.0352,
       "thesis": "Rotated in: hot momentum, +224% 6mo.",
-      "weight": 0.0948
+      "weight": 0.0947
     },
     {
       "ticker": "ARM",
@@ -173,55 +181,67 @@
       "drawdown": 0.094,
       "ret": -0.094,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.0941
+      "weight": 0.094
     },
     {
-      "ticker": "RKLB",
-      "theme": "Space",
+      "ticker": "AMD",
+      "theme": "AI / Semis",
       "conviction": "momentum",
-      "shares": 91.533,
-      "avg_entry": 109.25,
-      "price": 85.41,
-      "value": 7817.85,
-      "drawdown": 0.2182,
-      "ret": -0.2182,
-      "thesis": "Momentum leader in Space.",
-      "weight": 0.0812
+      "shares": 15.294,
+      "avg_entry": 515.69,
+      "price": 515.69,
+      "value": 7887.26,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Rotated in: hot momentum, +144% 6mo.",
+      "weight": 0.0819
     }
   ],
   "themes": [
     {
       "theme": "AI / Semis",
-      "weight": 0.3987,
+      "weight": 0.4803,
       "min": null,
       "max": null
     },
     {
       "theme": "Other momentum",
-      "weight": 0.205,
+      "weight": 0.2048,
       "min": null,
       "max": null
     },
     {
       "theme": "Crypto / Fintech",
-      "weight": 0.2033,
+      "weight": 0.2032,
       "min": null,
       "max": null
     },
     {
       "theme": "Energy / Power",
-      "weight": 0.1118,
-      "min": null,
-      "max": null
-    },
-    {
-      "theme": "Space",
-      "weight": 0.0812,
+      "weight": 0.1117,
       "min": null,
       "max": null
     }
   ],
   "moves": [
+    {
+      "date": "2026-06-24",
+      "ticker": "AMD",
+      "action": "BUY",
+      "rule": "Rotation",
+      "rationale": "Rotated into AMD \u2014 hottest available in AI / Semis (+144% 6mo).",
+      "judge": "momentum",
+      "price": 515.6933390299479
+    },
+    {
+      "date": "2026-06-24",
+      "ticker": "RKLB",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "RKLB fell 43% from its high \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 86.1683349609375
+    },
     {
       "date": "2026-06-23",
       "ticker": null,
@@ -278,6 +298,25 @@
     }
   ],
   "trade_days": [
+    {
+      "date": "2026-06-24",
+      "opened": [
+        {
+          "ticker": "AMD",
+          "weight": 0.0819,
+          "theme": "AI / Semis"
+        }
+      ],
+      "closed": [
+        {
+          "ticker": "RKLB",
+          "weight": 0.0819,
+          "theme": "Space"
+        }
+      ],
+      "n": 2,
+      "theme": "AI / Semis"
+    },
     {
       "date": "2026-06-17",
       "opened": [
@@ -1144,13 +1183,13 @@
     },
     {
       "t": "2026-06-24 18:00",
-      "value": 99637.2,
+      "value": 99634.15,
       "benchmark": 97691.0
     },
     {
       "t": "2026-06-24 18:30",
-      "value": 99680.57,
-      "benchmark": 97709.62
+      "value": 99529.35,
+      "benchmark": 97679.13
     }
   ],
   "dividends": {
