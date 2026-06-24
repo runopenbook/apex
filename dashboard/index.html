@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Apex — choose an edition</title>
-<!-- system Helvetica, no web fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0A0A09;--ink:#ECE8DF;--mut:#7E7A70;--faint:#46443D;--line:#211F1B;
   --sans:"Helvetica Neue","HelveticaNeue","Helvetica Neue LT Std",Helvetica,Arial,sans-serif;--disp:var(--sans);--hv:var(--sans);
@@ -48,7 +49,9 @@ header p{margin:14px 0 0;font-size:clamp(14px,1.8vw,17px);color:var(--mut);max-w
 
 /* N°2 — Scoreboard, the quick read */
 .c3{background:#0E1110;color:#ECF1EE;border-color:#1c2420}
-.c3 .name{font-family:var(--disp);font-weight:700;font-size:clamp(56px,9vw,108px);letter-spacing:-.04em;color:#28E08C}
+.c3 .name{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(56px,9vw,108px);letter-spacing:-.04em;color:#28E08C}
+.brandmark{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.brandmark .wm{font-weight:700;font-size:15px;letter-spacing:-.02em}
 .c3 .enter{color:#28E08C}
 .c3 .desc{opacity:.66}
 
@@ -62,7 +65,15 @@ footer b{color:var(--mut)}
 <div class="grain"></div>
 
 <header>
-  <div class="k rev">Apex — <b>a public paper portfolio</b></div>
+  <div class="brandmark rev">
+    <svg viewBox="0 0 100 100" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Open Book">
+      <path d="M50 77 L13 66 L13 31 C27 34 40 37 50 41 Z" fill="#ECE8DF"/>
+      <path d="M50 77 L87 66 L87 31 C73 34 60 37 50 41 Z" fill="#7E7A70"/>
+      <path d="M21 60 L38 50 L55 53 L82 27" stroke="#28E08C" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="82" cy="27" r="5.5" fill="#28E08C"/></svg>
+    <span class="wm">Open Book</span>
+  </div>
+  <div class="k rev" style="animation-delay:.04s">Five strategies, run in public · every move dated</div>
   <h1 class="rev" style="animation-delay:.06s">Two ways in.</h1>
   <p class="rev" style="animation-delay:.12s">Same portfolio, same honest data — read it deep, or read it fast. Pick your lane.</p>
 </header>

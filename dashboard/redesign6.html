@@ -116,7 +116,11 @@ nav .risk{margin-left:12px;font-family:var(--disp);font-size:10px;font-weight:70
 <div class="wrap">
 
   <nav class="rev">
-    <span class="brand"><span class="dot"></span><span id="brand">APEX</span></span>
+    <span class="brand"><svg viewBox="0 0 100 100" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Open Book" style="flex:none">
+      <path d="M50 77 L13 66 L13 31 C27 34 40 37 50 41 Z" fill="#ECF1EE"/>
+      <path d="M50 77 L87 66 L87 31 C73 34 60 37 50 41 Z" fill="#7F8884"/>
+      <path d="M21 60 L38 50 L55 53 L82 27" stroke="#28E08C" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="82" cy="27" r="5.5" fill="#28E08C"/></svg><span id="brand">APEX</span></span>
     <span class="sw"><b data-pf="ignition">Ignition</b><b class="on" data-pf="apex">Apex</b><b data-pf="slipstream">Slipstream</b><b data-pf="top34">Sweet Spot</b><b data-pf="bedrock">Bedrock</b></span>
     <span class="risk" id="risk"></span>
     <a href="index.html" class="ed">← Editions</a>
@@ -343,6 +347,19 @@ function buildRace(S,days){
 document.getElementById('rng').addEventListener('click',e=>{var b=e.target.closest('b');if(!b||!curS)return;
   document.querySelectorAll('#rng b').forEach(x=>x.classList.remove('on'));b.classList.add('on');drawn=true;buildRace(curS,+b.dataset.d);});
 document.querySelector('.sw').addEventListener('click',e=>{var b=e.target.closest('b[data-pf]');if(b)load(b.dataset.pf);});
+// order the switch live: best -> worst by all-time return
+const PF_URL={apex:'../data/state.json',top34:'../data/nasdaq34_state.json',bedrock:'../data/bedrock_state.json',slipstream:'../data/slipstream_state.json',ignition:'../data/ignition_state.json'};
+async function orderSwitch(){
+  var sw=document.querySelector('.sw'), btns=[].slice.call(sw.querySelectorAll('b[data-pf]'));
+  var rets=await Promise.all(btns.map(async function(b){
+    try{var s=await(await fetch(PF_URL[b.dataset.pf],{cache:'no-store'})).json();
+        var r=s.meta&&s.meta.total_return;return r==null?-Infinity:r;}catch(e){return -Infinity;}
+  }));
+  btns.map(function(b,i){return {b:b,r:rets[i]};})
+      .sort(function(x,y){return y.r-x.r;})
+      .forEach(function(o){sw.appendChild(o.b);});
+}
+orderSwitch();
 load(localStorage.getItem('apexPF')||'apex');
 </script>
 </body>
