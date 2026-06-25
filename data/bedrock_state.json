@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-05-22",
-    "last_date": "2026-06-24",
+    "last_date": "2026-06-25",
     "mode": "forward",
     "strategy": "Bedrock \u00b7 defensive, actively managed",
-    "total_value": 99382.99,
+    "total_value": 99326.21,
     "cash": 0.0,
-    "total_return": -0.0062,
-    "benchmark_return": -0.0166,
-    "alpha": 0.0104,
+    "total_return": -0.0067,
+    "benchmark_return": -0.0091,
+    "alpha": 0.0024,
     "num_trades": 1,
     "benchmark_label": "S&P 500",
     "risk": "Low",
@@ -191,6 +191,14 @@
       "benchmark": 98337.0,
       "benchmark_ret": -0.0166,
       "cash": 0.0
+    },
+    {
+      "date": "2026-06-25",
+      "value": 99326.21,
+      "ret": -0.0067,
+      "benchmark": 99086.69,
+      "benchmark_ret": -0.0091,
+      "cash": 0.0
     }
   ],
   "positions": [
@@ -208,30 +216,17 @@
       "weight": 0.0498
     },
     {
-      "ticker": "PG",
-      "theme": "Staples",
-      "conviction": "core",
-      "shares": 31.469,
-      "avg_entry": 144.44,
-      "price": 152.04,
-      "value": 4784.62,
-      "drawdown": 0,
-      "ret": 0.0526,
-      "thesis": "Defensive holding (Staples).",
-      "weight": 0.0481
-    },
-    {
       "ticker": "LLY",
       "theme": "Healthcare",
       "conviction": "core",
       "shares": 4.268,
       "avg_entry": 1065.0,
-      "price": 1117.26,
-      "value": 4768.5,
+      "price": 1126.99,
+      "value": 4810.03,
       "drawdown": 0,
-      "ret": 0.0491,
+      "ret": 0.0582,
       "thesis": "Defensive holding (Healthcare).",
-      "weight": 0.048
+      "weight": 0.0484
     },
     {
       "ticker": "UNH",
@@ -239,25 +234,25 @@
       "conviction": "core",
       "shares": 11.701,
       "avg_entry": 388.47,
-      "price": 405.8,
-      "value": 4748.23,
+      "price": 410.17,
+      "value": 4799.36,
       "drawdown": 0,
-      "ret": 0.0446,
+      "ret": 0.0559,
       "thesis": "Defensive holding (Healthcare).",
-      "weight": 0.0478
+      "weight": 0.0483
     },
     {
-      "ticker": "TJX",
-      "theme": "Discount Retail",
+      "ticker": "PG",
+      "theme": "Staples",
       "conviction": "core",
-      "shares": 28.72,
-      "avg_entry": 158.27,
-      "price": 165.17,
-      "value": 4743.62,
+      "shares": 31.469,
+      "avg_entry": 144.44,
+      "price": 151.87,
+      "value": 4779.27,
       "drawdown": 0,
-      "ret": 0.0436,
-      "thesis": "Defensive holding (Discount Retail).",
-      "weight": 0.0477
+      "ret": 0.0514,
+      "thesis": "Defensive holding (Staples).",
+      "weight": 0.0481
     },
     {
       "ticker": "AMGN",
@@ -265,12 +260,25 @@
       "conviction": "core",
       "shares": 13.397,
       "avg_entry": 339.3,
-      "price": 351.43,
-      "value": 4707.95,
+      "price": 352.0,
+      "value": 4715.59,
       "drawdown": 0,
-      "ret": 0.0358,
+      "ret": 0.0374,
       "thesis": "Defensive holding (Healthcare).",
-      "weight": 0.0474
+      "weight": 0.0475
+    },
+    {
+      "ticker": "TJX",
+      "theme": "Discount Retail",
+      "conviction": "core",
+      "shares": 28.72,
+      "avg_entry": 158.27,
+      "price": 163.19,
+      "value": 4686.76,
+      "drawdown": 0,
+      "ret": 0.0311,
+      "thesis": "Defensive holding (Discount Retail).",
+      "weight": 0.0472
     },
     {
       "ticker": "JNJ",
@@ -278,25 +286,12 @@
       "conviction": "core",
       "shares": 19.397,
       "avg_entry": 234.34,
-      "price": 241.0,
-      "value": 4674.64,
+      "price": 241.38,
+      "value": 4682.11,
       "drawdown": 0,
-      "ret": 0.0284,
+      "ret": 0.0301,
       "thesis": "Defensive holding (Healthcare).",
-      "weight": 0.047
-    },
-    {
-      "ticker": "WM",
-      "theme": "Waste",
-      "conviction": "core",
-      "shares": 20.86,
-      "avg_entry": 217.9,
-      "price": 223.26,
-      "value": 4657.27,
-      "drawdown": 0,
-      "ret": 0.0246,
-      "thesis": "Defensive holding (Waste).",
-      "weight": 0.0469
+      "weight": 0.0471
     },
     {
       "ticker": "RSG",
@@ -304,25 +299,25 @@
       "conviction": "core",
       "shares": 21.756,
       "avg_entry": 208.93,
-      "price": 213.58,
-      "value": 4646.62,
+      "price": 213.13,
+      "value": 4636.94,
       "drawdown": 0,
-      "ret": 0.0223,
+      "ret": 0.0201,
       "thesis": "Defensive holding (Waste).",
-      "weight": 0.0468
+      "weight": 0.0467
     },
     {
-      "ticker": "CL",
-      "theme": "Staples",
+      "ticker": "WM",
+      "theme": "Waste",
       "conviction": "core",
-      "shares": 50.165,
-      "avg_entry": 90.61,
-      "price": 91.88,
-      "value": 4609.16,
+      "shares": 20.86,
+      "avg_entry": 217.9,
+      "price": 221.3,
+      "value": 4616.48,
       "drawdown": 0,
-      "ret": 0.014,
-      "thesis": "Defensive holding (Staples).",
-      "weight": 0.0464
+      "ret": 0.0156,
+      "thesis": "Defensive holding (Waste).",
+      "weight": 0.0465
     },
     {
       "ticker": "DUK",
@@ -330,12 +325,25 @@
       "conviction": "core",
       "shares": 36.17,
       "avg_entry": 125.67,
-      "price": 126.53,
-      "value": 4576.56,
+      "price": 126.94,
+      "value": 4591.57,
       "drawdown": 0,
-      "ret": 0.0068,
+      "ret": 0.0101,
       "thesis": "Defensive holding (Utilities).",
-      "weight": 0.046
+      "weight": 0.0462
+    },
+    {
+      "ticker": "CL",
+      "theme": "Staples",
+      "conviction": "core",
+      "shares": 50.165,
+      "avg_entry": 90.61,
+      "price": 91.35,
+      "value": 4582.58,
+      "drawdown": 0,
+      "ret": 0.0082,
+      "thesis": "Defensive holding (Staples).",
+      "weight": 0.0461
     },
     {
       "ticker": "MDLZ",
@@ -343,12 +351,12 @@
       "conviction": "core",
       "shares": 73.599,
       "avg_entry": 61.76,
-      "price": 61.74,
-      "value": 4543.98,
-      "drawdown": 0.0003,
-      "ret": -0.0003,
+      "price": 61.82,
+      "value": 4549.87,
+      "drawdown": 0,
+      "ret": 0.001,
       "thesis": "Defensive holding (Staples).",
-      "weight": 0.0457
+      "weight": 0.0458
     },
     {
       "ticker": "NEE",
@@ -356,25 +364,12 @@
       "conviction": "core",
       "shares": 51.332,
       "avg_entry": 88.55,
-      "price": 87.62,
-      "value": 4497.72,
-      "drawdown": 0.0105,
-      "ret": -0.0105,
+      "price": 88.1,
+      "value": 4522.35,
+      "drawdown": 0.0051,
+      "ret": -0.0051,
       "thesis": "Defensive holding (Utilities).",
-      "weight": 0.0453
-    },
-    {
-      "ticker": "WMT",
-      "theme": "Staples",
-      "conviction": "core",
-      "shares": 37.794,
-      "avg_entry": 120.27,
-      "price": 119.0,
-      "value": 4497.46,
-      "drawdown": 0.0106,
-      "ret": -0.0106,
-      "thesis": "Defensive holding (Staples).",
-      "weight": 0.0453
+      "weight": 0.0455
     },
     {
       "ticker": "KO",
@@ -383,11 +378,11 @@
       "shares": 55.786,
       "avg_entry": 81.48,
       "price": 80.6,
-      "value": 4496.36,
-      "drawdown": 0.0108,
-      "ret": -0.0108,
+      "value": 4496.08,
+      "drawdown": 0.0109,
+      "ret": -0.0109,
       "thesis": "Defensive holding (Staples).",
-      "weight": 0.0452
+      "weight": 0.0453
     },
     {
       "ticker": "MRK",
@@ -395,12 +390,25 @@
       "conviction": "core",
       "shares": 37.133,
       "avg_entry": 122.41,
-      "price": 120.6,
-      "value": 4478.24,
-      "drawdown": 0.0148,
-      "ret": -0.0148,
+      "price": 121.0,
+      "value": 4493.1,
+      "drawdown": 0.0115,
+      "ret": -0.0115,
       "thesis": "Defensive holding (Healthcare).",
-      "weight": 0.0451
+      "weight": 0.0452
+    },
+    {
+      "ticker": "WMT",
+      "theme": "Staples",
+      "conviction": "core",
+      "shares": 37.794,
+      "avg_entry": 120.27,
+      "price": 117.94,
+      "value": 4457.4,
+      "drawdown": 0.0194,
+      "ret": -0.0194,
+      "thesis": "Defensive holding (Staples).",
+      "weight": 0.0449
     },
     {
       "ticker": "ROST",
@@ -408,12 +416,12 @@
       "conviction": "core",
       "shares": 19.358,
       "avg_entry": 234.81,
-      "price": 228.59,
-      "value": 4425.05,
-      "drawdown": 0.0265,
-      "ret": -0.0265,
+      "price": 229.09,
+      "value": 4434.73,
+      "drawdown": 0.0244,
+      "ret": -0.0244,
       "thesis": "Defensive holding (Discount Retail).",
-      "weight": 0.0445
+      "weight": 0.0446
     },
     {
       "ticker": "ORLY",
@@ -421,12 +429,12 @@
       "conviction": "core",
       "shares": 49.547,
       "avg_entry": 91.74,
-      "price": 87.82,
-      "value": 4351.23,
-      "drawdown": 0.0427,
-      "ret": -0.0427,
+      "price": 86.91,
+      "value": 4306.14,
+      "drawdown": 0.0526,
+      "ret": -0.0526,
       "thesis": "Defensive holding (Auto Parts).",
-      "weight": 0.0438
+      "weight": 0.0434
     },
     {
       "ticker": "PEP",
@@ -434,10 +442,10 @@
       "conviction": "core",
       "shares": 30.188,
       "avg_entry": 150.57,
-      "price": 142.27,
-      "value": 4294.89,
-      "drawdown": 0.0551,
-      "ret": -0.0551,
+      "price": 142.26,
+      "value": 4294.59,
+      "drawdown": 0.0552,
+      "ret": -0.0552,
       "thesis": "Defensive holding (Staples).",
       "weight": 0.0432
     },
@@ -447,12 +455,12 @@
       "conviction": "core",
       "shares": 4.421,
       "avg_entry": 1028.24,
-      "price": 961.09,
-      "value": 4248.61,
-      "drawdown": 0.0653,
-      "ret": -0.0653,
+      "price": 951.58,
+      "value": 4206.57,
+      "drawdown": 0.0746,
+      "ret": -0.0746,
       "thesis": "Defensive holding (Staples).",
-      "weight": 0.0427
+      "weight": 0.0424
     },
     {
       "ticker": "GLD",
@@ -460,12 +468,12 @@
       "conviction": "core",
       "shares": 10.984,
       "avg_entry": 413.82,
-      "price": 365.92,
-      "value": 4019.31,
-      "drawdown": 0.1158,
-      "ret": -0.1158,
+      "price": 369.49,
+      "value": 4058.55,
+      "drawdown": 0.1071,
+      "ret": -0.1071,
       "thesis": "Defensive holding (Gold).",
-      "weight": 0.0404
+      "weight": 0.0409
     },
     {
       "ticker": "ADM",
@@ -473,42 +481,42 @@
       "conviction": "core",
       "shares": 48.79,
       "avg_entry": 82.62,
-      "price": 75.08,
-      "value": 3663.12,
-      "drawdown": 0.0913,
-      "ret": -0.0913,
+      "price": 74.94,
+      "value": 3656.29,
+      "drawdown": 0.093,
+      "ret": -0.093,
       "thesis": "Defensive holding (Staples).",
-      "weight": 0.0369
+      "weight": 0.0368
     }
   ],
   "themes": [
     {
       "theme": "Staples",
-      "weight": 0.3536
+      "weight": 0.3526
     },
     {
       "theme": "Healthcare",
-      "weight": 0.285
+      "weight": 0.2864
     },
     {
       "theme": "Waste",
-      "weight": 0.0936
+      "weight": 0.0932
     },
     {
       "theme": "Discount Retail",
-      "weight": 0.0923
+      "weight": 0.0918
     },
     {
       "theme": "Utilities",
-      "weight": 0.0913
+      "weight": 0.0918
     },
     {
       "theme": "Auto Parts",
-      "weight": 0.0438
+      "weight": 0.0434
     },
     {
       "theme": "Gold",
-      "weight": 0.0404
+      "weight": 0.0409
     }
   ],
   "moves": [
@@ -4099,8 +4107,13 @@
     },
     {
       "t": "2026-06-25 09:00",
-      "value": 98841.49,
-      "benchmark": 99051.15
+      "value": 98985.29,
+      "benchmark": 99104.12
+    },
+    {
+      "t": "2026-06-25 09:30",
+      "value": 99304.74,
+      "benchmark": 99112.17
     }
   ],
   "dividends": {
