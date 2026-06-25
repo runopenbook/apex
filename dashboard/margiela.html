@@ -345,14 +345,21 @@ async function main(){
       dot.style.left=pt.x+'px'; dot.style.top=pt.y+'px';
     });
   }
+  // Trades from 2026-06-24 on fill in the 12:00–1:30pm ET window, so their marker
+  // belongs at the first 30-min refresh tick after that window — 2:00pm — not the
+  // close. Older trades filled at the close, so they stay pinned to 16:00.
+  const TRADE_MIDDAY_FROM='2026-06-24';
   function buildTradeDots(c){
     tdotsEl.innerHTML='';
+    const tmin=s=>{const[h,m]=s.split(':').map(Number);return h*60+m;};
     const pts={};   // date -> [{i, tm}] of non-null points
     c.forEach((p,i)=>{const d=p.x.slice(0,10); if(tdByDate[d]&&p.value!=null)
       (pts[d]=pts[d]||[]).push({i,tm:p.x.length>10?p.x.slice(11):'16:00'});});
     Object.keys(pts).forEach(d=>{
-      const reg=pts[d].filter(o=>o.tm<='16:00');           // the regular-close bar
-      const pick=(reg.length?reg:pts[d]).reduce((a,b)=>b.tm>a.tm?b:a);
+      const reg=pts[d].filter(o=>o.tm<='16:00');           // regular session only
+      const pool=reg.length?reg:pts[d];
+      const target=tmin(d>=TRADE_MIDDAY_FROM?'14:00':'16:00');  // 2pm tick for midday fills, else the close
+      const pick=pool.reduce((a,b)=>Math.abs(tmin(b.tm)-target)<Math.abs(tmin(a.tm)-target)?b:a);
       const dot=document.createElement('div'); dot.className='tdot'; dot.dataset.i=pick.i;
       dot.dataset.info=tradeSummary(tdByDate[d]); dot.dataset.date=fmtDate(d);
       tdotsEl.appendChild(dot);
