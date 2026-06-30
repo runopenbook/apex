@@ -2,10 +2,11 @@ name: Open Book news feed
 
 on:
   schedule:
-    # Hourly, ~8am–10pm ET, every day of the week. GitHub cron is UTC with no
-    # DST, so 12:00–02:00 UTC covers 8am–10pm during EDT (7am–9pm in EST).
-    - cron: "0 12-23 * * *"
-    - cron: "0 0-2 * * *"
+    # Hourly, ~8am–10pm ET, every day. GitHub cron is UTC with no DST, so 12:00–02:00 UTC
+    # covers 8am–10pm during EDT (7am–9pm in EST). Fires at :23 (off-peak, not :00) —
+    # GitHub drops far fewer scheduled runs when you avoid the top of the hour.
+    - cron: "23 12-23 * * *"
+    - cron: "23 0-2 * * *"
   workflow_dispatch: {}
 
 permissions:

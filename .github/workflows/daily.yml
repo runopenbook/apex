@@ -2,9 +2,9 @@ name: Apex daily update
 
 on:
   schedule:
-    # 21:30 UTC on weekdays — after the US market close year-round
-    # (4:30pm ET during EST, 5:30pm ET during EDT). Actions cron is best-effort.
-    - cron: "30 21 * * 1-5"
+    # 21:43 UTC on weekdays — after the US market close year-round (5:43pm ET in EDT,
+    # 4:43pm ET in EST). Off-peak minute (:43, not :30) so GitHub is less likely to drop it.
+    - cron: "43 21 * * 1-5"
   workflow_dispatch: {}   # lets you trigger it by hand from the Actions tab
 
 permissions:
