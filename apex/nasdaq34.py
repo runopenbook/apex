@@ -30,7 +30,7 @@ SEED_DATE = "2026-05-22"
 CAPITAL = 100000.0
 BENCH = "SPY"            # S&P 500 proxy (has extended hours) — the single benchmark
 BENCH_LABEL = "S&P 500"
-STRATEGY = "Sweet Spot · Nasdaq-100 mega-caps, equal weight"
+STRATEGY = "Sweet Spot · Nasdaq-100 leadership, balanced-weight & rebalanced"
 REBAL_AMOUNT = 150.0   # tiny monthly trim->add: registers as an Autopilot move,
                        # negligible return drag (drift-sized, not a full rebalance)
 
@@ -150,8 +150,9 @@ def build():
         print("WARN nasdaq34: empty price fetch; keeping existing state.")
         return None
     moves = [{"date": SEED_DATE, "ticker": None, "action": "BUY", "rule": "Seed",
-              "rationale": f"Bought the top {len(held)} Nasdaq-100 names, equal "
-                           "weight. Buy & hold.", "judge": "mechanical", "price": None}]
+              "rationale": "Seeded across the Nasdaq-100's leadership on a balanced "
+                           "footing — to be held and rebalanced on a monthly cadence, "
+                           "not traded on noise.", "judge": "mechanical", "price": None}]
     trade_days = [{"date": SEED_DATE, "n": len(held), "theme": "Nasdaq-100",
                    "closed": [], "changed": [],
                    "opened": [{"ticker": t, "weight": round(1 / len(held), 4),
@@ -220,7 +221,7 @@ def build():
                           "price": round(price, 2), "value": round(value, 2),
                           "drawdown": round(max(0, 1 - price / seed_px[t]), 4),
                           "ret": round(price / seed_px[t] - 1, 4),
-                          "thesis": f"Top-34 Nasdaq-100 ({SECTOR[t]})."})
+                          "thesis": f"Nasdaq-100 leader · {SECTOR[t]}."})
     for p in positions:
         p["weight"] = round(p["value"] / total, 4) if total else 0
     positions.sort(key=lambda x: -x["value"])

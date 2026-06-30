@@ -203,10 +203,10 @@ const PLAY={
        {n:'02',t:'Sell the broken',p:"The instant a name breaks its trend or falls hard from its high, it's out. Lock it in."},
        {n:'03',t:'Rotate',p:"Freed cash goes straight into the next hottest name in a confirmed uptrend."},
        {n:'04',t:'No hedging',p:"Ten convictions, fully invested. Concentrated on purpose — offense, not defense."}],
- top34:[{n:'01',t:'Own the giants',p:"The 34 largest Nasdaq-100 companies by market cap. The biggest names, nothing exotic."},
-        {n:'02',t:'Equal weight',p:"Every name gets the same slice at entry — no concentration bets, no favourites."},
-        {n:'03',t:'Buy & hold',p:"No timing, no trend calls. Bought once and held through the noise."},
-        {n:'04',t:'Light rebalance',p:"Once a month a small nudge trims the most-overweight into the most-underweight."}],
+ top34:[{n:'01',t:"The index's real engine",p:"Concentrated on the mega-cap leaders that actually drive the Nasdaq-100 — the franchises the whole index leans on, isolated from its long tail of lesser names."},
+        {n:'02',t:'Levelled, not top-heavy',p:"A cap-weighted fund like QQQ quietly becomes a bet on three or four giants. This holds the leaders on a deliberately balanced footing, so no single name can take over the book."},
+        {n:'03',t:'Rebalanced with discipline',p:"Weights are pulled back to target on a fixed monthly cadence — trimming whatever ran hot into whatever lagged. A systematic harvest of the spread, not a guess."},
+        {n:'04',t:'Judged against the index',p:"Benchmarked head-to-head with QQQ — the honest test of whether holding the leaders this way actually beats simply buying the index."}],
  bedrock:[{n:'01',t:'Own the essentials',p:"Staples, healthcare, auto-parts, discount retail, waste, utilities and gold — businesses people use in any economy."},
         {n:'02',t:'Reviewed twice a month',p:"Not a static hold. Every two weeks it checks for drift and damage — but only acts when a rule says to, so trades stay rare."},
         {n:'03',t:'Trim & top up',p:"When a name drifts well off its equal slice, the winner is trimmed and the laggard topped up — harvesting gains and buying defensive dips."},
@@ -273,7 +273,7 @@ function render(S,pf){
 
   // book
   var mx=Math.max.apply(null,S.positions.map(p=>p.weight).concat(0.0001));
-  var bookNote={apex:'momentum convictions',top34:'mega-caps · equal weight',bedrock:'defensive · equal weight',slipstream:'core anchors + hot rotation',ignition:'tiered moonshots'}[pf]||'equal weight at entry';
+  var bookNote={apex:'momentum convictions',top34:'index leaders · balanced weight',bedrock:'defensive · equal weight',slipstream:'core anchors + hot rotation',ignition:'tiered moonshots'}[pf]||'equal weight at entry';
   document.getElementById('bookMeta').textContent=S.positions.length+' names · '+bookNote;
   document.getElementById('hold').innerHTML=S.positions.map((p,i)=>
     '<div class="hrow"><span class="i">'+String(i+1).padStart(2,'0')+'</span>'+
