@@ -2,13 +2,13 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-06-30",
+    "last_date": "2026-06-29",
     "mode": "forward",
-    "total_value": 103349.8,
+    "total_value": 102454.3,
     "cash": 0.0,
-    "total_return": 0.0335,
-    "benchmark_return": -0.0016,
-    "alpha": 0.0351,
+    "total_return": 0.0016,
+    "benchmark_return": -0.0094,
+    "alpha": 0.011,
     "num_trades": 14,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
@@ -87,14 +87,6 @@
       "benchmark": 99055.83,
       "benchmark_ret": -0.0094,
       "cash": 0.0
-    },
-    {
-      "date": "2026-06-30",
-      "value": 103349.8,
-      "ret": 0.0335,
-      "benchmark": 99840.37,
-      "benchmark_ret": -0.0016,
-      "cash": 0.0
     }
   ],
   "positions": [
@@ -109,7 +101,7 @@
       "drawdown": 0,
       "ret": 0.1985,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.116
+      "weight": 0.117
     },
     {
       "ticker": "GEV",
@@ -122,7 +114,7 @@
       "drawdown": 0,
       "ret": 0.196,
       "thesis": "Momentum leader in Energy / Power.",
-      "weight": 0.1157
+      "weight": 0.1167
     },
     {
       "ticker": "MU",
@@ -135,20 +127,7 @@
       "drawdown": 0,
       "ret": 0.1308,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.1094
-    },
-    {
-      "ticker": "CRWD",
-      "theme": "Other momentum",
-      "conviction": "momentum",
-      "shares": 14.432,
-      "avg_entry": 692.91,
-      "price": 763.14,
-      "value": 11013.55,
-      "drawdown": 0,
-      "ret": 0.1014,
-      "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1066
+      "weight": 0.1104
     },
     {
       "ticker": "MRVL",
@@ -161,7 +140,20 @@
       "drawdown": 0,
       "ret": 0.069,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.1034
+      "weight": 0.1043
+    },
+    {
+      "ticker": "CRWD",
+      "theme": "Other momentum",
+      "conviction": "momentum",
+      "shares": 14.432,
+      "avg_entry": 692.91,
+      "price": 701.09,
+      "value": 10118.05,
+      "drawdown": 0,
+      "ret": 0.0118,
+      "thesis": "Momentum leader in Other momentum.",
+      "weight": 0.0988
     },
     {
       "ticker": "RIOT",
@@ -174,7 +166,7 @@
       "drawdown": 0,
       "ret": 0.0,
       "thesis": "Momentum leader in Crypto / Fintech.",
-      "weight": 0.0968
+      "weight": 0.0976
     },
     {
       "ticker": "MARA",
@@ -187,7 +179,7 @@
       "drawdown": 0.0512,
       "ret": -0.0512,
       "thesis": "Momentum leader in Crypto / Fintech.",
-      "weight": 0.0918
+      "weight": 0.0926
     },
     {
       "ticker": "DELL",
@@ -200,7 +192,7 @@
       "drawdown": 0,
       "ret": 0.029,
       "thesis": "Rotated in: hot momentum, +224% 6mo.",
-      "weight": 0.0878
+      "weight": 0.0886
     },
     {
       "ticker": "ARM",
@@ -213,7 +205,7 @@
       "drawdown": 0.1054,
       "ret": -0.1054,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.0866
+      "weight": 0.0873
     },
     {
       "ticker": "AMD",
@@ -226,45 +218,36 @@
       "drawdown": 0,
       "ret": 0.1265,
       "thesis": "Rotated in: hot momentum, +144% 6mo.",
-      "weight": 0.086
+      "weight": 0.0867
     }
   ],
   "themes": [
     {
       "theme": "AI / Semis",
-      "weight": 0.4732,
+      "weight": 0.4773,
       "min": null,
       "max": null
     },
     {
       "theme": "Other momentum",
-      "weight": 0.2225,
+      "weight": 0.2157,
       "min": null,
       "max": null
     },
     {
       "theme": "Crypto / Fintech",
-      "weight": 0.1886,
+      "weight": 0.1902,
       "min": null,
       "max": null
     },
     {
       "theme": "Energy / Power",
-      "weight": 0.1157,
+      "weight": 0.1167,
       "min": null,
       "max": null
     }
   ],
   "moves": [
-    {
-      "date": "2026-06-30",
-      "ticker": null,
-      "action": "NO_MOVE",
-      "rule": "Hold",
-      "rationale": "All holdings still trending up \u2014 holding. Let winners run.",
-      "judge": "momentum",
-      "price": null
-    },
     {
       "date": "2026-06-29",
       "ticker": null,
