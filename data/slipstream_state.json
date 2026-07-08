@@ -5,11 +5,11 @@
     "last_date": "2026-07-08",
     "mode": "forward",
     "strategy": "Slipstream \u00b7 momentum ETF rotation",
-    "total_value": 101623.78,
+    "total_value": 101598.04,
     "cash": 0.0,
-    "total_return": 0.0162,
-    "benchmark_return": 0.016,
-    "alpha": 0.0002,
+    "total_return": 0.016,
+    "benchmark_return": 0.0152,
+    "alpha": 0.0008,
     "num_trades": 30,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -282,10 +282,10 @@
     },
     {
       "date": "2026-07-08",
-      "value": 101623.79,
-      "ret": 0.0162,
-      "benchmark": 101603.55,
-      "benchmark_ret": 0.016,
+      "value": 101598.04,
+      "ret": 0.016,
+      "benchmark": 101523.72,
+      "benchmark_ret": 0.0152,
       "cash": 0.0
     }
   ],
@@ -296,10 +296,10 @@
       "conviction": "core",
       "shares": 105.676,
       "avg_entry": 82.8,
-      "price": 84.38,
-      "value": 8916.44,
+      "price": 84.36,
+      "value": 8914.33,
       "drawdown": 0,
-      "ret": 0.019,
+      "ret": 0.0188,
       "thesis": "Total Intl \u2014 core anchor.",
       "weight": 0.0877
     },
@@ -322,10 +322,10 @@
       "conviction": "core",
       "shares": 85.852,
       "avg_entry": 101.92,
-      "price": 103.33,
-      "value": 8871.05,
+      "price": 103.3,
+      "value": 8868.48,
       "drawdown": 0,
-      "ret": 0.0138,
+      "ret": 0.0135,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0873
     },
@@ -335,10 +335,10 @@
       "conviction": "core",
       "shares": 91.748,
       "avg_entry": 95.37,
-      "price": 96.28,
-      "value": 8833.48,
+      "price": 96.25,
+      "value": 8831.2,
       "drawdown": 0,
-      "ret": 0.0095,
+      "ret": 0.0093,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0869
     },
@@ -348,10 +348,10 @@
       "conviction": "rotation",
       "shares": 87.322,
       "avg_entry": 104.04,
-      "price": 97.05,
-      "value": 8474.56,
-      "drawdown": 0.0672,
-      "ret": -0.0672,
+      "price": 97.0,
+      "value": 8470.63,
+      "drawdown": 0.0676,
+      "ret": -0.0676,
       "thesis": "EM ex-China \u2014 momentum rotation.",
       "weight": 0.0834
     },
@@ -361,10 +361,10 @@
       "conviction": "rotation",
       "shares": 70.119,
       "avg_entry": 111.04,
-      "price": 106.13,
-      "value": 7441.78,
-      "drawdown": 0.0442,
-      "ret": -0.0442,
+      "price": 106.07,
+      "value": 7437.57,
+      "drawdown": 0.0448,
+      "ret": -0.0448,
       "thesis": "Homebuilders \u2014 momentum rotation.",
       "weight": 0.0732
     },
@@ -374,25 +374,12 @@
       "conviction": "rotation",
       "shares": 90.927,
       "avg_entry": 85.63,
-      "price": 80.17,
-      "value": 7289.15,
-      "drawdown": 0.0638,
-      "ret": -0.0638,
+      "price": 80.11,
+      "value": 7283.7,
+      "drawdown": 0.0645,
+      "ret": -0.0645,
       "thesis": "Emerging Mkts \u2014 momentum rotation.",
       "weight": 0.0717
-    },
-    {
-      "ticker": "EEM",
-      "theme": "Emerging Mkts",
-      "conviction": "rotation",
-      "shares": 85.974,
-      "avg_entry": 69.1,
-      "price": 66.07,
-      "value": 5680.73,
-      "drawdown": 0.0438,
-      "ret": -0.0438,
-      "thesis": "Emerging Mkts \u2014 momentum rotation.",
-      "weight": 0.0559
     },
     {
       "ticker": "JETS",
@@ -400,12 +387,25 @@
       "conviction": "rotation",
       "shares": 179.121,
       "avg_entry": 30.46,
-      "price": 31.68,
-      "value": 5675.45,
+      "price": 31.75,
+      "value": 5686.19,
       "drawdown": 0,
-      "ret": 0.0402,
+      "ret": 0.0422,
       "thesis": "Airlines \u2014 momentum rotation.",
-      "weight": 0.0558
+      "weight": 0.056
+    },
+    {
+      "ticker": "EEM",
+      "theme": "Emerging Mkts",
+      "conviction": "rotation",
+      "shares": 85.974,
+      "avg_entry": 69.1,
+      "price": 66.06,
+      "value": 5679.44,
+      "drawdown": 0.044,
+      "ret": -0.044,
+      "thesis": "Emerging Mkts \u2014 momentum rotation.",
+      "weight": 0.0559
     },
     {
       "ticker": "AAXJ",
@@ -413,10 +413,10 @@
       "conviction": "rotation",
       "shares": 48.83,
       "avg_entry": 122.15,
-      "price": 115.11,
-      "value": 5620.77,
-      "drawdown": 0.0576,
-      "ret": -0.0576,
+      "price": 115.07,
+      "value": 5618.82,
+      "drawdown": 0.058,
+      "ret": -0.058,
       "thesis": "Asia ex-Japan \u2014 momentum rotation.",
       "weight": 0.0553
     },
@@ -426,10 +426,10 @@
       "conviction": "rotation",
       "shares": 63.068,
       "avg_entry": 86.51,
-      "price": 86.31,
-      "value": 5443.41,
-      "drawdown": 0.0023,
-      "ret": -0.0023,
+      "price": 86.38,
+      "value": 5447.82,
+      "drawdown": 0.0015,
+      "ret": -0.0015,
       "thesis": "Transport \u2014 momentum rotation.",
       "weight": 0.0536
     },
@@ -439,12 +439,12 @@
       "conviction": "rotation",
       "shares": 70.291,
       "avg_entry": 77.62,
-      "price": 76.47,
-      "value": 5375.19,
-      "drawdown": 0.0148,
-      "ret": -0.0148,
+      "price": 76.19,
+      "value": 5355.51,
+      "drawdown": 0.0184,
+      "ret": -0.0184,
       "thesis": "Greece \u2014 momentum rotation.",
-      "weight": 0.0529
+      "weight": 0.0527
     },
     {
       "ticker": "EWN",
@@ -452,12 +452,12 @@
       "conviction": "rotation",
       "shares": 77.876,
       "avg_entry": 70.06,
-      "price": 67.55,
-      "value": 5260.55,
-      "drawdown": 0.0358,
-      "ret": -0.0358,
+      "price": 67.73,
+      "value": 5274.57,
+      "drawdown": 0.0333,
+      "ret": -0.0333,
       "thesis": "Netherlands \u2014 momentum rotation.",
-      "weight": 0.0518
+      "weight": 0.0519
     },
     {
       "ticker": "ARGT",
@@ -465,10 +465,10 @@
       "conviction": "rotation",
       "shares": 55.6,
       "avg_entry": 98.13,
-      "price": 92.5,
-      "value": 5143.0,
-      "drawdown": 0.0574,
-      "ret": -0.0574,
+      "price": 92.51,
+      "value": 5143.55,
+      "drawdown": 0.0573,
+      "ret": -0.0573,
       "thesis": "Argentina \u2014 momentum rotation.",
       "weight": 0.0506
     },
@@ -478,12 +478,12 @@
       "conviction": "rotation",
       "shares": 28.888,
       "avg_entry": 147.03,
-      "price": 162.26,
-      "value": 4687.15,
+      "price": 161.84,
+      "value": 4675.16,
       "drawdown": 0,
-      "ret": 0.1036,
+      "ret": 0.1007,
       "thesis": "Biotech \u2014 momentum rotation.",
-      "weight": 0.0461
+      "weight": 0.046
     }
   ],
   "themes": [
@@ -509,7 +509,7 @@
     },
     {
       "theme": "Airlines",
-      "weight": 0.0558
+      "weight": 0.056
     },
     {
       "theme": "Asia ex-Japan",
@@ -521,11 +521,11 @@
     },
     {
       "theme": "Greece",
-      "weight": 0.0529
+      "weight": 0.0527
     },
     {
       "theme": "Netherlands",
-      "weight": 0.0518
+      "weight": 0.0519
     },
     {
       "theme": "Argentina",
@@ -533,7 +533,7 @@
     },
     {
       "theme": "Biotech",
-      "weight": 0.0461
+      "weight": 0.046
     }
   ],
   "moves": [
@@ -6440,13 +6440,18 @@
     },
     {
       "t": "2026-07-08 14:30",
-      "value": 101577.22,
+      "value": 101576.26,
       "benchmark": 101580.97
     },
     {
       "t": "2026-07-08 15:00",
-      "value": 101614.45,
-      "benchmark": 101600.04
+      "value": 101627.7,
+      "benchmark": 101559.16
+    },
+    {
+      "t": "2026-07-08 15:30",
+      "value": 101600.44,
+      "benchmark": 101539.4
     }
   ],
   "dividends": {
