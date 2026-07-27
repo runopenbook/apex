@@ -5,12 +5,12 @@
     "last_date": "2026-07-27",
     "mode": "forward",
     "strategy": "Slipstream \u00b7 momentum ETF rotation",
-    "total_value": 99646.56,
+    "total_value": 99385.46,
     "cash": 0.0,
-    "total_return": -0.0035,
-    "benchmark_return": 0.008,
-    "alpha": -0.0115,
-    "num_trades": 38,
+    "total_return": -0.0061,
+    "benchmark_return": 0.0057,
+    "alpha": -0.0118,
+    "num_trades": 40,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
     "disclaimer": "Paper-tracked. Not investment advice. No brokerage connection \u2014 you execute your own trades."
@@ -377,11 +377,19 @@
       "cash": 0.0
     },
     {
+      "date": "2026-07-24",
+      "value": 99544.1,
+      "ret": -0.0046,
+      "benchmark": 100708.71,
+      "benchmark_ret": 0.0071,
+      "cash": 0.0
+    },
+    {
       "date": "2026-07-27",
-      "value": 99646.56,
-      "ret": -0.0035,
-      "benchmark": 100804.11,
-      "benchmark_ret": 0.008,
+      "value": 99385.48,
+      "ret": -0.0061,
+      "benchmark": 100571.06,
+      "benchmark_ret": 0.0057,
       "cash": 0.0
     }
   ],
@@ -392,10 +400,10 @@
       "conviction": "core",
       "shares": 85.852,
       "avg_entry": 101.92,
-      "price": 103.96,
-      "value": 8924.71,
+      "price": 103.75,
+      "value": 8906.68,
       "drawdown": 0,
-      "ret": 0.02,
+      "ret": 0.0179,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0896
     },
@@ -405,10 +413,10 @@
       "conviction": "core",
       "shares": 91.748,
       "avg_entry": 95.37,
-      "price": 96.87,
-      "value": 8887.62,
+      "price": 96.66,
+      "value": 8868.35,
       "drawdown": 0,
-      "ret": 0.0157,
+      "ret": 0.0135,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0892
     },
@@ -418,12 +426,12 @@
       "conviction": "core",
       "shares": 126.83,
       "avg_entry": 68.99,
-      "price": 69.97,
-      "value": 8874.29,
+      "price": 69.77,
+      "value": 8848.93,
       "drawdown": 0,
-      "ret": 0.0142,
+      "ret": 0.0113,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0891
+      "weight": 0.089
     },
     {
       "ticker": "VXUS",
@@ -431,10 +439,10 @@
       "conviction": "core",
       "shares": 105.676,
       "avg_entry": 82.8,
-      "price": 83.69,
-      "value": 8844.52,
+      "price": 83.47,
+      "value": 8821.33,
       "drawdown": 0,
-      "ret": 0.0108,
+      "ret": 0.0082,
       "thesis": "Total Intl \u2014 core anchor.",
       "weight": 0.0888
     },
@@ -444,12 +452,12 @@
       "conviction": "rotation",
       "shares": 70.119,
       "avg_entry": 111.04,
-      "price": 109.64,
-      "value": 7687.9,
-      "drawdown": 0.0126,
-      "ret": -0.0126,
+      "price": 109.08,
+      "value": 7648.98,
+      "drawdown": 0.0176,
+      "ret": -0.0176,
       "thesis": "Homebuilders \u2014 momentum rotation.",
-      "weight": 0.0772
+      "weight": 0.077
     },
     {
       "ticker": "HACK",
@@ -457,12 +465,12 @@
       "conviction": "rotation",
       "shares": 63.681,
       "avg_entry": 109.34,
-      "price": 105.38,
-      "value": 6710.35,
-      "drawdown": 0.0362,
-      "ret": -0.0362,
+      "price": 105.85,
+      "value": 6740.6,
+      "drawdown": 0.0319,
+      "ret": -0.0319,
       "thesis": "Cybersecurity \u2014 momentum rotation.",
-      "weight": 0.0673
+      "weight": 0.0678
     },
     {
       "ticker": "XLK",
@@ -470,25 +478,38 @@
       "conviction": "rotation",
       "shares": 38.301,
       "avg_entry": 181.79,
-      "price": 173.76,
-      "value": 6655.21,
-      "drawdown": 0.0442,
-      "ret": -0.0442,
+      "price": 172.79,
+      "value": 6618.25,
+      "drawdown": 0.0495,
+      "ret": -0.0495,
       "thesis": "Technology \u2014 momentum rotation.",
-      "weight": 0.0668
+      "weight": 0.0666
     },
     {
-      "ticker": "SOXX",
-      "theme": "Semiconductors",
+      "ticker": "KIE",
+      "theme": "Insurance",
       "conviction": "rotation",
-      "shares": 12.557,
-      "avg_entry": 554.5,
-      "price": 510.62,
-      "value": 6411.73,
-      "drawdown": 0.0791,
-      "ret": -0.0791,
-      "thesis": "Semiconductors \u2014 momentum rotation.",
-      "weight": 0.0643
+      "shares": 90.586,
+      "avg_entry": 64.81,
+      "price": 64.81,
+      "value": 5870.44,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Insurance \u2014 momentum rotation.",
+      "weight": 0.0591
+    },
+    {
+      "ticker": "SKYY",
+      "theme": "Cloud",
+      "conviction": "rotation",
+      "shares": 43.337,
+      "avg_entry": 135.46,
+      "price": 135.46,
+      "value": 5870.44,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Cloud \u2014 momentum rotation.",
+      "weight": 0.0591
     },
     {
       "ticker": "JETS",
@@ -496,12 +517,12 @@
       "conviction": "rotation",
       "shares": 179.121,
       "avg_entry": 30.46,
-      "price": 30.82,
-      "value": 5520.51,
+      "price": 30.83,
+      "value": 5523.19,
       "drawdown": 0,
-      "ret": 0.0118,
+      "ret": 0.0123,
       "thesis": "Airlines \u2014 momentum rotation.",
-      "weight": 0.0554
+      "weight": 0.0556
     },
     {
       "ticker": "IYT",
@@ -509,12 +530,12 @@
       "conviction": "rotation",
       "shares": 63.068,
       "avg_entry": 86.51,
-      "price": 87.24,
-      "value": 5502.06,
+      "price": 87.12,
+      "value": 5494.5,
       "drawdown": 0,
-      "ret": 0.0084,
+      "ret": 0.0071,
       "thesis": "Transport \u2014 momentum rotation.",
-      "weight": 0.0552
+      "weight": 0.0553
     },
     {
       "ticker": "GREK",
@@ -522,25 +543,12 @@
       "conviction": "rotation",
       "shares": 70.291,
       "avg_entry": 77.62,
-      "price": 77.81,
-      "value": 5469.38,
+      "price": 77.88,
+      "value": 5474.3,
       "drawdown": 0,
-      "ret": 0.0024,
+      "ret": 0.0033,
       "thesis": "Greece \u2014 momentum rotation.",
-      "weight": 0.0549
-    },
-    {
-      "ticker": "KIE",
-      "theme": "Insurance",
-      "conviction": "rotation",
-      "shares": 83.958,
-      "avg_entry": 64.83,
-      "price": 64.83,
-      "value": 5443.01,
-      "drawdown": 0,
-      "ret": 0.0,
-      "thesis": "Insurance \u2014 momentum rotation.",
-      "weight": 0.0546
+      "weight": 0.0551
     },
     {
       "ticker": "ARGT",
@@ -548,12 +556,12 @@
       "conviction": "rotation",
       "shares": 55.6,
       "avg_entry": 98.13,
-      "price": 93.74,
-      "value": 5211.94,
-      "drawdown": 0.0447,
-      "ret": -0.0447,
+      "price": 93.83,
+      "value": 5216.94,
+      "drawdown": 0.0438,
+      "ret": -0.0438,
       "thesis": "Argentina \u2014 momentum rotation.",
-      "weight": 0.0523
+      "weight": 0.0525
     },
     {
       "ticker": "EWN",
@@ -561,10 +569,10 @@
       "conviction": "rotation",
       "shares": 77.876,
       "avg_entry": 70.06,
-      "price": 65.68,
-      "value": 5115.31,
-      "drawdown": 0.0624,
-      "ret": -0.0624,
+      "price": 65.46,
+      "value": 5097.4,
+      "drawdown": 0.0657,
+      "ret": -0.0657,
       "thesis": "Netherlands \u2014 momentum rotation.",
       "weight": 0.0513
     },
@@ -574,18 +582,18 @@
       "conviction": "rotation",
       "shares": 28.888,
       "avg_entry": 147.03,
-      "price": 151.9,
-      "value": 4388.02,
+      "price": 151.8,
+      "value": 4385.13,
       "drawdown": 0,
-      "ret": 0.0331,
+      "ret": 0.0324,
       "thesis": "Biotech \u2014 momentum rotation.",
-      "weight": 0.044
+      "weight": 0.0441
     }
   ],
   "themes": [
     {
       "theme": "Developed Intl",
-      "weight": 0.2678
+      "weight": 0.2679
     },
     {
       "theme": "Total Intl",
@@ -593,39 +601,39 @@
     },
     {
       "theme": "Homebuilders",
-      "weight": 0.0772
+      "weight": 0.077
     },
     {
       "theme": "Cybersecurity",
-      "weight": 0.0673
+      "weight": 0.0678
     },
     {
       "theme": "Technology",
-      "weight": 0.0668
-    },
-    {
-      "theme": "Semiconductors",
-      "weight": 0.0643
-    },
-    {
-      "theme": "Airlines",
-      "weight": 0.0554
-    },
-    {
-      "theme": "Transport",
-      "weight": 0.0552
-    },
-    {
-      "theme": "Greece",
-      "weight": 0.0549
+      "weight": 0.0666
     },
     {
       "theme": "Insurance",
-      "weight": 0.0546
+      "weight": 0.0591
+    },
+    {
+      "theme": "Cloud",
+      "weight": 0.0591
+    },
+    {
+      "theme": "Airlines",
+      "weight": 0.0556
+    },
+    {
+      "theme": "Transport",
+      "weight": 0.0553
+    },
+    {
+      "theme": "Greece",
+      "weight": 0.0551
     },
     {
       "theme": "Argentina",
-      "weight": 0.0523
+      "weight": 0.0525
     },
     {
       "theme": "Netherlands",
@@ -633,10 +641,19 @@
     },
     {
       "theme": "Biotech",
-      "weight": 0.044
+      "weight": 0.0441
     }
   ],
   "moves": [
+    {
+      "date": "2026-07-27",
+      "ticker": "SKYY",
+      "action": "BUY",
+      "rule": "Rotate in",
+      "rationale": "Rotated into SKYY (Cloud) \u2014 top of the 1m+3m momentum board among names not on cooldown.",
+      "judge": "mechanical",
+      "price": 135.46
+    },
     {
       "date": "2026-07-27",
       "ticker": "KIE",
@@ -644,16 +661,25 @@
       "rule": "Rotate in",
       "rationale": "Rotated into KIE (Insurance) \u2014 top of the 1m+3m momentum board among names not on cooldown.",
       "judge": "mechanical",
-      "price": 64.83
+      "price": 64.81
+    },
+    {
+      "date": "2026-07-27",
+      "ticker": "SOXX",
+      "action": "SELL",
+      "rule": "Stop \u22128%",
+      "rationale": "Cut SOXX \u2014 broke the \u22128% stop (-9.3%).",
+      "judge": "mechanical",
+      "price": 503.02
     },
     {
       "date": "2026-07-27",
       "ticker": "EEM",
       "action": "SELL",
       "rule": "Stop \u22128%",
-      "rationale": "Cut EEM \u2014 broke the \u22128% stop (-8.4%).",
+      "rationale": "Cut EEM \u2014 broke the \u22128% stop (-8.7%).",
       "judge": "mechanical",
-      "price": 63.31
+      "price": 63.1
     },
     {
       "date": "2026-07-13",
@@ -1046,13 +1072,18 @@
   "trade_days": [
     {
       "date": "2026-07-27",
-      "n": 2,
+      "n": 4,
       "theme": "Rotation",
       "opened": [
         {
           "ticker": "KIE",
-          "weight": 0.0546,
+          "weight": 0.0591,
           "theme": "Insurance"
+        },
+        {
+          "ticker": "SKYY",
+          "weight": 0.0591,
+          "theme": "Cloud"
         }
       ],
       "closed": [
@@ -1060,6 +1091,11 @@
           "ticker": "EEM",
           "weight": 0.0546,
           "theme": "Emerging Mkts"
+        },
+        {
+          "ticker": "SOXX",
+          "weight": 0.0636,
+          "theme": "Semiconductors"
         }
       ],
       "changed": []
@@ -6212,7 +6248,7 @@
     },
     {
       "t": "2026-07-14 16:00",
-      "value": 101891.56,
+      "value": 101909.21,
       "benchmark": 102429.37
     },
     {
@@ -7342,7 +7378,7 @@
     },
     {
       "t": "2026-07-23 17:00",
-      "value": 99980.28,
+      "value": 99990.55,
       "benchmark": 100701.21
     },
     {
@@ -7427,7 +7463,7 @@
     },
     {
       "t": "2026-07-24 09:30",
-      "value": 99422.58,
+      "value": 99429.98,
       "benchmark": 100517.91
     },
     {
@@ -7597,13 +7633,18 @@
     },
     {
       "t": "2026-07-27 10:30",
-      "value": 99702.46,
+      "value": 99722.68,
       "benchmark": 100812.31
     },
     {
       "t": "2026-07-27 11:00",
-      "value": 99662.93,
-      "benchmark": 100819.1
+      "value": 99424.78,
+      "benchmark": 100621.48
+    },
+    {
+      "t": "2026-07-27 11:30",
+      "value": 99414.91,
+      "benchmark": 100614.67
     }
   ],
   "dividends": {
