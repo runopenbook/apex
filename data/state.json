@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-07-08",
+    "last_date": "2026-07-29",
     "mode": "forward",
-    "total_value": 78816.27,
-    "cash": 0.0,
-    "total_return": -0.0912,
-    "benchmark_return": -0.0036,
-    "alpha": -0.0876,
-    "num_trades": 16,
+    "total_value": 78954.14,
+    "cash": -0.0,
+    "total_return": -0.2105,
+    "benchmark_return": -0.0166,
+    "alpha": -0.1939,
+    "num_trades": 20,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
     "risk": "High",
@@ -111,6 +111,14 @@
       "benchmark": 99636.28,
       "benchmark_ret": -0.0036,
       "cash": 0.0
+    },
+    {
+      "date": "2026-07-29",
+      "value": 78954.14,
+      "ret": -0.2105,
+      "benchmark": 98343.44,
+      "benchmark_ret": -0.0166,
+      "cash": 0.0
     }
   ],
   "positions": [
@@ -120,12 +128,12 @@
       "conviction": "momentum",
       "shares": 35.144,
       "avg_entry": 284.54,
-      "price": 313.68,
-      "value": 11024.11,
+      "price": 315.8,
+      "value": 11098.61,
       "drawdown": 0,
-      "ret": 0.1024,
+      "ret": 0.1099,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1399
+      "weight": 0.1406
     },
     {
       "ticker": "CRWD",
@@ -133,12 +141,12 @@
       "conviction": "momentum",
       "shares": 57.728,
       "avg_entry": 173.23,
-      "price": 179.42,
-      "value": 10357.48,
+      "price": 179.9,
+      "value": 10385.48,
       "drawdown": 0,
-      "ret": 0.0357,
+      "ret": 0.0385,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1314
+      "weight": 0.1315
     },
     {
       "ticker": "GEV",
@@ -146,12 +154,12 @@
       "conviction": "momentum",
       "shares": 10.18,
       "avg_entry": 982.35,
-      "price": 907.91,
-      "value": 9242.28,
-      "drawdown": 0.0758,
-      "ret": -0.0758,
+      "price": 913.41,
+      "value": 9298.16,
+      "drawdown": 0.0702,
+      "ret": -0.0702,
       "thesis": "Momentum leader in Energy / Power.",
-      "weight": 0.1173
+      "weight": 0.1178
     },
     {
       "ticker": "DELL",
@@ -159,10 +167,10 @@
       "conviction": "momentum",
       "shares": 21.034,
       "avg_entry": 419.32,
-      "price": 374.16,
-      "value": 7870.0,
-      "drawdown": 0.1077,
-      "ret": -0.1077,
+      "price": 375.01,
+      "value": 7887.88,
+      "drawdown": 0.1057,
+      "ret": -0.1057,
       "thesis": "Rotated in: hot momentum, +224% 6mo.",
       "weight": 0.0999
     },
@@ -172,25 +180,12 @@
       "conviction": "momentum",
       "shares": 9.797,
       "avg_entry": 1020.76,
-      "price": 771.15,
-      "value": 7554.67,
-      "drawdown": 0.2445,
-      "ret": -0.2445,
+      "price": 772.01,
+      "value": 7563.04,
+      "drawdown": 0.2437,
+      "ret": -0.2437,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.0959
-    },
-    {
-      "ticker": "AXON",
-      "theme": "Other momentum",
-      "conviction": "momentum",
-      "shares": 13.105,
-      "avg_entry": 644.3,
-      "price": 547.6,
-      "value": 7176.53,
-      "drawdown": 0.1501,
-      "ret": -0.1501,
-      "thesis": "Rotated in: hot momentum, +15% 6mo.",
-      "weight": 0.0911
+      "weight": 0.0958
     },
     {
       "ticker": "RIOT",
@@ -198,12 +193,25 @@
       "conviction": "momentum",
       "shares": 365.23,
       "avg_entry": 27.38,
-      "price": 19.42,
-      "value": 7090.94,
-      "drawdown": 0.2909,
-      "ret": -0.2909,
+      "price": 19.59,
+      "value": 7154.89,
+      "drawdown": 0.2845,
+      "ret": -0.2845,
       "thesis": "Momentum leader in Crypto / Fintech.",
-      "weight": 0.09
+      "weight": 0.0906
+    },
+    {
+      "ticker": "AXON",
+      "theme": "Other momentum",
+      "conviction": "momentum",
+      "shares": 13.105,
+      "avg_entry": 644.3,
+      "price": 542.86,
+      "value": 7114.41,
+      "drawdown": 0.1574,
+      "ret": -0.1574,
+      "thesis": "Rotated in: hot momentum, +15% 6mo.",
+      "weight": 0.0901
     },
     {
       "ticker": "AMD",
@@ -211,67 +219,109 @@
       "conviction": "momentum",
       "shares": 15.294,
       "avg_entry": 515.69,
-      "price": 436.71,
-      "value": 6679.33,
-      "drawdown": 0.1531,
-      "ret": -0.1531,
+      "price": 436.99,
+      "value": 6683.53,
+      "drawdown": 0.1526,
+      "ret": -0.1526,
       "thesis": "Rotated in: hot momentum, +144% 6mo.",
       "weight": 0.0847
     },
     {
-      "ticker": "MRVL",
-      "theme": "AI / Semis",
+      "ticker": "RTX",
+      "theme": "Defense / Nuclear",
       "conviction": "momentum",
-      "shares": 35.885,
-      "avg_entry": 278.67,
-      "price": 166.98,
-      "value": 5991.85,
-      "drawdown": 0.4008,
-      "ret": -0.4008,
-      "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.076
+      "shares": 27.065,
+      "avg_entry": 217.4,
+      "price": 217.4,
+      "value": 5884.06,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Rotated in: hot momentum, +13% 6mo.",
+      "weight": 0.0745
     },
     {
-      "ticker": "ARM",
-      "theme": "AI / Semis",
+      "ticker": "GD",
+      "theme": "Defense / Nuclear",
       "conviction": "momentum",
-      "shares": 25.231,
-      "avg_entry": 396.34,
-      "price": 231.03,
-      "value": 5829.09,
-      "drawdown": 0.4171,
-      "ret": -0.4171,
-      "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.074
+      "shares": 15.088,
+      "avg_entry": 389.98,
+      "price": 389.98,
+      "value": 5884.06,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Rotated in: hot momentum, +8% 6mo.",
+      "weight": 0.0745
     }
   ],
   "themes": [
     {
-      "theme": "AI / Semis",
-      "weight": 0.4304,
+      "theme": "Other momentum",
+      "weight": 0.3622,
       "min": null,
       "max": null
     },
     {
-      "theme": "Other momentum",
-      "weight": 0.3623,
+      "theme": "AI / Semis",
+      "weight": 0.2803,
+      "min": null,
+      "max": null
+    },
+    {
+      "theme": "Defense / Nuclear",
+      "weight": 0.1491,
       "min": null,
       "max": null
     },
     {
       "theme": "Energy / Power",
-      "weight": 0.1173,
+      "weight": 0.1178,
       "min": null,
       "max": null
     },
     {
       "theme": "Crypto / Fintech",
-      "weight": 0.09,
+      "weight": 0.0906,
       "min": null,
       "max": null
     }
   ],
   "moves": [
+    {
+      "date": "2026-07-29",
+      "ticker": "GD",
+      "action": "BUY",
+      "rule": "Rotation",
+      "rationale": "Rotated into GD \u2014 hottest available in Defense / Nuclear (+8% 6mo).",
+      "judge": "momentum",
+      "price": 389.97670491536456
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "RTX",
+      "action": "BUY",
+      "rule": "Rotation",
+      "rationale": "Rotated into RTX \u2014 hottest available in Defense / Nuclear (+13% 6mo).",
+      "judge": "momentum",
+      "price": 217.40499877929688
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "ARM",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "ARM fell 48% from its high \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 230.5133310953776
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "MRVL",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "MRVL fell 48% from its high \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 165.86666870117188
+    },
     {
       "date": "2026-07-08",
       "ticker": null,
@@ -409,6 +459,35 @@
     }
   ],
   "trade_days": [
+    {
+      "date": "2026-07-29",
+      "opened": [
+        {
+          "ticker": "RTX",
+          "weight": 0.0745,
+          "theme": "Defense / Nuclear"
+        },
+        {
+          "ticker": "GD",
+          "weight": 0.0745,
+          "theme": "Defense / Nuclear"
+        }
+      ],
+      "closed": [
+        {
+          "ticker": "MRVL",
+          "weight": 0.0754,
+          "theme": "AI / Semis"
+        },
+        {
+          "ticker": "ARM",
+          "weight": 0.0737,
+          "theme": "AI / Semis"
+        }
+      ],
+      "n": 4,
+      "theme": "Defense / Nuclear"
+    },
     {
       "date": "2026-07-07",
       "opened": [
@@ -3888,108 +3967,118 @@
     },
     {
       "t": "2026-07-29 04:00",
-      "value": 81666.56,
+      "value": 81381.05,
       "benchmark": 100661.42
     },
     {
       "t": "2026-07-29 04:30",
-      "value": 81818.54,
+      "value": 81532.5,
       "benchmark": 100783.46
     },
     {
       "t": "2026-07-29 05:00",
-      "value": 82406.81,
+      "value": 82118.71,
       "benchmark": 100790.25
     },
     {
       "t": "2026-07-29 05:30",
-      "value": 82509.16,
+      "value": 82220.71,
       "benchmark": 100866.28
     },
     {
       "t": "2026-07-29 06:00",
-      "value": 82530.92,
+      "value": 82242.39,
       "benchmark": 100851.35
     },
     {
       "t": "2026-07-29 06:30",
-      "value": 81953.41,
+      "value": 81666.9,
       "benchmark": 100746.8
     },
     {
       "t": "2026-07-29 07:00",
-      "value": 82290.47,
+      "value": 82002.78,
       "benchmark": 100816.04
     },
     {
       "t": "2026-07-29 07:30",
-      "value": 82226.87,
+      "value": 81939.4,
       "benchmark": 100791.6
     },
     {
       "t": "2026-07-29 08:00",
-      "value": 81696.32,
+      "value": 81410.71,
       "benchmark": 100511.89
     },
     {
       "t": "2026-07-29 08:30",
-      "value": 81871.0,
+      "value": 81584.77,
       "benchmark": 100566.03
     },
     {
       "t": "2026-07-29 09:00",
-      "value": 81842.78,
+      "value": 81556.65,
       "benchmark": 100452.15
     },
     {
       "t": "2026-07-29 09:30",
-      "value": 80486.75,
+      "value": 80205.36,
       "benchmark": 100119.49
     },
     {
       "t": "2026-07-29 10:00",
-      "value": 79641.3,
+      "value": 79362.87,
       "benchmark": 99788.18
     },
     {
       "t": "2026-07-29 10:30",
-      "value": 79463.49,
+      "value": 79185.68,
       "benchmark": 99774.6
     },
     {
       "t": "2026-07-29 11:00",
-      "value": 78994.35,
+      "value": 78718.18,
       "benchmark": 99723.05
     },
     {
       "t": "2026-07-29 11:30",
-      "value": 78597.83,
+      "value": 78323.05,
       "benchmark": 99626.6
     },
     {
       "t": "2026-07-29 12:00",
-      "value": 78409.24,
+      "value": 78135.12,
       "benchmark": 99642.89
     },
     {
       "t": "2026-07-29 12:30",
-      "value": 78615.96,
+      "value": 78341.12,
       "benchmark": 99781.39
     },
     {
       "t": "2026-07-29 13:00",
-      "value": 78881.12,
+      "value": 78602.09,
       "benchmark": 99899.52
     },
     {
       "t": "2026-07-29 13:30",
-      "value": 78895.11,
-      "benchmark": 99865.58
+      "value": 78893.64,
+      "benchmark": 99990.15
+    },
+    {
+      "t": "2026-07-29 14:00",
+      "value": 78954.14,
+      "benchmark": 99990.15
     }
   ],
   "dividends": {
-    "total": 21.96,
+    "total": 43.8,
     "per": [
+      {
+        "ticker": "GD",
+        "amount": 23.99,
+        "dps": 1.59
+      },
       {
         "ticker": "DELL",
         "amount": 13.25,
@@ -3999,11 +4088,6 @@
         "ticker": "GEV",
         "amount": 5.09,
         "dps": 0.5
-      },
-      {
-        "ticker": "MRVL",
-        "amount": 2.15,
-        "dps": 0.06
       },
       {
         "ticker": "MU",
