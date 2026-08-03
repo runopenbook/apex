@@ -331,6 +331,42 @@ async function main(){
   catch(e){ document.getElementById('metrics').innerHTML='<div class="metric">No data. Run the engine.</div>'; return; }
   const m=S.meta;
 
+  // one authoritative plotted series, built ONCE and shared by the overview tiles
+  // and the chart: the daily curve + the healed intraday (per-day anchored to the
+  // official closes, merged back to inception)
+  const daily=S.curve.map(p=>({x:p.date,t:new Date(p.date),value:p.value,benchmark:p.benchmark}));
+  const intra=(S.intraday||[]).map(p=>({x:p.t,t:new Date(p.t.replace(' ','T')),value:p.value,benchmark:p.benchmark}));
+  // Heal the plotted series. (1) Per-day anchor: scale each intraday day's bars to end
+  // at that day's OFFICIAL daily close, so a mismatched price feed (e.g. a split applied
+  // to the daily feed but not the 30-min one) can't drift the line. (2) Prepend the daily
+  // history older than the intraday window, so long ranges always baseline at inception —
+  // once a book outlives Yahoo's ~60-day 30-min window, the intraday series alone starts
+  // mid-life and the ALL view silently rebased there (the "-15% / never beating" bug).
+  (function(){
+    if(!intra.length) return;
+    const dval={}; daily.forEach(p=>{ if(p.value!=null) dval[p.x]=p.value; });
+    const byday={}; intra.forEach(p=>{ (byday[p.x.slice(0,10)]=byday[p.x.slice(0,10)]||[]).push(p); });
+    Object.keys(byday).forEach(d=>{
+      const tv=dval[d]; if(!tv) return;
+      const pts=byday[d].filter(p=>p.value!=null); if(!pts.length) return;
+      const reg=pts.filter(p=>p.x.slice(11)<='16:00');
+      const a=reg.length?reg[reg.length-1]:pts[pts.length-1];
+      const k=tv/a.value;
+      if(isFinite(k)&&Math.abs(k-1)>1e-9) byday[d].forEach(p=>{ if(p.value!=null) p.value=Math.round(p.value*k*100)/100; });
+    });
+    const seam=intra[0].x.slice(0,10);
+    const older=daily.filter(p=>p.x<seam);
+    if(older.length){
+      // keep the benchmark line continuous across the seam (Apex's intraday bench is
+      // rebased at its own window start, not at inception)
+      const db=older[older.length-1].benchmark, ib=intra[0].benchmark;
+      if(db!=null&&ib){ const f=db/ib;
+        if(isFinite(f)&&Math.abs(f-1)>1e-6) intra.forEach(p=>{ if(p.benchmark!=null) p.benchmark=p.benchmark*f; }); }
+      intra.unshift.apply(intra,older);
+    }
+  })();
+
+
   document.getElementById('strat').textContent=(m.strategy||'Portfolio');
   const mt=document.getElementById('modeTag');
   mt.textContent=(m.mode==='forward'?'● Live':m.mode);
@@ -342,7 +378,7 @@ async function main(){
 
   // Overview reads from the SAME source as the chart (latest point vs inception),
   // so the cards and the chart's ALL view always agree — incl. extended hours.
-  const _src=(S.intraday&&S.intraday.length)?S.intraday:S.curve;
+  const _src=intra.length?intra:daily;   // healed + inception-merged (same as the chart)
   const _inc=_src.find(p=>p.value!=null)||_src[0];
   const _lat=[..._src].reverse().find(p=>p.value!=null)||_src[_src.length-1];
   const navNow=_lat.value;
@@ -424,37 +460,6 @@ async function main(){
   window.__chart=chart; themeChart(chart);
 
   const RANGES=[['1D',1],['1W',7],['1M',30],['3M',90],['6M',180],['1Y',365],['2Y',730],['ALL',1e9]];
-  const daily=S.curve.map(p=>({x:p.date,t:new Date(p.date),value:p.value,benchmark:p.benchmark}));
-  const intra=(S.intraday||[]).map(p=>({x:p.t,t:new Date(p.t.replace(' ','T')),value:p.value,benchmark:p.benchmark}));
-  // Heal the plotted series. (1) Per-day anchor: scale each intraday day's bars to end
-  // at that day's OFFICIAL daily close, so a mismatched price feed (e.g. a split applied
-  // to the daily feed but not the 30-min one) can't drift the line. (2) Prepend the daily
-  // history older than the intraday window, so long ranges always baseline at inception —
-  // once a book outlives Yahoo's ~60-day 30-min window, the intraday series alone starts
-  // mid-life and the ALL view silently rebased there (the "-15% / never beating" bug).
-  (function(){
-    if(!intra.length) return;
-    const dval={}; daily.forEach(p=>{ if(p.value!=null) dval[p.x]=p.value; });
-    const byday={}; intra.forEach(p=>{ (byday[p.x.slice(0,10)]=byday[p.x.slice(0,10)]||[]).push(p); });
-    Object.keys(byday).forEach(d=>{
-      const tv=dval[d]; if(!tv) return;
-      const pts=byday[d].filter(p=>p.value!=null); if(!pts.length) return;
-      const reg=pts.filter(p=>p.x.slice(11)<='16:00');
-      const a=reg.length?reg[reg.length-1]:pts[pts.length-1];
-      const k=tv/a.value;
-      if(isFinite(k)&&Math.abs(k-1)>1e-9) byday[d].forEach(p=>{ if(p.value!=null) p.value=Math.round(p.value*k*100)/100; });
-    });
-    const seam=intra[0].x.slice(0,10);
-    const older=daily.filter(p=>p.x<seam);
-    if(older.length){
-      // keep the benchmark line continuous across the seam (Apex's intraday bench is
-      // rebased at its own window start, not at inception)
-      const db=older[older.length-1].benchmark, ib=intra[0].benchmark;
-      if(db!=null&&ib){ const f=db/ib;
-        if(isFinite(f)&&Math.abs(f-1)>1e-6) intra.forEach(p=>{ if(p.benchmark!=null) p.benchmark=p.benchmark*f; }); }
-      intra.unshift.apply(intra,older);
-    }
-  })();
   const intraSpan=intra.length>=2?(intra[intra.length-1].t-intra[0].t)/86400000:0;
   // Everything below is relative to the SELECTED timeframe's start (curA0/curB0):
   // the line, the hover box and the header all read the same baseline, in $ AND %,
@@ -495,7 +500,19 @@ async function main(){
     if(c.length<2) c=src.slice(-Math.min(src.length,Math.max(2,useIntra?14:2)));
     // resample to a consistent target so every frame + book has a similar density
     const TGT=128;
-    if(c.length>TGT){const o=[],n=c.length;for(let i=0;i<TGT;i++)o.push(c[Math.round(i*(n-1)/(TGT-1))]);c=o;}
+    if(c.length>TGT){
+      // pick points evenly in TIME, not by index — the merged series mixes one-point-
+      // per-day history with dense 30-min bars, and index-uniform sampling let the
+      // dense weeks hog the width (the launch month collapsed into the left edge, so
+      // a mid-June peak looked like day one)
+      const t0=c[0].t.getTime(), t1=c[c.length-1].t.getTime(), o=[]; let j=0;
+      for(let i=0;i<TGT;i++){
+        const tt=t0+(t1-t0)*i/(TGT-1);
+        while(j<c.length-1 && Math.abs(c[j+1].t.getTime()-tt)<=Math.abs(c[j].t.getTime()-tt)) j++;
+        o.push(c[j]);
+      }
+      c=o;   // duplicates from sparse daily days are fine — equal spacing per time-slot keeps the axis linear
+    }
     return c;
   }
   const rangeStat=document.getElementById('rangeStat');
@@ -561,7 +578,12 @@ async function main(){
       <div class="an">${t.theme}</div>
       <div class="atrack"><i style="width:${t.weight/tmax*100}%"></i></div>
       <div class="ap num">${(t.weight*100).toFixed(1)}%</div>
-    </div>`).join('');
+    </div>`).join('')+(function(){
+      const cash=(S.cash!=null?S.cash:(m.cash||0)), tot=m.total_value||0;
+      if(!tot||cash/tot<0.005) return '';
+      const w=cash/tot;
+      return `<div class="arow"><div class="an">Cash</div><div class="atrack"><i style="width:${Math.min(w/tmax,1)*100}%"></i></div><div class="ap num">${(w*100).toFixed(1)}%</div></div>`;
+    })();
 
   /* recent trades (autopilot-style) */
   const td=S.trade_days||[];
