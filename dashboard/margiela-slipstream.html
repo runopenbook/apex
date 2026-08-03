@@ -429,6 +429,35 @@ async function main(){
   const RANGES=[['1D',1],['1W',7],['1M',30],['3M',90],['6M',180],['1Y',365],['2Y',730],['ALL',1e9]];
   const daily=S.curve.map(p=>({x:p.date,t:new Date(p.date),value:p.value,benchmark:p.benchmark}));
   const intra=(S.intraday||[]).map(p=>({x:p.t,t:new Date(p.t.replace(' ','T')),value:p.value,benchmark:p.benchmark}));
+  // Heal the plotted series. (1) Per-day anchor: scale each intraday day's bars to end
+  // at that day's OFFICIAL daily close, so a mismatched price feed (e.g. a split applied
+  // to the daily feed but not the 30-min one) can't drift the line. (2) Prepend the daily
+  // history older than the intraday window, so long ranges always baseline at inception —
+  // once a book outlives Yahoo's ~60-day 30-min window, the intraday series alone starts
+  // mid-life and the ALL view silently rebased there (the "-15% / never beating" bug).
+  (function(){
+    if(!intra.length) return;
+    const dval={}; daily.forEach(p=>{ if(p.value!=null) dval[p.x]=p.value; });
+    const byday={}; intra.forEach(p=>{ (byday[p.x.slice(0,10)]=byday[p.x.slice(0,10)]||[]).push(p); });
+    Object.keys(byday).forEach(d=>{
+      const tv=dval[d]; if(!tv) return;
+      const pts=byday[d].filter(p=>p.value!=null); if(!pts.length) return;
+      const reg=pts.filter(p=>p.x.slice(11)<='16:00');
+      const a=reg.length?reg[reg.length-1]:pts[pts.length-1];
+      const k=tv/a.value;
+      if(isFinite(k)&&Math.abs(k-1)>1e-9) byday[d].forEach(p=>{ if(p.value!=null) p.value=Math.round(p.value*k*100)/100; });
+    });
+    const seam=intra[0].x.slice(0,10);
+    const older=daily.filter(p=>p.x<seam);
+    if(older.length){
+      // keep the benchmark line continuous across the seam (Apex's intraday bench is
+      // rebased at its own window start, not at inception)
+      const db=older[older.length-1].benchmark, ib=intra[0].benchmark;
+      if(db!=null&&ib){ const f=db/ib;
+        if(isFinite(f)&&Math.abs(f-1)>1e-6) intra.forEach(p=>{ if(p.benchmark!=null) p.benchmark=p.benchmark*f; }); }
+      intra.unshift.apply(intra,older);
+    }
+  })();
   const intraSpan=intra.length>=2?(intra[intra.length-1].t-intra[0].t)/86400000:0;
   // Everything below is relative to the SELECTED timeframe's start (curA0/curB0):
   // the line, the hover box and the header all read the same baseline, in $ AND %,

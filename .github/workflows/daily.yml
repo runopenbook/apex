@@ -10,8 +10,12 @@ on:
 permissions:
   contents: write
 
+# Own group, NOT apex-publish: sharing a queue with the every-15-min refresh meant this
+# run was perpetually bumped out of the pending slot and CANCELLED (every day Jul 9-30),
+# so apex.db was never committed and Apex lost its daily history. Push races are handled
+# by the pull --rebase below instead.
 concurrency:
-  group: apex-publish     # shared with the intraday refresh so pushes serialize
+  group: apex-daily
   cancel-in-progress: false
 
 jobs:
@@ -60,5 +64,6 @@ jobs:
             echo "No changes today (market closed / no new bar)."
           else
             git commit -m "Daily update $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash || true
             git push
           fi
