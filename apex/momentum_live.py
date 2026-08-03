@@ -245,6 +245,12 @@ def run(end=None):
     et = _now_et()
     et_min = et.hour * 60 + et.minute
     weekday = et.weekday() < 5
+    # Backfilling a PAST session (end= a date before today): the wall clock is
+    # meaningless for that day, so skip the intraday gate and run the day's one
+    # trade window + close mark directly. Fills still come from that day's
+    # 12:00-1:30pm bars via midday.at, so a replayed day prints exactly what a
+    # live day would have.
+    backfill = end is not None and date < et.strftime("%Y-%m-%d")
     with ledger.connect() as conn:
         already = ledger.get_meta(conn, "last_committed_date") == date
 
@@ -254,7 +260,7 @@ def run(end=None):
         print(f"{date}: re-marked NAV at close (already traded today).")
         return
     # Outside the midday trade window -> no new trade.
-    if not (weekday and _TRADE_LO <= et_min <= _TRADE_HI):
+    if not backfill and not (weekday and _TRADE_LO <= et_min <= _TRADE_HI):
         if weekday and et_min > _TRADE_HI:
             # past the window with no trade today -> mark a hold at the close, so the day
             # still gets its NAV point (e.g. all holdings held, or the window was missed).
@@ -301,6 +307,13 @@ def run(end=None):
         empty = target_n - len(held)
 
     # --- refill empty slots with the hottest in-uptrend names not held ---
+    if empty > 0:
+        # No meaningful cash -> no refill. Without this, a fully-invested book one name
+        # short of target re-"bought" the hottest name every day with ~$0 of dust — a
+        # position too small to register, so the same buy printed again the next day.
+        with ledger.connect() as conn:
+            if ledger.get_cash(conn) < 100:
+                empty = 0
     if empty > 0:
         sc = scout.scan(end=end)
         cands = [r for _, r in sc.iterrows()
