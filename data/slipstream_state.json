@@ -5,11 +5,11 @@
     "last_date": "2026-08-27",
     "mode": "forward",
     "strategy": "Slipstream \u00b7 momentum ETF rotation",
-    "total_value": 104522.75,
+    "total_value": 104514.55,
     "cash": 0.0,
-    "total_return": 0.0452,
-    "benchmark_return": 0.0492,
-    "alpha": -0.004,
+    "total_return": 0.0451,
+    "benchmark_return": 0.0489,
+    "alpha": -0.0038,
     "num_trades": 46,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -570,10 +570,10 @@
     },
     {
       "date": "2026-08-27",
-      "value": 104522.74,
-      "ret": 0.0452,
-      "benchmark": 104922.81,
-      "benchmark_ret": 0.0492,
+      "value": 104514.55,
+      "ret": 0.0451,
+      "benchmark": 104890.08,
+      "benchmark_ret": 0.0489,
       "cash": 0.0
     }
   ],
@@ -584,12 +584,12 @@
       "conviction": "core",
       "shares": 126.83,
       "avg_entry": 68.99,
-      "price": 73.31,
-      "value": 9297.91,
+      "price": 73.29,
+      "value": 9296.0,
       "drawdown": 0,
-      "ret": 0.0626,
+      "ret": 0.0624,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.089
+      "weight": 0.0889
     },
     {
       "ticker": "VXUS",
@@ -597,10 +597,10 @@
       "conviction": "core",
       "shares": 105.676,
       "avg_entry": 82.8,
-      "price": 87.78,
-      "value": 9275.74,
+      "price": 87.75,
+      "value": 9273.63,
       "drawdown": 0,
-      "ret": 0.0601,
+      "ret": 0.0598,
       "thesis": "Total Intl \u2014 core anchor.",
       "weight": 0.0887
     },
@@ -610,10 +610,10 @@
       "conviction": "core",
       "shares": 85.852,
       "avg_entry": 101.92,
-      "price": 107.9,
-      "value": 9263.82,
+      "price": 107.89,
+      "value": 9262.53,
       "drawdown": 0,
-      "ret": 0.0587,
+      "ret": 0.0586,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0886
     },
@@ -623,10 +623,10 @@
       "conviction": "core",
       "shares": 91.748,
       "avg_entry": 95.37,
-      "price": 100.7,
-      "value": 9238.81,
+      "price": 100.67,
+      "value": 9236.25,
       "drawdown": 0,
-      "ret": 0.0559,
+      "ret": 0.0556,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0884
     },
@@ -636,8 +636,8 @@
       "conviction": "rotation",
       "shares": 63.681,
       "avg_entry": 109.34,
-      "price": 118.69,
-      "value": 7558.26,
+      "price": 118.68,
+      "value": 7557.94,
       "drawdown": 0,
       "ret": 0.0855,
       "thesis": "Cybersecurity \u2014 momentum rotation.",
@@ -662,10 +662,10 @@
       "conviction": "rotation",
       "shares": 75.776,
       "avg_entry": 86.03,
-      "price": 96.23,
-      "value": 7291.96,
+      "price": 96.25,
+      "value": 7293.86,
       "drawdown": 0,
-      "ret": 0.1185,
+      "ret": 0.1188,
       "thesis": "Copper Miners \u2014 momentum rotation.",
       "weight": 0.0698
     },
@@ -675,10 +675,10 @@
       "conviction": "rotation",
       "shares": 38.301,
       "avg_entry": 181.79,
-      "price": 187.57,
-      "value": 7184.15,
+      "price": 187.56,
+      "value": 7183.76,
       "drawdown": 0,
-      "ret": 0.0318,
+      "ret": 0.0317,
       "thesis": "Technology \u2014 momentum rotation.",
       "weight": 0.0687
     },
@@ -714,10 +714,10 @@
       "conviction": "rotation",
       "shares": 63.068,
       "avg_entry": 86.51,
-      "price": 86.54,
-      "value": 5457.92,
+      "price": 86.53,
+      "value": 5457.28,
       "drawdown": 0,
-      "ret": 0.0003,
+      "ret": 0.0002,
       "thesis": "Transport \u2014 momentum rotation.",
       "weight": 0.0522
     },
@@ -732,20 +732,7 @@
       "drawdown": 0.0163,
       "ret": -0.0163,
       "thesis": "Netherlands \u2014 momentum rotation.",
-      "weight": 0.0513
-    },
-    {
-      "ticker": "IBB",
-      "theme": "Biotech",
-      "conviction": "rotation",
-      "shares": 24.49,
-      "avg_entry": 203.58,
-      "price": 215.03,
-      "value": 5266.04,
-      "drawdown": 0,
-      "ret": 0.0563,
-      "thesis": "Biotech \u2014 momentum rotation.",
-      "weight": 0.0504
+      "weight": 0.0514
     },
     {
       "ticker": "JETS",
@@ -753,12 +740,25 @@
       "conviction": "rotation",
       "shares": 179.121,
       "avg_entry": 30.46,
-      "price": 29.39,
-      "value": 5264.36,
-      "drawdown": 0.0351,
-      "ret": -0.0351,
+      "price": 29.4,
+      "value": 5266.16,
+      "drawdown": 0.0348,
+      "ret": -0.0348,
       "thesis": "Airlines \u2014 momentum rotation.",
       "weight": 0.0504
+    },
+    {
+      "ticker": "IBB",
+      "theme": "Biotech",
+      "conviction": "rotation",
+      "shares": 24.49,
+      "avg_entry": 203.58,
+      "price": 214.85,
+      "value": 5261.64,
+      "drawdown": 0,
+      "ret": 0.0554,
+      "thesis": "Biotech \u2014 momentum rotation.",
+      "weight": 0.0503
     },
     {
       "ticker": "GDX",
@@ -766,10 +766,10 @@
       "conviction": "rotation",
       "shares": 47.42,
       "avg_entry": 99.48,
-      "price": 103.6,
-      "value": 4912.7,
+      "price": 103.64,
+      "value": 4914.42,
       "drawdown": 0,
-      "ret": 0.0413,
+      "ret": 0.0417,
       "thesis": "Gold Miners \u2014 momentum rotation.",
       "weight": 0.047
     }
@@ -777,7 +777,7 @@
   "themes": [
     {
       "theme": "Developed Intl",
-      "weight": 0.266
+      "weight": 0.2659
     },
     {
       "theme": "Total Intl",
@@ -816,12 +816,12 @@
       "weight": 0.0514
     },
     {
-      "theme": "Biotech",
+      "theme": "Airlines",
       "weight": 0.0504
     },
     {
-      "theme": "Airlines",
-      "weight": 0.0504
+      "theme": "Biotech",
+      "weight": 0.0503
     },
     {
       "theme": "Gold Miners",
@@ -8546,8 +8546,8 @@
     },
     {
       "t": "2026-08-27 15:00",
-      "value": 104534.52,
-      "benchmark": 104925.52
+      "value": 104518.21,
+      "benchmark": 104898.26
     }
   ],
   "dividends": {
