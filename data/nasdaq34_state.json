@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-05-22",
-    "last_date": "2026-09-03",
+    "last_date": "2026-09-04",
     "mode": "forward",
     "strategy": "Sweet Spot \u00b7 Nasdaq-100 leadership, balanced-weight & rebalanced",
-    "total_value": 98244.89,
+    "total_value": 95962.54,
     "cash": 0,
-    "total_return": -0.0176,
-    "benchmark_return": 0.0369,
-    "alpha": -0.0545,
+    "total_return": -0.0404,
+    "benchmark_return": 0.0356,
+    "alpha": -0.076,
     "num_trades": 4,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -591,6 +591,14 @@
       "benchmark": 103692.13,
       "benchmark_ret": 0.0369,
       "cash": 0
+    },
+    {
+      "date": "2026-09-04",
+      "value": 95962.54,
+      "ret": -0.0404,
+      "benchmark": 103559.36,
+      "benchmark_ret": 0.0356,
+      "cash": 0
     }
   ],
   "positions": [
@@ -600,12 +608,12 @@
       "conviction": "core",
       "shares": 21.487,
       "avg_entry": 136.88,
-      "price": 182.53,
-      "value": 3922.07,
+      "price": 181.01,
+      "value": 3889.41,
       "drawdown": 0,
-      "ret": 0.3335,
+      "ret": 0.3224,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0399
+      "weight": 0.0405
     },
     {
       "ticker": "AMGN",
@@ -613,12 +621,12 @@
       "conviction": "core",
       "shares": 8.668,
       "avg_entry": 339.3,
-      "price": 444.12,
-      "value": 3849.79,
+      "price": 437.46,
+      "value": 3792.06,
       "drawdown": 0,
-      "ret": 0.3089,
+      "ret": 0.2893,
       "thesis": "Nasdaq-100 leader \u00b7 Healthcare.",
-      "weight": 0.0392
+      "weight": 0.0395
     },
     {
       "ticker": "MU",
@@ -626,12 +634,12 @@
       "conviction": "core",
       "shares": 3.771,
       "avg_entry": 751.0,
-      "price": 958.16,
-      "value": 3613.69,
+      "price": 973.54,
+      "value": 3671.71,
       "drawdown": 0,
-      "ret": 0.2758,
+      "ret": 0.2963,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0368
+      "weight": 0.0383
     },
     {
       "ticker": "MSFT",
@@ -639,12 +647,12 @@
       "conviction": "core",
       "shares": 7.027,
       "avg_entry": 418.57,
-      "price": 510.12,
-      "value": 3584.47,
+      "price": 510.26,
+      "value": 3585.46,
       "drawdown": 0,
-      "ret": 0.2187,
+      "ret": 0.2191,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0365
+      "weight": 0.0374
     },
     {
       "ticker": "PANW",
@@ -652,51 +660,12 @@
       "conviction": "core",
       "shares": 10.431,
       "avg_entry": 260.58,
-      "price": 331.94,
-      "value": 3462.47,
+      "price": 330.0,
+      "value": 3442.23,
       "drawdown": 0,
-      "ret": 0.2739,
+      "ret": 0.2664,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0352
-    },
-    {
-      "ticker": "MRVL",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 14.981,
-      "avg_entry": 196.33,
-      "price": 208.83,
-      "value": 3128.44,
-      "drawdown": 0,
-      "ret": 0.0637,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0318
-    },
-    {
-      "ticker": "AAPL",
-      "theme": "Hardware",
-      "conviction": "core",
-      "shares": 9.524,
-      "avg_entry": 308.82,
-      "price": 328.21,
-      "value": 3125.85,
-      "drawdown": 0,
-      "ret": 0.0628,
-      "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
-      "weight": 0.0318
-    },
-    {
-      "ticker": "NVDA",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 13.659,
-      "avg_entry": 215.33,
-      "price": 228.45,
-      "value": 3120.38,
-      "drawdown": 0,
-      "ret": 0.0609,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0318
+      "weight": 0.0359
     },
     {
       "ticker": "SNDK",
@@ -704,12 +673,51 @@
       "conviction": "core",
       "shares": 1.989,
       "avg_entry": 1478.69,
-      "price": 1554.99,
-      "value": 3092.94,
+      "price": 1594.29,
+      "value": 3171.11,
       "drawdown": 0,
-      "ret": 0.0516,
+      "ret": 0.0782,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0315
+      "weight": 0.033
+    },
+    {
+      "ticker": "MRVL",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 14.981,
+      "avg_entry": 196.33,
+      "price": 211.36,
+      "value": 3166.34,
+      "drawdown": 0,
+      "ret": 0.0766,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.033
+    },
+    {
+      "ticker": "NVDA",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 13.659,
+      "avg_entry": 215.33,
+      "price": 230.76,
+      "value": 3152.0,
+      "drawdown": 0,
+      "ret": 0.0717,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0328
+    },
+    {
+      "ticker": "AAPL",
+      "theme": "Hardware",
+      "conviction": "core",
+      "shares": 9.524,
+      "avg_entry": 308.82,
+      "price": 328.11,
+      "value": 3124.85,
+      "drawdown": 0,
+      "ret": 0.0624,
+      "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
+      "weight": 0.0326
     },
     {
       "ticker": "ASML",
@@ -717,12 +725,12 @@
       "conviction": "core",
       "shares": 1.801,
       "avg_entry": 1632.9,
-      "price": 1646.19,
-      "value": 2965.11,
+      "price": 1678.57,
+      "value": 3023.44,
       "drawdown": 0,
-      "ret": 0.0081,
+      "ret": 0.028,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0302
+      "weight": 0.0315
     },
     {
       "ticker": "META",
@@ -730,51 +738,12 @@
       "conviction": "core",
       "shares": 4.82,
       "avg_entry": 610.26,
-      "price": 610.68,
-      "value": 2943.2,
+      "price": 613.05,
+      "value": 2954.62,
       "drawdown": 0,
-      "ret": 0.0007,
+      "ret": 0.0046,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.03
-    },
-    {
-      "ticker": "STX",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 3.619,
-      "avg_entry": 812.73,
-      "price": 798.61,
-      "value": 2890.08,
-      "drawdown": 0.0174,
-      "ret": -0.0174,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0294
-    },
-    {
-      "ticker": "TMUS",
-      "theme": "Communications",
-      "conviction": "core",
-      "shares": 15.361,
-      "avg_entry": 191.47,
-      "price": 188.02,
-      "value": 2888.18,
-      "drawdown": 0.018,
-      "ret": -0.018,
-      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0294
-    },
-    {
-      "ticker": "AMD",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 6.291,
-      "avg_entry": 467.51,
-      "price": 456.16,
-      "value": 2869.77,
-      "drawdown": 0.0243,
-      "ret": -0.0243,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0292
+      "weight": 0.0308
     },
     {
       "ticker": "AMAT",
@@ -782,25 +751,38 @@
       "conviction": "core",
       "shares": 6.575,
       "avg_entry": 432.16,
-      "price": 435.91,
-      "value": 2866.24,
+      "price": 449.31,
+      "value": 2954.35,
       "drawdown": 0,
-      "ret": 0.0087,
+      "ret": 0.0397,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0292
+      "weight": 0.0308
     },
     {
-      "ticker": "AMZN",
-      "theme": "Consumer",
+      "ticker": "STX",
+      "theme": "Semiconductors",
       "conviction": "core",
-      "shares": 11.044,
-      "avg_entry": 266.32,
-      "price": 258.9,
-      "value": 2859.23,
-      "drawdown": 0.0279,
-      "ret": -0.0279,
-      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0291
+      "shares": 3.619,
+      "avg_entry": 812.73,
+      "price": 815.6,
+      "value": 2951.58,
+      "drawdown": 0,
+      "ret": 0.0035,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0308
+    },
+    {
+      "ticker": "TMUS",
+      "theme": "Communications",
+      "conviction": "core",
+      "shares": 15.361,
+      "avg_entry": 191.47,
+      "price": 191.47,
+      "value": 2941.18,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
+      "weight": 0.0306
     },
     {
       "ticker": "LRCX",
@@ -808,51 +790,38 @@
       "conviction": "core",
       "shares": 9.632,
       "avg_entry": 305.35,
-      "price": 292.66,
-      "value": 2818.94,
-      "drawdown": 0.0416,
-      "ret": -0.0416,
+      "price": 302.0,
+      "value": 2908.91,
+      "drawdown": 0.011,
+      "ret": -0.011,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0287
+      "weight": 0.0303
     },
     {
-      "ticker": "NFLX",
-      "theme": "Communications",
+      "ticker": "AMD",
+      "theme": "Semiconductors",
       "conviction": "core",
-      "shares": 33.196,
-      "avg_entry": 88.6,
-      "price": 82.67,
-      "value": 2744.32,
-      "drawdown": 0.0669,
-      "ret": -0.0669,
-      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0279
+      "shares": 6.291,
+      "avg_entry": 467.51,
+      "price": 461.97,
+      "value": 2906.32,
+      "drawdown": 0.0119,
+      "ret": -0.0119,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0303
     },
     {
-      "ticker": "LIN",
-      "theme": "Materials",
-      "conviction": "core",
-      "shares": 5.683,
-      "avg_entry": 517.58,
-      "price": 482.19,
-      "value": 2740.07,
-      "drawdown": 0.0684,
-      "ret": -0.0684,
-      "thesis": "Nasdaq-100 leader \u00b7 Materials.",
-      "weight": 0.0279
-    },
-    {
-      "ticker": "PEP",
+      "ticker": "AMZN",
       "theme": "Consumer",
       "conviction": "core",
-      "shares": 19.534,
-      "avg_entry": 150.57,
-      "price": 140.02,
-      "value": 2735.1,
-      "drawdown": 0.0701,
-      "ret": -0.0701,
+      "shares": 11.044,
+      "avg_entry": 266.32,
+      "price": 259.42,
+      "value": 2864.97,
+      "drawdown": 0.0259,
+      "ret": -0.0259,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0278
+      "weight": 0.0299
     },
     {
       "ticker": "KLAC",
@@ -860,12 +829,12 @@
       "conviction": "core",
       "shares": 15.575,
       "avg_entry": 188.84,
-      "price": 172.94,
-      "value": 2693.56,
-      "drawdown": 0.0842,
-      "ret": -0.0842,
+      "price": 177.21,
+      "value": 2760.07,
+      "drawdown": 0.0616,
+      "ret": -0.0616,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0274
+      "weight": 0.0288
     },
     {
       "ticker": "WDC",
@@ -873,12 +842,51 @@
       "conviction": "core",
       "shares": 6.073,
       "avg_entry": 484.28,
-      "price": 441.57,
-      "value": 2681.79,
-      "drawdown": 0.0882,
-      "ret": -0.0882,
+      "price": 452.0,
+      "value": 2745.13,
+      "drawdown": 0.0667,
+      "ret": -0.0667,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0273
+      "weight": 0.0286
+    },
+    {
+      "ticker": "NFLX",
+      "theme": "Communications",
+      "conviction": "core",
+      "shares": 33.196,
+      "avg_entry": 88.6,
+      "price": 82.2,
+      "value": 2728.82,
+      "drawdown": 0.0722,
+      "ret": -0.0722,
+      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
+      "weight": 0.0284
+    },
+    {
+      "ticker": "LIN",
+      "theme": "Materials",
+      "conviction": "core",
+      "shares": 5.683,
+      "avg_entry": 517.58,
+      "price": 478.7,
+      "value": 2720.24,
+      "drawdown": 0.0751,
+      "ret": -0.0751,
+      "thesis": "Nasdaq-100 leader \u00b7 Materials.",
+      "weight": 0.0283
+    },
+    {
+      "ticker": "PEP",
+      "theme": "Consumer",
+      "conviction": "core",
+      "shares": 19.534,
+      "avg_entry": 150.57,
+      "price": 137.76,
+      "value": 2690.95,
+      "drawdown": 0.0851,
+      "ret": -0.0851,
+      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.028
     },
     {
       "ticker": "CSCO",
@@ -886,38 +894,12 @@
       "conviction": "core",
       "shares": 24.426,
       "avg_entry": 120.41,
-      "price": 108.61,
-      "value": 2652.95,
-      "drawdown": 0.098,
-      "ret": -0.098,
+      "price": 109.66,
+      "value": 2678.59,
+      "drawdown": 0.0893,
+      "ret": -0.0893,
       "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
-      "weight": 0.027
-    },
-    {
-      "ticker": "WMT",
-      "theme": "Consumer",
-      "conviction": "core",
-      "shares": 24.455,
-      "avg_entry": 120.27,
-      "price": 108.42,
-      "value": 2651.39,
-      "drawdown": 0.0985,
-      "ret": -0.0985,
-      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.027
-    },
-    {
-      "ticker": "COST",
-      "theme": "Consumer",
-      "conviction": "core",
-      "shares": 2.86,
-      "avg_entry": 1028.24,
-      "price": 925.41,
-      "value": 2647.04,
-      "drawdown": 0.1,
-      "ret": -0.1,
-      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0269
+      "weight": 0.0279
     },
     {
       "ticker": "ADI",
@@ -925,12 +907,38 @@
       "conviction": "core",
       "shares": 7.407,
       "avg_entry": 397.07,
-      "price": 356.5,
-      "value": 2640.67,
-      "drawdown": 0.1022,
-      "ret": -0.1022,
+      "price": 360.49,
+      "value": 2670.22,
+      "drawdown": 0.0921,
+      "ret": -0.0921,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0269
+      "weight": 0.0278
+    },
+    {
+      "ticker": "WMT",
+      "theme": "Consumer",
+      "conviction": "core",
+      "shares": 24.455,
+      "avg_entry": 120.27,
+      "price": 108.39,
+      "value": 2650.78,
+      "drawdown": 0.0987,
+      "ret": -0.0987,
+      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0276
+    },
+    {
+      "ticker": "COST",
+      "theme": "Consumer",
+      "conviction": "core",
+      "shares": 2.86,
+      "avg_entry": 1028.24,
+      "price": 925.43,
+      "value": 2647.1,
+      "drawdown": 0.1,
+      "ret": -0.1,
+      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0276
     },
     {
       "ticker": "GOOGL",
@@ -938,12 +946,12 @@
       "conviction": "core",
       "shares": 7.68,
       "avg_entry": 382.97,
-      "price": 342.48,
-      "value": 2630.22,
-      "drawdown": 0.1057,
-      "ret": -0.1057,
+      "price": 342.8,
+      "value": 2632.64,
+      "drawdown": 0.1049,
+      "ret": -0.1049,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0268
+      "weight": 0.0274
     },
     {
       "ticker": "GOOG",
@@ -951,25 +959,12 @@
       "conviction": "core",
       "shares": 7.753,
       "avg_entry": 379.38,
-      "price": 339.08,
-      "value": 2628.75,
-      "drawdown": 0.1062,
-      "ret": -0.1062,
+      "price": 339.14,
+      "value": 2629.21,
+      "drawdown": 0.1061,
+      "ret": -0.1061,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0268
-    },
-    {
-      "ticker": "TSLA",
-      "theme": "Consumer",
-      "conviction": "core",
-      "shares": 6.904,
-      "avg_entry": 426.01,
-      "price": 376.37,
-      "value": 2598.46,
-      "drawdown": 0.1165,
-      "ret": -0.1165,
-      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0264
+      "weight": 0.0274
     },
     {
       "ticker": "AVGO",
@@ -977,12 +972,12 @@
       "conviction": "core",
       "shares": 7.102,
       "avg_entry": 414.14,
-      "price": 357.16,
-      "value": 2536.51,
-      "drawdown": 0.1376,
-      "ret": -0.1376,
+      "price": 358.93,
+      "value": 2549.08,
+      "drawdown": 0.1333,
+      "ret": -0.1333,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0258
+      "weight": 0.0266
     },
     {
       "ticker": "ARM",
@@ -990,12 +985,25 @@
       "conviction": "core",
       "shares": 10.236,
       "avg_entry": 306.51,
-      "price": 242.59,
-      "value": 2483.1,
-      "drawdown": 0.2085,
-      "ret": -0.2085,
+      "price": 248.43,
+      "value": 2542.88,
+      "drawdown": 0.1895,
+      "ret": -0.1895,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0253
+      "weight": 0.0265
+    },
+    {
+      "ticker": "TSLA",
+      "theme": "Consumer",
+      "conviction": "core",
+      "shares": 6.904,
+      "avg_entry": 426.01,
+      "price": 362.35,
+      "value": 2501.67,
+      "drawdown": 0.1494,
+      "ret": -0.1494,
+      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0261
     },
     {
       "ticker": "TXN",
@@ -1003,25 +1011,12 @@
       "conviction": "core",
       "shares": 9.512,
       "avg_entry": 309.21,
-      "price": 253.83,
-      "value": 2414.41,
-      "drawdown": 0.1791,
-      "ret": -0.1791,
+      "price": 256.64,
+      "value": 2441.14,
+      "drawdown": 0.17,
+      "ret": -0.17,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0246
-    },
-    {
-      "ticker": "QCOM",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 14.179,
-      "avg_entry": 238.16,
-      "price": 168.57,
-      "value": 2390.12,
-      "drawdown": 0.2922,
-      "ret": -0.2922,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0243
+      "weight": 0.0254
     },
     {
       "ticker": "INTC",
@@ -1029,42 +1024,55 @@
       "conviction": "core",
       "shares": 25.915,
       "avg_entry": 119.84,
-      "price": 91.67,
-      "value": 2375.58,
-      "drawdown": 0.2351,
-      "ret": -0.2351,
+      "price": 92.93,
+      "value": 2408.24,
+      "drawdown": 0.2245,
+      "ret": -0.2245,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0242
+      "weight": 0.0251
+    },
+    {
+      "ticker": "QCOM",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 14.179,
+      "avg_entry": 238.16,
+      "price": 169.72,
+      "value": 2406.42,
+      "drawdown": 0.2874,
+      "ret": -0.2874,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0251
     }
   ],
   "themes": [
     {
       "theme": "Semiconductors",
-      "weight": 0.4843
+      "weight": 0.5047
     },
     {
       "theme": "Communications",
-      "weight": 0.1408
+      "weight": 0.1447
     },
     {
       "theme": "Consumer",
-      "weight": 0.1373
+      "weight": 0.1392
     },
     {
       "theme": "Software",
-      "weight": 0.1116
+      "weight": 0.1138
     },
     {
       "theme": "Hardware",
-      "weight": 0.0588
+      "weight": 0.0605
     },
     {
       "theme": "Healthcare",
-      "weight": 0.0392
+      "weight": 0.0395
     },
     {
       "theme": "Materials",
-      "weight": 0.0279
+      "weight": 0.0283
     }
   ],
   "moves": [
@@ -1433,12 +1441,12 @@
     },
     {
       "t": "2026-07-27 05:30",
-      "value": 98629.09,
+      "value": 98627.28,
       "benchmark": 100103.47
     },
     {
       "t": "2026-07-27 06:00",
-      "value": 98475.15,
+      "value": 98474.95,
       "benchmark": 100087.38
     },
     {
@@ -1468,7 +1476,7 @@
     },
     {
       "t": "2026-07-27 09:00",
-      "value": 97393.11,
+      "value": 97393.52,
       "benchmark": 99967.1
     },
     {
@@ -1533,12 +1541,12 @@
     },
     {
       "t": "2026-07-27 15:30",
-      "value": 95428.05,
+      "value": 95427.72,
       "benchmark": 99117.69
     },
     {
       "t": "2026-07-27 16:00",
-      "value": 95291.96,
+      "value": 95291.1,
       "benchmark": 99120.09
     },
     {
@@ -1578,7 +1586,7 @@
     },
     {
       "t": "2026-07-28 04:00",
-      "value": 94148.05,
+      "value": 94143.45,
       "benchmark": 99050.63
     },
     {
@@ -1593,12 +1601,12 @@
     },
     {
       "t": "2026-07-28 05:30",
-      "value": 93804.02,
+      "value": 93803.85,
       "benchmark": 99015.76
     },
     {
       "t": "2026-07-28 06:00",
-      "value": 93842.94,
+      "value": 93842.77,
       "benchmark": 99047.95
     },
     {
@@ -1623,7 +1631,7 @@
     },
     {
       "t": "2026-07-28 08:30",
-      "value": 93626.13,
+      "value": 93624.66,
       "benchmark": 99233.03
     },
     {
@@ -1633,7 +1641,7 @@
     },
     {
       "t": "2026-07-28 09:30",
-      "value": 92070.87,
+      "value": 92070.76,
       "benchmark": 98779.71
     },
     {
@@ -1653,7 +1661,7 @@
     },
     {
       "t": "2026-07-28 11:30",
-      "value": 93516.49,
+      "value": 93517.27,
       "benchmark": 99546.21
     },
     {
@@ -1668,7 +1676,7 @@
     },
     {
       "t": "2026-07-28 13:00",
-      "value": 93286.4,
+      "value": 93286.48,
       "benchmark": 99424.82
     },
     {
@@ -1728,17 +1736,17 @@
     },
     {
       "t": "2026-07-28 19:00",
-      "value": 92599.76,
+      "value": 92597.51,
       "benchmark": 99392.64
     },
     {
       "t": "2026-07-28 19:30",
-      "value": 93530.4,
+      "value": 93530.66,
       "benchmark": 99734.64
     },
     {
       "t": "2026-07-29 04:00",
-      "value": 92235.3,
+      "value": 92236.08,
       "benchmark": 99430.35
     },
     {
@@ -1763,7 +1771,7 @@
     },
     {
       "t": "2026-07-29 06:30",
-      "value": 92887.65,
+      "value": 92889.01,
       "benchmark": 99514.69
     },
     {
@@ -1829,7 +1837,7 @@
     {
       "t": "2026-07-29 13:00",
       "value": 91604.74,
-      "benchmark": 98676.43
+      "benchmark": 98677.77
     },
     {
       "t": "2026-07-29 13:30",
@@ -1853,17 +1861,17 @@
     },
     {
       "t": "2026-07-29 15:30",
-      "value": 90395.21,
+      "value": 90391.78,
       "benchmark": 97846.22
     },
     {
       "t": "2026-07-29 16:00",
-      "value": 89893.12,
+      "value": 89892.15,
       "benchmark": 97594.07
     },
     {
       "t": "2026-07-29 16:30",
-      "value": 90135.29,
+      "value": 90135.03,
       "benchmark": 97654.43
     },
     {
@@ -1913,17 +1921,17 @@
     },
     {
       "t": "2026-07-30 05:30",
-      "value": 90772.64,
+      "value": 90771.69,
       "benchmark": 98188.23
     },
     {
       "t": "2026-07-30 06:00",
-      "value": 91217.76,
+      "value": 91214.6,
       "benchmark": 98343.81
     },
     {
       "t": "2026-07-30 06:30",
-      "value": 91350.14,
+      "value": 91350.6,
       "benchmark": 98325.04
     },
     {
@@ -2033,7 +2041,7 @@
     },
     {
       "t": "2026-07-30 17:30",
-      "value": 95751.89,
+      "value": 95751.42,
       "benchmark": 99521.39
     },
     {
@@ -2043,12 +2051,12 @@
     },
     {
       "t": "2026-07-30 18:30",
-      "value": 96080.2,
+      "value": 96077.21,
       "benchmark": 99648.81
     },
     {
       "t": "2026-07-30 19:00",
-      "value": 95992.9,
+      "value": 95992.47,
       "benchmark": 99630.03
     },
     {
@@ -2058,7 +2066,7 @@
     },
     {
       "t": "2026-07-31 04:00",
-      "value": 96894.25,
+      "value": 96892.74,
       "benchmark": 100053.85
     },
     {
@@ -2108,7 +2116,7 @@
     },
     {
       "t": "2026-07-31 09:00",
-      "value": 96997.63,
+      "value": 97002.69,
       "benchmark": 99760.13
     },
     {
@@ -2233,7 +2241,7 @@
     },
     {
       "t": "2026-08-03 05:30",
-      "value": 95688.16,
+      "value": 95688.69,
       "benchmark": 100674.69
     },
     {
@@ -2248,17 +2256,17 @@
     },
     {
       "t": "2026-08-03 07:00",
-      "value": 94905.79,
+      "value": 94905.8,
       "benchmark": 100725.79
     },
     {
       "t": "2026-08-03 07:30",
-      "value": 94603.94,
+      "value": 94609.25,
       "benchmark": 100673.49
     },
     {
       "t": "2026-08-03 08:00",
-      "value": 94754.86,
+      "value": 94755.06,
       "benchmark": 100682.85
     },
     {
@@ -2268,7 +2276,7 @@
     },
     {
       "t": "2026-08-03 09:00",
-      "value": 94599.19,
+      "value": 94596.9,
       "benchmark": 100731.29
     },
     {
@@ -2293,7 +2301,7 @@
     },
     {
       "t": "2026-08-03 11:30",
-      "value": 95795.03,
+      "value": 95796.29,
       "benchmark": 101389.02
     },
     {
@@ -2333,7 +2341,7 @@
     },
     {
       "t": "2026-08-03 15:30",
-      "value": 96475.39,
+      "value": 96474.87,
       "benchmark": 101619.03
     },
     {
@@ -2398,7 +2406,7 @@
     },
     {
       "t": "2026-08-04 06:00",
-      "value": 98080.59,
+      "value": 98078.0,
       "benchmark": 101743.77
     },
     {
@@ -2428,7 +2436,7 @@
     },
     {
       "t": "2026-08-04 09:00",
-      "value": 98795.22,
+      "value": 98796.63,
       "benchmark": 101966.41
     },
     {
@@ -2498,12 +2506,12 @@
     },
     {
       "t": "2026-08-04 16:00",
-      "value": 100626.15,
+      "value": 100625.67,
       "benchmark": 103473.09
     },
     {
       "t": "2026-08-04 16:30",
-      "value": 100661.8,
+      "value": 100661.03,
       "benchmark": 103579.42
     },
     {
@@ -2563,12 +2571,12 @@
     },
     {
       "t": "2026-08-05 06:30",
-      "value": 100891.18,
+      "value": 100891.16,
       "benchmark": 103887.01
     },
     {
       "t": "2026-08-05 07:00",
-      "value": 100939.89,
+      "value": 100937.81,
       "benchmark": 103849.42
     },
     {
@@ -2578,7 +2586,7 @@
     },
     {
       "t": "2026-08-05 08:00",
-      "value": 101042.52,
+      "value": 101041.55,
       "benchmark": 103971.41
     },
     {
@@ -2588,7 +2596,7 @@
     },
     {
       "t": "2026-08-05 09:00",
-      "value": 101212.73,
+      "value": 101212.98,
       "benchmark": 104010.4
     },
     {
@@ -2698,7 +2706,7 @@
     },
     {
       "t": "2026-08-06 04:00",
-      "value": 98958.56,
+      "value": 98945.78,
       "benchmark": 103410.88
     },
     {
@@ -2818,7 +2826,7 @@
     },
     {
       "t": "2026-08-06 16:00",
-      "value": 99387.59,
+      "value": 99386.68,
       "benchmark": 103014.1
     },
     {
@@ -2843,12 +2851,12 @@
     },
     {
       "t": "2026-08-06 18:30",
-      "value": 99753.88,
+      "value": 99750.84,
       "benchmark": 103110.59
     },
     {
       "t": "2026-08-06 19:00",
-      "value": 99753.75,
+      "value": 99756.84,
       "benchmark": 103115.82
     },
     {
@@ -2858,12 +2866,12 @@
     },
     {
       "t": "2026-08-07 04:00",
-      "value": 100327.98,
+      "value": 100327.81,
       "benchmark": 103225.8
     },
     {
       "t": "2026-08-07 04:30",
-      "value": 100280.07,
+      "value": 100279.89,
       "benchmark": 103248.6
     },
     {
@@ -2893,12 +2901,12 @@
     },
     {
       "t": "2026-08-07 07:30",
-      "value": 100123.85,
+      "value": 100124.51,
       "benchmark": 103292.72
     },
     {
       "t": "2026-08-07 08:00",
-      "value": 100328.73,
+      "value": 100328.62,
       "benchmark": 103408.2
     },
     {
@@ -2908,7 +2916,7 @@
     },
     {
       "t": "2026-08-07 09:00",
-      "value": 100546.17,
+      "value": 100546.44,
       "benchmark": 103456.85
     },
     {
@@ -2928,7 +2936,7 @@
     },
     {
       "t": "2026-08-07 11:00",
-      "value": 100121.67,
+      "value": 100121.63,
       "benchmark": 103762.28
     },
     {
@@ -2968,7 +2976,7 @@
     },
     {
       "t": "2026-08-07 15:00",
-      "value": 100260.34,
+      "value": 100260.41,
       "benchmark": 103685.16
     },
     {
@@ -3013,7 +3021,7 @@
     },
     {
       "t": "2026-08-07 19:30",
-      "value": 100333.57,
+      "value": 100333.19,
       "benchmark": 103728.41
     },
     {
@@ -3188,7 +3196,7 @@
     },
     {
       "t": "2026-08-11 05:00",
-      "value": 99951.59,
+      "value": 99956.3,
       "benchmark": 103687.17
     },
     {
@@ -3293,7 +3301,7 @@
     },
     {
       "t": "2026-08-11 15:30",
-      "value": 99878.98,
+      "value": 99879.5,
       "benchmark": 103337.12
     },
     {
@@ -3303,7 +3311,7 @@
     },
     {
       "t": "2026-08-11 16:30",
-      "value": 99919.1,
+      "value": 99921.3,
       "benchmark": 103378.7
     },
     {
@@ -3363,7 +3371,7 @@
     },
     {
       "t": "2026-08-12 06:30",
-      "value": 100772.6,
+      "value": 100772.79,
       "benchmark": 103562.28
     },
     {
@@ -3388,7 +3396,7 @@
     },
     {
       "t": "2026-08-12 09:00",
-      "value": 101762.67,
+      "value": 101763.95,
       "benchmark": 103822.63
     },
     {
@@ -3403,7 +3411,7 @@
     },
     {
       "t": "2026-08-12 10:30",
-      "value": 101068.08,
+      "value": 101068.18,
       "benchmark": 103570.48
     },
     {
@@ -3453,12 +3461,12 @@
     },
     {
       "t": "2026-08-12 15:30",
-      "value": 100943.3,
+      "value": 100944.49,
       "benchmark": 103610.73
     },
     {
       "t": "2026-08-12 16:00",
-      "value": 100736.62,
+      "value": 100736.05,
       "benchmark": 103586.23
     },
     {
@@ -3473,7 +3481,7 @@
     },
     {
       "t": "2026-08-12 17:30",
-      "value": 100960.51,
+      "value": 100960.4,
       "benchmark": 103616.09
     },
     {
@@ -3498,7 +3506,7 @@
     },
     {
       "t": "2026-08-13 04:00",
-      "value": 100869.12,
+      "value": 100869.05,
       "benchmark": 103774.35
     },
     {
@@ -3513,7 +3521,7 @@
     },
     {
       "t": "2026-08-13 05:30",
-      "value": 101004.59,
+      "value": 101004.71,
       "benchmark": 103809.22
     },
     {
@@ -3618,17 +3626,17 @@
     },
     {
       "t": "2026-08-13 16:00",
-      "value": 102750.67,
+      "value": 102749.16,
       "benchmark": 104288.78
     },
     {
       "t": "2026-08-13 16:30",
-      "value": 102806.32,
+      "value": 102806.25,
       "benchmark": 104345.01
     },
     {
       "t": "2026-08-13 17:00",
-      "value": 102741.16,
+      "value": 102740.57,
       "benchmark": 104333.98
     },
     {
@@ -3703,7 +3711,7 @@
     },
     {
       "t": "2026-08-14 08:30",
-      "value": 103143.94,
+      "value": 103144.65,
       "benchmark": 104454.17
     },
     {
@@ -3773,7 +3781,7 @@
     },
     {
       "t": "2026-08-14 15:30",
-      "value": 102781.42,
+      "value": 102782.1,
       "benchmark": 104117.7
     },
     {
@@ -3783,7 +3791,7 @@
     },
     {
       "t": "2026-08-14 16:30",
-      "value": 102748.88,
+      "value": 102748.17,
       "benchmark": 104081.49
     },
     {
@@ -3803,7 +3811,7 @@
     },
     {
       "t": "2026-08-14 18:30",
-      "value": 102828.69,
+      "value": 102828.82,
       "benchmark": 104100.64
     },
     {
@@ -3838,7 +3846,7 @@
     },
     {
       "t": "2026-08-17 06:00",
-      "value": 103911.49,
+      "value": 103911.64,
       "benchmark": 104375.3
     },
     {
@@ -3848,7 +3856,7 @@
     },
     {
       "t": "2026-08-17 07:00",
-      "value": 103694.71,
+      "value": 103695.78,
       "benchmark": 104257.18
     },
     {
@@ -3858,17 +3866,17 @@
     },
     {
       "t": "2026-08-17 08:00",
-      "value": 103416.31,
+      "value": 103416.16,
       "benchmark": 104167.42
     },
     {
       "t": "2026-08-17 08:30",
-      "value": 103292.68,
+      "value": 103291.9,
       "benchmark": 104103.88
     },
     {
       "t": "2026-08-17 09:00",
-      "value": 103485.06,
+      "value": 103485.27,
       "benchmark": 104139.16
     },
     {
@@ -3933,7 +3941,7 @@
     },
     {
       "t": "2026-08-17 15:30",
-      "value": 103332.09,
+      "value": 103332.0,
       "benchmark": 103632.18
     },
     {
@@ -3943,7 +3951,7 @@
     },
     {
       "t": "2026-08-17 16:30",
-      "value": 103251.05,
+      "value": 103251.68,
       "benchmark": 103593.96
     },
     {
@@ -4093,7 +4101,7 @@
     },
     {
       "t": "2026-08-18 15:30",
-      "value": 100488.32,
+      "value": 100488.07,
       "benchmark": 102922.69
     },
     {
@@ -4133,8 +4141,8 @@
     },
     {
       "t": "2026-08-18 19:30",
-      "value": 100052.2,
-      "benchmark": 102881.01
+      "value": 100042.23,
+      "benchmark": 102881.11
     },
     {
       "t": "2026-08-19 04:00",
@@ -4163,7 +4171,7 @@
     },
     {
       "t": "2026-08-19 06:30",
-      "value": 100128.11,
+      "value": 100126.87,
       "benchmark": 102922.85
     },
     {
@@ -4188,7 +4196,7 @@
     },
     {
       "t": "2026-08-19 09:00",
-      "value": 101245.87,
+      "value": 101245.3,
       "benchmark": 103393.45
     },
     {
@@ -4253,12 +4261,12 @@
     },
     {
       "t": "2026-08-19 15:30",
-      "value": 99654.0,
+      "value": 99653.69,
       "benchmark": 103150.69
     },
     {
       "t": "2026-08-19 16:00",
-      "value": 99756.7,
+      "value": 99757.08,
       "benchmark": 103131.42
     },
     {
@@ -4273,7 +4281,7 @@
     },
     {
       "t": "2026-08-19 17:30",
-      "value": 99953.23,
+      "value": 99954.67,
       "benchmark": 103162.76
     },
     {
@@ -4288,7 +4296,7 @@
     },
     {
       "t": "2026-08-19 19:00",
-      "value": 100199.9,
+      "value": 100199.97,
       "benchmark": 103293.06
     },
     {
@@ -4303,7 +4311,7 @@
     },
     {
       "t": "2026-08-20 04:30",
-      "value": 99466.45,
+      "value": 99466.16,
       "benchmark": 103004.5
     },
     {
@@ -4318,7 +4326,7 @@
     },
     {
       "t": "2026-08-20 06:00",
-      "value": 99847.08,
+      "value": 99847.16,
       "benchmark": 103122.53
     },
     {
@@ -4348,12 +4356,12 @@
     },
     {
       "t": "2026-08-20 09:00",
-      "value": 99058.31,
+      "value": 99058.45,
       "benchmark": 102678.59
     },
     {
       "t": "2026-08-20 09:30",
-      "value": 99158.48,
+      "value": 99158.64,
       "benchmark": 102810.02
     },
     {
@@ -4413,7 +4421,7 @@
     },
     {
       "t": "2026-08-20 15:30",
-      "value": 99318.21,
+      "value": 99317.61,
       "benchmark": 102285.62
     },
     {
@@ -4438,7 +4446,7 @@
     },
     {
       "t": "2026-08-20 18:00",
-      "value": 99216.93,
+      "value": 99216.24,
       "benchmark": 102301.04
     },
     {
@@ -4454,7 +4462,7 @@
     {
       "t": "2026-08-20 19:30",
       "value": 99166.43,
-      "benchmark": 102317.8
+      "benchmark": 102315.12
     },
     {
       "t": "2026-08-21 04:00",
@@ -4483,7 +4491,7 @@
     },
     {
       "t": "2026-08-21 06:30",
-      "value": 100006.79,
+      "value": 100006.57,
       "benchmark": 102641.98
     },
     {
@@ -4508,7 +4516,7 @@
     },
     {
       "t": "2026-08-21 09:00",
-      "value": 100179.88,
+      "value": 100197.39,
       "benchmark": 102684.77
     },
     {
@@ -4573,8 +4581,8 @@
     },
     {
       "t": "2026-08-21 15:30",
-      "value": 99505.68,
-      "benchmark": 102694.68
+      "value": 99506.34,
+      "benchmark": 102689.32
     },
     {
       "t": "2026-08-21 16:00",
@@ -4618,7 +4626,7 @@
     },
     {
       "t": "2026-08-24 04:00",
-      "value": 98441.22,
+      "value": 98446.16,
       "benchmark": 102512.28
     },
     {
@@ -4663,7 +4671,7 @@
     },
     {
       "t": "2026-08-24 08:30",
-      "value": 98387.86,
+      "value": 98388.17,
       "benchmark": 102521.49
     },
     {
@@ -4733,7 +4741,7 @@
     },
     {
       "t": "2026-08-24 15:30",
-      "value": 98087.89,
+      "value": 98087.99,
       "benchmark": 102398.27
     },
     {
@@ -4773,7 +4781,7 @@
     },
     {
       "t": "2026-08-24 19:30",
-      "value": 97906.75,
+      "value": 97911.67,
       "benchmark": 102421.02
     },
     {
@@ -4788,7 +4796,7 @@
     },
     {
       "t": "2026-08-25 05:00",
-      "value": 99094.79,
+      "value": 99094.5,
       "benchmark": 102812.57
     },
     {
@@ -4798,12 +4806,12 @@
     },
     {
       "t": "2026-08-25 06:00",
-      "value": 99507.41,
+      "value": 99507.5,
       "benchmark": 102872.54
     },
     {
       "t": "2026-08-25 06:30",
-      "value": 99331.31,
+      "value": 99331.36,
       "benchmark": 102850.26
     },
     {
@@ -4823,17 +4831,17 @@
     },
     {
       "t": "2026-08-25 08:30",
-      "value": 99310.19,
+      "value": 99310.38,
       "benchmark": 102796.61
     },
     {
       "t": "2026-08-25 09:00",
-      "value": 99131.79,
+      "value": 99132.44,
       "benchmark": 102806.0
     },
     {
       "t": "2026-08-25 09:30",
-      "value": 99029.09,
+      "value": 99030.54,
       "benchmark": 102694.68
     },
     {
@@ -4893,7 +4901,7 @@
     },
     {
       "t": "2026-08-25 15:30",
-      "value": 98643.29,
+      "value": 98643.77,
       "benchmark": 102714.13
     },
     {
@@ -4903,7 +4911,7 @@
     },
     {
       "t": "2026-08-25 16:30",
-      "value": 98698.93,
+      "value": 98699.53,
       "benchmark": 102716.14
     },
     {
@@ -4933,7 +4941,7 @@
     },
     {
       "t": "2026-08-25 19:30",
-      "value": 98566.6,
+      "value": 98595.54,
       "benchmark": 102594.09
     },
     {
@@ -4953,7 +4961,7 @@
     },
     {
       "t": "2026-08-26 05:30",
-      "value": 98641.14,
+      "value": 98641.96,
       "benchmark": 102694.68
     },
     {
@@ -4963,7 +4971,7 @@
     },
     {
       "t": "2026-08-26 06:30",
-      "value": 98601.27,
+      "value": 98599.95,
       "benchmark": 102670.63
     },
     {
@@ -4988,7 +4996,7 @@
     },
     {
       "t": "2026-08-26 09:00",
-      "value": 98441.34,
+      "value": 98438.72,
       "benchmark": 102595.59
     },
     {
@@ -5053,7 +5061,7 @@
     },
     {
       "t": "2026-08-26 15:30",
-      "value": 99114.43,
+      "value": 99114.33,
       "benchmark": 102737.6
     },
     {
@@ -5063,7 +5071,7 @@
     },
     {
       "t": "2026-08-26 16:30",
-      "value": 99813.24,
+      "value": 99813.1,
       "benchmark": 102962.92
     },
     {
@@ -5073,12 +5081,12 @@
     },
     {
       "t": "2026-08-26 17:30",
-      "value": 100234.2,
+      "value": 100233.1,
       "benchmark": 103271.4
     },
     {
       "t": "2026-08-26 18:00",
-      "value": 100456.72,
+      "value": 100453.9,
       "benchmark": 103345.16
     },
     {
@@ -5123,7 +5131,7 @@
     },
     {
       "t": "2026-08-27 06:30",
-      "value": 100453.5,
+      "value": 100454.04,
       "benchmark": 103166.78
     },
     {
@@ -5263,7 +5271,7 @@
     },
     {
       "t": "2026-08-28 04:30",
-      "value": 99455.19,
+      "value": 99469.42,
       "benchmark": 103425.64
     },
     {
@@ -5288,12 +5296,12 @@
     },
     {
       "t": "2026-08-28 07:00",
-      "value": 99487.52,
+      "value": 99487.62,
       "benchmark": 103448.44
     },
     {
       "t": "2026-08-28 07:30",
-      "value": 99289.54,
+      "value": 99288.83,
       "benchmark": 103421.12
     },
     {
@@ -5313,7 +5321,7 @@
     },
     {
       "t": "2026-08-28 09:30",
-      "value": 99437.44,
+      "value": 99437.89,
       "benchmark": 103511.48
     },
     {
@@ -5483,7 +5491,7 @@
     },
     {
       "t": "2026-08-31 10:30",
-      "value": 98572.39,
+      "value": 98571.99,
       "benchmark": 102729.55
     },
     {
@@ -5533,7 +5541,7 @@
     },
     {
       "t": "2026-08-31 15:30",
-      "value": 98956.96,
+      "value": 98958.58,
       "benchmark": 102863.67
     },
     {
@@ -5549,7 +5557,7 @@
     {
       "t": "2026-08-31 17:00",
       "value": 99008.84,
-      "benchmark": 102920.0
+      "benchmark": 102920.02
     },
     {
       "t": "2026-08-31 17:30",
@@ -5563,7 +5571,7 @@
     },
     {
       "t": "2026-08-31 18:30",
-      "value": 98875.49,
+      "value": 98886.52,
       "benchmark": 102912.79
     },
     {
@@ -5578,7 +5586,7 @@
     },
     {
       "t": "2026-09-01 04:00",
-      "value": 98140.84,
+      "value": 98130.54,
       "benchmark": 102443.75
     },
     {
@@ -5598,17 +5606,17 @@
     },
     {
       "t": "2026-09-01 06:00",
-      "value": 97921.74,
+      "value": 97895.99,
       "benchmark": 102380.66
     },
     {
       "t": "2026-09-01 06:30",
-      "value": 97837.76,
+      "value": 97832.45,
       "benchmark": 102321.83
     },
     {
       "t": "2026-09-01 07:00",
-      "value": 97731.59,
+      "value": 97729.76,
       "benchmark": 102340.44
     },
     {
@@ -5618,7 +5626,7 @@
     },
     {
       "t": "2026-09-01 08:00",
-      "value": 97635.6,
+      "value": 97635.22,
       "benchmark": 102279.44
     },
     {
@@ -5693,7 +5701,7 @@
     },
     {
       "t": "2026-09-01 15:30",
-      "value": 97588.52,
+      "value": 97588.28,
       "benchmark": 102159.54
     },
     {
@@ -5718,17 +5726,17 @@
     },
     {
       "t": "2026-09-01 18:00",
-      "value": 97385.71,
+      "value": 97385.97,
       "benchmark": 102144.79
     },
     {
       "t": "2026-09-01 18:30",
-      "value": 97443.84,
+      "value": 97455.87,
       "benchmark": 102175.46
     },
     {
       "t": "2026-09-01 19:00",
-      "value": 97441.48,
+      "value": 97441.79,
       "benchmark": 102170.47
     },
     {
@@ -5743,12 +5751,12 @@
     },
     {
       "t": "2026-09-02 04:30",
-      "value": 96926.96,
+      "value": 96892.56,
       "benchmark": 101931.54
     },
     {
       "t": "2026-09-02 05:00",
-      "value": 97000.64,
+      "value": 96982.47,
       "benchmark": 101922.15
     },
     {
@@ -5763,7 +5771,7 @@
     },
     {
       "t": "2026-09-02 06:30",
-      "value": 96904.95,
+      "value": 96905.14,
       "benchmark": 101940.79
     },
     {
@@ -5783,12 +5791,12 @@
     },
     {
       "t": "2026-09-02 08:30",
-      "value": 97046.99,
+      "value": 97046.98,
       "benchmark": 102120.65
     },
     {
       "t": "2026-09-02 09:00",
-      "value": 97296.37,
+      "value": 97296.24,
       "benchmark": 102166.05
     },
     {
@@ -5898,7 +5906,7 @@
     },
     {
       "t": "2026-09-03 04:00",
-      "value": 97525.84,
+      "value": 97542.87,
       "benchmark": 102788.57
     },
     {
@@ -5913,7 +5921,7 @@
     },
     {
       "t": "2026-09-03 05:30",
-      "value": 97040.14,
+      "value": 97041.56,
       "benchmark": 102578.67
     },
     {
@@ -5923,7 +5931,7 @@
     },
     {
       "t": "2026-09-03 06:30",
-      "value": 97030.86,
+      "value": 97023.21,
       "benchmark": 102565.72
     },
     {
@@ -6103,13 +6111,18 @@
     },
     {
       "t": "2026-09-04 08:30",
-      "value": 98607.18,
-      "benchmark": 103495.38
+      "value": 98605.7,
+      "benchmark": 103494.84
     },
     {
       "t": "2026-09-04 09:00",
-      "value": 98543.24,
-      "benchmark": 103455.14
+      "value": 98809.08,
+      "benchmark": 103540.98
+    },
+    {
+      "t": "2026-09-04 09:30",
+      "value": 98860.66,
+      "benchmark": 103557.75
     }
   ],
   "dividends": {
