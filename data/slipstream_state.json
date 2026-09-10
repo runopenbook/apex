@@ -5,11 +5,11 @@
     "last_date": "2026-09-10",
     "mode": "forward",
     "strategy": "Slipstream \u00b7 momentum ETF rotation",
-    "total_value": 101445.62,
+    "total_value": 101468.15,
     "cash": 0.0,
-    "total_return": 0.0145,
-    "benchmark_return": 0.032,
-    "alpha": -0.0175,
+    "total_return": 0.0147,
+    "benchmark_return": 0.0341,
+    "alpha": -0.0194,
     "num_trades": 50,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -642,10 +642,10 @@
     },
     {
       "date": "2026-09-10",
-      "value": 101445.63,
-      "ret": 0.0145,
-      "benchmark": 103201.44,
-      "benchmark_ret": 0.032,
+      "value": 101468.15,
+      "ret": 0.0147,
+      "benchmark": 103412.7,
+      "benchmark_ret": 0.0341,
       "cash": 0.0
     }
   ],
@@ -656,12 +656,12 @@
       "conviction": "core",
       "shares": 126.83,
       "avg_entry": 68.99,
-      "price": 72.18,
-      "value": 9154.46,
+      "price": 72.28,
+      "value": 9166.64,
       "drawdown": 0,
-      "ret": 0.0462,
+      "ret": 0.0476,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0902
+      "weight": 0.0903
     },
     {
       "ticker": "VXUS",
@@ -669,12 +669,12 @@
       "conviction": "core",
       "shares": 105.676,
       "avg_entry": 82.8,
-      "price": 86.5,
-      "value": 9141.0,
+      "price": 86.62,
+      "value": 9153.68,
       "drawdown": 0,
-      "ret": 0.0447,
+      "ret": 0.0461,
       "thesis": "Total Intl \u2014 core anchor.",
-      "weight": 0.0901
+      "weight": 0.0902
     },
     {
       "ticker": "EFA",
@@ -682,12 +682,12 @@
       "conviction": "core",
       "shares": 85.852,
       "avg_entry": 101.92,
-      "price": 105.92,
-      "value": 9092.98,
+      "price": 106.06,
+      "value": 9105.0,
       "drawdown": 0,
-      "ret": 0.0392,
+      "ret": 0.0406,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0896
+      "weight": 0.0897
     },
     {
       "ticker": "IEFA",
@@ -695,25 +695,12 @@
       "conviction": "core",
       "shares": 91.748,
       "avg_entry": 95.37,
-      "price": 98.8,
-      "value": 9064.7,
+      "price": 98.92,
+      "value": 9075.25,
       "drawdown": 0,
-      "ret": 0.036,
+      "ret": 0.0372,
       "thesis": "Developed Intl \u2014 core anchor.",
       "weight": 0.0894
-    },
-    {
-      "ticker": "HACK",
-      "theme": "Cybersecurity",
-      "conviction": "rotation",
-      "shares": 63.532,
-      "avg_entry": 109.28,
-      "price": 112.2,
-      "value": 7128.31,
-      "drawdown": 0,
-      "ret": 0.0267,
-      "thesis": "Cybersecurity \u2014 momentum rotation.",
-      "weight": 0.0703
     },
     {
       "ticker": "XLK",
@@ -721,12 +708,25 @@
       "conviction": "rotation",
       "shares": 38.299,
       "avg_entry": 181.28,
-      "price": 185.07,
-      "value": 7087.95,
+      "price": 185.84,
+      "value": 7117.44,
       "drawdown": 0,
-      "ret": 0.0209,
+      "ret": 0.0252,
       "thesis": "Technology \u2014 momentum rotation.",
-      "weight": 0.0699
+      "weight": 0.0701
+    },
+    {
+      "ticker": "HACK",
+      "theme": "Cybersecurity",
+      "conviction": "rotation",
+      "shares": 63.532,
+      "avg_entry": 109.28,
+      "price": 111.79,
+      "value": 7101.95,
+      "drawdown": 0,
+      "ret": 0.0229,
+      "thesis": "Cybersecurity \u2014 momentum rotation.",
+      "weight": 0.07
     },
     {
       "ticker": "COPX",
@@ -734,25 +734,12 @@
       "conviction": "rotation",
       "shares": 75.725,
       "avg_entry": 86.03,
-      "price": 89.1,
-      "value": 6747.09,
+      "price": 89.18,
+      "value": 6753.53,
       "drawdown": 0,
-      "ret": 0.0356,
+      "ret": 0.0366,
       "thesis": "Copper Miners \u2014 momentum rotation.",
-      "weight": 0.0665
-    },
-    {
-      "ticker": "GDXJ",
-      "theme": "Jr Gold Miners",
-      "conviction": "rotation",
-      "shares": 48.634,
-      "avg_entry": 124.38,
-      "price": 125.93,
-      "value": 6124.48,
-      "drawdown": 0,
-      "ret": 0.0125,
-      "thesis": "Jr Gold Miners \u2014 momentum rotation.",
-      "weight": 0.0604
+      "weight": 0.0666
     },
     {
       "ticker": "SIL",
@@ -761,11 +748,24 @@
       "shares": 63.0,
       "avg_entry": 96.02,
       "price": 97.0,
-      "value": 6110.97,
+      "value": 6110.98,
       "drawdown": 0,
       "ret": 0.0102,
       "thesis": "Silver Miners \u2014 momentum rotation.",
       "weight": 0.0602
+    },
+    {
+      "ticker": "GDXJ",
+      "theme": "Jr Gold Miners",
+      "conviction": "rotation",
+      "shares": 48.634,
+      "avg_entry": 124.38,
+      "price": 125.36,
+      "value": 6096.76,
+      "drawdown": 0,
+      "ret": 0.0079,
+      "thesis": "Jr Gold Miners \u2014 momentum rotation.",
+      "weight": 0.0601
     },
     {
       "ticker": "GREK",
@@ -773,10 +773,10 @@
       "conviction": "rotation",
       "shares": 70.291,
       "avg_entry": 77.62,
-      "price": 86.64,
-      "value": 6090.05,
+      "price": 86.56,
+      "value": 6084.43,
       "drawdown": 0,
-      "ret": 0.1162,
+      "ret": 0.1152,
       "thesis": "Greece \u2014 momentum rotation.",
       "weight": 0.06
     },
@@ -786,12 +786,12 @@
       "conviction": "rotation",
       "shares": 91.082,
       "avg_entry": 64.71,
-      "price": 62.44,
-      "value": 5687.18,
-      "drawdown": 0.0351,
-      "ret": -0.0351,
+      "price": 62.19,
+      "value": 5664.86,
+      "drawdown": 0.0389,
+      "ret": -0.0389,
       "thesis": "Insurance \u2014 momentum rotation.",
-      "weight": 0.0561
+      "weight": 0.0558
     },
     {
       "ticker": "EWN",
@@ -799,12 +799,12 @@
       "conviction": "rotation",
       "shares": 77.876,
       "avg_entry": 70.06,
-      "price": 67.68,
-      "value": 5270.68,
-      "drawdown": 0.034,
-      "ret": -0.034,
+      "price": 67.88,
+      "value": 5286.25,
+      "drawdown": 0.0311,
+      "ret": -0.0311,
       "thesis": "Netherlands \u2014 momentum rotation.",
-      "weight": 0.052
+      "weight": 0.0521
     },
     {
       "ticker": "IYT",
@@ -812,12 +812,12 @@
       "conviction": "rotation",
       "shares": 63.068,
       "avg_entry": 86.51,
-      "price": 81.58,
-      "value": 5145.41,
-      "drawdown": 0.0569,
-      "ret": -0.0569,
+      "price": 82.13,
+      "value": 5179.78,
+      "drawdown": 0.0506,
+      "ret": -0.0506,
       "thesis": "Transport \u2014 momentum rotation.",
-      "weight": 0.0507
+      "weight": 0.051
     },
     {
       "ticker": "IBB",
@@ -825,10 +825,10 @@
       "conviction": "rotation",
       "shares": 24.49,
       "avg_entry": 203.58,
-      "price": 203.88,
-      "value": 4992.98,
+      "price": 203.79,
+      "value": 4990.78,
       "drawdown": 0,
-      "ret": 0.0015,
+      "ret": 0.001,
       "thesis": "Biotech \u2014 momentum rotation.",
       "weight": 0.0492
     },
@@ -838,42 +838,42 @@
       "conviction": "rotation",
       "shares": 47.42,
       "avg_entry": 99.48,
-      "price": 97.16,
-      "value": 4607.38,
-      "drawdown": 0.0234,
-      "ret": -0.0234,
+      "price": 96.6,
+      "value": 4580.82,
+      "drawdown": 0.029,
+      "ret": -0.029,
       "thesis": "Gold Miners \u2014 momentum rotation.",
-      "weight": 0.0454
+      "weight": 0.0451
     }
   ],
   "themes": [
     {
       "theme": "Developed Intl",
-      "weight": 0.2692
+      "weight": 0.2695
     },
     {
       "theme": "Total Intl",
-      "weight": 0.0901
-    },
-    {
-      "theme": "Cybersecurity",
-      "weight": 0.0703
+      "weight": 0.0902
     },
     {
       "theme": "Technology",
-      "weight": 0.0699
+      "weight": 0.0701
+    },
+    {
+      "theme": "Cybersecurity",
+      "weight": 0.07
     },
     {
       "theme": "Copper Miners",
-      "weight": 0.0665
-    },
-    {
-      "theme": "Jr Gold Miners",
-      "weight": 0.0604
+      "weight": 0.0666
     },
     {
       "theme": "Silver Miners",
       "weight": 0.0602
+    },
+    {
+      "theme": "Jr Gold Miners",
+      "weight": 0.0601
     },
     {
       "theme": "Greece",
@@ -881,15 +881,15 @@
     },
     {
       "theme": "Insurance",
-      "weight": 0.0561
+      "weight": 0.0558
     },
     {
       "theme": "Netherlands",
-      "weight": 0.052
+      "weight": 0.0521
     },
     {
       "theme": "Transport",
-      "weight": 0.0507
+      "weight": 0.051
     },
     {
       "theme": "Biotech",
@@ -897,7 +897,7 @@
     },
     {
       "theme": "Gold Miners",
-      "weight": 0.0454
+      "weight": 0.0451
     }
   ],
   "moves": [
@@ -2164,7 +2164,7 @@
     },
     {
       "t": "2026-07-14 16:00",
-      "value": 101882.81,
+      "value": 101865.16,
       "benchmark": 102429.37
     },
     {
@@ -3294,7 +3294,7 @@
     },
     {
       "t": "2026-07-23 17:00",
-      "value": 99965.78,
+      "value": 99955.51,
       "benchmark": 100701.21
     },
     {
@@ -3379,7 +3379,7 @@
     },
     {
       "t": "2026-07-24 09:30",
-      "value": 99405.71,
+      "value": 99398.31,
       "benchmark": 100517.91
     },
     {
@@ -4604,27 +4604,27 @@
     },
     {
       "t": "2026-08-05 04:00",
-      "value": 103682.16,
+      "value": 103714.03,
       "benchmark": 105406.62
     },
     {
       "t": "2026-08-05 04:30",
-      "value": 103710.62,
+      "value": 103742.5,
       "benchmark": 105392.99
     },
     {
       "t": "2026-08-05 05:00",
-      "value": 103721.51,
+      "value": 103753.39,
       "benchmark": 105454.33
     },
     {
       "t": "2026-08-05 05:30",
-      "value": 103740.77,
+      "value": 103772.64,
       "benchmark": 105448.7
     },
     {
       "t": "2026-08-05 06:00",
-      "value": 103840.27,
+      "value": 103872.15,
       "benchmark": 105514.97
     },
     {
@@ -4764,7 +4764,7 @@
     },
     {
       "t": "2026-08-06 04:00",
-      "value": 103466.05,
+      "value": 103467.11,
       "benchmark": 105083.62
     },
     {
@@ -4794,7 +4794,7 @@
     },
     {
       "t": "2026-08-06 07:00",
-      "value": 103279.42,
+      "value": 103267.58,
       "benchmark": 105106.68
     },
     {
@@ -4899,22 +4899,22 @@
     },
     {
       "t": "2026-08-06 17:30",
-      "value": 103163.6,
+      "value": 103167.04,
       "benchmark": 104723.81
     },
     {
       "t": "2026-08-06 18:00",
-      "value": 103213.79,
+      "value": 103204.35,
       "benchmark": 104763.34
     },
     {
       "t": "2026-08-06 18:30",
-      "value": 103290.41,
+      "value": 103280.97,
       "benchmark": 104778.46
     },
     {
       "t": "2026-08-06 19:00",
-      "value": 103243.24,
+      "value": 103233.8,
       "benchmark": 104783.78
     },
     {
@@ -8659,13 +8659,18 @@
     },
     {
       "t": "2026-09-10 09:30",
-      "value": 101357.58,
-      "benchmark": 103138.76
+      "value": 101358.33,
+      "benchmark": 103141.49
     },
     {
       "t": "2026-09-10 10:00",
-      "value": 101458.25,
-      "benchmark": 103212.35
+      "value": 101488.81,
+      "benchmark": 103404.53
+    },
+    {
+      "t": "2026-09-10 10:30",
+      "value": 101462.92,
+      "benchmark": 103418.15
     }
   ],
   "dividends": {
