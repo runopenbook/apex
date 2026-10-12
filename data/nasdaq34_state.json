@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-05-22",
-    "last_date": "2026-10-09",
+    "last_date": "2026-10-12",
     "mode": "forward",
     "strategy": "Sweet Spot \u00b7 Nasdaq-100 leadership, balanced-weight & rebalanced",
-    "total_value": 104197.32,
+    "total_value": 102977.13,
     "cash": 0,
-    "total_return": 0.042,
-    "benchmark_return": 0.0442,
-    "alpha": -0.0022,
+    "total_return": 0.0298,
+    "benchmark_return": 0.0431,
+    "alpha": -0.0133,
     "num_trades": 5,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -791,6 +791,14 @@
       "benchmark": 104416.34,
       "benchmark_ret": 0.0442,
       "cash": 0
+    },
+    {
+      "date": "2026-10-12",
+      "value": 102977.13,
+      "ret": 0.0298,
+      "benchmark": 104310.39,
+      "benchmark_ret": 0.0431,
+      "cash": 0
     }
   ],
   "positions": [
@@ -800,10 +808,10 @@
       "conviction": "core",
       "shares": 21.487,
       "avg_entry": 136.88,
-      "price": 209.05,
-      "value": 4491.91,
+      "price": 206.7,
+      "value": 4441.42,
       "drawdown": 0,
-      "ret": 0.5273,
+      "ret": 0.5101,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
       "weight": 0.0431
     },
@@ -813,12 +821,12 @@
       "conviction": "core",
       "shares": 10.437,
       "avg_entry": 260.58,
-      "price": 418.78,
-      "value": 4370.99,
+      "price": 401.45,
+      "value": 4190.11,
       "drawdown": 0,
-      "ret": 0.6071,
+      "ret": 0.5406,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0419
+      "weight": 0.0407
     },
     {
       "ticker": "MRVL",
@@ -826,25 +834,12 @@
       "conviction": "core",
       "shares": 14.981,
       "avg_entry": 196.33,
-      "price": 275.28,
-      "value": 4123.91,
+      "price": 266.38,
+      "value": 3990.51,
       "drawdown": 0,
-      "ret": 0.4021,
+      "ret": 0.3568,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0396
-    },
-    {
-      "ticker": "AMD",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 6.291,
-      "avg_entry": 467.51,
-      "price": 608.1,
-      "value": 3825.65,
-      "drawdown": 0,
-      "ret": 0.3007,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0367
+      "weight": 0.0388
     },
     {
       "ticker": "MSFT",
@@ -852,38 +847,25 @@
       "conviction": "core",
       "shares": 7.027,
       "avg_entry": 418.57,
-      "price": 535.07,
-      "value": 3759.79,
+      "price": 540.79,
+      "value": 3799.98,
       "drawdown": 0,
-      "ret": 0.2783,
+      "ret": 0.292,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0361
+      "weight": 0.0369
     },
     {
-      "ticker": "MU",
+      "ticker": "AMD",
       "theme": "Semiconductors",
       "conviction": "core",
-      "shares": 3.63,
-      "avg_entry": 751.0,
-      "price": 1029.0,
-      "value": 3735.36,
+      "shares": 6.291,
+      "avg_entry": 467.51,
+      "price": 590.05,
+      "value": 3712.11,
       "drawdown": 0,
-      "ret": 0.3702,
+      "ret": 0.2621,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0358
-    },
-    {
-      "ticker": "AMGN",
-      "theme": "Healthcare",
-      "conviction": "core",
-      "shares": 8.668,
-      "avg_entry": 339.3,
-      "price": 414.87,
-      "value": 3596.24,
-      "drawdown": 0,
-      "ret": 0.2227,
-      "thesis": "Nasdaq-100 leader \u00b7 Healthcare.",
-      "weight": 0.0345
+      "weight": 0.036
     },
     {
       "ticker": "META",
@@ -891,12 +873,38 @@
       "conviction": "core",
       "shares": 4.82,
       "avg_entry": 610.26,
-      "price": 718.67,
-      "value": 3463.66,
+      "price": 750.4,
+      "value": 3616.59,
       "drawdown": 0,
-      "ret": 0.1776,
+      "ret": 0.2296,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0332
+      "weight": 0.0351
+    },
+    {
+      "ticker": "AMGN",
+      "theme": "Healthcare",
+      "conviction": "core",
+      "shares": 8.668,
+      "avg_entry": 339.3,
+      "price": 414.96,
+      "value": 3597.03,
+      "drawdown": 0,
+      "ret": 0.223,
+      "thesis": "Nasdaq-100 leader \u00b7 Healthcare.",
+      "weight": 0.0349
+    },
+    {
+      "ticker": "MU",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 3.63,
+      "avg_entry": 751.0,
+      "price": 990.78,
+      "value": 3596.63,
+      "drawdown": 0,
+      "ret": 0.3193,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0349
     },
     {
       "ticker": "AMAT",
@@ -904,25 +912,12 @@
       "conviction": "core",
       "shares": 6.575,
       "avg_entry": 432.16,
-      "price": 507.03,
-      "value": 3333.88,
+      "price": 497.06,
+      "value": 3268.32,
       "drawdown": 0,
-      "ret": 0.1732,
+      "ret": 0.1502,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.032
-    },
-    {
-      "ticker": "ASML",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 1.801,
-      "avg_entry": 1632.9,
-      "price": 1780.34,
-      "value": 3206.75,
-      "drawdown": 0,
-      "ret": 0.0903,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0308
+      "weight": 0.0317
     },
     {
       "ticker": "AAPL",
@@ -930,25 +925,25 @@
       "conviction": "core",
       "shares": 9.524,
       "avg_entry": 308.82,
-      "price": 336.64,
-      "value": 3206.13,
+      "price": 339.57,
+      "value": 3233.99,
       "drawdown": 0,
-      "ret": 0.0901,
+      "ret": 0.0996,
       "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
-      "weight": 0.0308
+      "weight": 0.0314
     },
     {
-      "ticker": "SNDK",
+      "ticker": "ASML",
       "theme": "Semiconductors",
       "conviction": "core",
-      "shares": 1.989,
-      "avg_entry": 1478.69,
-      "price": 1581.82,
-      "value": 3146.31,
+      "shares": 1.801,
+      "avg_entry": 1632.9,
+      "price": 1761.0,
+      "value": 3171.91,
       "drawdown": 0,
-      "ret": 0.0697,
+      "ret": 0.0784,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0302
+      "weight": 0.0308
     },
     {
       "ticker": "NVDA",
@@ -956,38 +951,12 @@
       "conviction": "core",
       "shares": 13.659,
       "avg_entry": 215.33,
-      "price": 229.28,
-      "value": 3131.72,
+      "price": 226.4,
+      "value": 3092.38,
       "drawdown": 0,
-      "ret": 0.0648,
+      "ret": 0.0514,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0301
-    },
-    {
-      "ticker": "LRCX",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 9.632,
-      "avg_entry": 305.35,
-      "price": 318.84,
-      "value": 3071.11,
-      "drawdown": 0,
-      "ret": 0.0442,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0295
-    },
-    {
-      "ticker": "KLAC",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 15.575,
-      "avg_entry": 188.84,
-      "price": 195.57,
-      "value": 3046.03,
-      "drawdown": 0,
-      "ret": 0.0356,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0292
+      "weight": 0.03
     },
     {
       "ticker": "ADI",
@@ -995,12 +964,51 @@
       "conviction": "core",
       "shares": 7.407,
       "avg_entry": 397.07,
-      "price": 406.19,
-      "value": 3008.73,
+      "price": 405.48,
+      "value": 3003.51,
       "drawdown": 0,
-      "ret": 0.023,
+      "ret": 0.0212,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0289
+      "weight": 0.0292
+    },
+    {
+      "ticker": "LRCX",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 9.632,
+      "avg_entry": 305.35,
+      "price": 310.89,
+      "value": 2994.49,
+      "drawdown": 0,
+      "ret": 0.0181,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0291
+    },
+    {
+      "ticker": "KLAC",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 15.575,
+      "avg_entry": 188.84,
+      "price": 190.53,
+      "value": 2967.53,
+      "drawdown": 0,
+      "ret": 0.009,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0288
+    },
+    {
+      "ticker": "SNDK",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 1.989,
+      "avg_entry": 1478.69,
+      "price": 1481.01,
+      "value": 2945.79,
+      "drawdown": 0,
+      "ret": 0.0016,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0286
     },
     {
       "ticker": "AMZN",
@@ -1008,12 +1016,12 @@
       "conviction": "core",
       "shares": 11.044,
       "avg_entry": 266.32,
-      "price": 262.43,
-      "value": 2898.22,
-      "drawdown": 0.0146,
-      "ret": -0.0146,
+      "price": 259.79,
+      "value": 2869.01,
+      "drawdown": 0.0245,
+      "ret": -0.0245,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0278
+      "weight": 0.0279
     },
     {
       "ticker": "CSCO",
@@ -1021,25 +1029,12 @@
       "conviction": "core",
       "shares": 24.426,
       "avg_entry": 120.41,
-      "price": 118.39,
-      "value": 2891.84,
-      "drawdown": 0.0168,
-      "ret": -0.0168,
+      "price": 115.6,
+      "value": 2823.69,
+      "drawdown": 0.0399,
+      "ret": -0.0399,
       "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
-      "weight": 0.0278
-    },
-    {
-      "ticker": "STX",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 3.619,
-      "avg_entry": 812.73,
-      "price": 783.0,
-      "value": 2833.59,
-      "drawdown": 0.0366,
-      "ret": -0.0366,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0272
+      "weight": 0.0274
     },
     {
       "ticker": "LIN",
@@ -1047,25 +1042,12 @@
       "conviction": "core",
       "shares": 5.683,
       "avg_entry": 517.58,
-      "price": 483.73,
-      "value": 2748.82,
-      "drawdown": 0.0654,
-      "ret": -0.0654,
+      "price": 489.18,
+      "value": 2779.79,
+      "drawdown": 0.0549,
+      "ret": -0.0549,
       "thesis": "Nasdaq-100 leader \u00b7 Materials.",
-      "weight": 0.0264
-    },
-    {
-      "ticker": "ARM",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 10.236,
-      "avg_entry": 306.51,
-      "price": 266.28,
-      "value": 2725.59,
-      "drawdown": 0.1313,
-      "ret": -0.1313,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0262
+      "weight": 0.027
     },
     {
       "ticker": "WMT",
@@ -1073,25 +1055,25 @@
       "conviction": "core",
       "shares": 24.455,
       "avg_entry": 120.27,
-      "price": 111.35,
-      "value": 2723.04,
-      "drawdown": 0.0742,
-      "ret": -0.0742,
+      "price": 112.66,
+      "value": 2755.08,
+      "drawdown": 0.0633,
+      "ret": -0.0633,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0261
+      "weight": 0.0268
     },
     {
-      "ticker": "INTC",
+      "ticker": "STX",
       "theme": "Semiconductors",
       "conviction": "core",
-      "shares": 25.915,
-      "avg_entry": 119.84,
-      "price": 104.7,
-      "value": 2713.25,
-      "drawdown": 0.1263,
-      "ret": -0.1263,
+      "shares": 3.619,
+      "avg_entry": 812.73,
+      "price": 759.24,
+      "value": 2747.6,
+      "drawdown": 0.0658,
+      "ret": -0.0658,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.026
+      "weight": 0.0267
     },
     {
       "ticker": "COST",
@@ -1099,12 +1081,12 @@
       "conviction": "core",
       "shares": 2.86,
       "avg_entry": 1028.24,
-      "price": 946.92,
-      "value": 2708.57,
-      "drawdown": 0.0791,
-      "ret": -0.0791,
+      "price": 960.02,
+      "value": 2746.04,
+      "drawdown": 0.0663,
+      "ret": -0.0663,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.026
+      "weight": 0.0267
     },
     {
       "ticker": "GOOGL",
@@ -1112,25 +1094,12 @@
       "conviction": "core",
       "shares": 7.68,
       "avg_entry": 382.97,
-      "price": 351.66,
-      "value": 2700.72,
-      "drawdown": 0.0818,
-      "ret": -0.0818,
+      "price": 352.68,
+      "value": 2708.58,
+      "drawdown": 0.0791,
+      "ret": -0.0791,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0259
-    },
-    {
-      "ticker": "TXN",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 9.512,
-      "avg_entry": 309.21,
-      "price": 283.74,
-      "value": 2698.91,
-      "drawdown": 0.0824,
-      "ret": -0.0824,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0259
+      "weight": 0.0263
     },
     {
       "ticker": "GOOG",
@@ -1138,12 +1107,38 @@
       "conviction": "core",
       "shares": 7.753,
       "avg_entry": 379.38,
-      "price": 347.86,
-      "value": 2696.81,
-      "drawdown": 0.0831,
-      "ret": -0.0831,
+      "price": 349.23,
+      "value": 2707.47,
+      "drawdown": 0.0795,
+      "ret": -0.0795,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0259
+      "weight": 0.0263
+    },
+    {
+      "ticker": "TXN",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 9.512,
+      "avg_entry": 309.21,
+      "price": 281.88,
+      "value": 2681.22,
+      "drawdown": 0.0884,
+      "ret": -0.0884,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.026
+    },
+    {
+      "ticker": "INTC",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 25.915,
+      "avg_entry": 119.84,
+      "price": 101.15,
+      "value": 2621.25,
+      "drawdown": 0.156,
+      "ret": -0.156,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0255
     },
     {
       "ticker": "TSLA",
@@ -1151,11 +1146,24 @@
       "conviction": "core",
       "shares": 6.904,
       "avg_entry": 426.01,
-      "price": 382.7,
-      "value": 2642.16,
-      "drawdown": 0.1017,
-      "ret": -0.1017,
+      "price": 379.29,
+      "value": 2618.62,
+      "drawdown": 0.1097,
+      "ret": -0.1097,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0254
+    },
+    {
+      "ticker": "ARM",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 10.236,
+      "avg_entry": 306.51,
+      "price": 255.47,
+      "value": 2614.94,
+      "drawdown": 0.1665,
+      "ret": -0.1665,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
       "weight": 0.0254
     },
     {
@@ -1164,12 +1172,12 @@
       "conviction": "core",
       "shares": 7.102,
       "avg_entry": 414.14,
-      "price": 361.54,
-      "value": 2567.62,
-      "drawdown": 0.127,
-      "ret": -0.127,
+      "price": 355.88,
+      "value": 2527.42,
+      "drawdown": 0.1407,
+      "ret": -0.1407,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0246
+      "weight": 0.0245
     },
     {
       "ticker": "NFLX",
@@ -1177,25 +1185,12 @@
       "conviction": "core",
       "shares": 35.398,
       "avg_entry": 88.6,
-      "price": 70.3,
-      "value": 2488.48,
-      "drawdown": 0.2065,
-      "ret": -0.2065,
+      "price": 70.83,
+      "value": 2507.41,
+      "drawdown": 0.2005,
+      "ret": -0.2005,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0239
-    },
-    {
-      "ticker": "QCOM",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 14.164,
-      "avg_entry": 238.16,
-      "price": 175.5,
-      "value": 2485.74,
-      "drawdown": 0.2631,
-      "ret": -0.2631,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0239
+      "weight": 0.0243
     },
     {
       "ticker": "PEP",
@@ -1203,12 +1198,25 @@
       "conviction": "core",
       "shares": 19.534,
       "avg_entry": 150.57,
-      "price": 125.97,
-      "value": 2460.65,
-      "drawdown": 0.1634,
-      "ret": -0.1634,
+      "price": 126.92,
+      "value": 2479.21,
+      "drawdown": 0.1571,
+      "ret": -0.1571,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0236
+      "weight": 0.0241
+    },
+    {
+      "ticker": "QCOM",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 14.164,
+      "avg_entry": 238.16,
+      "price": 173.56,
+      "value": 2458.26,
+      "drawdown": 0.2712,
+      "ret": -0.2712,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0239
     },
     {
       "ticker": "WDC",
@@ -1216,12 +1224,12 @@
       "conviction": "core",
       "shares": 6.073,
       "avg_entry": 484.28,
-      "price": 397.28,
-      "value": 2412.8,
-      "drawdown": 0.1796,
-      "ret": -0.1796,
+      "price": 388.02,
+      "value": 2356.56,
+      "drawdown": 0.1988,
+      "ret": -0.1988,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0232
+      "weight": 0.0229
     },
     {
       "ticker": "TMUS",
@@ -1229,42 +1237,42 @@
       "conviction": "core",
       "shares": 15.361,
       "avg_entry": 191.47,
-      "price": 148.58,
-      "value": 2282.34,
-      "drawdown": 0.224,
-      "ret": -0.224,
+      "price": 153.16,
+      "value": 2352.7,
+      "drawdown": 0.2001,
+      "ret": -0.2001,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0219
+      "weight": 0.0228
     }
   ],
   "themes": [
     {
       "theme": "Semiconductors",
-      "weight": 0.4997
+      "weight": 0.4928
     },
     {
       "theme": "Communications",
-      "weight": 0.1308
+      "weight": 0.1349
     },
     {
       "theme": "Consumer",
-      "weight": 0.1289
+      "weight": 0.1308
     },
     {
       "theme": "Software",
-      "weight": 0.1211
+      "weight": 0.1207
     },
     {
       "theme": "Hardware",
-      "weight": 0.0585
+      "weight": 0.0588
     },
     {
       "theme": "Healthcare",
-      "weight": 0.0345
+      "weight": 0.0349
     },
     {
       "theme": "Materials",
-      "weight": 0.0264
+      "weight": 0.027
     }
   ],
   "moves": [
@@ -1656,4584 +1664,4334 @@
   ],
   "intraday": [
     {
-      "t": "2026-08-31 04:00",
-      "value": 98876.71,
+      "t": "2026-09-02 04:00",
+      "value": 97276.94,
       "benchmark": 100000.0
     },
     {
-      "t": "2026-08-31 04:30",
-      "value": 98814.75,
-      "benchmark": 99992.19
-    },
-    {
-      "t": "2026-08-31 05:00",
-      "value": 98859.08,
-      "benchmark": 100019.52
-    },
-    {
-      "t": "2026-08-31 05:30",
-      "value": 98672.09,
-      "benchmark": 99932.33
-    },
-    {
-      "t": "2026-08-31 06:00",
-      "value": 98731.52,
-      "benchmark": 99958.19
-    },
-    {
-      "t": "2026-08-31 06:30",
-      "value": 98712.6,
-      "benchmark": 99968.77
-    },
-    {
-      "t": "2026-08-31 07:00",
-      "value": 98721.56,
-      "benchmark": 99975.27
-    },
-    {
-      "t": "2026-08-31 07:30",
-      "value": 98571.2,
-      "benchmark": 99871.35
-    },
-    {
-      "t": "2026-08-31 08:00",
-      "value": 98632.17,
-      "benchmark": 99815.21
-    },
-    {
-      "t": "2026-08-31 08:30",
-      "value": 98478.93,
-      "benchmark": 99754.04
-    },
-    {
-      "t": "2026-08-31 09:00",
-      "value": 98649.02,
-      "benchmark": 99817.81
-    },
-    {
-      "t": "2026-08-31 09:30",
-      "value": 98905.56,
-      "benchmark": 99707.19
-    },
-    {
-      "t": "2026-08-31 10:00",
-      "value": 98502.55,
-      "benchmark": 99544.52
-    },
-    {
-      "t": "2026-08-31 10:30",
-      "value": 98617.89,
-      "benchmark": 99677.27
-    },
-    {
-      "t": "2026-08-31 11:00",
-      "value": 98604.18,
-      "benchmark": 99675.96
-    },
-    {
-      "t": "2026-08-31 11:30",
-      "value": 98450.15,
-      "benchmark": 99608.28
-    },
-    {
-      "t": "2026-08-31 12:00",
-      "value": 98536.1,
-      "benchmark": 99670.76
-    },
-    {
-      "t": "2026-08-31 12:30",
-      "value": 98649.44,
-      "benchmark": 99662.95
-    },
-    {
-      "t": "2026-08-31 13:00",
-      "value": 98508.98,
-      "benchmark": 99608.29
-    },
-    {
-      "t": "2026-08-31 13:30",
-      "value": 98658.67,
-      "benchmark": 99751.44
-    },
-    {
-      "t": "2026-08-31 14:00",
-      "value": 98741.74,
-      "benchmark": 99722.81
-    },
-    {
-      "t": "2026-08-31 14:30",
-      "value": 98553.71,
-      "benchmark": 99640.82
-    },
-    {
-      "t": "2026-08-31 15:00",
-      "value": 98685.66,
-      "benchmark": 99766.41
-    },
-    {
-      "t": "2026-08-31 15:30",
-      "value": 98999.6,
-      "benchmark": 99807.4
-    },
-    {
-      "t": "2026-08-31 16:00",
-      "value": 98963.54,
-      "benchmark": 99868.15
-    },
-    {
-      "t": "2026-08-31 16:30",
-      "value": 98983.95,
-      "benchmark": 99854.25
-    },
-    {
-      "t": "2026-08-31 17:00",
-      "value": 99052.39,
-      "benchmark": 99862.06
-    },
-    {
-      "t": "2026-08-31 17:30",
-      "value": 98958.95,
-      "benchmark": 99861.71
-    },
-    {
-      "t": "2026-08-31 18:00",
-      "value": 98950.4,
-      "benchmark": 99855.77
-    },
-    {
-      "t": "2026-08-31 18:30",
-      "value": 98923.64,
-      "benchmark": 99855.06
-    },
-    {
-      "t": "2026-08-31 19:00",
-      "value": 98920.86,
-      "benchmark": 99874.97
-    },
-    {
-      "t": "2026-08-31 19:30",
-      "value": 98930.47,
-      "benchmark": 99885.47
-    },
-    {
-      "t": "2026-09-01 04:00",
-      "value": 98181.24,
-      "benchmark": 99399.96
-    },
-    {
-      "t": "2026-09-01 04:30",
-      "value": 98042.02,
-      "benchmark": 99314.32
-    },
-    {
-      "t": "2026-09-01 05:00",
-      "value": 97854.85,
-      "benchmark": 99212.77
-    },
-    {
-      "t": "2026-09-01 05:30",
-      "value": 97920.01,
-      "benchmark": 99247.82
-    },
-    {
-      "t": "2026-09-01 06:00",
-      "value": 97966.6,
-      "benchmark": 99338.74
-    },
-    {
-      "t": "2026-09-01 06:30",
-      "value": 97882.59,
-      "benchmark": 99281.65
-    },
-    {
-      "t": "2026-09-01 07:00",
-      "value": 97777.16,
-      "benchmark": 99299.72
-    },
-    {
-      "t": "2026-09-01 07:30",
-      "value": 97674.65,
-      "benchmark": 99235.1
-    },
-    {
-      "t": "2026-09-01 08:00",
-      "value": 97681.2,
-      "benchmark": 99240.53
-    },
-    {
-      "t": "2026-09-01 08:30",
-      "value": 97554.42,
-      "benchmark": 99169.74
-    },
-    {
-      "t": "2026-09-01 09:00",
-      "value": 97594.47,
-      "benchmark": 99123.84
-    },
-    {
-      "t": "2026-09-01 09:30",
-      "value": 97285.4,
-      "benchmark": 99165.18
-    },
-    {
-      "t": "2026-09-01 10:00",
-      "value": 97356.62,
-      "benchmark": 99393.5
-    },
-    {
-      "t": "2026-09-01 10:30",
-      "value": 97873.43,
-      "benchmark": 99363.63
-    },
-    {
-      "t": "2026-09-01 11:00",
-      "value": 97838.63,
-      "benchmark": 99370.15
-    },
-    {
-      "t": "2026-09-01 11:30",
-      "value": 98070.71,
-      "benchmark": 99461.24
-    },
-    {
-      "t": "2026-09-01 12:00",
-      "value": 97665.56,
-      "benchmark": 99233.49
-    },
-    {
-      "t": "2026-09-01 12:30",
-      "value": 97762.37,
-      "benchmark": 99197.07
-    },
-    {
-      "t": "2026-09-01 13:00",
-      "value": 97575.94,
-      "benchmark": 99121.58
-    },
-    {
-      "t": "2026-09-01 13:30",
-      "value": 97582.42,
-      "benchmark": 99139.81
-    },
-    {
-      "t": "2026-09-01 14:00",
-      "value": 97421.46,
-      "benchmark": 99060.42
-    },
-    {
-      "t": "2026-09-01 14:30",
-      "value": 97347.83,
-      "benchmark": 98997.89
-    },
-    {
-      "t": "2026-09-01 15:00",
-      "value": 97619.84,
-      "benchmark": 99079.94
-    },
-    {
-      "t": "2026-09-01 15:30",
-      "value": 97634.3,
-      "benchmark": 99124.19
-    },
-    {
-      "t": "2026-09-01 16:00",
-      "value": 97574.64,
-      "benchmark": 99159.32
-    },
-    {
-      "t": "2026-09-01 16:30",
-      "value": 97622.96,
-      "benchmark": 99153.73
-    },
-    {
-      "t": "2026-09-01 17:00",
-      "value": 97590.7,
-      "benchmark": 99142.41
-    },
-    {
-      "t": "2026-09-01 17:30",
-      "value": 97534.4,
-      "benchmark": 99133.96
-    },
-    {
-      "t": "2026-09-01 18:00",
-      "value": 97431.56,
-      "benchmark": 99109.87
-    },
-    {
-      "t": "2026-09-01 18:30",
-      "value": 97490.83,
-      "benchmark": 99139.64
-    },
-    {
-      "t": "2026-09-01 19:00",
-      "value": 97487.34,
-      "benchmark": 99134.79
-    },
-    {
-      "t": "2026-09-01 19:30",
-      "value": 97503.72,
-      "benchmark": 99151.52
-    },
-    {
-      "t": "2026-09-02 04:00",
-      "value": 97276.94,
-      "benchmark": 99039.6
-    },
-    {
       "t": "2026-09-02 04:30",
-      "value": 96973.59,
-      "benchmark": 98902.96
+      "value": 96939.19,
+      "benchmark": 99862.03
     },
     {
       "t": "2026-09-02 05:00",
-      "value": 97047.22,
-      "benchmark": 98893.85
+      "value": 97029.05,
+      "benchmark": 99852.83
     },
     {
       "t": "2026-09-02 05:30",
       "value": 96912.15,
-      "benchmark": 98893.85
+      "benchmark": 99852.83
     },
     {
       "t": "2026-09-02 06:00",
       "value": 96964.05,
-      "benchmark": 98909.46
+      "benchmark": 99868.6
     },
     {
       "t": "2026-09-02 06:30",
-      "value": 96951.65,
-      "benchmark": 98911.94
+      "value": 96950.46,
+      "benchmark": 99871.1
     },
     {
       "t": "2026-09-02 07:00",
       "value": 97108.33,
-      "benchmark": 99031.79
+      "benchmark": 99992.12
     },
     {
       "t": "2026-09-02 07:30",
       "value": 97247.13,
-      "benchmark": 99161.93
+      "benchmark": 100123.51
     },
     {
       "t": "2026-09-02 08:00",
       "value": 97410.68,
-      "benchmark": 99212.68
+      "benchmark": 100174.76
     },
     {
       "t": "2026-09-02 08:30",
-      "value": 97093.07,
-      "benchmark": 99086.45
+      "value": 97092.46,
+      "benchmark": 100047.3
     },
     {
       "t": "2026-09-02 09:00",
-      "value": 97342.1,
-      "benchmark": 99130.5
+      "value": 97341.97,
+      "benchmark": 100091.78
     },
     {
       "t": "2026-09-02 09:30",
       "value": 96941.63,
-      "benchmark": 99301.82
+      "benchmark": 100264.77
     },
     {
       "t": "2026-09-02 10:00",
       "value": 97489.56,
-      "benchmark": 99588.77
+      "benchmark": 100554.5
     },
     {
       "t": "2026-09-02 10:30",
       "value": 97076.36,
-      "benchmark": 99593.98
+      "benchmark": 100559.75
     },
     {
       "t": "2026-09-02 11:00",
       "value": 97368.97,
-      "benchmark": 99722.16
+      "benchmark": 100689.18
     },
     {
       "t": "2026-09-02 11:30",
       "value": 97288.09,
-      "benchmark": 99674.01
+      "benchmark": 100640.56
     },
     {
       "t": "2026-09-02 12:00",
       "value": 97181.54,
-      "benchmark": 99534.11
+      "benchmark": 100499.31
     },
     {
       "t": "2026-09-02 12:30",
       "value": 97151.49,
-      "benchmark": 99543.22
+      "benchmark": 100508.51
     },
     {
       "t": "2026-09-02 13:00",
       "value": 97199.38,
-      "benchmark": 99515.9
+      "benchmark": 100480.92
     },
     {
       "t": "2026-09-02 13:30",
       "value": 97243.98,
-      "benchmark": 99577.06
+      "benchmark": 100542.67
     },
     {
       "t": "2026-09-02 14:00",
       "value": 97255.04,
-      "benchmark": 99595.28
+      "benchmark": 100561.07
     },
     {
       "t": "2026-09-02 14:30",
       "value": 97279.2,
-      "benchmark": 99528.91
+      "benchmark": 100494.05
     },
     {
       "t": "2026-09-02 15:00",
       "value": 97355.1,
-      "benchmark": 99616.1
+      "benchmark": 100582.09
     },
     {
       "t": "2026-09-02 15:30",
       "value": 97478.84,
-      "benchmark": 99573.16
+      "benchmark": 100538.73
     },
     {
       "t": "2026-09-02 16:00",
       "value": 97222.99,
-      "benchmark": 99485.99
+      "benchmark": 100450.72
     },
     {
       "t": "2026-09-02 16:30",
-      "value": 97409.48,
-      "benchmark": 99461.24
+      "value": 97409.57,
+      "benchmark": 100425.73
     },
     {
       "t": "2026-09-02 17:00",
-      "value": 97474.5,
-      "benchmark": 99547.13
+      "value": 97474.48,
+      "benchmark": 100512.45
     },
     {
       "t": "2026-09-02 17:30",
       "value": 97389.43,
-      "benchmark": 99540.61
+      "benchmark": 100505.87
     },
     {
       "t": "2026-09-02 18:00",
       "value": 97388.29,
-      "benchmark": 99569.45
+      "benchmark": 100534.98
     },
     {
       "t": "2026-09-02 18:30",
       "value": 97414.34,
-      "benchmark": 99545.83
+      "benchmark": 100511.14
     },
     {
       "t": "2026-09-02 19:00",
       "value": 97388.65,
-      "benchmark": 99555.67
+      "benchmark": 100521.07
     },
     {
       "t": "2026-09-02 19:30",
       "value": 97525.54,
-      "benchmark": 99601.79
+      "benchmark": 100567.64
     },
     {
       "t": "2026-09-03 04:00",
-      "value": 97572.76,
-      "benchmark": 99734.52
+      "value": 97590.0,
+      "benchmark": 100701.66
     },
     {
       "t": "2026-09-03 04:30",
       "value": 97437.29,
-      "benchmark": 99654.97
+      "benchmark": 100621.34
     },
     {
       "t": "2026-09-03 05:00",
-      "value": 97255.67,
-      "benchmark": 99644.63
+      "value": 97255.82,
+      "benchmark": 100610.89
     },
     {
       "t": "2026-09-03 05:30",
-      "value": 97087.45,
-      "benchmark": 99530.86
+      "value": 97088.87,
+      "benchmark": 100496.03
     },
     {
       "t": "2026-09-03 06:00",
       "value": 97099.9,
-      "benchmark": 99492.47
+      "benchmark": 100457.26
     },
     {
       "t": "2026-09-03 06:30",
-      "value": 97077.33,
-      "benchmark": 99518.3
+      "value": 97069.68,
+      "benchmark": 100483.35
     },
     {
       "t": "2026-09-03 07:00",
       "value": 97222.03,
-      "benchmark": 99643.43
+      "benchmark": 100609.68
     },
     {
       "t": "2026-09-03 07:30",
       "value": 96965.83,
-      "benchmark": 99527.84
+      "benchmark": 100492.98
     },
     {
       "t": "2026-09-03 08:00",
       "value": 97057.21,
-      "benchmark": 99614.8
+      "benchmark": 100580.78
     },
     {
       "t": "2026-09-03 08:30",
       "value": 97423.03,
-      "benchmark": 99886.78
+      "benchmark": 100855.4
     },
     {
       "t": "2026-09-03 09:00",
-      "value": 97304.38,
-      "benchmark": 99895.89
+      "value": 97303.39,
+      "benchmark": 100864.59
     },
     {
       "t": "2026-09-03 09:30",
       "value": 97290.07,
-      "benchmark": 100147.05
+      "benchmark": 101118.19
     },
     {
       "t": "2026-09-03 10:00",
       "value": 97354.77,
-      "benchmark": 100031.23
+      "benchmark": 101001.25
     },
     {
       "t": "2026-09-03 10:30",
-      "value": 97640.5,
-      "benchmark": 100110.62
+      "value": 97642.09,
+      "benchmark": 101081.4
     },
     {
       "t": "2026-09-03 11:00",
       "value": 98230.95,
-      "benchmark": 100586.91
+      "benchmark": 101562.32
     },
     {
       "t": "2026-09-03 11:30",
       "value": 98243.72,
-      "benchmark": 100636.36
+      "benchmark": 101612.25
     },
     {
       "t": "2026-09-03 12:00",
       "value": 98114.49,
-      "benchmark": 100521.19
+      "benchmark": 101495.96
     },
     {
       "t": "2026-09-03 12:30",
       "value": 98334.82,
-      "benchmark": 100579.1
+      "benchmark": 101554.43
     },
     {
       "t": "2026-09-03 13:00",
       "value": 98273.23,
-      "benchmark": 100551.61
+      "benchmark": 101526.67
     },
     {
       "t": "2026-09-03 13:30",
       "value": 98350.63,
-      "benchmark": 100630.51
+      "benchmark": 101606.34
     },
     {
       "t": "2026-09-03 14:00",
       "value": 98438.65,
-      "benchmark": 100689.72
+      "benchmark": 101666.12
     },
     {
       "t": "2026-09-03 14:30",
       "value": 98433.28,
-      "benchmark": 100681.91
+      "benchmark": 101658.23
     },
     {
       "t": "2026-09-03 15:00",
       "value": 98211.46,
-      "benchmark": 100648.07
+      "benchmark": 101624.07
     },
     {
       "t": "2026-09-03 15:30",
-      "value": 98301.06,
-      "benchmark": 100609.03
+      "value": 98301.44,
+      "benchmark": 101584.65
     },
     {
       "t": "2026-09-03 16:00",
       "value": 98230.78,
-      "benchmark": 100528.35
+      "benchmark": 101503.19
     },
     {
       "t": "2026-09-03 16:30",
       "value": 98207.58,
-      "benchmark": 100517.94
+      "benchmark": 101492.67
     },
     {
       "t": "2026-09-03 17:00",
       "value": 98206.61,
-      "benchmark": 100538.57
+      "benchmark": 101513.5
     },
     {
       "t": "2026-09-03 17:30",
       "value": 98217.05,
-      "benchmark": 100532.25
+      "benchmark": 101507.13
     },
     {
       "t": "2026-09-03 18:00",
       "value": 98172.43,
-      "benchmark": 100535.35
+      "benchmark": 101510.26
     },
     {
       "t": "2026-09-03 18:30",
       "value": 98228.85,
-      "benchmark": 100556.49
+      "benchmark": 101531.59
     },
     {
       "t": "2026-09-03 19:00",
       "value": 98239.46,
-      "benchmark": 100561.2
+      "benchmark": 101536.35
     },
     {
       "t": "2026-09-03 19:30",
       "value": 98233.37,
-      "benchmark": 100562.19
+      "benchmark": 101537.35
     },
     {
       "t": "2026-09-04 04:00",
-      "value": 99147.0,
-      "benchmark": 100711.84
+      "value": 99145.81,
+      "benchmark": 101688.46
     },
     {
       "t": "2026-09-04 04:30",
       "value": 99081.26,
-      "benchmark": 100720.95
+      "benchmark": 101697.65
     },
     {
       "t": "2026-09-04 05:00",
       "value": 98973.05,
-      "benchmark": 100648.07
+      "benchmark": 101624.07
     },
     {
       "t": "2026-09-04 05:30",
       "value": 99153.6,
-      "benchmark": 100675.4
+      "benchmark": 101651.67
     },
     {
       "t": "2026-09-04 06:00",
-      "value": 99239.04,
-      "benchmark": 100713.14
+      "value": 99238.84,
+      "benchmark": 101689.77
     },
     {
       "t": "2026-09-04 06:30",
       "value": 99158.57,
-      "benchmark": 100717.31
+      "benchmark": 101693.98
     },
     {
       "t": "2026-09-04 07:00",
-      "value": 99106.22,
-      "benchmark": 100676.7
+      "value": 99104.12,
+      "benchmark": 101652.98
     },
     {
       "t": "2026-09-04 07:30",
       "value": 99165.95,
-      "benchmark": 100724.1
+      "benchmark": 101700.83
     },
     {
       "t": "2026-09-04 08:00",
-      "value": 99237.45,
-      "benchmark": 100667.59
+      "value": 99238.92,
+      "benchmark": 101643.78
     },
     {
       "t": "2026-09-04 08:30",
-      "value": 98651.59,
-      "benchmark": 100419.82
+      "value": 98650.11,
+      "benchmark": 101393.6
     },
     {
       "t": "2026-09-04 09:00",
-      "value": 98852.21,
-      "benchmark": 100420.34
+      "value": 98850.92,
+      "benchmark": 101394.13
     },
     {
       "t": "2026-09-04 09:30",
       "value": 99757.29,
-      "benchmark": 100504.93
+      "benchmark": 101479.53
     },
     {
       "t": "2026-09-04 10:00",
       "value": 99434.18,
-      "benchmark": 100361.78
+      "benchmark": 101335.0
     },
     {
       "t": "2026-09-04 10:30",
       "value": 99244.4,
-      "benchmark": 100132.74
+      "benchmark": 101103.74
     },
     {
       "t": "2026-09-04 11:00",
       "value": 99145.08,
-      "benchmark": 100130.13
+      "benchmark": 101101.11
     },
     {
       "t": "2026-09-04 11:30",
       "value": 99181.72,
-      "benchmark": 100198.78
+      "benchmark": 101170.43
     },
     {
       "t": "2026-09-04 12:00",
       "value": 99345.95,
-      "benchmark": 100290.2
+      "benchmark": 101262.73
     },
     {
       "t": "2026-09-04 12:30",
       "value": 99476.71,
-      "benchmark": 100320.14
+      "benchmark": 101292.95
     },
     {
       "t": "2026-09-04 13:00",
       "value": 99125.48,
-      "benchmark": 100185.05
+      "benchmark": 101156.56
     },
     {
       "t": "2026-09-04 13:30",
       "value": 99125.65,
-      "benchmark": 100133.91
+      "benchmark": 101104.92
     },
     {
       "t": "2026-09-04 14:00",
       "value": 99218.12,
-      "benchmark": 100188.7
+      "benchmark": 101160.24
     },
     {
       "t": "2026-09-04 14:30",
       "value": 99248.57,
-      "benchmark": 100236.85
+      "benchmark": 101208.86
     },
     {
       "t": "2026-09-04 15:00",
       "value": 99180.65,
-      "benchmark": 100205.62
+      "benchmark": 101177.32
     },
     {
       "t": "2026-09-04 15:30",
-      "value": 99533.87,
-      "benchmark": 100234.24
+      "value": 99532.89,
+      "benchmark": 101207.54
     },
     {
       "t": "2026-09-04 16:00",
       "value": 99460.45,
-      "benchmark": 100137.89
+      "benchmark": 101108.94
     },
     {
       "t": "2026-09-04 16:30",
       "value": 99238.99,
-      "benchmark": 100132.74
+      "benchmark": 101103.74
     },
     {
       "t": "2026-09-04 17:00",
-      "value": 99300.86,
-      "benchmark": 100183.73
+      "value": 99300.87,
+      "benchmark": 101155.22
     },
     {
       "t": "2026-09-04 17:30",
       "value": 99326.22,
-      "benchmark": 100184.79
+      "benchmark": 101156.3
     },
     {
       "t": "2026-09-04 18:00",
       "value": 99277.99,
-      "benchmark": 100115.59
+      "benchmark": 101086.42
     },
     {
       "t": "2026-09-04 18:30",
       "value": 99257.95,
-      "benchmark": 100181.37
+      "benchmark": 101152.84
     },
     {
       "t": "2026-09-04 19:00",
       "value": 99274.13,
-      "benchmark": 100176.84
+      "benchmark": 101148.27
     },
     {
       "t": "2026-09-04 19:30",
-      "value": 99214.2,
-      "benchmark": 100145.75
+      "value": 99215.53,
+      "benchmark": 101116.88
     },
     {
       "t": "2026-09-08 04:00",
       "value": 99429.87,
-      "benchmark": 99837.33
+      "benchmark": 100805.47
     },
     {
       "t": "2026-09-08 04:30",
       "value": 99467.05,
-      "benchmark": 99823.02
+      "benchmark": 100791.01
     },
     {
       "t": "2026-09-08 05:00",
       "value": 99720.49,
-      "benchmark": 99921.92
+      "benchmark": 100890.87
     },
     {
       "t": "2026-09-08 05:30",
       "value": 99904.42,
-      "benchmark": 100046.85
+      "benchmark": 101017.02
     },
     {
       "t": "2026-09-08 06:00",
-      "value": 99984.36,
-      "benchmark": 100022.12
+      "value": 99985.14,
+      "benchmark": 100992.05
     },
     {
       "t": "2026-09-08 06:30",
       "value": 99816.22,
-      "benchmark": 99929.69
+      "benchmark": 100898.72
     },
     {
       "t": "2026-09-08 07:00",
       "value": 99726.21,
-      "benchmark": 99911.51
+      "benchmark": 100880.36
     },
     {
       "t": "2026-09-08 07:30",
       "value": 99860.41,
-      "benchmark": 100010.41
+      "benchmark": 100980.22
     },
     {
       "t": "2026-09-08 08:00",
       "value": 99959.69,
-      "benchmark": 100003.9
+      "benchmark": 100973.65
     },
     {
       "t": "2026-09-08 08:30",
       "value": 100257.61,
-      "benchmark": 100111.92
+      "benchmark": 101082.71
     },
     {
       "t": "2026-09-08 09:00",
-      "value": 100305.02,
-      "benchmark": 100110.62
+      "value": 100296.9,
+      "benchmark": 101081.4
     },
     {
       "t": "2026-09-08 09:30",
-      "value": 99733.24,
-      "benchmark": 99873.77
+      "value": 99732.99,
+      "benchmark": 100842.26
     },
     {
       "t": "2026-09-08 10:00",
       "value": 100066.23,
-      "benchmark": 99774.87
+      "benchmark": 100742.4
     },
     {
       "t": "2026-09-08 10:30",
       "value": 100265.37,
-      "benchmark": 99898.5
+      "benchmark": 100867.23
     },
     {
       "t": "2026-09-08 11:00",
       "value": 100440.69,
-      "benchmark": 99918.66
+      "benchmark": 100887.59
     },
     {
       "t": "2026-09-08 11:30",
       "value": 100485.57,
-      "benchmark": 99864.66
+      "benchmark": 100833.06
     },
     {
       "t": "2026-09-08 12:00",
       "value": 100343.34,
-      "benchmark": 99826.92
+      "benchmark": 100794.95
     },
     {
       "t": "2026-09-08 12:30",
       "value": 100303.79,
-      "benchmark": 99806.1
+      "benchmark": 100773.93
     },
     {
       "t": "2026-09-08 13:00",
       "value": 100622.79,
-      "benchmark": 99875.72
+      "benchmark": 100844.23
     },
     {
       "t": "2026-09-08 13:30",
       "value": 100493.7,
-      "benchmark": 99873.77
+      "benchmark": 100842.26
     },
     {
       "t": "2026-09-08 14:00",
       "value": 100532.97,
-      "benchmark": 99913.46
+      "benchmark": 100882.34
     },
     {
       "t": "2026-09-08 14:30",
       "value": 100488.79,
-      "benchmark": 99783.98
+      "benchmark": 100751.6
     },
     {
       "t": "2026-09-08 15:00",
       "value": 100379.69,
-      "benchmark": 99811.3
+      "benchmark": 100779.18
     },
     {
       "t": "2026-09-08 15:30",
-      "value": 100173.22,
-      "benchmark": 99682.47
+      "value": 100174.51,
+      "benchmark": 100649.1
     },
     {
       "t": "2026-09-08 16:00",
       "value": 100153.47,
-      "benchmark": 99614.8
+      "benchmark": 100580.78
     },
     {
       "t": "2026-09-08 16:30",
       "value": 100244.23,
-      "benchmark": 99658.85
+      "benchmark": 100625.25
     },
     {
       "t": "2026-09-08 17:00",
       "value": 100004.55,
-      "benchmark": 99660.35
+      "benchmark": 100626.77
     },
     {
       "t": "2026-09-08 17:30",
       "value": 100227.26,
-      "benchmark": 99666.85
+      "benchmark": 100633.34
     },
     {
       "t": "2026-09-08 18:00",
       "value": 100204.33,
-      "benchmark": 99677.26
+      "benchmark": 100643.85
     },
     {
       "t": "2026-09-08 18:30",
-      "value": 100238.33,
-      "benchmark": 99707.2
+      "value": 100239.02,
+      "benchmark": 100674.07
     },
     {
       "t": "2026-09-08 19:00",
       "value": 100174.57,
-      "benchmark": 99646.03
+      "benchmark": 100612.31
     },
     {
       "t": "2026-09-08 19:30",
-      "value": 100066.33,
-      "benchmark": 99606.99
+      "value": 100073.21,
+      "benchmark": 100572.89
     },
     {
       "t": "2026-09-09 04:00",
-      "value": 100491.74,
-      "benchmark": 99752.74
+      "value": 100495.14,
+      "benchmark": 100720.06
     },
     {
       "t": "2026-09-09 04:30",
       "value": 100460.25,
-      "benchmark": 99711.1
+      "benchmark": 100678.01
     },
     {
       "t": "2026-09-09 05:00",
       "value": 100275.62,
-      "benchmark": 99636.92
+      "benchmark": 100620.2
     },
     {
       "t": "2026-09-09 05:30",
-      "value": 99591.0,
-      "benchmark": 99416.99
+      "value": 99591.26,
+      "benchmark": 100381.05
     },
     {
       "t": "2026-09-09 06:00",
-      "value": 99701.54,
-      "benchmark": 99449.53
+      "value": 99701.57,
+      "benchmark": 100413.9
     },
     {
       "t": "2026-09-09 06:30",
-      "value": 99627.72,
-      "benchmark": 99298.57
+      "value": 99605.79,
+      "benchmark": 100261.48
     },
     {
       "t": "2026-09-09 07:00",
-      "value": 99686.04,
-      "benchmark": 99367.24
+      "value": 99687.29,
+      "benchmark": 100330.82
     },
     {
       "t": "2026-09-09 07:30",
       "value": 99630.17,
-      "benchmark": 99332.41
+      "benchmark": 100295.64
     },
     {
       "t": "2026-09-09 08:00",
       "value": 99457.82,
-      "benchmark": 99260.83
+      "benchmark": 100223.38
     },
     {
       "t": "2026-09-09 08:30",
       "value": 99623.15,
-      "benchmark": 99368.19
+      "benchmark": 100331.78
     },
     {
       "t": "2026-09-09 09:00",
-      "value": 99869.16,
-      "benchmark": 99376.65
+      "value": 99869.44,
+      "benchmark": 100340.45
     },
     {
       "t": "2026-09-09 09:30",
       "value": 100680.88,
-      "benchmark": 99436.51
+      "benchmark": 100400.76
     },
     {
       "t": "2026-09-09 10:00",
       "value": 100580.68,
-      "benchmark": 99420.89
+      "benchmark": 100384.99
     },
     {
       "t": "2026-09-09 10:30",
       "value": 100641.79,
-      "benchmark": 99394.87
+      "benchmark": 100358.72
     },
     {
       "t": "2026-09-09 11:00",
       "value": 100038.89,
-      "benchmark": 99103.36
+      "benchmark": 100064.38
     },
     {
       "t": "2026-09-09 11:30",
       "value": 100330.91,
-      "benchmark": 99185.35
+      "benchmark": 100147.16
     },
     {
       "t": "2026-09-09 12:00",
       "value": 100145.42,
-      "benchmark": 99115.08
+      "benchmark": 100076.21
     },
     {
       "t": "2026-09-09 12:30",
       "value": 100405.06,
-      "benchmark": 99236.88
+      "benchmark": 100199.2
     },
     {
       "t": "2026-09-09 13:00",
       "value": 100322.69,
-      "benchmark": 99282.95
+      "benchmark": 100245.71
     },
     {
       "t": "2026-09-09 13:30",
       "value": 100348.15,
-      "benchmark": 99296.62
+      "benchmark": 100259.51
     },
     {
       "t": "2026-09-09 14:00",
       "value": 100275.79,
-      "benchmark": 99272.55
+      "benchmark": 100235.2
     },
     {
       "t": "2026-09-09 14:30",
       "value": 100149.48,
-      "benchmark": 99280.35
+      "benchmark": 100243.09
     },
     {
       "t": "2026-09-09 15:00",
       "value": 100179.04,
-      "benchmark": 99306.37
+      "benchmark": 100269.36
     },
     {
       "t": "2026-09-09 15:30",
-      "value": 100188.13,
-      "benchmark": 99213.98
+      "value": 100187.49,
+      "benchmark": 100176.07
     },
     {
       "t": "2026-09-09 16:00",
       "value": 100196.04,
-      "benchmark": 99230.9
+      "benchmark": 100193.15
     },
     {
       "t": "2026-09-09 16:30",
       "value": 100301.26,
-      "benchmark": 99262.13
+      "benchmark": 100224.69
     },
     {
       "t": "2026-09-09 17:00",
       "value": 100216.55,
-      "benchmark": 99254.32
+      "benchmark": 100216.81
     },
     {
       "t": "2026-09-09 17:30",
       "value": 100196.78,
-      "benchmark": 99242.61
+      "benchmark": 100204.98
     },
     {
       "t": "2026-09-09 18:00",
       "value": 100117.42,
-      "benchmark": 99241.31
+      "benchmark": 100203.67
     },
     {
       "t": "2026-09-09 18:30",
       "value": 100102.58,
-      "benchmark": 99250.42
+      "benchmark": 100212.86
     },
     {
       "t": "2026-09-09 19:00",
-      "value": 100082.47,
-      "benchmark": 99253.02
+      "value": 100082.77,
+      "benchmark": 100215.49
     },
     {
       "t": "2026-09-09 19:30",
       "value": 100191.63,
-      "benchmark": 99311.58
+      "benchmark": 100274.62
     },
     {
       "t": "2026-09-10 04:00",
-      "value": 100067.73,
-      "benchmark": 99413.09
+      "value": 100063.52,
+      "benchmark": 100377.11
     },
     {
       "t": "2026-09-10 04:30",
       "value": 99897.79,
-      "benchmark": 99325.25
+      "benchmark": 100288.42
     },
     {
       "t": "2026-09-10 05:00",
       "value": 99858.11,
-      "benchmark": 99306.38
+      "benchmark": 100269.36
     },
     {
       "t": "2026-09-10 05:30",
-      "value": 99756.1,
-      "benchmark": 99342.82
+      "value": 99754.48,
+      "benchmark": 100306.16
     },
     {
       "t": "2026-09-10 06:00",
-      "value": 99757.92,
-      "benchmark": 99316.79
+      "value": 99748.4,
+      "benchmark": 100279.88
     },
     {
       "t": "2026-09-10 06:30",
-      "value": 99733.9,
-      "benchmark": 99297.27
+      "value": 99733.62,
+      "benchmark": 100260.17
     },
     {
       "t": "2026-09-10 07:00",
-      "value": 99551.54,
-      "benchmark": 99219.19
+      "value": 99551.41,
+      "benchmark": 100181.33
     },
     {
       "t": "2026-09-10 07:30",
-      "value": 99257.98,
-      "benchmark": 99074.74
+      "value": 99258.21,
+      "benchmark": 100035.48
     },
     {
       "t": "2026-09-10 08:00",
-      "value": 99070.01,
-      "benchmark": 98974.53
+      "value": 99068.1,
+      "benchmark": 99934.3
     },
     {
       "t": "2026-09-10 08:30",
-      "value": 98376.81,
-      "benchmark": 98666.11
+      "value": 98376.7,
+      "benchmark": 99622.89
     },
     {
       "t": "2026-09-10 09:00",
-      "value": 98595.6,
-      "benchmark": 98667.41
+      "value": 98594.88,
+      "benchmark": 99624.2
     },
     {
       "t": "2026-09-10 09:30",
       "value": 98373.67,
-      "benchmark": 98483.93
+      "benchmark": 99438.94
     },
     {
       "t": "2026-09-10 10:00",
-      "value": 98903.82,
-      "benchmark": 98735.09
+      "value": 98903.69,
+      "benchmark": 99692.53
     },
     {
       "t": "2026-09-10 10:30",
       "value": 99137.51,
-      "benchmark": 98824.81
+      "benchmark": 99783.13
     },
     {
       "t": "2026-09-10 11:00",
       "value": 98980.68,
-      "benchmark": 98796.9
+      "benchmark": 99754.94
     },
     {
       "t": "2026-09-10 11:30",
       "value": 98859.6,
-      "benchmark": 98712.96
+      "benchmark": 99670.19
     },
     {
       "t": "2026-09-10 12:00",
       "value": 98647.44,
-      "benchmark": 98653.75
+      "benchmark": 99610.41
     },
     {
       "t": "2026-09-10 12:30",
       "value": 98865.37,
-      "benchmark": 98799.5
+      "benchmark": 99757.57
     },
     {
       "t": "2026-09-10 13:00",
       "value": 98750.85,
-      "benchmark": 98719.47
+      "benchmark": 99676.77
     },
     {
       "t": "2026-09-10 13:30",
       "value": 98744.16,
-      "benchmark": 98677.83
+      "benchmark": 99634.72
     },
     {
       "t": "2026-09-10 14:00",
       "value": 98698.31,
-      "benchmark": 98602.35
+      "benchmark": 99558.51
     },
     {
       "t": "2026-09-10 14:30",
       "value": 98792.57,
-      "benchmark": 98613.41
+      "benchmark": 99569.68
     },
     {
       "t": "2026-09-10 15:00",
       "value": 98712.16,
-      "benchmark": 98592.58
+      "benchmark": 99548.65
     },
     {
       "t": "2026-09-10 15:30",
-      "value": 98446.86,
-      "benchmark": 98627.07
+      "value": 98447.59,
+      "benchmark": 99583.47
     },
     {
       "t": "2026-09-10 16:00",
       "value": 98492.59,
-      "benchmark": 98696.04
+      "benchmark": 99653.11
     },
     {
       "t": "2026-09-10 16:30",
       "value": 98468.47,
-      "benchmark": 98658.3
+      "benchmark": 99615.01
     },
     {
       "t": "2026-09-10 17:00",
-      "value": 98444.59,
-      "benchmark": 98685.63
+      "value": 98442.98,
+      "benchmark": 99642.6
     },
     {
       "t": "2026-09-10 17:30",
       "value": 98435.11,
-      "benchmark": 98699.95
+      "benchmark": 99657.05
     },
     {
       "t": "2026-09-10 18:00",
       "value": 98377.54,
-      "benchmark": 98681.73
+      "benchmark": 99638.66
     },
     {
       "t": "2026-09-10 18:30",
       "value": 98295.18,
-      "benchmark": 98640.08
+      "benchmark": 99596.61
     },
     {
       "t": "2026-09-10 19:00",
       "value": 98249.09,
-      "benchmark": 98648.33
+      "benchmark": 99604.94
     },
     {
       "t": "2026-09-10 19:30",
       "value": 98126.22,
-      "benchmark": 98581.34
+      "benchmark": 99537.3
     },
     {
       "t": "2026-09-11 04:00",
       "value": 99055.41,
-      "benchmark": 99086.45
+      "benchmark": 100047.3
     },
     {
       "t": "2026-09-11 04:30",
-      "value": 99276.85,
-      "benchmark": 99241.31
+      "value": 99278.49,
+      "benchmark": 100203.67
     },
     {
       "t": "2026-09-11 05:00",
       "value": 99160.32,
-      "benchmark": 99184.05
+      "benchmark": 100145.85
     },
     {
       "t": "2026-09-11 05:30",
       "value": 99208.36,
-      "benchmark": 99212.68
+      "benchmark": 100174.76
     },
     {
       "t": "2026-09-11 06:00",
-      "value": 99187.79,
-      "benchmark": 99202.27
+      "value": 99181.69,
+      "benchmark": 100164.25
     },
     {
       "t": "2026-09-11 06:30",
       "value": 99176.93,
-      "benchmark": 99184.05
+      "benchmark": 100145.85
     },
     {
       "t": "2026-09-11 07:00",
       "value": 99165.89,
-      "benchmark": 99187.95
+      "benchmark": 100149.79
     },
     {
       "t": "2026-09-11 07:30",
       "value": 99253.85,
-      "benchmark": 99208.78
+      "benchmark": 100170.82
     },
     {
       "t": "2026-09-11 08:00",
       "value": 99441.96,
-      "benchmark": 99358.43
+      "benchmark": 100321.92
     },
     {
       "t": "2026-09-11 08:30",
       "value": 99885.96,
-      "benchmark": 99657.74
+      "benchmark": 100624.14
     },
     {
       "t": "2026-09-11 09:00",
-      "value": 99525.94,
-      "benchmark": 99547.14
+      "value": 99526.42,
+      "benchmark": 100512.46
     },
     {
       "t": "2026-09-11 09:30",
-      "value": 99526.42,
-      "benchmark": 99724.11
+      "value": 99526.7,
+      "benchmark": 100691.15
     },
     {
       "t": "2026-09-11 10:00",
       "value": 99457.56,
-      "benchmark": 99648.63
+      "benchmark": 100614.94
     },
     {
       "t": "2026-09-11 10:30",
       "value": 99162.15,
-      "benchmark": 99419.59
+      "benchmark": 100383.68
     },
     {
       "t": "2026-09-11 11:00",
       "value": 99659.75,
-      "benchmark": 99683.77
+      "benchmark": 100650.42
     },
     {
       "t": "2026-09-11 11:30",
       "value": 99630.26,
-      "benchmark": 99646.03
+      "benchmark": 100612.31
     },
     {
       "t": "2026-09-11 12:00",
       "value": 99356.12,
-      "benchmark": 99543.22
+      "benchmark": 100508.51
     },
     {
       "t": "2026-09-11 12:30",
       "value": 99572.14,
-      "benchmark": 99634.32
+      "benchmark": 100600.49
     },
     {
       "t": "2026-09-11 13:00",
       "value": 99701.77,
-      "benchmark": 99683.12
+      "benchmark": 100649.76
     },
     {
       "t": "2026-09-11 13:30",
       "value": 99698.92,
-      "benchmark": 99649.93
+      "benchmark": 100616.25
     },
     {
       "t": "2026-09-11 14:00",
       "value": 99603.92,
-      "benchmark": 99606.99
+      "benchmark": 100572.89
     },
     {
       "t": "2026-09-11 14:30",
       "value": 99522.35,
-      "benchmark": 99556.89
+      "benchmark": 100522.31
     },
     {
       "t": "2026-09-11 15:00",
       "value": 99426.24,
-      "benchmark": 99556.24
+      "benchmark": 100521.65
     },
     {
       "t": "2026-09-11 15:30",
-      "value": 99357.68,
-      "benchmark": 99446.92
+      "value": 99357.71,
+      "benchmark": 100411.27
     },
     {
       "t": "2026-09-11 16:00",
       "value": 99302.84,
-      "benchmark": 99470.35
+      "benchmark": 100434.93
     },
     {
       "t": "2026-09-11 16:30",
       "value": 99350.79,
-      "benchmark": 99472.95
+      "benchmark": 100437.55
     },
     {
       "t": "2026-09-11 17:00",
       "value": 99340.5,
-      "benchmark": 99423.5
+      "benchmark": 100387.62
     },
     {
       "t": "2026-09-11 17:30",
       "value": 99348.25,
-      "benchmark": 99476.86
+      "benchmark": 100441.5
     },
     {
       "t": "2026-09-11 18:00",
       "value": 99367.28,
-      "benchmark": 99462.54
+      "benchmark": 100427.04
     },
     {
       "t": "2026-09-11 18:30",
       "value": 99357.47,
-      "benchmark": 99492.47
+      "benchmark": 100457.26
     },
     {
       "t": "2026-09-11 19:00",
-      "value": 99336.93,
-      "benchmark": 99501.58
+      "value": 99339.67,
+      "benchmark": 100466.46
     },
     {
       "t": "2026-09-11 19:30",
       "value": 99374.13,
-      "benchmark": 99478.16
+      "benchmark": 100450.69
     },
     {
       "t": "2026-09-14 04:00",
       "value": 96904.27,
-      "benchmark": 98759.81
+      "benchmark": 99717.5
     },
     {
       "t": "2026-09-14 04:30",
       "value": 96961.45,
-      "benchmark": 98785.84
+      "benchmark": 99743.78
     },
     {
       "t": "2026-09-14 05:00",
       "value": 96792.44,
-      "benchmark": 98690.84
+      "benchmark": 99647.85
     },
     {
       "t": "2026-09-14 05:30",
-      "value": 96830.18,
-      "benchmark": 98629.67
+      "value": 96830.97,
+      "benchmark": 99586.1
     },
     {
       "t": "2026-09-14 06:00",
       "value": 97152.83,
-      "benchmark": 98740.29
+      "benchmark": 99697.79
     },
     {
       "t": "2026-09-14 06:30",
       "value": 97127.82,
-      "benchmark": 98814.47
+      "benchmark": 99772.68
     },
     {
       "t": "2026-09-14 07:00",
-      "value": 97110.13,
-      "benchmark": 98909.46
+      "value": 97111.49,
+      "benchmark": 99868.6
     },
     {
       "t": "2026-09-14 07:30",
       "value": 96795.87,
-      "benchmark": 98837.89
+      "benchmark": 99796.33
     },
     {
       "t": "2026-09-14 08:00",
       "value": 96734.32,
-      "benchmark": 98815.77
+      "benchmark": 99774.0
     },
     {
       "t": "2026-09-14 08:30",
       "value": 96681.96,
-      "benchmark": 98774.12
+      "benchmark": 99731.95
     },
     {
       "t": "2026-09-14 09:00",
-      "value": 96606.89,
-      "benchmark": 98772.82
+      "value": 96615.12,
+      "benchmark": 99730.64
     },
     {
       "t": "2026-09-14 09:30",
       "value": 97250.44,
-      "benchmark": 98902.31
+      "benchmark": 99861.38
     },
     {
       "t": "2026-09-14 10:00",
       "value": 97480.47,
-      "benchmark": 98752.0
+      "benchmark": 99709.62
     },
     {
       "t": "2026-09-14 10:30",
       "value": 97336.58,
-      "benchmark": 98716.87
+      "benchmark": 99674.14
     },
     {
       "t": "2026-09-14 11:00",
       "value": 97573.84,
-      "benchmark": 98850.25
+      "benchmark": 99808.81
     },
     {
       "t": "2026-09-14 11:30",
       "value": 97838.28,
-      "benchmark": 99130.7
+      "benchmark": 100091.98
     },
     {
       "t": "2026-09-14 12:00",
       "value": 97928.18,
-      "benchmark": 99165.83
+      "benchmark": 100127.46
     },
     {
       "t": "2026-09-14 12:30",
       "value": 98134.8,
-      "benchmark": 99280.35
+      "benchmark": 100243.09
     },
     {
       "t": "2026-09-14 13:00",
-      "value": 98239.38,
-      "benchmark": 99251.72
+      "value": 98239.63,
+      "benchmark": 100214.18
     },
     {
       "t": "2026-09-14 13:30",
       "value": 98289.74,
-      "benchmark": 99208.77
+      "benchmark": 100170.81
     },
     {
       "t": "2026-09-14 14:00",
       "value": 98217.08,
-      "benchmark": 99164.63
+      "benchmark": 100126.25
     },
     {
       "t": "2026-09-14 14:30",
       "value": 98281.22,
-      "benchmark": 99179.89
+      "benchmark": 100141.65
     },
     {
       "t": "2026-09-14 15:00",
       "value": 98095.35,
-      "benchmark": 99127.44
+      "benchmark": 100088.69
     },
     {
       "t": "2026-09-14 15:30",
-      "value": 97702.07,
-      "benchmark": 99003.16
+      "value": 97701.1,
+      "benchmark": 99963.21
     },
     {
       "t": "2026-09-14 16:00",
       "value": 97889.99,
-      "benchmark": 99042.2
+      "benchmark": 100002.63
     },
     {
       "t": "2026-09-14 16:30",
       "value": 97801.51,
-      "benchmark": 99096.86
+      "benchmark": 100057.81
     },
     {
       "t": "2026-09-14 17:00",
       "value": 97940.49,
-      "benchmark": 99031.79
+      "benchmark": 99992.12
     },
     {
       "t": "2026-09-14 17:30",
       "value": 97919.69,
-      "benchmark": 99059.12
+      "benchmark": 100019.71
     },
     {
       "t": "2026-09-14 18:00",
       "value": 97851.88,
-      "benchmark": 99057.27
+      "benchmark": 100017.84
     },
     {
       "t": "2026-09-14 18:30",
       "value": 97879.94,
-      "benchmark": 99055.35
+      "benchmark": 100015.9
     },
     {
       "t": "2026-09-14 19:00",
       "value": 97928.11,
-      "benchmark": 99035.7
+      "benchmark": 99996.06
     },
     {
       "t": "2026-09-14 19:30",
-      "value": 97955.44,
-      "benchmark": 99043.5
+      "value": 97955.71,
+      "benchmark": 100010.51
     },
     {
       "t": "2026-09-15 04:00",
-      "value": 97370.66,
-      "benchmark": 98525.57
+      "value": 97372.79,
+      "benchmark": 99480.98
     },
     {
       "t": "2026-09-15 04:30",
-      "value": 97288.42,
-      "benchmark": 98482.62
+      "value": 97288.52,
+      "benchmark": 99438.93
     },
     {
       "t": "2026-09-15 05:00",
-      "value": 97308.66,
-      "benchmark": 98494.33
+      "value": 97310.18,
+      "benchmark": 99449.44
     },
     {
       "t": "2026-09-15 05:30",
-      "value": 97617.11,
-      "benchmark": 98664.81
+      "value": 97621.15,
+      "benchmark": 99621.58
     },
     {
       "t": "2026-09-15 06:00",
       "value": 97766.83,
-      "benchmark": 98701.25
+      "benchmark": 99662.31
     },
     {
       "t": "2026-09-15 06:30",
-      "value": 97807.11,
-      "benchmark": 98814.47
+      "value": 97803.82,
+      "benchmark": 99772.68
     },
     {
       "t": "2026-09-15 07:00",
       "value": 97912.9,
-      "benchmark": 98839.19
+      "benchmark": 99797.65
     },
     {
       "t": "2026-09-15 07:30",
       "value": 97934.81,
-      "benchmark": 98873.03
+      "benchmark": 99831.81
     },
     {
       "t": "2026-09-15 08:00",
-      "value": 97954.6,
-      "benchmark": 98887.34
+      "value": 97954.76,
+      "benchmark": 99846.27
     },
     {
       "t": "2026-09-15 08:30",
       "value": 97992.13,
-      "benchmark": 98966.72
+      "benchmark": 99926.42
     },
     {
       "t": "2026-09-15 09:00",
-      "value": 97902.02,
-      "benchmark": 98974.53
+      "value": 97898.44,
+      "benchmark": 99934.3
     },
     {
       "t": "2026-09-15 09:30",
-      "value": 97950.88,
-      "benchmark": 98844.4
+      "value": 97950.75,
+      "benchmark": 99802.9
     },
     {
       "t": "2026-09-15 10:00",
       "value": 97661.08,
-      "benchmark": 98575.01
+      "benchmark": 99530.91
     },
     {
       "t": "2026-09-15 10:30",
       "value": 97266.25,
-      "benchmark": 98439.68
+      "benchmark": 99394.26
     },
     {
       "t": "2026-09-15 11:00",
       "value": 97411.36,
-      "benchmark": 98575.01
+      "benchmark": 99530.91
     },
     {
       "t": "2026-09-15 11:30",
       "value": 97253.39,
-      "benchmark": 98527.52
+      "benchmark": 99482.95
     },
     {
       "t": "2026-09-15 12:00",
       "value": 97261.77,
-      "benchmark": 98587.38
+      "benchmark": 99543.4
     },
     {
       "t": "2026-09-15 12:30",
       "value": 97275.69,
-      "benchmark": 98608.85
+      "benchmark": 99565.07
     },
     {
       "t": "2026-09-15 13:00",
       "value": 97244.91,
-      "benchmark": 98496.94
+      "benchmark": 99452.07
     },
     {
       "t": "2026-09-15 13:30",
       "value": 97240.13,
-      "benchmark": 98547.69
+      "benchmark": 99503.32
     },
     {
       "t": "2026-09-15 14:00",
       "value": 97267.93,
-      "benchmark": 98599.74
+      "benchmark": 99555.87
     },
     {
       "t": "2026-09-15 14:30",
       "value": 97195.6,
-      "benchmark": 98576.32
+      "benchmark": 99532.22
     },
     {
       "t": "2026-09-15 15:00",
       "value": 97151.04,
-      "benchmark": 98510.6
+      "benchmark": 99465.87
     },
     {
       "t": "2026-09-15 15:30",
-      "value": 97196.04,
-      "benchmark": 98567.21
+      "value": 97196.29,
+      "benchmark": 99523.03
     },
     {
       "t": "2026-09-15 16:00",
       "value": 97224.88,
-      "benchmark": 98653.1
+      "benchmark": 99609.75
     },
     {
       "t": "2026-09-15 16:30",
       "value": 97233.14,
-      "benchmark": 98649.19
+      "benchmark": 99605.81
     },
     {
       "t": "2026-09-15 17:00",
       "value": 97125.29,
-      "benchmark": 98638.78
+      "benchmark": 99595.3
     },
     {
       "t": "2026-09-15 17:30",
       "value": 97122.62,
-      "benchmark": 98628.37
+      "benchmark": 99584.78
     },
     {
       "t": "2026-09-15 18:00",
-      "value": 97203.67,
-      "benchmark": 98645.29
+      "value": 97203.99,
+      "benchmark": 99601.87
     },
     {
       "t": "2026-09-15 18:30",
       "value": 97256.7,
-      "benchmark": 98689.54
+      "benchmark": 99646.54
     },
     {
       "t": "2026-09-15 19:00",
-      "value": 97175.18,
-      "benchmark": 98642.69
+      "value": 97173.11,
+      "benchmark": 99599.24
     },
     {
       "t": "2026-09-15 19:30",
       "value": 97206.23,
-      "benchmark": 98672.62
+      "benchmark": 99629.46
     },
     {
       "t": "2026-09-16 04:00",
-      "value": 97793.57,
-      "benchmark": 98697.34
+      "value": 97794.48,
+      "benchmark": 99654.42
     },
     {
       "t": "2026-09-16 04:30",
       "value": 97808.43,
-      "benchmark": 98783.23
+      "benchmark": 99741.15
     },
     {
       "t": "2026-09-16 05:00",
       "value": 97857.56,
-      "benchmark": 98720.77
+      "benchmark": 99678.08
     },
     {
       "t": "2026-09-16 05:30",
       "value": 97874.37,
-      "benchmark": 98797.55
+      "benchmark": 99755.6
     },
     {
       "t": "2026-09-16 06:00",
-      "value": 97775.5,
-      "benchmark": 98783.23
+      "value": 97774.81,
+      "benchmark": 99741.15
     },
     {
       "t": "2026-09-16 06:30",
-      "value": 97928.12,
-      "benchmark": 98832.68
+      "value": 97928.19,
+      "benchmark": 99791.08
     },
     {
       "t": "2026-09-16 07:00",
       "value": 97937.41,
-      "benchmark": 98831.38
+      "benchmark": 99789.76
     },
     {
       "t": "2026-09-16 07:30",
       "value": 97972.81,
-      "benchmark": 98921.1
+      "benchmark": 99880.35
     },
     {
       "t": "2026-09-16 08:00",
       "value": 98050.03,
-      "benchmark": 98924.43
+      "benchmark": 99883.71
     },
     {
       "t": "2026-09-16 08:30",
       "value": 97939.09,
-      "benchmark": 98886.04
+      "benchmark": 99844.95
     },
     {
       "t": "2026-09-16 09:00",
-      "value": 98049.23,
-      "benchmark": 98888.64
+      "value": 98049.58,
+      "benchmark": 99847.58
     },
     {
       "t": "2026-09-16 09:30",
-      "value": 98209.93,
-      "benchmark": 98928.99
+      "value": 98210.38,
+      "benchmark": 99888.31
     },
     {
       "t": "2026-09-16 10:00",
       "value": 98102.76,
-      "benchmark": 98767.62
+      "benchmark": 99725.38
     },
     {
       "t": "2026-09-16 10:30",
       "value": 98148.43,
-      "benchmark": 98930.29
+      "benchmark": 99889.63
     },
     {
       "t": "2026-09-16 11:00",
       "value": 98162.99,
-      "benchmark": 98947.22
+      "benchmark": 99906.72
     },
     {
       "t": "2026-09-16 11:30",
-      "value": 98097.36,
-      "benchmark": 98992.75
+      "value": 98097.49,
+      "benchmark": 99952.7
     },
     {
       "t": "2026-09-16 12:00",
       "value": 98034.44,
-      "benchmark": 98921.18
+      "benchmark": 99880.43
     },
     {
       "t": "2026-09-16 12:30",
       "value": 97988.01,
-      "benchmark": 98873.03
+      "benchmark": 99831.81
     },
     {
       "t": "2026-09-16 13:00",
       "value": 97929.4,
-      "benchmark": 98893.85
+      "benchmark": 99852.83
     },
     {
       "t": "2026-09-16 13:30",
-      "value": 98108.29,
-      "benchmark": 98939.4
+      "value": 98109.13,
+      "benchmark": 99898.83
     },
     {
       "t": "2026-09-16 14:00",
       "value": 97880.91,
-      "benchmark": 98861.31
+      "benchmark": 99819.98
     },
     {
       "t": "2026-09-16 14:30",
       "value": 97103.81,
-      "benchmark": 98107.83
+      "benchmark": 99059.2
     },
     {
       "t": "2026-09-16 15:00",
       "value": 96741.8,
-      "benchmark": 97765.58
+      "benchmark": 98713.62
     },
     {
       "t": "2026-09-16 15:30",
-      "value": 97190.25,
-      "benchmark": 98131.26
+      "value": 97189.94,
+      "benchmark": 99082.85
     },
     {
       "t": "2026-09-16 16:00",
       "value": 97239.1,
-      "benchmark": 98114.34
+      "benchmark": 99065.76
     },
     {
       "t": "2026-09-16 16:30",
       "value": 97278.13,
-      "benchmark": 98133.86
+      "benchmark": 99085.47
     },
     {
       "t": "2026-09-16 17:00",
       "value": 97249.35,
-      "benchmark": 98131.25
+      "benchmark": 99082.85
     },
     {
       "t": "2026-09-16 17:30",
       "value": 97368.29,
-      "benchmark": 98164.09
+      "benchmark": 99116.0
     },
     {
       "t": "2026-09-16 18:00",
       "value": 97483.42,
-      "benchmark": 98261.09
+      "benchmark": 99213.94
     },
     {
       "t": "2026-09-16 18:30",
       "value": 97609.59,
-      "benchmark": 98314.82
+      "benchmark": 99268.2
     },
     {
       "t": "2026-09-16 19:00",
       "value": 97833.98,
-      "benchmark": 98434.47
+      "benchmark": 99389.0
     },
     {
       "t": "2026-09-16 19:30",
       "value": 97972.94,
-      "benchmark": 98573.22
+      "benchmark": 99529.1
     },
     {
       "t": "2026-09-17 04:00",
       "value": 98219.01,
-      "benchmark": 98854.16
+      "benchmark": 99812.76
     },
     {
       "t": "2026-09-17 04:30",
-      "value": 98352.59,
-      "benchmark": 98925.08
+      "value": 98352.1,
+      "benchmark": 99884.37
     },
     {
       "t": "2026-09-17 05:00",
       "value": 98334.95,
-      "benchmark": 98927.68
+      "benchmark": 99887.0
     },
     {
       "t": "2026-09-17 05:30",
       "value": 98374.2,
-      "benchmark": 98913.37
+      "benchmark": 99872.54
     },
     {
       "t": "2026-09-17 06:00",
       "value": 98465.29,
-      "benchmark": 98981.04
+      "benchmark": 99940.87
     },
     {
       "t": "2026-09-17 06:30",
-      "value": 98401.78,
-      "benchmark": 98991.45
+      "value": 98401.45,
+      "benchmark": 99951.38
     },
     {
       "t": "2026-09-17 07:00",
       "value": 98505.92,
-      "benchmark": 98964.12
+      "benchmark": 99923.79
     },
     {
       "t": "2026-09-17 07:30",
       "value": 98618.52,
-      "benchmark": 99076.04
+      "benchmark": 100036.79
     },
     {
       "t": "2026-09-17 08:00",
       "value": 98941.56,
-      "benchmark": 99349.32
+      "benchmark": 100312.73
     },
     {
       "t": "2026-09-17 08:30",
       "value": 99188.73,
-      "benchmark": 99372.5
+      "benchmark": 100336.13
     },
     {
       "t": "2026-09-17 09:00",
       "value": 99060.27,
-      "benchmark": 99349.32
+      "benchmark": 100312.73
     },
     {
       "t": "2026-09-17 09:30",
       "value": 99076.39,
-      "benchmark": 99065.63
+      "benchmark": 100026.28
     },
     {
       "t": "2026-09-17 10:00",
       "value": 98881.85,
-      "benchmark": 99120.93
+      "benchmark": 100082.12
     },
     {
       "t": "2026-09-17 10:30",
       "value": 98804.73,
-      "benchmark": 99005.11
+      "benchmark": 99965.18
     },
     {
       "t": "2026-09-17 11:00",
       "value": 98867.5,
-      "benchmark": 99107.27
+      "benchmark": 100068.33
     },
     {
       "t": "2026-09-17 11:30",
       "value": 98939.64,
-      "benchmark": 99233.5
+      "benchmark": 100195.78
     },
     {
       "t": "2026-09-17 12:00",
       "value": 98943.51,
-      "benchmark": 99232.2
+      "benchmark": 100194.47
     },
     {
       "t": "2026-09-17 12:30",
       "value": 98912.04,
-      "benchmark": 99222.44
+      "benchmark": 100184.62
     },
     {
       "t": "2026-09-17 13:00",
       "value": 98862.96,
-      "benchmark": 99167.78
+      "benchmark": 100129.42
     },
     {
       "t": "2026-09-17 13:30",
       "value": 98866.61,
-      "benchmark": 99245.21
+      "benchmark": 100207.61
     },
     {
       "t": "2026-09-17 14:00",
       "value": 98810.02,
-      "benchmark": 99258.23
+      "benchmark": 100220.75
     },
     {
       "t": "2026-09-17 14:30",
       "value": 98876.44,
-      "benchmark": 99220.49
+      "benchmark": 100182.64
     },
     {
       "t": "2026-09-17 15:00",
       "value": 98861.25,
-      "benchmark": 99242.6
+      "benchmark": 100204.97
     },
     {
       "t": "2026-09-17 15:30",
-      "value": 98910.56,
-      "benchmark": 99251.72
+      "value": 98910.97,
+      "benchmark": 100214.18
     },
     {
       "t": "2026-09-17 16:00",
       "value": 98842.84,
-      "benchmark": 99180.08
+      "benchmark": 100141.84
     },
     {
       "t": "2026-09-17 16:30",
-      "value": 98889.06,
-      "benchmark": 99190.56
+      "value": 98888.81,
+      "benchmark": 100152.42
     },
     {
       "t": "2026-09-17 17:00",
       "value": 98933.98,
-      "benchmark": 99194.46
+      "benchmark": 100156.36
     },
     {
       "t": "2026-09-17 17:30",
       "value": 98929.62,
-      "benchmark": 99204.22
+      "benchmark": 100166.22
     },
     {
       "t": "2026-09-17 18:00",
       "value": 98734.82,
-      "benchmark": 99132.0
+      "benchmark": 100093.29
     },
     {
       "t": "2026-09-17 18:30",
       "value": 98774.35,
-      "benchmark": 99143.71
+      "benchmark": 100105.12
     },
     {
       "t": "2026-09-17 19:00",
       "value": 98780.39,
-      "benchmark": 99161.09
+      "benchmark": 100122.67
     },
     {
       "t": "2026-09-17 19:30",
       "value": 98808.41,
-      "benchmark": 99173.44
+      "benchmark": 100135.14
     },
     {
       "t": "2026-09-18 04:00",
       "value": 99707.05,
-      "benchmark": 99275.15
+      "benchmark": 100237.83
     },
     {
       "t": "2026-09-18 04:30",
-      "value": 99657.48,
-      "benchmark": 99293.36
+      "value": 99657.34,
+      "benchmark": 100256.22
     },
     {
       "t": "2026-09-18 05:00",
-      "value": 99523.81,
-      "benchmark": 99253.02
+      "value": 99523.42,
+      "benchmark": 100215.49
     },
     {
       "t": "2026-09-18 05:30",
-      "value": 99406.93,
-      "benchmark": 99165.83
+      "value": 99406.85,
+      "benchmark": 100127.46
     },
     {
       "t": "2026-09-18 06:00",
-      "value": 99529.24,
-      "benchmark": 99190.56
+      "value": 99529.02,
+      "benchmark": 100152.42
     },
     {
       "t": "2026-09-18 06:30",
       "value": 99485.09,
-      "benchmark": 99206.17
+      "benchmark": 100168.19
     },
     {
       "t": "2026-09-18 07:00",
       "value": 99224.25,
-      "benchmark": 99111.9
+      "benchmark": 100073.0
     },
     {
       "t": "2026-09-18 07:30",
-      "value": 99279.46,
-      "benchmark": 99094.24
+      "value": 99278.63,
+      "benchmark": 100055.17
     },
     {
       "t": "2026-09-18 08:00",
       "value": 99095.7,
-      "benchmark": 98928.99
+      "benchmark": 99888.31
     },
     {
       "t": "2026-09-18 08:30",
       "value": 99028.69,
-      "benchmark": 98953.7
+      "benchmark": 99913.26
     },
     {
       "t": "2026-09-18 09:00",
-      "value": 99343.76,
-      "benchmark": 98961.52
+      "value": 99342.79,
+      "benchmark": 99921.16
     },
     {
       "t": "2026-09-18 09:30",
       "value": 99307.99,
-      "benchmark": 98865.22
+      "benchmark": 99823.93
     },
     {
       "t": "2026-09-18 10:00",
       "value": 99246.53,
-      "benchmark": 98817.06
+      "benchmark": 99775.3
     },
     {
       "t": "2026-09-18 10:30",
       "value": 99376.48,
-      "benchmark": 98893.85
+      "benchmark": 99852.83
     },
     {
       "t": "2026-09-18 11:00",
       "value": 99366.44,
-      "benchmark": 98900.35
+      "benchmark": 99859.4
     },
     {
       "t": "2026-09-18 11:30",
       "value": 99221.25,
-      "benchmark": 98772.82
+      "benchmark": 99730.64
     },
     {
       "t": "2026-09-18 12:00",
       "value": 99181.02,
-      "benchmark": 98744.2
+      "benchmark": 99701.73
     },
     {
       "t": "2026-09-18 12:30",
       "value": 99304.87,
-      "benchmark": 98824.81
+      "benchmark": 99783.13
     },
     {
       "t": "2026-09-18 13:00",
       "value": 99384.52,
-      "benchmark": 98824.88
+      "benchmark": 99783.2
     },
     {
       "t": "2026-09-18 13:30",
       "value": 99518.86,
-      "benchmark": 98880.84
+      "benchmark": 99839.7
     },
     {
       "t": "2026-09-18 14:00",
       "value": 99566.35,
-      "benchmark": 98964.12
+      "benchmark": 99923.79
     },
     {
       "t": "2026-09-18 14:30",
       "value": 99731.8,
-      "benchmark": 99066.93
+      "benchmark": 100027.59
     },
     {
       "t": "2026-09-18 15:00",
       "value": 99720.12,
-      "benchmark": 99014.87
+      "benchmark": 99975.03
     },
     {
       "t": "2026-09-18 15:30",
-      "value": 100346.55,
-      "benchmark": 99115.08
+      "value": 100346.71,
+      "benchmark": 100076.21
     },
     {
       "t": "2026-09-18 16:00",
       "value": 100407.74,
-      "benchmark": 99275.15
+      "benchmark": 100237.83
     },
     {
       "t": "2026-09-18 16:30",
       "value": 100363.54,
-      "benchmark": 99259.53
+      "benchmark": 100222.06
     },
     {
       "t": "2026-09-18 17:00",
       "value": 100428.75,
-      "benchmark": 99273.34
+      "benchmark": 100236.0
     },
     {
       "t": "2026-09-18 17:30",
       "value": 100406.78,
-      "benchmark": 99280.35
+      "benchmark": 100243.09
     },
     {
       "t": "2026-09-18 18:00",
       "value": 100356.57,
-      "benchmark": 99280.35
+      "benchmark": 100243.09
     },
     {
       "t": "2026-09-18 18:30",
       "value": 100465.39,
-      "benchmark": 99267.4
+      "benchmark": 100230.01
     },
     {
       "t": "2026-09-18 19:00",
       "value": 100379.73,
-      "benchmark": 99279.66
+      "benchmark": 100242.39
     },
     {
       "t": "2026-09-18 19:30",
-      "value": 100405.21,
-      "benchmark": 99285.56
+      "value": 100420.92,
+      "benchmark": 100248.34
     },
     {
       "t": "2026-09-21 04:00",
-      "value": 101650.88,
-      "benchmark": 99734.52
+      "value": 101650.53,
+      "benchmark": 100701.66
     },
     {
       "t": "2026-09-21 04:30",
       "value": 101777.63,
-      "benchmark": 99748.84
+      "benchmark": 100716.12
     },
     {
       "t": "2026-09-21 05:00",
       "value": 101850.89,
-      "benchmark": 99767.04
+      "benchmark": 100734.5
     },
     {
       "t": "2026-09-21 05:30",
       "value": 101783.61,
-      "benchmark": 99761.85
+      "benchmark": 100729.26
     },
     {
       "t": "2026-09-21 06:00",
       "value": 101813.48,
-      "benchmark": 99806.1
+      "benchmark": 100773.93
     },
     {
       "t": "2026-09-21 06:30",
       "value": 101788.97,
-      "benchmark": 99791.78
+      "benchmark": 100759.48
     },
     {
       "t": "2026-09-21 07:00",
       "value": 101667.05,
-      "benchmark": 99766.41
+      "benchmark": 100733.85
     },
     {
       "t": "2026-09-21 07:30",
-      "value": 101825.41,
-      "benchmark": 99810.0
+      "value": 101825.32,
+      "benchmark": 100777.87
     },
     {
       "t": "2026-09-21 08:00",
       "value": 101774.78,
-      "benchmark": 99750.14
+      "benchmark": 100717.43
     },
     {
       "t": "2026-09-21 08:30",
-      "value": 101774.92,
-      "benchmark": 99733.22
+      "value": 101774.52,
+      "benchmark": 100700.35
     },
     {
       "t": "2026-09-21 09:00",
-      "value": 101843.07,
-      "benchmark": 99746.24
+      "value": 101850.36,
+      "benchmark": 100713.49
     },
     {
       "t": "2026-09-21 09:30",
       "value": 102224.67,
-      "benchmark": 99903.7
+      "benchmark": 100872.48
     },
     {
       "t": "2026-09-21 10:00",
       "value": 102618.75,
-      "benchmark": 100078.51
+      "benchmark": 101048.99
     },
     {
       "t": "2026-09-21 10:30",
       "value": 102840.32,
-      "benchmark": 100102.8
+      "benchmark": 101073.51
     },
     {
       "t": "2026-09-21 11:00",
       "value": 103072.85,
-      "benchmark": 100186.09
+      "benchmark": 101157.61
     },
     {
       "t": "2026-09-21 11:30",
       "value": 103096.34,
-      "benchmark": 100300.61
+      "benchmark": 101273.24
     },
     {
       "t": "2026-09-21 12:00",
       "value": 103333.69,
-      "benchmark": 100441.16
+      "benchmark": 101415.15
     },
     {
       "t": "2026-09-21 12:30",
       "value": 103335.51,
-      "benchmark": 100506.23
+      "benchmark": 101480.85
     },
     {
       "t": "2026-09-21 13:00",
       "value": 103279.15,
-      "benchmark": 100569.34
+      "benchmark": 101544.58
     },
     {
       "t": "2026-09-21 13:30",
       "value": 103386.08,
-      "benchmark": 100581.06
+      "benchmark": 101556.4
     },
     {
       "t": "2026-09-21 14:00",
       "value": 103586.54,
-      "benchmark": 100705.98
+      "benchmark": 101682.54
     },
     {
       "t": "2026-09-21 14:30",
       "value": 103759.72,
-      "benchmark": 100763.24
+      "benchmark": 101740.36
     },
     {
       "t": "2026-09-21 15:00",
-      "value": 103743.4,
-      "benchmark": 100737.86
+      "value": 103743.32,
+      "benchmark": 101714.73
     },
     {
       "t": "2026-09-21 15:30",
-      "value": 103769.11,
-      "benchmark": 100662.39
+      "value": 103769.15,
+      "benchmark": 101638.53
     },
     {
       "t": "2026-09-21 16:00",
       "value": 103667.97,
-      "benchmark": 100627.25
+      "benchmark": 101603.05
     },
     {
       "t": "2026-09-21 16:30",
       "value": 103707.8,
-      "benchmark": 100615.71
+      "benchmark": 101591.39
     },
     {
       "t": "2026-09-21 17:00",
       "value": 103769.06,
-      "benchmark": 100644.17
+      "benchmark": 101620.13
     },
     {
       "t": "2026-09-21 17:30",
       "value": 103812.26,
-      "benchmark": 100651.98
+      "benchmark": 101628.01
     },
     {
       "t": "2026-09-21 18:00",
       "value": 103941.72,
-      "benchmark": 100696.0
+      "benchmark": 101672.47
     },
     {
       "t": "2026-09-21 18:30",
       "value": 103976.97,
-      "benchmark": 100692.28
+      "benchmark": 101668.71
     },
     {
       "t": "2026-09-21 19:00",
-      "value": 104047.52,
-      "benchmark": 100688.42
+      "value": 104037.94,
+      "benchmark": 101664.81
     },
     {
       "t": "2026-09-21 19:30",
       "value": 104051.03,
-      "benchmark": 100702.73
+      "benchmark": 101679.26
     },
     {
       "t": "2026-09-22 04:00",
-      "value": 103005.29,
-      "benchmark": 100414.48
+      "value": 103005.16,
+      "benchmark": 101388.21
     },
     {
       "t": "2026-09-22 04:30",
       "value": 103586.21,
-      "benchmark": 100681.91
+      "benchmark": 101658.24
     },
     {
       "t": "2026-09-22 05:00",
       "value": 103505.57,
-      "benchmark": 100602.53
+      "benchmark": 101578.08
     },
     {
       "t": "2026-09-22 05:30",
       "value": 103853.96,
-      "benchmark": 100735.27
+      "benchmark": 101712.11
     },
     {
       "t": "2026-09-22 06:00",
-      "value": 103758.27,
-      "benchmark": 100730.06
+      "value": 103758.46,
+      "benchmark": 101706.85
     },
     {
       "t": "2026-09-22 06:30",
       "value": 103848.41,
-      "benchmark": 100747.63
+      "benchmark": 101724.59
     },
     {
       "t": "2026-09-22 07:00",
-      "value": 103480.33,
-      "benchmark": 100709.24
+      "value": 103480.46,
+      "benchmark": 101685.83
     },
     {
       "t": "2026-09-22 07:30",
-      "value": 103379.33,
-      "benchmark": 100714.44
+      "value": 103384.0,
+      "benchmark": 101691.08
     },
     {
       "t": "2026-09-22 08:00",
       "value": 103443.87,
-      "benchmark": 100769.1
+      "benchmark": 101746.27
     },
     {
       "t": "2026-09-22 08:30",
       "value": 103288.84,
-      "benchmark": 100720.95
+      "benchmark": 101697.65
     },
     {
       "t": "2026-09-22 09:00",
-      "value": 103394.93,
-      "benchmark": 100773.0
+      "value": 103399.46,
+      "benchmark": 101750.21
     },
     {
       "t": "2026-09-22 09:30",
       "value": 104692.66,
-      "benchmark": 100702.08
+      "benchmark": 101678.6
     },
     {
       "t": "2026-09-22 10:00",
       "value": 104628.3,
-      "benchmark": 100664.98
+      "benchmark": 101641.14
     },
     {
       "t": "2026-09-22 10:30",
       "value": 104396.29,
-      "benchmark": 100648.07
+      "benchmark": 101624.07
     },
     {
       "t": "2026-09-22 11:00",
       "value": 104382.6,
-      "benchmark": 100640.26
+      "benchmark": 101616.18
     },
     {
       "t": "2026-09-22 11:30",
-      "value": 104424.52,
-      "benchmark": 100599.27
+      "value": 104424.86,
+      "benchmark": 101574.79
     },
     {
       "t": "2026-09-22 12:00",
       "value": 104390.95,
-      "benchmark": 100584.31
+      "benchmark": 101559.69
     },
     {
       "t": "2026-09-22 12:30",
       "value": 104633.43,
-      "benchmark": 100670.2
+      "benchmark": 101646.41
     },
     {
       "t": "2026-09-22 13:00",
       "value": 104677.52,
-      "benchmark": 100670.2
+      "benchmark": 101646.41
     },
     {
       "t": "2026-09-22 13:30",
       "value": 104833.28,
-      "benchmark": 100739.17
+      "benchmark": 101716.05
     },
     {
       "t": "2026-09-22 14:00",
       "value": 104942.48,
-      "benchmark": 100742.42
+      "benchmark": 101719.34
     },
     {
       "t": "2026-09-22 14:30",
       "value": 104877.23,
-      "benchmark": 100693.62
+      "benchmark": 101670.06
     },
     {
       "t": "2026-09-22 15:00",
       "value": 105032.49,
-      "benchmark": 100775.61
+      "benchmark": 101752.84
     },
     {
       "t": "2026-09-22 15:30",
-      "value": 105191.77,
-      "benchmark": 100651.98
+      "value": 105191.78,
+      "benchmark": 101628.01
     },
     {
       "t": "2026-09-22 16:00",
       "value": 105086.02,
-      "benchmark": 100638.97
+      "benchmark": 101614.87
     },
     {
       "t": "2026-09-22 16:30",
       "value": 105090.61,
-      "benchmark": 100606.43
+      "benchmark": 101582.02
     },
     {
       "t": "2026-09-22 17:00",
       "value": 105123.94,
-      "benchmark": 100622.31
+      "benchmark": 101598.06
     },
     {
       "t": "2026-09-22 17:30",
-      "value": 105110.12,
-      "benchmark": 100627.25
+      "value": 105110.25,
+      "benchmark": 101603.05
     },
     {
       "t": "2026-09-22 18:00",
       "value": 105237.24,
-      "benchmark": 100667.59
+      "benchmark": 101643.78
     },
     {
       "t": "2026-09-22 18:30",
       "value": 105215.34,
-      "benchmark": 100659.79
+      "benchmark": 101635.9
     },
     {
       "t": "2026-09-22 19:00",
       "value": 105262.05,
-      "benchmark": 100671.5
+      "benchmark": 101647.72
     },
     {
       "t": "2026-09-22 19:30",
-      "value": 105342.85,
-      "benchmark": 100691.02
+      "value": 105343.22,
+      "benchmark": 101667.43
     },
     {
       "t": "2026-09-23 04:00",
-      "value": 105182.56,
-      "benchmark": 100786.02
+      "value": 105183.05,
+      "benchmark": 101763.35
     },
     {
       "t": "2026-09-23 04:30",
       "value": 104944.62,
-      "benchmark": 100748.28
+      "benchmark": 101725.25
     },
     {
       "t": "2026-09-23 05:00",
-      "value": 105063.56,
-      "benchmark": 100754.79
+      "value": 105063.59,
+      "benchmark": 101731.82
     },
     {
       "t": "2026-09-23 05:30",
       "value": 104987.97,
-      "benchmark": 100711.84
+      "benchmark": 101688.46
     },
     {
       "t": "2026-09-23 06:00",
       "value": 105036.13,
-      "benchmark": 100750.88
+      "benchmark": 101727.88
     },
     {
       "t": "2026-09-23 06:30",
       "value": 105072.32,
-      "benchmark": 100741.77
+      "benchmark": 101718.68
     },
     {
       "t": "2026-09-23 07:00",
-      "value": 104623.36,
-      "benchmark": 100614.24
+      "value": 104622.81,
+      "benchmark": 101589.91
     },
     {
       "t": "2026-09-23 07:30",
       "value": 104659.92,
-      "benchmark": 100602.53
+      "benchmark": 101578.08
     },
     {
       "t": "2026-09-23 08:00",
       "value": 104652.66,
-      "benchmark": 100555.68
+      "benchmark": 101530.78
     },
     {
       "t": "2026-09-23 08:30",
-      "value": 104783.09,
-      "benchmark": 100567.39
+      "value": 104783.15,
+      "benchmark": 101542.61
     },
     {
       "t": "2026-09-23 09:00",
-      "value": 105222.26,
-      "benchmark": 100538.76
+      "value": 105253.36,
+      "benchmark": 101513.7
     },
     {
       "t": "2026-09-23 09:30",
       "value": 104570.54,
-      "benchmark": 100292.8
+      "benchmark": 101265.36
     },
     {
       "t": "2026-09-23 10:00",
       "value": 104142.96,
-      "benchmark": 100055.96
+      "benchmark": 101026.21
     },
     {
       "t": "2026-09-23 10:30",
       "value": 104748.45,
-      "benchmark": 100236.85
+      "benchmark": 101208.86
     },
     {
       "t": "2026-09-23 11:00",
       "value": 104651.5,
-      "benchmark": 100076.78
+      "benchmark": 101047.24
     },
     {
       "t": "2026-09-23 11:30",
       "value": 104440.95,
-      "benchmark": 100026.03
+      "benchmark": 100995.99
     },
     {
       "t": "2026-09-23 12:00",
       "value": 104441.44,
-      "benchmark": 99998.7
+      "benchmark": 100968.4
     },
     {
       "t": "2026-09-23 12:30",
       "value": 104270.04,
-      "benchmark": 99868.56
+      "benchmark": 100837.0
     },
     {
       "t": "2026-09-23 13:00",
       "value": 104337.64,
-      "benchmark": 99849.05
+      "benchmark": 100817.29
     },
     {
       "t": "2026-09-23 13:30",
       "value": 104766.1,
-      "benchmark": 100074.18
+      "benchmark": 101044.61
     },
     {
       "t": "2026-09-23 14:00",
       "value": 104681.7,
-      "benchmark": 99979.18
+      "benchmark": 100948.69
     },
     {
       "t": "2026-09-23 14:30",
       "value": 104731.75,
-      "benchmark": 99967.47
+      "benchmark": 100936.86
     },
     {
       "t": "2026-09-23 15:00",
       "value": 104743.98,
-      "benchmark": 99897.2
+      "benchmark": 100865.92
     },
     {
       "t": "2026-09-23 15:30",
-      "value": 104871.17,
-      "benchmark": 99915.42
+      "value": 104870.88,
+      "benchmark": 100884.31
     },
     {
       "t": "2026-09-23 16:00",
       "value": 104814.5,
-      "benchmark": 99894.59
+      "benchmark": 100863.28
     },
     {
       "t": "2026-09-23 16:30",
-      "value": 104860.01,
-      "benchmark": 99903.7
+      "value": 104850.87,
+      "benchmark": 100872.48
     },
     {
       "t": "2026-09-23 17:00",
-      "value": 104815.39,
-      "benchmark": 99901.1
+      "value": 104824.47,
+      "benchmark": 100869.85
     },
     {
       "t": "2026-09-23 17:30",
       "value": 104881.53,
-      "benchmark": 99916.71
+      "benchmark": 100885.62
     },
     {
       "t": "2026-09-23 18:00",
       "value": 104935.95,
-      "benchmark": 99967.47
+      "benchmark": 100936.86
     },
     {
       "t": "2026-09-23 18:30",
       "value": 104936.72,
-      "benchmark": 99941.44
+      "benchmark": 100910.58
     },
     {
       "t": "2026-09-23 19:00",
       "value": 104807.96,
-      "benchmark": 99869.86
+      "benchmark": 100838.32
     },
     {
       "t": "2026-09-23 19:30",
       "value": 104788.95,
-      "benchmark": 99855.55
+      "benchmark": 100823.86
     },
     {
       "t": "2026-09-24 04:00",
       "value": 103431.4,
-      "benchmark": 99281.65
+      "benchmark": 100244.4
     },
     {
       "t": "2026-09-24 04:30",
-      "value": 103228.66,
-      "benchmark": 99273.84
+      "value": 103233.85,
+      "benchmark": 100236.52
     },
     {
       "t": "2026-09-24 05:00",
       "value": 103318.19,
-      "benchmark": 99306.38
+      "benchmark": 100269.36
     },
     {
       "t": "2026-09-24 05:30",
-      "value": 103277.28,
-      "benchmark": 99300.39
+      "value": 103274.83,
+      "benchmark": 100263.32
     },
     {
       "t": "2026-09-24 06:00",
-      "value": 103273.03,
-      "benchmark": 99269.94
+      "value": 103275.4,
+      "benchmark": 100232.57
     },
     {
       "t": "2026-09-24 06:30",
-      "value": 103556.77,
-      "benchmark": 99410.49
+      "value": 103556.78,
+      "benchmark": 100374.48
     },
     {
       "t": "2026-09-24 07:00",
-      "value": 103469.98,
-      "benchmark": 99389.53
+      "value": 103471.15,
+      "benchmark": 100353.33
     },
     {
       "t": "2026-09-24 07:30",
       "value": 103456.39,
-      "benchmark": 99401.38
+      "benchmark": 100365.28
     },
     {
       "t": "2026-09-24 08:00",
       "value": 103537.06,
-      "benchmark": 99418.29
+      "benchmark": 100382.37
     },
     {
       "t": "2026-09-24 08:30",
-      "value": 103507.47,
-      "benchmark": 99439.12
+      "value": 103507.77,
+      "benchmark": 100403.39
     },
     {
       "t": "2026-09-24 09:00",
-      "value": 103729.0,
-      "benchmark": 99480.76
+      "value": 103729.68,
+      "benchmark": 100445.44
     },
     {
       "t": "2026-09-24 09:30",
       "value": 103935.51,
-      "benchmark": 99603.09
+      "benchmark": 100568.95
     },
     {
       "t": "2026-09-24 10:00",
       "value": 104138.42,
-      "benchmark": 99688.97
+      "benchmark": 100655.67
     },
     {
       "t": "2026-09-24 10:30",
       "value": 103757.24,
-      "benchmark": 99487.26
+      "benchmark": 100452.01
     },
     {
       "t": "2026-09-24 11:00",
       "value": 103546.11,
-      "benchmark": 99376.65
+      "benchmark": 100340.32
     },
     {
       "t": "2026-09-24 11:30",
       "value": 103698.59,
-      "benchmark": 99460.58
+      "benchmark": 100425.07
     },
     {
       "t": "2026-09-24 12:00",
       "value": 104194.13,
-      "benchmark": 99833.43
+      "benchmark": 100801.53
     },
     {
       "t": "2026-09-24 12:30",
       "value": 104657.62,
-      "benchmark": 99977.88
+      "benchmark": 100947.38
     },
     {
       "t": "2026-09-24 13:00",
       "value": 104303.15,
-      "benchmark": 99843.18
+      "benchmark": 100811.38
     },
     {
       "t": "2026-09-24 13:30",
       "value": 104139.53,
-      "benchmark": 99804.8
+      "benchmark": 100772.62
     },
     {
       "t": "2026-09-24 14:00",
       "value": 104279.49,
-      "benchmark": 99893.29
+      "benchmark": 100861.97
     },
     {
       "t": "2026-09-24 14:30",
       "value": 104480.57,
-      "benchmark": 99936.23
+      "benchmark": 100905.33
     },
     {
       "t": "2026-09-24 15:00",
       "value": 104305.81,
-      "benchmark": 99888.74
+      "benchmark": 100857.37
     },
     {
       "t": "2026-09-24 15:30",
-      "value": 104328.72,
-      "benchmark": 99845.14
+      "value": 104328.77,
+      "benchmark": 100813.35
     },
     {
       "t": "2026-09-24 16:00",
       "value": 104090.3,
-      "benchmark": 99647.33
+      "benchmark": 100613.63
     },
     {
       "t": "2026-09-24 16:30",
-      "value": 104315.42,
-      "benchmark": 99782.67
+      "value": 104315.06,
+      "benchmark": 100750.28
     },
     {
       "t": "2026-09-24 17:00",
       "value": 104224.37,
-      "benchmark": 99739.73
+      "benchmark": 100706.92
     },
     {
       "t": "2026-09-24 17:30",
       "value": 104282.23,
-      "benchmark": 99754.04
+      "benchmark": 100721.37
     },
     {
       "t": "2026-09-24 18:00",
       "value": 104196.96,
-      "benchmark": 99715.0
+      "benchmark": 100681.95
     },
     {
       "t": "2026-09-24 18:30",
       "value": 104262.0,
-      "benchmark": 99742.33
+      "benchmark": 100709.55
     },
     {
       "t": "2026-09-24 19:00",
       "value": 104247.73,
-      "benchmark": 99751.44
+      "benchmark": 100718.74
     },
     {
       "t": "2026-09-24 19:30",
       "value": 104178.91,
-      "benchmark": 99670.76
+      "benchmark": 100637.28
     },
     {
       "t": "2026-09-25 04:00",
-      "value": 105255.43,
-      "benchmark": 100126.23
+      "value": 105255.35,
+      "benchmark": 101097.17
     },
     {
       "t": "2026-09-25 04:30",
-      "value": 105354.56,
-      "benchmark": 100198.46
+      "value": 105354.64,
+      "benchmark": 101170.09
     },
     {
       "t": "2026-09-25 05:00",
-      "value": 105318.75,
-      "benchmark": 100178.29
+      "value": 105318.12,
+      "benchmark": 101149.73
     },
     {
       "t": "2026-09-25 05:30",
-      "value": 105238.22,
-      "benchmark": 100169.18
+      "value": 105242.01,
+      "benchmark": 101140.53
     },
     {
       "t": "2026-09-25 06:00",
       "value": 105274.74,
-      "benchmark": 100188.92
+      "benchmark": 101160.46
     },
     {
       "t": "2026-09-25 06:30",
       "value": 105161.98,
-      "benchmark": 100143.15
+      "benchmark": 101114.25
     },
     {
       "t": "2026-09-25 07:00",
-      "value": 105386.68,
-      "benchmark": 100281.09
+      "value": 105386.55,
+      "benchmark": 101253.53
     },
     {
       "t": "2026-09-25 07:30",
       "value": 105387.21,
-      "benchmark": 100240.75
+      "benchmark": 101212.8
     },
     {
       "t": "2026-09-25 08:00",
       "value": 105252.15,
-      "benchmark": 100234.24
+      "benchmark": 101206.23
     },
     {
       "t": "2026-09-25 08:30",
       "value": 105154.28,
-      "benchmark": 100130.14
+      "benchmark": 101101.11
     },
     {
       "t": "2026-09-25 09:00",
-      "value": 104827.81,
-      "benchmark": 100191.3
+      "value": 104823.32,
+      "benchmark": 101162.87
     },
     {
       "t": "2026-09-25 09:30",
       "value": 105152.54,
-      "benchmark": 100169.17
+      "benchmark": 101140.53
     },
     {
       "t": "2026-09-25 10:00",
       "value": 104497.48,
-      "benchmark": 99864.66
+      "benchmark": 100833.06
     },
     {
       "t": "2026-09-25 10:30",
       "value": 104883.71,
-      "benchmark": 100044.95
+      "benchmark": 101015.1
     },
     {
       "t": "2026-09-25 11:00",
       "value": 104867.06,
-      "benchmark": 100039.04
+      "benchmark": 101009.13
     },
     {
       "t": "2026-09-25 11:30",
       "value": 104913.58,
-      "benchmark": 100196.5
+      "benchmark": 101168.12
     },
     {
       "t": "2026-09-25 12:00",
       "value": 105200.2,
-      "benchmark": 100404.85
+      "benchmark": 101378.49
     },
     {
       "t": "2026-09-25 12:30",
       "value": 105025.42,
-      "benchmark": 100261.57
+      "benchmark": 101233.82
     },
     {
       "t": "2026-09-25 13:00",
       "value": 105157.31,
-      "benchmark": 100368.28
+      "benchmark": 101341.57
     },
     {
       "t": "2026-09-25 13:30",
       "value": 105164.6,
-      "benchmark": 100354.62
+      "benchmark": 101327.77
     },
     {
       "t": "2026-09-25 14:00",
       "value": 105053.41,
-      "benchmark": 100321.44
+      "benchmark": 101294.27
     },
     {
       "t": "2026-09-25 14:30",
       "value": 104965.56,
-      "benchmark": 100291.5
+      "benchmark": 101264.04
     },
     {
       "t": "2026-09-25 15:00",
       "value": 104972.72,
-      "benchmark": 100247.26
+      "benchmark": 101219.37
     },
     {
       "t": "2026-09-25 15:30",
-      "value": 104916.45,
-      "benchmark": 100381.3
+      "value": 104916.27,
+      "benchmark": 101346.82
     },
     {
       "t": "2026-09-25 16:00",
       "value": 104904.77,
-      "benchmark": 100356.57
+      "benchmark": 101329.74
     },
     {
       "t": "2026-09-25 16:30",
       "value": 105098.83,
-      "benchmark": 100393.01
+      "benchmark": 101366.53
     },
     {
       "t": "2026-09-25 17:00",
       "value": 104902.33,
-      "benchmark": 100477.6
+      "benchmark": 101451.94
     },
     {
       "t": "2026-09-25 17:30",
       "value": 105062.52,
-      "benchmark": 100471.09
+      "benchmark": 101445.37
     },
     {
       "t": "2026-09-25 18:00",
       "value": 105037.36,
-      "benchmark": 100516.64
+      "benchmark": 101491.36
     },
     {
       "t": "2026-09-25 18:30",
-      "value": 105053.68,
-      "benchmark": 100503.62
+      "value": 105054.32,
+      "benchmark": 101478.22
     },
     {
       "t": "2026-09-25 19:00",
-      "value": 105038.95,
-      "benchmark": 100503.62
+      "value": 105046.85,
+      "benchmark": 101478.22
     },
     {
       "t": "2026-09-25 19:30",
       "value": 104983.74,
-      "benchmark": 100469.79
+      "benchmark": 101444.06
     },
     {
       "t": "2026-09-28 04:00",
-      "value": 103506.13,
-      "benchmark": 99995.71
+      "value": 103505.6,
+      "benchmark": 100965.38
     },
     {
       "t": "2026-09-28 04:30",
-      "value": 103371.95,
-      "benchmark": 99925.82
+      "value": 103372.01,
+      "benchmark": 100894.82
     },
     {
       "t": "2026-09-28 05:00",
-      "value": 103281.65,
-      "benchmark": 99898.04
+      "value": 103281.71,
+      "benchmark": 100866.76
     },
     {
       "t": "2026-09-28 05:30",
       "value": 103339.38,
-      "benchmark": 99871.06
+      "benchmark": 100839.52
     },
     {
       "t": "2026-09-28 06:00",
       "value": 103350.27,
-      "benchmark": 99821.71
+      "benchmark": 100789.7
     },
     {
       "t": "2026-09-28 06:30",
       "value": 103463.9,
-      "benchmark": 99841.23
+      "benchmark": 100809.41
     },
     {
       "t": "2026-09-28 07:00",
       "value": 103665.4,
-      "benchmark": 99945.34
+      "benchmark": 100914.53
     },
     {
       "t": "2026-09-28 07:30",
       "value": 103664.21,
-      "benchmark": 99927.12
+      "benchmark": 100896.13
     },
     {
       "t": "2026-09-28 08:00",
       "value": 103870.22,
-      "benchmark": 100011.71
+      "benchmark": 100981.54
     },
     {
       "t": "2026-09-28 08:30",
-      "value": 104097.2,
-      "benchmark": 100094.8
+      "value": 104097.62,
+      "benchmark": 101065.44
     },
     {
       "t": "2026-09-28 09:00",
-      "value": 104232.41,
-      "benchmark": 100029.93
+      "value": 104238.81,
+      "benchmark": 100999.93
     },
     {
       "t": "2026-09-28 09:30",
       "value": 103641.11,
-      "benchmark": 99990.89
+      "benchmark": 100960.51
     },
     {
       "t": "2026-09-28 10:00",
       "value": 103050.15,
-      "benchmark": 99872.47
+      "benchmark": 100840.95
     },
     {
       "t": "2026-09-28 10:30",
       "value": 102623.93,
-      "benchmark": 99443.02
+      "benchmark": 100407.34
     },
     {
       "t": "2026-09-28 11:00",
       "value": 102896.72,
-      "benchmark": 99562.75
+      "benchmark": 100528.22
     },
     {
       "t": "2026-09-28 11:30",
       "value": 103141.09,
-      "benchmark": 99619.35
+      "benchmark": 100585.38
     },
     {
       "t": "2026-09-28 12:00",
       "value": 103803.16,
-      "benchmark": 100036.44
+      "benchmark": 101006.51
     },
     {
       "t": "2026-09-28 12:30",
       "value": 103526.94,
-      "benchmark": 99839.51
+      "benchmark": 100807.66
     },
     {
       "t": "2026-09-28 13:00",
-      "value": 103697.94,
-      "benchmark": 99821.71
+      "value": 103698.15,
+      "benchmark": 100789.7
     },
     {
       "t": "2026-09-28 13:30",
       "value": 103799.51,
-      "benchmark": 99851.64
+      "benchmark": 100819.92
     },
     {
       "t": "2026-09-28 14:00",
       "value": 103757.09,
-      "benchmark": 99800.9
+      "benchmark": 100768.68
     },
     {
       "t": "2026-09-28 14:30",
       "value": 103899.63,
-      "benchmark": 99811.3
+      "benchmark": 100779.18
     },
     {
       "t": "2026-09-28 15:00",
       "value": 103723.08,
-      "benchmark": 99682.47
+      "benchmark": 100649.1
     },
     {
       "t": "2026-09-28 15:30",
-      "value": 103596.97,
-      "benchmark": 99618.7
+      "value": 103597.41,
+      "benchmark": 100584.72
     },
     {
       "t": "2026-09-28 16:00",
       "value": 103471.92,
-      "benchmark": 99620.0
+      "benchmark": 100586.03
     },
     {
       "t": "2026-09-28 16:30",
       "value": 103502.95,
-      "benchmark": 99618.7
+      "benchmark": 100584.72
     },
     {
       "t": "2026-09-28 17:00",
       "value": 103584.53,
-      "benchmark": 99666.85
+      "benchmark": 100633.34
     },
     {
       "t": "2026-09-28 17:30",
       "value": 103587.68,
-      "benchmark": 99640.83
+      "benchmark": 100607.06
     },
     {
       "t": "2026-09-28 18:00",
       "value": 103714.15,
-      "benchmark": 99683.77
+      "benchmark": 100650.42
     },
     {
       "t": "2026-09-28 18:30",
       "value": 103688.47,
-      "benchmark": 99673.36
+      "benchmark": 100639.91
     },
     {
       "t": "2026-09-28 19:00",
       "value": 103746.32,
-      "benchmark": 99682.47
+      "benchmark": 100649.1
     },
     {
       "t": "2026-09-28 19:30",
       "value": 103674.23,
-      "benchmark": 99657.74
+      "benchmark": 100624.14
     },
     {
       "t": "2026-09-29 04:00",
-      "value": 104030.3,
-      "benchmark": 99621.31
+      "value": 104030.47,
+      "benchmark": 100587.35
     },
     {
       "t": "2026-09-29 04:30",
       "value": 103958.21,
-      "benchmark": 99610.89
+      "benchmark": 100576.83
     },
     {
       "t": "2026-09-29 05:00",
       "value": 103783.46,
-      "benchmark": 99531.51
+      "benchmark": 100496.68
     },
     {
       "t": "2026-09-29 05:30",
       "value": 103843.87,
-      "benchmark": 99531.51
+      "benchmark": 100496.68
     },
     {
       "t": "2026-09-29 06:00",
       "value": 104002.68,
-      "benchmark": 99621.32
+      "benchmark": 100587.36
     },
     {
       "t": "2026-09-29 06:30",
-      "value": 104112.46,
-      "benchmark": 99722.81
+      "value": 104112.72,
+      "benchmark": 100689.84
     },
     {
       "t": "2026-09-29 07:00",
-      "value": 104168.07,
-      "benchmark": 99781.37
+      "value": 104167.29,
+      "benchmark": 100748.97
     },
     {
       "t": "2026-09-29 07:30",
       "value": 104329.51,
-      "benchmark": 99858.15
+      "benchmark": 100826.49
     },
     {
       "t": "2026-09-29 08:00",
       "value": 104304.98,
-      "benchmark": 99808.7
+      "benchmark": 100776.56
     },
     {
       "t": "2026-09-29 08:30",
       "value": 104188.79,
-      "benchmark": 99731.92
+      "benchmark": 100699.03
     },
     {
       "t": "2026-09-29 09:00",
       "value": 104657.96,
-      "benchmark": 99782.67
+      "benchmark": 100750.28
     },
     {
       "t": "2026-09-29 09:30",
       "value": 104259.7,
-      "benchmark": 99517.19
+      "benchmark": 100482.22
     },
     {
       "t": "2026-09-29 10:00",
       "value": 104485.12,
-      "benchmark": 99593.98
+      "benchmark": 100559.75
     },
     {
       "t": "2026-09-29 10:30",
       "value": 104388.04,
-      "benchmark": 99535.41
+      "benchmark": 100500.62
     },
     {
       "t": "2026-09-29 11:00",
       "value": 103985.28,
-      "benchmark": 99285.53
+      "benchmark": 100248.32
     },
     {
       "t": "2026-09-29 11:30",
       "value": 104044.67,
-      "benchmark": 99332.4
+      "benchmark": 100295.64
     },
     {
       "t": "2026-09-29 12:00",
       "value": 104055.55,
-      "benchmark": 99344.77
+      "benchmark": 100308.13
     },
     {
       "t": "2026-09-29 12:30",
       "value": 103851.71,
-      "benchmark": 99292.69
+      "benchmark": 100255.54
     },
     {
       "t": "2026-09-29 13:00",
       "value": 104045.39,
-      "benchmark": 99303.78
+      "benchmark": 100266.74
     },
     {
       "t": "2026-09-29 13:30",
       "value": 103885.7,
-      "benchmark": 99243.91
+      "benchmark": 100206.29
     },
     {
       "t": "2026-09-29 14:00",
       "value": 104222.64,
-      "benchmark": 99419.59
+      "benchmark": 100383.68
     },
     {
       "t": "2026-09-29 14:30",
       "value": 104374.05,
-      "benchmark": 99536.72
+      "benchmark": 100501.94
     },
     {
       "t": "2026-09-29 15:00",
       "value": 104273.12,
-      "benchmark": 99497.68
+      "benchmark": 100462.52
     },
     {
       "t": "2026-09-29 15:30",
-      "value": 104354.64,
-      "benchmark": 99461.24
+      "value": 104354.86,
+      "benchmark": 100425.72
     },
     {
       "t": "2026-09-29 16:00",
-      "value": 104413.31,
-      "benchmark": 99541.92
+      "value": 104413.7,
+      "benchmark": 100507.19
     },
     {
       "t": "2026-09-29 16:30",
       "value": 104427.78,
-      "benchmark": 99543.22
+      "benchmark": 100508.51
     },
     {
       "t": "2026-09-29 17:00",
       "value": 104485.8,
-      "benchmark": 99527.93
+      "benchmark": 100493.07
     },
     {
       "t": "2026-09-29 17:30",
       "value": 104457.48,
-      "benchmark": 99545.83
+      "benchmark": 100511.14
     },
     {
       "t": "2026-09-29 18:00",
       "value": 104567.05,
-      "benchmark": 99603.09
+      "benchmark": 100568.95
     },
     {
       "t": "2026-09-29 18:30",
       "value": 104502.81,
-      "benchmark": 99592.68
+      "benchmark": 100558.44
     },
     {
       "t": "2026-09-29 19:00",
-      "value": 104576.59,
-      "benchmark": 99618.83
+      "value": 104578.05,
+      "benchmark": 100584.85
     },
     {
       "t": "2026-09-29 19:30",
       "value": 104676.94,
-      "benchmark": 99692.79
+      "benchmark": 100659.52
     },
     {
       "t": "2026-09-30 04:00",
       "value": 104493.21,
-      "benchmark": 99729.32
+      "benchmark": 100696.41
     },
     {
       "t": "2026-09-30 04:30",
-      "value": 104295.76,
-      "benchmark": 99633.02
+      "value": 104297.44,
+      "benchmark": 100599.17
     },
     {
       "t": "2026-09-30 05:00",
       "value": 104318.12,
-      "benchmark": 99593.98
+      "benchmark": 100559.75
     },
     {
       "t": "2026-09-30 05:30",
       "value": 104246.96,
-      "benchmark": 99583.51
+      "benchmark": 100549.19
     },
     {
       "t": "2026-09-30 06:00",
       "value": 104175.65,
-      "benchmark": 99517.2
+      "benchmark": 100482.23
     },
     {
       "t": "2026-09-30 06:30",
-      "value": 104161.81,
-      "benchmark": 99500.28
+      "value": 104161.36,
+      "benchmark": 100465.15
     },
     {
       "t": "2026-09-30 07:00",
       "value": 104078.76,
-      "benchmark": 99501.58
+      "benchmark": 100466.46
     },
     {
       "t": "2026-09-30 07:30",
       "value": 104152.98,
-      "benchmark": 99536.72
+      "benchmark": 100501.94
     },
     {
       "t": "2026-09-30 08:00",
       "value": 104211.89,
-      "benchmark": 99618.7
+      "benchmark": 100584.72
     },
     {
       "t": "2026-09-30 08:30",
       "value": 104721.35,
-      "benchmark": 99773.56
+      "benchmark": 100741.08
     },
     {
       "t": "2026-09-30 09:00",
-      "value": 104674.89,
-      "benchmark": 99810.0
+      "value": 104666.97,
+      "benchmark": 100777.87
     },
     {
       "t": "2026-09-30 09:30",
-      "value": 104879.92,
-      "benchmark": 99940.13
+      "value": 104876.78,
+      "benchmark": 100909.27
     },
     {
       "t": "2026-09-30 10:00",
       "value": 104695.72,
-      "benchmark": 99927.12
+      "benchmark": 100896.13
     },
     {
       "t": "2026-09-30 10:30",
-      "value": 104878.94,
-      "benchmark": 100012.79
+      "value": 104878.89,
+      "benchmark": 100982.62
     },
     {
       "t": "2026-09-30 11:00",
-      "value": 104952.97,
-      "benchmark": 100042.32
+      "value": 104953.15,
+      "benchmark": 101012.44
     },
     {
       "t": "2026-09-30 11:30",
       "value": 105018.93,
-      "benchmark": 100036.44
+      "benchmark": 101006.51
     },
     {
       "t": "2026-09-30 12:00",
       "value": 104815.15,
-      "benchmark": 99953.15
+      "benchmark": 100922.41
     },
     {
       "t": "2026-09-30 12:30",
       "value": 104912.13,
-      "benchmark": 99979.18
+      "benchmark": 100948.69
     },
     {
       "t": "2026-09-30 13:00",
       "value": 104656.4,
-      "benchmark": 99813.91
+      "benchmark": 100781.81
     },
     {
       "t": "2026-09-30 13:30",
       "value": 104913.52,
-      "benchmark": 99905.0
+      "benchmark": 100873.79
     },
     {
       "t": "2026-09-30 14:00",
       "value": 104858.37,
-      "benchmark": 99782.68
+      "benchmark": 100750.28
     },
     {
       "t": "2026-09-30 14:30",
       "value": 104783.24,
-      "benchmark": 99743.64
+      "benchmark": 100710.86
     },
     {
       "t": "2026-09-30 15:00",
       "value": 104839.64,
-      "benchmark": 99728.02
+      "benchmark": 100695.1
     },
     {
       "t": "2026-09-30 15:30",
-      "value": 104466.28,
-      "benchmark": 99220.49
+      "value": 104465.85,
+      "benchmark": 100182.64
     },
     {
       "t": "2026-09-30 16:00",
       "value": 104787.61,
-      "benchmark": 99355.83
+      "benchmark": 100319.3
     },
     {
       "t": "2026-09-30 16:30",
       "value": 104675.31,
-      "benchmark": 99323.3
+      "benchmark": 100286.45
     },
     {
       "t": "2026-09-30 17:00",
       "value": 104326.75,
-      "benchmark": 99294.67
+      "benchmark": 100257.54
     },
     {
       "t": "2026-09-30 17:30",
       "value": 104417.72,
-      "benchmark": 99290.76
+      "benchmark": 100253.6
     },
     {
       "t": "2026-09-30 18:00",
       "value": 104596.43,
-      "benchmark": 99462.54
+      "benchmark": 100427.04
     },
     {
       "t": "2026-09-30 18:30",
       "value": 104709.67,
-      "benchmark": 99504.18
+      "benchmark": 100469.09
     },
     {
       "t": "2026-09-30 19:00",
       "value": 104679.85,
-      "benchmark": 99526.31
+      "benchmark": 100491.43
     },
     {
       "t": "2026-09-30 19:30",
       "value": 104869.17,
-      "benchmark": 99623.91
+      "benchmark": 100589.97
     },
     {
       "t": "2026-10-01 04:00",
       "value": 104973.49,
-      "benchmark": 99199.67
+      "benchmark": 100161.62
     },
     {
       "t": "2026-10-01 04:30",
       "value": 105213.45,
-      "benchmark": 99332.41
+      "benchmark": 100295.64
     },
     {
       "t": "2026-10-01 05:00",
       "value": 105424.7,
-      "benchmark": 99505.5
+      "benchmark": 100470.42
     },
     {
       "t": "2026-10-01 05:30",
       "value": 105327.86,
-      "benchmark": 99437.81
+      "benchmark": 100402.08
     },
     {
       "t": "2026-10-01 06:00",
       "value": 105273.79,
-      "benchmark": 99504.18
+      "benchmark": 100469.09
     },
     {
       "t": "2026-10-01 06:30",
-      "value": 105508.85,
-      "benchmark": 99642.13
+      "value": 105508.35,
+      "benchmark": 100608.37
     },
     {
       "t": "2026-10-01 07:00",
       "value": 105024.18,
-      "benchmark": 99452.13
+      "benchmark": 100416.53
     },
     {
       "t": "2026-10-01 07:30",
-      "value": 105084.09,
-      "benchmark": 99642.13
+      "value": 105082.68,
+      "benchmark": 100608.37
     },
     {
       "t": "2026-10-01 08:00",
       "value": 105029.57,
-      "benchmark": 99616.1
+      "benchmark": 100582.09
     },
     {
       "t": "2026-10-01 08:30",
       "value": 104786.8,
-      "benchmark": 99506.79
+      "benchmark": 100471.72
     },
     {
       "t": "2026-10-01 09:00",
-      "value": 104771.59,
-      "benchmark": 99528.91
+      "value": 104771.43,
+      "benchmark": 100494.05
     },
     {
       "t": "2026-10-01 09:30",
       "value": 104535.52,
-      "benchmark": 99238.71
+      "benchmark": 100201.04
     },
     {
       "t": "2026-10-01 10:00",
       "value": 104003.47,
-      "benchmark": 98968.03
+      "benchmark": 99927.73
     },
     {
       "t": "2026-10-01 10:30",
       "value": 104229.08,
-      "benchmark": 98956.31
+      "benchmark": 99915.9
     },
     {
       "t": "2026-10-01 11:00",
       "value": 104281.4,
-      "benchmark": 98955.02
+      "benchmark": 99914.59
     },
     {
       "t": "2026-10-01 11:30",
       "value": 104280.87,
-      "benchmark": 98990.15
+      "benchmark": 99950.07
     },
     {
       "t": "2026-10-01 12:00",
       "value": 104187.6,
-      "benchmark": 99070.18
+      "benchmark": 100030.87
     },
     {
       "t": "2026-10-01 12:30",
       "value": 104195.27,
-      "benchmark": 99024.63
+      "benchmark": 99984.89
     },
     {
       "t": "2026-10-01 13:00",
       "value": 105060.15,
-      "benchmark": 99382.51
+      "benchmark": 100346.23
     },
     {
       "t": "2026-10-01 13:30",
       "value": 104994.0,
-      "benchmark": 99362.4
+      "benchmark": 100325.93
     },
     {
       "t": "2026-10-01 14:00",
       "value": 104977.92,
-      "benchmark": 99439.12
+      "benchmark": 100403.39
     },
     {
       "t": "2026-10-01 14:30",
       "value": 105119.93,
-      "benchmark": 99527.61
+      "benchmark": 100492.74
     },
     {
       "t": "2026-10-01 15:00",
       "value": 104982.27,
-      "benchmark": 99490.53
+      "benchmark": 100455.3
     },
     {
       "t": "2026-10-01 15:30",
-      "value": 104948.04,
-      "benchmark": 99426.11
+      "value": 104947.24,
+      "benchmark": 100390.25
     },
     {
       "t": "2026-10-01 16:00",
       "value": 105003.96,
-      "benchmark": 99477.32
+      "benchmark": 100441.97
     },
     {
       "t": "2026-10-01 16:30",
       "value": 104937.14,
-      "benchmark": 99430.01
+      "benchmark": 100394.19
     },
     {
       "t": "2026-10-01 17:00",
       "value": 104938.19,
-      "benchmark": 99427.4
+      "benchmark": 100391.56
     },
     {
       "t": "2026-10-01 17:30",
       "value": 104938.49,
-      "benchmark": 99414.38
+      "benchmark": 100378.41
     },
     {
       "t": "2026-10-01 18:00",
-      "value": 105008.31,
-      "benchmark": 99426.1
+      "value": 105008.84,
+      "benchmark": 100390.25
     },
     {
       "t": "2026-10-01 18:30",
-      "value": 105136.39,
-      "benchmark": 99509.39
+      "value": 105133.1,
+      "benchmark": 100474.34
     },
     {
       "t": "2026-10-01 19:00",
       "value": 105161.46,
-      "benchmark": 99518.5
+      "benchmark": 100483.54
     },
     {
       "t": "2026-10-01 19:30",
       "value": 105146.18,
-      "benchmark": 99518.5
+      "benchmark": 100483.54
     },
     {
       "t": "2026-10-02 04:00",
       "value": 106116.05,
-      "benchmark": 99849.04
+      "benchmark": 100817.29
     },
     {
       "t": "2026-10-02 04:30",
       "value": 105947.37,
-      "benchmark": 99933.63
+      "benchmark": 100902.7
     },
     {
       "t": "2026-10-02 05:00",
       "value": 105956.68,
-      "benchmark": 99920.62
+      "benchmark": 100889.56
     },
     {
       "t": "2026-10-02 05:30",
       "value": 105940.65,
-      "benchmark": 99902.4
+      "benchmark": 100871.16
     },
     {
       "t": "2026-10-02 06:00",
       "value": 105715.77,
-      "benchmark": 99852.95
+      "benchmark": 100821.23
     },
     {
       "t": "2026-10-02 06:30",
       "value": 105690.56,
-      "benchmark": 99929.73
+      "benchmark": 100898.76
     },
     {
       "t": "2026-10-02 07:00",
       "value": 105404.92,
-      "benchmark": 99942.74
+      "benchmark": 100911.9
     },
     {
       "t": "2026-10-02 07:30",
       "value": 105211.46,
-      "benchmark": 99869.86
+      "benchmark": 100838.32
     },
     {
       "t": "2026-10-02 08:00",
       "value": 105360.28,
-      "benchmark": 99944.04
+      "benchmark": 100913.21
     },
     {
       "t": "2026-10-02 08:30",
-      "value": 106094.95,
-      "benchmark": 100375.01
+      "value": 106094.87,
+      "benchmark": 101348.36
     },
     {
       "t": "2026-10-02 09:00",
-      "value": 106026.78,
-      "benchmark": 100331.85
+      "value": 106025.61,
+      "benchmark": 101304.78
     },
     {
       "t": "2026-10-02 09:30",
       "value": 106133.09,
-      "benchmark": 100275.89
+      "benchmark": 101248.27
     },
     {
       "t": "2026-10-02 10:00",
       "value": 106315.67,
-      "benchmark": 100475.0
+      "benchmark": 101449.32
     },
     {
       "t": "2026-10-02 10:30",
       "value": 105916.94,
-      "benchmark": 100330.54
+      "benchmark": 101303.46
     },
     {
       "t": "2026-10-02 11:00",
       "value": 105598.94,
-      "benchmark": 100046.85
+      "benchmark": 101017.01
     },
     {
       "t": "2026-10-02 11:30",
       "value": 105866.13,
-      "benchmark": 100104.11
+      "benchmark": 101074.83
     },
     {
       "t": "2026-10-02 12:00",
       "value": 105661.35,
-      "benchmark": 100068.97
+      "benchmark": 101039.36
     },
     {
       "t": "2026-10-02 12:30",
       "value": 105655.59,
-      "benchmark": 100114.84
+      "benchmark": 101085.67
     },
     {
       "t": "2026-10-02 13:00",
       "value": 105389.39,
-      "benchmark": 100014.31
+      "benchmark": 100984.16
     },
     {
       "t": "2026-10-02 13:30",
       "value": 105570.88,
-      "benchmark": 100096.3
+      "benchmark": 101066.94
     },
     {
       "t": "2026-10-02 14:00",
       "value": 105596.68,
-      "benchmark": 100070.27
+      "benchmark": 101040.66
     },
     {
       "t": "2026-10-02 14:30",
       "value": 105572.37,
-      "benchmark": 100111.91
+      "benchmark": 101082.71
     },
     {
       "t": "2026-10-02 15:00",
       "value": 105622.65,
-      "benchmark": 100119.72
+      "benchmark": 101090.6
     },
     {
       "t": "2026-10-02 15:30",
-      "value": 105626.63,
-      "benchmark": 100161.37
+      "value": 105627.04,
+      "benchmark": 101132.64
     },
     {
       "t": "2026-10-02 16:00",
-      "value": 105587.0,
-      "benchmark": 100160.07
+      "value": 105587.02,
+      "benchmark": 101131.33
     },
     {
       "t": "2026-10-02 16:30",
       "value": 105571.6,
-      "benchmark": 100121.03
+      "benchmark": 101091.91
     },
     {
       "t": "2026-10-02 17:00",
       "value": 105575.98,
-      "benchmark": 100132.74
+      "benchmark": 101103.74
     },
     {
       "t": "2026-10-02 17:30",
       "value": 105584.27,
-      "benchmark": 100092.4
+      "benchmark": 101063.01
     },
     {
       "t": "2026-10-02 18:00",
-      "value": 105599.54,
-      "benchmark": 100089.79
+      "value": 105598.76,
+      "benchmark": 101060.38
     },
     {
       "t": "2026-10-02 18:30",
-      "value": 105606.9,
-      "benchmark": 100158.77
+      "value": 105606.97,
+      "benchmark": 101130.02
     },
     {
       "t": "2026-10-02 19:00",
       "value": 105614.51,
-      "benchmark": 100140.55
+      "benchmark": 101111.62
     },
     {
       "t": "2026-10-02 19:30",
       "value": 105640.31,
-      "benchmark": 100186.09
+      "benchmark": 101157.61
     },
     {
       "t": "2026-10-05 04:00",
       "value": 105818.92,
-      "benchmark": 100145.75
+      "benchmark": 101116.88
     },
     {
       "t": "2026-10-05 04:30",
       "value": 105610.73,
-      "benchmark": 100015.62
+      "benchmark": 100985.48
     },
     {
       "t": "2026-10-05 05:00",
       "value": 105554.49,
-      "benchmark": 100015.62
+      "benchmark": 100985.48
     },
     {
       "t": "2026-10-05 05:30",
       "value": 105402.68,
-      "benchmark": 99992.19
+      "benchmark": 100961.83
     },
     {
       "t": "2026-10-05 06:00",
       "value": 105419.28,
-      "benchmark": 99968.77
+      "benchmark": 100938.18
     },
     {
       "t": "2026-10-05 06:30",
       "value": 105549.84,
-      "benchmark": 100071.67
+      "benchmark": 101042.07
     },
     {
       "t": "2026-10-05 07:00",
       "value": 105606.91,
-      "benchmark": 100170.48
+      "benchmark": 101139.22
     },
     {
       "t": "2026-10-05 07:30",
-      "value": 105497.72,
-      "benchmark": 100105.41
+      "value": 105497.41,
+      "benchmark": 101076.14
     },
     {
       "t": "2026-10-05 08:00",
       "value": 105476.47,
-      "benchmark": 100132.14
+      "benchmark": 101103.13
     },
     {
       "t": "2026-10-05 08:30",
-      "value": 105410.79,
-      "benchmark": 100032.53
+      "value": 105407.3,
+      "benchmark": 101002.56
     },
     {
       "t": "2026-10-05 09:00",
       "value": 105732.5,
-      "benchmark": 100076.78
+      "benchmark": 101047.24
     },
     {
       "t": "2026-10-05 09:30",
       "value": 105623.72,
-      "benchmark": 100288.9
+      "benchmark": 101261.42
     },
     {
       "t": "2026-10-05 10:00",
       "value": 105876.28,
-      "benchmark": 100551.77
+      "benchmark": 101526.84
     },
     {
       "t": "2026-10-05 10:30",
       "value": 105941.55,
-      "benchmark": 100564.8
+      "benchmark": 101539.99
     },
     {
       "t": "2026-10-05 11:00",
       "value": 105903.19,
-      "benchmark": 100575.2
+      "benchmark": 101550.49
     },
     {
       "t": "2026-10-05 11:30",
       "value": 105892.22,
-      "benchmark": 100633.76
+      "benchmark": 101609.62
     },
     {
       "t": "2026-10-05 12:00",
       "value": 105855.84,
-      "benchmark": 100674.22
+      "benchmark": 101650.47
     },
     {
       "t": "2026-10-05 12:30",
       "value": 105870.72,
-      "benchmark": 100735.27
+      "benchmark": 101712.11
     },
     {
       "t": "2026-10-05 13:00",
       "value": 105952.97,
-      "benchmark": 100771.05
+      "benchmark": 101748.24
     },
     {
       "t": "2026-10-05 13:30",
       "value": 106083.07,
-      "benchmark": 100825.05
+      "benchmark": 101802.76
     },
     {
       "t": "2026-10-05 14:00",
       "value": 106121.23,
-      "benchmark": 100874.51
+      "benchmark": 101852.71
     },
     {
       "t": "2026-10-05 14:30",
       "value": 105989.32,
-      "benchmark": 100929.17
+      "benchmark": 101907.89
     },
     {
       "t": "2026-10-05 15:00",
       "value": 106096.66,
-      "benchmark": 100998.14
+      "benchmark": 101977.53
     },
     {
       "t": "2026-10-05 15:30",
-      "value": 106141.82,
-      "benchmark": 100847.18
+      "value": 106141.64,
+      "benchmark": 101825.11
     },
     {
       "t": "2026-10-05 16:00",
       "value": 106072.49,
-      "benchmark": 100823.76
+      "benchmark": 101801.46
     },
     {
       "t": "2026-10-05 16:30",
       "value": 106175.24,
-      "benchmark": 100838.07
+      "benchmark": 101815.91
     },
     {
       "t": "2026-10-05 17:00",
       "value": 106154.53,
-      "benchmark": 100856.29
+      "benchmark": 101834.31
     },
     {
       "t": "2026-10-05 17:30",
       "value": 106146.61,
-      "benchmark": 100851.09
+      "benchmark": 101829.05
     },
     {
       "t": "2026-10-05 18:00",
-      "value": 106260.68,
-      "benchmark": 100894.03
+      "value": 106260.72,
+      "benchmark": 101872.41
     },
     {
       "t": "2026-10-05 18:30",
       "value": 106170.76,
-      "benchmark": 100843.28
+      "benchmark": 101821.17
     },
     {
       "t": "2026-10-05 19:00",
       "value": 106264.47,
-      "benchmark": 100869.32
+      "benchmark": 101847.46
     },
     {
       "t": "2026-10-05 19:30",
       "value": 106244.57,
-      "benchmark": 100847.18
+      "benchmark": 101825.11
     },
     {
       "t": "2026-10-06 04:00",
       "value": 106197.44,
-      "benchmark": 101003.34
+      "benchmark": 101982.79
     },
     {
       "t": "2026-10-06 04:30",
       "value": 106246.34,
-      "benchmark": 101042.39
+      "benchmark": 102022.21
     },
     {
       "t": "2026-10-06 05:00",
       "value": 106262.24,
-      "benchmark": 101055.4
+      "benchmark": 102035.35
     },
     {
       "t": "2026-10-06 05:30",
       "value": 106337.87,
-      "benchmark": 101012.45
+      "benchmark": 101991.98
     },
     {
       "t": "2026-10-06 06:00",
-      "value": 106448.29,
-      "benchmark": 101044.99
+      "value": 106448.21,
+      "benchmark": 102024.83
     },
     {
       "t": "2026-10-06 06:30",
-      "value": 106451.4,
-      "benchmark": 101076.22
+      "value": 106451.1,
+      "benchmark": 102056.37
     },
     {
       "t": "2026-10-06 07:00",
-      "value": 106680.01,
-      "benchmark": 101189.44
+      "value": 106679.87,
+      "benchmark": 102170.69
     },
     {
       "t": "2026-10-06 07:30",
       "value": 106662.03,
-      "benchmark": 101292.84
+      "benchmark": 102275.09
     },
     {
       "t": "2026-10-06 08:00",
       "value": 106581.27,
-      "benchmark": 101227.18
+      "benchmark": 102204.85
     },
     {
       "t": "2026-10-06 08:30",
-      "value": 106575.62,
-      "benchmark": 101230.43
+      "value": 106577.42,
+      "benchmark": 102212.08
     },
     {
       "t": "2026-10-06 09:00",
-      "value": 106464.48,
-      "benchmark": 101245.4
+      "value": 106464.0,
+      "benchmark": 102227.19
     },
     {
       "t": "2026-10-06 09:30",
       "value": 106486.64,
-      "benchmark": 101478.34
+      "benchmark": 102462.38
     },
     {
       "t": "2026-10-06 10:00",
       "value": 106176.54,
-      "benchmark": 101356.01
+      "benchmark": 102338.87
     },
     {
       "t": "2026-10-06 10:30",
       "value": 106336.28,
-      "benchmark": 101560.26
+      "benchmark": 102545.1
     },
     {
       "t": "2026-10-06 11:00",
       "value": 106422.85,
-      "benchmark": 101680.05
+      "benchmark": 102666.06
     },
     {
       "t": "2026-10-06 11:30",
       "value": 106321.89,
-      "benchmark": 101648.81
+      "benchmark": 102634.51
     },
     {
       "t": "2026-10-06 12:00",
       "value": 106179.31,
-      "benchmark": 101544.71
+      "benchmark": 102529.4
     },
     {
       "t": "2026-10-06 12:30",
       "value": 106162.35,
-      "benchmark": 101508.46
+      "benchmark": 102492.8
     },
     {
       "t": "2026-10-06 13:00",
       "value": 106243.1,
-      "benchmark": 101466.63
+      "benchmark": 102450.56
     },
     {
       "t": "2026-10-06 13:30",
       "value": 106280.74,
-      "benchmark": 101482.24
+      "benchmark": 102466.33
     },
     {
       "t": "2026-10-06 14:00",
       "value": 106240.63,
-      "benchmark": 101479.64
+      "benchmark": 102463.7
     },
     {
       "t": "2026-10-06 14:30",
       "value": 106290.41,
-      "benchmark": 101517.39
+      "benchmark": 102501.82
     },
     {
       "t": "2026-10-06 15:00",
       "value": 106269.94,
-      "benchmark": 101467.93
+      "benchmark": 102451.88
     },
     {
       "t": "2026-10-06 15:30",
-      "value": 106102.61,
-      "benchmark": 101393.75
+      "value": 106103.01,
+      "benchmark": 102376.98
     },
     {
       "t": "2026-10-06 16:00",
       "value": 106144.48,
-      "benchmark": 101449.71
+      "benchmark": 102433.48
     },
     {
       "t": "2026-10-06 16:30",
       "value": 106096.14,
-      "benchmark": 101488.75
+      "benchmark": 102472.9
     },
     {
       "t": "2026-10-06 17:00",
       "value": 106130.82,
-      "benchmark": 101470.53
+      "benchmark": 102454.5
     },
     {
       "t": "2026-10-06 17:30",
-      "value": 106168.46,
-      "benchmark": 101484.85
+      "value": 106168.32,
+      "benchmark": 102468.96
     },
     {
       "t": "2026-10-06 18:00",
       "value": 106221.09,
-      "benchmark": 101518.68
+      "benchmark": 102503.12
     },
     {
       "t": "2026-10-06 18:30",
-      "value": 106185.37,
-      "benchmark": 101518.68
+      "value": 106185.47,
+      "benchmark": 102503.12
     },
     {
       "t": "2026-10-06 19:00",
-      "value": 106194.86,
-      "benchmark": 101518.68
+      "value": 106198.93,
+      "benchmark": 102503.12
     },
     {
       "t": "2026-10-06 19:30",
-      "value": 106194.86,
-      "benchmark": 101488.75
+      "value": 106198.93,
+      "benchmark": 102472.9
     },
     {
       "t": "2026-10-07 04:00",
       "value": 105862.4,
-      "benchmark": 101422.26
+      "benchmark": 102405.77
     },
     {
       "t": "2026-10-07 04:30",
       "value": 105709.28,
-      "benchmark": 101414.57
+      "benchmark": 102398.0
     },
     {
       "t": "2026-10-07 05:00",
       "value": 105542.49,
-      "benchmark": 101349.5
+      "benchmark": 102332.3
     },
     {
       "t": "2026-10-07 05:30",
       "value": 105432.18,
-      "benchmark": 101262.31
+      "benchmark": 102244.27
     },
     {
       "t": "2026-10-07 06:00",
       "value": 105457.68,
-      "benchmark": 101232.38
+      "benchmark": 102214.05
     },
     {
       "t": "2026-10-07 06:30",
       "value": 105252.1,
-      "benchmark": 101163.41
+      "benchmark": 102144.41
     },
     {
       "t": "2026-10-07 07:00",
       "value": 104995.44,
-      "benchmark": 101021.56
+      "benchmark": 102001.18
     },
     {
       "t": "2026-10-07 07:30",
       "value": 105090.12,
-      "benchmark": 101041.08
+      "benchmark": 102020.89
     },
     {
       "t": "2026-10-07 08:00",
       "value": 104835.0,
-      "benchmark": 100925.26
+      "benchmark": 101903.95
     },
     {
       "t": "2026-10-07 08:30",
       "value": 105016.38,
-      "benchmark": 101007.25
+      "benchmark": 101986.73
     },
     {
       "t": "2026-10-07 09:00",
-      "value": 104843.1,
-      "benchmark": 100977.32
+      "value": 104843.02,
+      "benchmark": 101956.51
     },
     {
       "t": "2026-10-07 09:30",
       "value": 105181.87,
-      "benchmark": 100827.01
+      "benchmark": 101804.74
     },
     {
       "t": "2026-10-07 10:00",
       "value": 105413.92,
-      "benchmark": 100782.11
+      "benchmark": 101759.41
     },
     {
       "t": "2026-10-07 10:30",
       "value": 105402.0,
-      "benchmark": 100771.7
+      "benchmark": 101748.9
     },
     {
       "t": "2026-10-07 11:00",
-      "value": 105413.37,
-      "benchmark": 100818.55
+      "value": 105413.21,
+      "benchmark": 101796.2
     },
     {
       "t": "2026-10-07 11:30",
       "value": 105533.7,
-      "benchmark": 101029.38
+      "benchmark": 102009.07
     },
     {
       "t": "2026-10-07 12:00",
       "value": 105571.04,
-      "benchmark": 101074.92
+      "benchmark": 102055.06
     },
     {
       "t": "2026-10-07 12:30",
       "value": 105573.15,
-      "benchmark": 101030.67
+      "benchmark": 102010.38
     },
     {
       "t": "2026-10-07 13:00",
       "value": 105677.99,
-      "benchmark": 101155.6
+      "benchmark": 102136.52
     },
     {
       "t": "2026-10-07 13:30",
       "value": 105624.1,
-      "benchmark": 101155.6
+      "benchmark": 102136.52
     },
     {
       "t": "2026-10-07 14:00",
       "value": 105711.25,
-      "benchmark": 101185.53
+      "benchmark": 102166.74
     },
     {
       "t": "2026-10-07 14:30",
       "value": 105579.75,
-      "benchmark": 101199.85
+      "benchmark": 102181.2
     },
     {
       "t": "2026-10-07 15:00",
       "value": 105552.56,
-      "benchmark": 101120.46
+      "benchmark": 102101.04
     },
     {
       "t": "2026-10-07 15:30",
-      "value": 105747.23,
-      "benchmark": 101133.48
+      "value": 105746.56,
+      "benchmark": 102114.19
     },
     {
       "t": "2026-10-07 16:00",
       "value": 105770.89,
-      "benchmark": 101143.89
+      "benchmark": 102124.7
     },
     {
       "t": "2026-10-07 19:30",
       "value": 105770.89,
-      "benchmark": 101155.6
+      "benchmark": 102136.52
     },
     {
       "t": "2026-10-08 04:00",
-      "value": 105120.86,
-      "benchmark": 100914.85
+      "value": 105120.47,
+      "benchmark": 101893.44
     },
     {
       "t": "2026-10-08 04:30",
       "value": 104947.89,
-      "benchmark": 100786.02
+      "benchmark": 101763.35
     },
     {
       "t": "2026-10-08 05:00",
       "value": 105052.59,
-      "benchmark": 100792.45
+      "benchmark": 101769.84
     },
     {
       "t": "2026-10-08 05:30",
       "value": 105054.43,
-      "benchmark": 100750.88
+      "benchmark": 101727.88
     },
     {
       "t": "2026-10-08 06:00",
       "value": 104688.79,
-      "benchmark": 100604.48
+      "benchmark": 101580.05
     },
     {
       "t": "2026-10-08 06:30",
       "value": 104703.54,
-      "benchmark": 100622.05
+      "benchmark": 101597.79
     },
     {
       "t": "2026-10-08 07:00",
       "value": 104800.3,
-      "benchmark": 100674.1
+      "benchmark": 101650.35
     },
     {
       "t": "2026-10-08 07:30",
       "value": 104800.54,
-      "benchmark": 100711.84
+      "benchmark": 101688.46
     },
     {
       "t": "2026-10-08 08:00",
       "value": 105031.29,
-      "benchmark": 100814.4
+      "benchmark": 101792.01
     },
     {
       "t": "2026-10-08 08:30",
       "value": 104899.71,
-      "benchmark": 100759.99
+      "benchmark": 101737.07
     },
     {
       "t": "2026-10-08 09:00",
-      "value": 104945.6,
-      "benchmark": 100823.76
+      "value": 104946.32,
+      "benchmark": 101801.46
     },
     {
       "t": "2026-10-08 09:30",
       "value": 104825.1,
-      "benchmark": 100890.13
+      "benchmark": 101868.47
     },
     {
       "t": "2026-10-08 10:00",
       "value": 105627.55,
-      "benchmark": 101042.39
+      "benchmark": 102022.21
     },
     {
       "t": "2026-10-08 10:30",
       "value": 105260.41,
-      "benchmark": 100900.53
+      "benchmark": 101878.98
     },
     {
       "t": "2026-10-08 11:00",
       "value": 105196.37,
-      "benchmark": 100810.74
+      "benchmark": 101788.32
     },
     {
       "t": "2026-10-08 11:30",
       "value": 104968.71,
-      "benchmark": 100778.21
+      "benchmark": 101755.47
     },
     {
       "t": "2026-10-08 12:00",
       "value": 105155.6,
-      "benchmark": 100912.25
+      "benchmark": 101890.81
     },
     {
       "t": "2026-10-08 12:30",
       "value": 104050.62,
-      "benchmark": 100612.94
+      "benchmark": 101588.6
     },
     {
       "t": "2026-10-08 13:00",
       "value": 103474.54,
-      "benchmark": 100344.86
+      "benchmark": 101317.92
     },
     {
       "t": "2026-10-08 13:30",
       "value": 103815.75,
-      "benchmark": 100454.17
+      "benchmark": 101428.29
     },
     {
       "t": "2026-10-08 14:00",
       "value": 104257.0,
-      "benchmark": 100638.97
+      "benchmark": 101614.88
     },
     {
       "t": "2026-10-08 14:30",
       "value": 103924.03,
-      "benchmark": 100579.1
+      "benchmark": 101554.43
     },
     {
       "t": "2026-10-08 15:00",
       "value": 103870.02,
-      "benchmark": 100645.47
+      "benchmark": 101621.45
     },
     {
       "t": "2026-10-08 15:30",
-      "value": 104138.56,
-      "benchmark": 100710.54
+      "value": 104138.44,
+      "benchmark": 101687.14
     },
     {
       "t": "2026-10-08 16:00",
       "value": 104175.87,
-      "benchmark": 100715.75
+      "benchmark": 101692.4
     },
     {
       "t": "2026-10-08 19:30",
       "value": 104175.87,
-      "benchmark": 100784.7
+      "benchmark": 101762.03
     },
     {
       "t": "2026-10-09 04:00",
-      "value": 105132.39,
-      "benchmark": 101136.08
+      "value": 105127.8,
+      "benchmark": 102116.81
     },
     {
       "t": "2026-10-09 04:30",
-      "value": 105149.99,
-      "benchmark": 101166.01
+      "value": 105145.28,
+      "benchmark": 102147.03
     },
     {
       "t": "2026-10-09 05:00",
-      "value": 105037.97,
-      "benchmark": 101193.34
+      "value": 105033.38,
+      "benchmark": 102174.63
     },
     {
       "t": "2026-10-09 05:30",
-      "value": 105041.33,
-      "benchmark": 101132.18
+      "value": 105036.73,
+      "benchmark": 102112.87
     },
     {
       "t": "2026-10-09 06:00",
-      "value": 105030.19,
-      "benchmark": 101095.74
+      "value": 105025.6,
+      "benchmark": 102076.08
     },
     {
       "t": "2026-10-09 06:30",
-      "value": 104953.5,
-      "benchmark": 101110.06
+      "value": 104948.9,
+      "benchmark": 102090.53
     },
     {
       "t": "2026-10-09 07:00",
-      "value": 105054.44,
-      "benchmark": 101162.11
+      "value": 105049.85,
+      "benchmark": 102143.09
     },
     {
       "t": "2026-10-09 07:30",
-      "value": 105085.2,
-      "benchmark": 101177.73
+      "value": 105080.61,
+      "benchmark": 102158.86
     },
     {
       "t": "2026-10-09 08:00",
-      "value": 104993.94,
-      "benchmark": 101124.37
+      "value": 104989.35,
+      "benchmark": 102104.99
     },
     {
       "t": "2026-10-09 08:30",
-      "value": 104913.45,
-      "benchmark": 101056.7
+      "value": 104913.33,
+      "benchmark": 102036.66
     },
     {
       "t": "2026-10-09 09:00",
-      "value": 104785.84,
-      "benchmark": 101074.92
+      "value": 104785.45,
+      "benchmark": 102055.06
     },
     {
       "t": "2026-10-09 09:30",
-      "value": 104079.57,
-      "benchmark": 100992.93
+      "value": 104078.48,
+      "benchmark": 101972.27
     },
     {
       "t": "2026-10-09 10:00",
       "value": 104025.27,
-      "benchmark": 101059.3
+      "benchmark": 102039.29
     },
     {
       "t": "2026-10-09 10:30",
       "value": 104132.72,
-      "benchmark": 101156.91
+      "benchmark": 102137.84
     },
     {
       "t": "2026-10-09 11:00",
       "value": 103919.16,
-      "benchmark": 101125.67
+      "benchmark": 102106.3
     },
     {
       "t": "2026-10-09 11:30",
-      "value": 103998.72,
-      "benchmark": 101151.7
+      "value": 103999.17,
+      "benchmark": 102132.58
     },
     {
       "t": "2026-10-09 12:00",
       "value": 104117.33,
-      "benchmark": 101244.75
+      "benchmark": 102226.53
     },
     {
       "t": "2026-10-09 12:30",
       "value": 104060.54,
-      "benchmark": 101274.02
+      "benchmark": 102256.09
     },
     {
       "t": "2026-10-09 13:00",
       "value": 104167.72,
-      "benchmark": 101250.6
+      "benchmark": 102232.44
     },
     {
       "t": "2026-10-09 13:30",
       "value": 104177.97,
-      "benchmark": 101293.55
+      "benchmark": 102275.8
     },
     {
       "t": "2026-10-09 14:00",
       "value": 104227.68,
-      "benchmark": 101326.08
+      "benchmark": 102308.65
     },
     {
       "t": "2026-10-09 14:30",
       "value": 104183.89,
-      "benchmark": 101366.42
+      "benchmark": 102349.38
     },
     {
       "t": "2026-10-09 15:00",
       "value": 104235.67,
-      "benchmark": 101363.82
+      "benchmark": 102346.75
     },
     {
       "t": "2026-10-09 15:30",
-      "value": 104208.27,
-      "benchmark": 101314.37
+      "value": 104207.2,
+      "benchmark": 102296.83
     },
     {
       "t": "2026-10-09 16:00",
-      "value": 104177.82,
-      "benchmark": 101319.57
-    },
-    {
-      "t": "2026-10-09 16:30",
-      "value": 104190.37,
-      "benchmark": 101319.57
-    },
-    {
-      "t": "2026-10-09 17:00",
-      "value": 104158.39,
-      "benchmark": 101319.57
-    },
-    {
-      "t": "2026-10-09 17:30",
-      "value": 104174.41,
-      "benchmark": 101319.57
-    },
-    {
-      "t": "2026-10-09 18:00",
-      "value": 104179.0,
-      "benchmark": 101319.57
-    },
-    {
-      "t": "2026-10-09 18:30",
-      "value": 104192.25,
-      "benchmark": 101319.57
-    },
-    {
-      "t": "2026-10-09 19:00",
-      "value": 104179.99,
-      "benchmark": 101319.57
+      "value": 104197.32,
+      "benchmark": 102302.08
     },
     {
       "t": "2026-10-09 19:30",
-      "value": 104174.94,
-      "benchmark": 101319.57
+      "value": 104197.32,
+      "benchmark": 102302.08
+    },
+    {
+      "t": "2026-10-12 04:00",
+      "value": 104128.63,
+      "benchmark": 102538.6
+    },
+    {
+      "t": "2026-10-12 04:30",
+      "value": 103759.38,
+      "benchmark": 102383.55
+    },
+    {
+      "t": "2026-10-12 05:00",
+      "value": 103943.9,
+      "benchmark": 102438.74
+    },
+    {
+      "t": "2026-10-12 05:30",
+      "value": 103897.45,
+      "benchmark": 102366.47
+    },
+    {
+      "t": "2026-10-12 06:00",
+      "value": 103873.54,
+      "benchmark": 102362.53
+    },
+    {
+      "t": "2026-10-12 06:30",
+      "value": 103898.37,
+      "benchmark": 102332.3
+    },
+    {
+      "t": "2026-10-12 07:00",
+      "value": 103783.34,
+      "benchmark": 102330.99
+    },
+    {
+      "t": "2026-10-12 07:30",
+      "value": 103793.18,
+      "benchmark": 102328.36
+    },
+    {
+      "t": "2026-10-12 08:00",
+      "value": 103753.21,
+      "benchmark": 102335.26
+    },
+    {
+      "t": "2026-10-12 08:30",
+      "value": 103811.12,
+      "benchmark": 102336.25
+    },
+    {
+      "t": "2026-10-12 09:00",
+      "value": 103800.27,
+      "benchmark": 102352.51
+    },
+    {
+      "t": "2026-10-12 09:30",
+      "value": 103230.25,
+      "benchmark": 102298.14
+    },
+    {
+      "t": "2026-10-12 10:00",
+      "value": 102882.02,
+      "benchmark": 102217.99
+    },
+    {
+      "t": "2026-10-12 10:30",
+      "value": 103016.82,
+      "benchmark": 102249.84
+    },
+    {
+      "t": "2026-10-12 11:00",
+      "value": 102867.51,
+      "benchmark": 102232.44
+    },
+    {
+      "t": "2026-10-12 11:30",
+      "value": 103201.64,
+      "benchmark": 102328.36
+    },
+    {
+      "t": "2026-10-12 12:00",
+      "value": 103081.73,
+      "benchmark": 102241.64
+    },
+    {
+      "t": "2026-10-12 12:30",
+      "value": 102954.99,
+      "benchmark": 102167.4
+    },
+    {
+      "t": "2026-10-12 13:00",
+      "value": 102946.56,
+      "benchmark": 102186.45
+    },
+    {
+      "t": "2026-10-12 13:30",
+      "value": 102973.34,
+      "benchmark": 102191.71
     }
   ],
   "dividends": {
