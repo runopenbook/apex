@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-18",
-    "last_date": "2026-10-12",
+    "last_date": "2026-10-13",
     "mode": "forward",
     "strategy": "Ignition \u00b7 generational-breakout moonshots",
-    "total_value": 58967.71,
+    "total_value": 57689.64,
     "cash": 18093.81,
-    "total_return": -0.4103,
-    "benchmark_return": 0.042,
-    "alpha": -0.4523,
+    "total_return": -0.4231,
+    "benchmark_return": 0.0399,
+    "alpha": -0.463,
     "num_trades": 6,
     "benchmark_label": "S&P 500",
     "risk": "High",
@@ -655,6 +655,14 @@
       "benchmark": 104199.59,
       "benchmark_ret": 0.042,
       "cash": 18093.81
+    },
+    {
+      "date": "2026-10-13",
+      "value": 57689.64,
+      "ret": -0.4231,
+      "benchmark": 103989.35,
+      "benchmark_ret": 0.0399,
+      "cash": 18093.81
     }
   ],
   "positions": [
@@ -664,12 +672,12 @@
       "conviction": "anchor",
       "shares": 20.439,
       "avg_entry": 391.41,
-      "price": 306.36,
-      "value": 6261.67,
-      "drawdown": 0.2173,
-      "ret": -0.2173,
+      "price": 297.46,
+      "value": 6079.76,
+      "drawdown": 0.24,
+      "ret": -0.24,
       "thesis": "Photonics / RF \u2014 anchor.",
-      "weight": 0.1062
+      "weight": 0.1054
     },
     {
       "ticker": "SOLS",
@@ -677,12 +685,12 @@
       "conviction": "anchor",
       "shares": 93.491,
       "avg_entry": 85.57,
-      "price": 60.71,
-      "value": 5675.82,
-      "drawdown": 0.2905,
-      "ret": -0.2905,
+      "price": 59.51,
+      "value": 5564.1,
+      "drawdown": 0.3045,
+      "ret": -0.3045,
       "thesis": "DC Cooling \u2014 anchor.",
-      "weight": 0.0963
+      "weight": 0.0964
     },
     {
       "ticker": "LEU",
@@ -690,12 +698,12 @@
       "conviction": "anchor",
       "shares": 41.799,
       "avg_entry": 191.39,
-      "price": 135.31,
-      "value": 5655.89,
-      "drawdown": 0.293,
-      "ret": -0.293,
+      "price": 131.43,
+      "value": 5493.7,
+      "drawdown": 0.3133,
+      "ret": -0.3133,
       "thesis": "Nuclear Fuel \u2014 anchor.",
-      "weight": 0.0959
+      "weight": 0.0952
     },
     {
       "ticker": "OUST",
@@ -703,12 +711,12 @@
       "conviction": "moonshot",
       "shares": 128.838,
       "avg_entry": 46.57,
-      "price": 37.27,
-      "value": 4801.8,
-      "drawdown": 0.1997,
-      "ret": -0.1997,
+      "price": 35.7,
+      "value": 4599.49,
+      "drawdown": 0.2334,
+      "ret": -0.2334,
       "thesis": "Lidar \u2014 moonshot.",
-      "weight": 0.0814
+      "weight": 0.0797
     },
     {
       "ticker": "LAES",
@@ -716,12 +724,12 @@
       "conviction": "moonshot",
       "shares": 1923.077,
       "avg_entry": 3.12,
-      "price": 2.02,
-      "value": 3884.62,
-      "drawdown": 0.3526,
-      "ret": -0.3526,
+      "price": 1.92,
+      "value": 3696.73,
+      "drawdown": 0.3839,
+      "ret": -0.3839,
       "thesis": "Quantum Security \u2014 moonshot.",
-      "weight": 0.0659
+      "weight": 0.0641
     },
     {
       "ticker": "GSIT",
@@ -729,25 +737,12 @@
       "conviction": "moonshot",
       "shares": 791.557,
       "avg_entry": 7.58,
-      "price": 4.5,
-      "value": 3562.01,
-      "drawdown": 0.4063,
-      "ret": -0.4063,
+      "price": 4.36,
+      "value": 3455.14,
+      "drawdown": 0.4241,
+      "ret": -0.4241,
       "thesis": "Compute-in-Memory \u2014 moonshot.",
-      "weight": 0.0604
-    },
-    {
-      "ticker": "POET",
-      "theme": "Photonics",
-      "conviction": "moonshot",
-      "shares": 493.827,
-      "avg_entry": 12.15,
-      "price": 6.41,
-      "value": 3165.43,
-      "drawdown": 0.4724,
-      "ret": -0.4724,
-      "thesis": "Photonics \u2014 moonshot.",
-      "weight": 0.0537
+      "weight": 0.0599
     },
     {
       "ticker": "OKLO",
@@ -755,12 +750,25 @@
       "conviction": "moonshot",
       "shares": 98.087,
       "avg_entry": 61.17,
-      "price": 32.21,
-      "value": 3159.39,
-      "drawdown": 0.4734,
-      "ret": -0.4734,
+      "price": 31.46,
+      "value": 3086.22,
+      "drawdown": 0.4856,
+      "ret": -0.4856,
       "thesis": "Nuclear / SMR \u2014 moonshot.",
-      "weight": 0.0536
+      "weight": 0.0535
+    },
+    {
+      "ticker": "POET",
+      "theme": "Photonics",
+      "conviction": "moonshot",
+      "shares": 493.827,
+      "avg_entry": 12.15,
+      "price": 6.19,
+      "value": 3056.74,
+      "drawdown": 0.4905,
+      "ret": -0.4905,
+      "thesis": "Photonics \u2014 moonshot.",
+      "weight": 0.053
     },
     {
       "ticker": "RGTI",
@@ -768,12 +776,12 @@
       "conviction": "lottery",
       "shares": 187.266,
       "avg_entry": 21.36,
-      "price": 13.25,
-      "value": 2481.27,
-      "drawdown": 0.3797,
-      "ret": -0.3797,
+      "price": 12.79,
+      "value": 2395.02,
+      "drawdown": 0.4012,
+      "ret": -0.4012,
       "thesis": "Quantum Compute \u2014 lottery.",
-      "weight": 0.0421
+      "weight": 0.0415
     },
     {
       "ticker": "QBTS",
@@ -781,50 +789,50 @@
       "conviction": "lottery",
       "shares": 162.009,
       "avg_entry": 24.69,
-      "price": 13.74,
-      "value": 2226.0,
-      "drawdown": 0.4435,
-      "ret": -0.4435,
+      "price": 13.39,
+      "value": 2168.93,
+      "drawdown": 0.4578,
+      "ret": -0.4578,
       "thesis": "Quantum Compute \u2014 lottery.",
-      "weight": 0.0377
+      "weight": 0.0376
     }
   ],
   "themes": [
     {
       "theme": "Photonics / RF",
-      "weight": 0.1062
+      "weight": 0.1054
     },
     {
       "theme": "DC Cooling",
-      "weight": 0.0963
+      "weight": 0.0964
     },
     {
       "theme": "Nuclear Fuel",
-      "weight": 0.0959
+      "weight": 0.0952
     },
     {
       "theme": "Lidar",
-      "weight": 0.0814
+      "weight": 0.0797
     },
     {
       "theme": "Quantum Compute",
-      "weight": 0.0798
+      "weight": 0.0791
     },
     {
       "theme": "Quantum Security",
-      "weight": 0.0659
+      "weight": 0.0641
     },
     {
       "theme": "Compute-in-Memory",
-      "weight": 0.0604
-    },
-    {
-      "theme": "Photonics",
-      "weight": 0.0537
+      "weight": 0.0599
     },
     {
       "theme": "Nuclear / SMR",
-      "weight": 0.0536
+      "weight": 0.0535
+    },
+    {
+      "theme": "Photonics",
+      "weight": 0.053
     }
   ],
   "moves": [
@@ -7259,6 +7267,61 @@
       "benchmark": 104262.53
     },
     {
+      "t": "2026-10-12 04:00",
+      "value": 61295.4,
+      "benchmark": 104503.58
+    },
+    {
+      "t": "2026-10-12 04:30",
+      "value": 61147.84,
+      "benchmark": 104345.56
+    },
+    {
+      "t": "2026-10-12 05:00",
+      "value": 61140.68,
+      "benchmark": 104401.8
+    },
+    {
+      "t": "2026-10-12 05:30",
+      "value": 61217.32,
+      "benchmark": 104328.15
+    },
+    {
+      "t": "2026-10-12 06:00",
+      "value": 61175.72,
+      "benchmark": 104324.13
+    },
+    {
+      "t": "2026-10-12 06:30",
+      "value": 61188.88,
+      "benchmark": 104293.33
+    },
+    {
+      "t": "2026-10-12 07:00",
+      "value": 61084.95,
+      "benchmark": 104291.99
+    },
+    {
+      "t": "2026-10-12 07:30",
+      "value": 61045.77,
+      "benchmark": 104289.31
+    },
+    {
+      "t": "2026-10-12 08:00",
+      "value": 60980.11,
+      "benchmark": 104296.34
+    },
+    {
+      "t": "2026-10-12 08:30",
+      "value": 60982.45,
+      "benchmark": 104297.35
+    },
+    {
+      "t": "2026-10-12 09:00",
+      "value": 60849.12,
+      "benchmark": 104313.93
+    },
+    {
       "t": "2026-10-12 09:30",
       "value": 59888.42,
       "benchmark": 104258.51
@@ -7325,43 +7388,93 @@
     },
     {
       "t": "2026-10-12 16:00",
-      "value": 59011.97,
-      "benchmark": 104199.59
-    },
-    {
-      "t": "2026-10-12 16:30",
-      "value": 59014.85,
-      "benchmark": 104199.59
-    },
-    {
-      "t": "2026-10-12 17:00",
-      "value": 58992.78,
-      "benchmark": 104199.59
-    },
-    {
-      "t": "2026-10-12 17:30",
-      "value": 58992.99,
-      "benchmark": 104199.59
-    },
-    {
-      "t": "2026-10-12 18:00",
-      "value": 59040.2,
-      "benchmark": 104199.59
-    },
-    {
-      "t": "2026-10-12 18:30",
-      "value": 59014.99,
-      "benchmark": 104199.59
-    },
-    {
-      "t": "2026-10-12 19:00",
-      "value": 59019.8,
+      "value": 58967.71,
       "benchmark": 104199.59
     },
     {
       "t": "2026-10-12 19:30",
-      "value": 59047.44,
+      "value": 58956.92,
       "benchmark": 104093.8
+    },
+    {
+      "t": "2026-10-13 04:00",
+      "value": 58686.51,
+      "benchmark": 104245.12
+    },
+    {
+      "t": "2026-10-13 04:30",
+      "value": 58745.5,
+      "benchmark": 104215.66
+    },
+    {
+      "t": "2026-10-13 05:00",
+      "value": 58744.73,
+      "benchmark": 104243.78
+    },
+    {
+      "t": "2026-10-13 05:30",
+      "value": 58694.12,
+      "benchmark": 104287.97
+    },
+    {
+      "t": "2026-10-13 06:00",
+      "value": 58696.32,
+      "benchmark": 104219.68
+    },
+    {
+      "t": "2026-10-13 06:30",
+      "value": 58506.26,
+      "benchmark": 104103.17
+    },
+    {
+      "t": "2026-10-13 07:00",
+      "value": 58261.32,
+      "benchmark": 104148.7
+    },
+    {
+      "t": "2026-10-13 07:30",
+      "value": 58276.81,
+      "benchmark": 104119.24
+    },
+    {
+      "t": "2026-10-13 08:00",
+      "value": 58176.38,
+      "benchmark": 104159.68
+    },
+    {
+      "t": "2026-10-13 08:30",
+      "value": 58067.63,
+      "benchmark": 104121.92
+    },
+    {
+      "t": "2026-10-13 09:00",
+      "value": 58162.86,
+      "benchmark": 104105.85
+    },
+    {
+      "t": "2026-10-13 09:30",
+      "value": 58243.4,
+      "benchmark": 104198.25
+    },
+    {
+      "t": "2026-10-13 10:00",
+      "value": 58064.87,
+      "benchmark": 104123.26
+    },
+    {
+      "t": "2026-10-13 10:30",
+      "value": 57822.57,
+      "benchmark": 104037.55
+    },
+    {
+      "t": "2026-10-13 11:00",
+      "value": 57723.91,
+      "benchmark": 103941.13
+    },
+    {
+      "t": "2026-10-13 11:30",
+      "value": 57695.33,
+      "benchmark": 103985.99
     }
   ],
   "dividends": {
