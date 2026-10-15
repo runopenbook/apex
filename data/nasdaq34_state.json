@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-05-22",
-    "last_date": "2026-10-13",
+    "last_date": "2026-10-14",
     "mode": "forward",
     "strategy": "Sweet Spot \u00b7 Nasdaq-100 leadership, balanced-weight & rebalanced",
-    "total_value": 102673.79,
+    "total_value": 100035.13,
     "cash": 0,
-    "total_return": 0.0267,
-    "benchmark_return": 0.0434,
-    "alpha": -0.0167,
+    "total_return": 0.0004,
+    "benchmark_return": 0.0321,
+    "alpha": -0.0317,
     "num_trades": 5,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -807,6 +807,14 @@
       "benchmark": 104341.24,
       "benchmark_ret": 0.0434,
       "cash": 0
+    },
+    {
+      "date": "2026-10-14",
+      "value": 100035.13,
+      "ret": 0.0004,
+      "benchmark": 103213.34,
+      "benchmark_ret": 0.0321,
+      "cash": 0
     }
   ],
   "positions": [
@@ -816,12 +824,12 @@
       "conviction": "core",
       "shares": 21.487,
       "avg_entry": 136.88,
-      "price": 208.67,
-      "value": 4483.75,
+      "price": 200.97,
+      "value": 4318.29,
       "drawdown": 0,
-      "ret": 0.5245,
+      "ret": 0.4682,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0437
+      "weight": 0.0432
     },
     {
       "ticker": "PANW",
@@ -829,25 +837,12 @@
       "conviction": "core",
       "shares": 10.437,
       "avg_entry": 260.58,
-      "price": 397.03,
-      "value": 4143.98,
+      "price": 375.04,
+      "value": 3914.46,
       "drawdown": 0,
-      "ret": 0.5236,
+      "ret": 0.4393,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0404
-    },
-    {
-      "ticker": "MRVL",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 14.981,
-      "avg_entry": 196.33,
-      "price": 268.73,
-      "value": 4025.79,
-      "drawdown": 0,
-      "ret": 0.3688,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0392
+      "weight": 0.0391
     },
     {
       "ticker": "MSFT",
@@ -855,38 +850,12 @@
       "conviction": "core",
       "shares": 7.027,
       "avg_entry": 418.57,
-      "price": 543.45,
-      "value": 3818.67,
+      "price": 533.69,
+      "value": 3750.09,
       "drawdown": 0,
-      "ret": 0.2983,
+      "ret": 0.275,
       "thesis": "Nasdaq-100 leader \u00b7 Software.",
-      "weight": 0.0372
-    },
-    {
-      "ticker": "AMD",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 6.291,
-      "avg_entry": 467.51,
-      "price": 605.53,
-      "value": 3809.48,
-      "drawdown": 0,
-      "ret": 0.2952,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0371
-    },
-    {
-      "ticker": "META",
-      "theme": "Communications",
-      "conviction": "core",
-      "shares": 4.82,
-      "avg_entry": 610.26,
-      "price": 762.5,
-      "value": 3674.9,
-      "drawdown": 0,
-      "ret": 0.2495,
-      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0358
+      "weight": 0.0375
     },
     {
       "ticker": "AMGN",
@@ -894,12 +863,51 @@
       "conviction": "core",
       "shares": 8.668,
       "avg_entry": 339.3,
-      "price": 412.84,
-      "value": 3578.65,
+      "price": 426.11,
+      "value": 3693.68,
       "drawdown": 0,
-      "ret": 0.2167,
+      "ret": 0.2559,
       "thesis": "Nasdaq-100 leader \u00b7 Healthcare.",
-      "weight": 0.0349
+      "weight": 0.0369
+    },
+    {
+      "ticker": "MRVL",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 14.981,
+      "avg_entry": 196.33,
+      "price": 245.28,
+      "value": 3674.49,
+      "drawdown": 0,
+      "ret": 0.2493,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0367
+    },
+    {
+      "ticker": "AMD",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 6.291,
+      "avg_entry": 467.51,
+      "price": 570.82,
+      "value": 3591.12,
+      "drawdown": 0,
+      "ret": 0.221,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0359
+    },
+    {
+      "ticker": "META",
+      "theme": "Communications",
+      "conviction": "core",
+      "shares": 4.82,
+      "avg_entry": 610.26,
+      "price": 737.54,
+      "value": 3554.61,
+      "drawdown": 0,
+      "ret": 0.2086,
+      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
+      "weight": 0.0355
     },
     {
       "ticker": "MU",
@@ -907,12 +915,12 @@
       "conviction": "core",
       "shares": 3.63,
       "avg_entry": 751.0,
-      "price": 953.19,
-      "value": 3460.17,
+      "price": 914.13,
+      "value": 3318.38,
       "drawdown": 0,
-      "ret": 0.2692,
+      "ret": 0.2172,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0337
+      "weight": 0.0332
     },
     {
       "ticker": "AAPL",
@@ -920,12 +928,12 @@
       "conviction": "core",
       "shares": 9.524,
       "avg_entry": 308.82,
-      "price": 341.27,
-      "value": 3250.23,
+      "price": 342.96,
+      "value": 3266.32,
       "drawdown": 0,
-      "ret": 0.1051,
+      "ret": 0.1105,
       "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
-      "weight": 0.0317
+      "weight": 0.0327
     },
     {
       "ticker": "NVDA",
@@ -933,25 +941,12 @@
       "conviction": "core",
       "shares": 13.659,
       "avg_entry": 215.33,
-      "price": 228.52,
-      "value": 3121.34,
+      "price": 221.3,
+      "value": 3022.72,
       "drawdown": 0,
-      "ret": 0.0613,
+      "ret": 0.0277,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0304
-    },
-    {
-      "ticker": "ASML",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 1.801,
-      "avg_entry": 1632.9,
-      "price": 1717.76,
-      "value": 3094.03,
-      "drawdown": 0,
-      "ret": 0.052,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0301
+      "weight": 0.0302
     },
     {
       "ticker": "ADI",
@@ -959,12 +954,25 @@
       "conviction": "core",
       "shares": 7.407,
       "avg_entry": 397.07,
-      "price": 414.7,
-      "value": 3071.77,
+      "price": 403.57,
+      "value": 2989.32,
       "drawdown": 0,
-      "ret": 0.0444,
+      "ret": 0.0164,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
       "weight": 0.0299
+    },
+    {
+      "ticker": "ASML",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 1.801,
+      "avg_entry": 1632.9,
+      "price": 1650.0,
+      "value": 2971.98,
+      "drawdown": 0,
+      "ret": 0.0105,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0297
     },
     {
       "ticker": "AMAT",
@@ -972,51 +980,38 @@
       "conviction": "core",
       "shares": 6.575,
       "avg_entry": 432.16,
-      "price": 464.24,
-      "value": 3052.52,
+      "price": 446.63,
+      "value": 2936.73,
       "drawdown": 0,
-      "ret": 0.0742,
+      "ret": 0.0335,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0297
+      "weight": 0.0294
     },
     {
-      "ticker": "SNDK",
-      "theme": "Semiconductors",
+      "ticker": "WMT",
+      "theme": "Consumer",
       "conviction": "core",
-      "shares": 1.989,
-      "avg_entry": 1478.69,
-      "price": 1482.33,
-      "value": 2948.42,
-      "drawdown": 0,
-      "ret": 0.0025,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0287
+      "shares": 24.455,
+      "avg_entry": 120.27,
+      "price": 116.16,
+      "value": 2840.67,
+      "drawdown": 0.0342,
+      "ret": -0.0342,
+      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0284
     },
     {
-      "ticker": "LRCX",
-      "theme": "Semiconductors",
+      "ticker": "COST",
+      "theme": "Consumer",
       "conviction": "core",
-      "shares": 9.632,
-      "avg_entry": 305.35,
-      "price": 301.11,
-      "value": 2900.34,
-      "drawdown": 0.0139,
-      "ret": -0.0139,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0282
-    },
-    {
-      "ticker": "KLAC",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 15.575,
-      "avg_entry": 188.84,
-      "price": 184.0,
-      "value": 2865.82,
-      "drawdown": 0.0256,
-      "ret": -0.0256,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0279
+      "shares": 2.86,
+      "avg_entry": 1028.24,
+      "price": 982.0,
+      "value": 2808.91,
+      "drawdown": 0.045,
+      "ret": -0.045,
+      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0281
     },
     {
       "ticker": "AMZN",
@@ -1024,11 +1019,50 @@
       "conviction": "core",
       "shares": 11.044,
       "avg_entry": 266.32,
-      "price": 258.58,
-      "value": 2855.7,
-      "drawdown": 0.0291,
-      "ret": -0.0291,
+      "price": 254.08,
+      "value": 2806.0,
+      "drawdown": 0.046,
+      "ret": -0.046,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "weight": 0.0281
+    },
+    {
+      "ticker": "LIN",
+      "theme": "Materials",
+      "conviction": "core",
+      "shares": 5.683,
+      "avg_entry": 517.58,
+      "price": 492.7,
+      "value": 2799.79,
+      "drawdown": 0.0481,
+      "ret": -0.0481,
+      "thesis": "Nasdaq-100 leader \u00b7 Materials.",
+      "weight": 0.028
+    },
+    {
+      "ticker": "SNDK",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 1.989,
+      "avg_entry": 1478.69,
+      "price": 1403.34,
+      "value": 2791.3,
+      "drawdown": 0.051,
+      "ret": -0.051,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0279
+    },
+    {
+      "ticker": "KLAC",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 15.575,
+      "avg_entry": 188.84,
+      "price": 178.81,
+      "value": 2784.99,
+      "drawdown": 0.0531,
+      "ret": -0.0531,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
       "weight": 0.0278
     },
     {
@@ -1037,37 +1071,37 @@
       "conviction": "core",
       "shares": 24.426,
       "avg_entry": 120.41,
-      "price": 115.07,
-      "value": 2810.74,
-      "drawdown": 0.0443,
-      "ret": -0.0443,
+      "price": 113.64,
+      "value": 2775.81,
+      "drawdown": 0.0562,
+      "ret": -0.0562,
       "thesis": "Nasdaq-100 leader \u00b7 Hardware.",
-      "weight": 0.0274
+      "weight": 0.0277
     },
     {
-      "ticker": "LIN",
-      "theme": "Materials",
+      "ticker": "LRCX",
+      "theme": "Semiconductors",
       "conviction": "core",
-      "shares": 5.683,
-      "avg_entry": 517.58,
-      "price": 492.11,
-      "value": 2796.44,
-      "drawdown": 0.0492,
-      "ret": -0.0492,
-      "thesis": "Nasdaq-100 leader \u00b7 Materials.",
-      "weight": 0.0272
+      "shares": 9.632,
+      "avg_entry": 305.35,
+      "price": 286.92,
+      "value": 2763.66,
+      "drawdown": 0.0604,
+      "ret": -0.0604,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0276
     },
     {
-      "ticker": "WMT",
-      "theme": "Consumer",
+      "ticker": "GOOGL",
+      "theme": "Communications",
       "conviction": "core",
-      "shares": 24.455,
-      "avg_entry": 120.27,
-      "price": 112.28,
-      "value": 2745.78,
-      "drawdown": 0.0664,
-      "ret": -0.0664,
-      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
+      "shares": 7.68,
+      "avg_entry": 382.97,
+      "price": 347.64,
+      "value": 2669.85,
+      "drawdown": 0.0923,
+      "ret": -0.0923,
+      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
       "weight": 0.0267
     },
     {
@@ -1076,38 +1110,12 @@
       "conviction": "core",
       "shares": 9.512,
       "avg_entry": 309.21,
-      "price": 287.85,
-      "value": 2738.0,
-      "drawdown": 0.0691,
-      "ret": -0.0691,
+      "price": 280.65,
+      "value": 2669.52,
+      "drawdown": 0.0924,
+      "ret": -0.0924,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
       "weight": 0.0267
-    },
-    {
-      "ticker": "COST",
-      "theme": "Consumer",
-      "conviction": "core",
-      "shares": 2.86,
-      "avg_entry": 1028.24,
-      "price": 954.63,
-      "value": 2730.62,
-      "drawdown": 0.0716,
-      "ret": -0.0716,
-      "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0266
-    },
-    {
-      "ticker": "GOOGL",
-      "theme": "Communications",
-      "conviction": "core",
-      "shares": 7.68,
-      "avg_entry": 382.97,
-      "price": 353.78,
-      "value": 2717.0,
-      "drawdown": 0.0762,
-      "ret": -0.0762,
-      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0265
     },
     {
       "ticker": "GOOG",
@@ -1115,12 +1123,12 @@
       "conviction": "core",
       "shares": 7.753,
       "avg_entry": 379.38,
-      "price": 349.52,
-      "value": 2709.68,
-      "drawdown": 0.0787,
-      "ret": -0.0787,
+      "price": 343.65,
+      "value": 2664.18,
+      "drawdown": 0.0942,
+      "ret": -0.0942,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0264
+      "weight": 0.0266
     },
     {
       "ticker": "STX",
@@ -1128,12 +1136,12 @@
       "conviction": "core",
       "shares": 3.619,
       "avg_entry": 812.73,
-      "price": 747.2,
-      "value": 2704.03,
-      "drawdown": 0.0806,
-      "ret": -0.0806,
+      "price": 713.54,
+      "value": 2582.22,
+      "drawdown": 0.122,
+      "ret": -0.122,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0263
+      "weight": 0.0258
     },
     {
       "ticker": "INTC",
@@ -1141,25 +1149,12 @@
       "conviction": "core",
       "shares": 25.915,
       "avg_entry": 119.84,
-      "price": 102.81,
-      "value": 2664.27,
-      "drawdown": 0.1421,
-      "ret": -0.1421,
+      "price": 98.12,
+      "value": 2542.73,
+      "drawdown": 0.1812,
+      "ret": -0.1812,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0259
-    },
-    {
-      "ticker": "ARM",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 10.236,
-      "avg_entry": 306.51,
-      "price": 255.39,
-      "value": 2614.12,
-      "drawdown": 0.1668,
-      "ret": -0.1668,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0255
+      "weight": 0.0254
     },
     {
       "ticker": "TSLA",
@@ -1167,51 +1162,12 @@
       "conviction": "core",
       "shares": 6.904,
       "avg_entry": 426.01,
-      "price": 375.23,
-      "value": 2590.59,
-      "drawdown": 0.1192,
-      "ret": -0.1192,
+      "price": 367.16,
+      "value": 2534.88,
+      "drawdown": 0.1381,
+      "ret": -0.1381,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0252
-    },
-    {
-      "ticker": "AVGO",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 7.102,
-      "avg_entry": 414.14,
-      "price": 357.31,
-      "value": 2537.58,
-      "drawdown": 0.1372,
-      "ret": -0.1372,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0247
-    },
-    {
-      "ticker": "QCOM",
-      "theme": "Semiconductors",
-      "conviction": "core",
-      "shares": 14.164,
-      "avg_entry": 238.16,
-      "price": 176.86,
-      "value": 2505.0,
-      "drawdown": 0.2574,
-      "ret": -0.2574,
-      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0244
-    },
-    {
-      "ticker": "NFLX",
-      "theme": "Communications",
-      "conviction": "core",
-      "shares": 35.398,
-      "avg_entry": 88.6,
-      "price": 70.46,
-      "value": 2494.14,
-      "drawdown": 0.2047,
-      "ret": -0.2047,
-      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.0243
+      "weight": 0.0253
     },
     {
       "ticker": "PEP",
@@ -1219,12 +1175,64 @@
       "conviction": "core",
       "shares": 19.534,
       "avg_entry": 150.57,
-      "price": 127.3,
-      "value": 2486.63,
-      "drawdown": 0.1545,
-      "ret": -0.1545,
+      "price": 129.27,
+      "value": 2525.11,
+      "drawdown": 0.1415,
+      "ret": -0.1415,
       "thesis": "Nasdaq-100 leader \u00b7 Consumer.",
-      "weight": 0.0242
+      "weight": 0.0252
+    },
+    {
+      "ticker": "NFLX",
+      "theme": "Communications",
+      "conviction": "core",
+      "shares": 35.398,
+      "avg_entry": 88.6,
+      "price": 70.57,
+      "value": 2498.03,
+      "drawdown": 0.2035,
+      "ret": -0.2035,
+      "thesis": "Nasdaq-100 leader \u00b7 Communications.",
+      "weight": 0.025
+    },
+    {
+      "ticker": "AVGO",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 7.102,
+      "avg_entry": 414.14,
+      "price": 346.25,
+      "value": 2459.03,
+      "drawdown": 0.1639,
+      "ret": -0.1639,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0246
+    },
+    {
+      "ticker": "QCOM",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 14.164,
+      "avg_entry": 238.16,
+      "price": 172.62,
+      "value": 2444.95,
+      "drawdown": 0.2752,
+      "ret": -0.2752,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0244
+    },
+    {
+      "ticker": "ARM",
+      "theme": "Semiconductors",
+      "conviction": "core",
+      "shares": 10.236,
+      "avg_entry": 306.51,
+      "price": 238.01,
+      "value": 2436.22,
+      "drawdown": 0.2235,
+      "ret": -0.2235,
+      "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
+      "weight": 0.0244
     },
     {
       "ticker": "TMUS",
@@ -1232,12 +1240,12 @@
       "conviction": "core",
       "shares": 15.361,
       "avg_entry": 191.47,
-      "price": 153.73,
-      "value": 2361.45,
-      "drawdown": 0.1971,
-      "ret": -0.1971,
+      "price": 157.79,
+      "value": 2423.82,
+      "drawdown": 0.1759,
+      "ret": -0.1759,
       "thesis": "Nasdaq-100 leader \u00b7 Communications.",
-      "weight": 0.023
+      "weight": 0.0242
     },
     {
       "ticker": "WDC",
@@ -1245,42 +1253,42 @@
       "conviction": "core",
       "shares": 6.073,
       "avg_entry": 484.28,
-      "price": 380.71,
-      "value": 2312.17,
-      "drawdown": 0.2139,
-      "ret": -0.2139,
+      "price": 364.1,
+      "value": 2211.29,
+      "drawdown": 0.2482,
+      "ret": -0.2482,
       "thesis": "Nasdaq-100 leader \u00b7 Semiconductors.",
-      "weight": 0.0225
+      "weight": 0.0221
     }
   ],
   "themes": [
     {
       "theme": "Semiconductors",
-      "weight": 0.4911
+      "weight": 0.4817
     },
     {
       "theme": "Communications",
-      "weight": 0.1359
+      "weight": 0.1381
     },
     {
       "theme": "Consumer",
-      "weight": 0.1306
+      "weight": 0.1351
     },
     {
       "theme": "Software",
-      "weight": 0.1212
+      "weight": 0.1198
     },
     {
       "theme": "Hardware",
-      "weight": 0.059
+      "weight": 0.0604
     },
     {
       "theme": "Healthcare",
-      "weight": 0.0349
+      "weight": 0.0369
     },
     {
       "theme": "Materials",
-      "weight": 0.0272
+      "weight": 0.028
     }
   ],
   "moves": [
@@ -5854,11 +5862,11 @@
     {
       "t": "2026-10-14 19:30",
       "value": 98742.44,
-      "benchmark": 99996.09
+      "benchmark": 99993.48
     }
   ],
   "dividends": {
-    "total": 278.84,
+    "total": 279.38,
     "per": [
       {
         "ticker": "PEP",
@@ -5982,8 +5990,8 @@
       },
       {
         "ticker": "MU",
-        "amount": 0.54,
-        "dps": 0.15
+        "amount": 1.09,
+        "dps": 0.3
       }
     ]
   }
