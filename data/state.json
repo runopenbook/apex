@@ -2,13 +2,13 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-10-23",
+    "last_date": "2026-10-26",
     "mode": "forward",
-    "total_value": 72028.45,
+    "total_value": 71918.97,
     "cash": 0.01,
-    "total_return": -0.2961,
-    "benchmark_return": 0.015,
-    "alpha": -0.3111,
+    "total_return": -0.2808,
+    "benchmark_return": 0.022,
+    "alpha": -0.3028,
     "num_trades": 29,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
@@ -719,6 +719,14 @@
       "benchmark": 101495.47,
       "benchmark_ret": 0.015,
       "cash": 0.01
+    },
+    {
+      "date": "2026-10-26",
+      "value": 71918.97,
+      "ret": -0.2808,
+      "benchmark": 102202.27,
+      "benchmark_ret": 0.022,
+      "cash": 0.01
     }
   ],
   "positions": [
@@ -728,12 +736,12 @@
       "conviction": "momentum",
       "shares": 57.728,
       "avg_entry": 173.23,
-      "price": 262.48,
-      "value": 15152.39,
+      "price": 261.83,
+      "value": 15114.81,
       "drawdown": 0,
-      "ret": 0.5152,
+      "ret": 0.5115,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.2104
+      "weight": 0.2102
     },
     {
       "ticker": "PANW",
@@ -741,12 +749,12 @@
       "conviction": "momentum",
       "shares": 35.144,
       "avg_entry": 284.54,
-      "price": 389.0,
-      "value": 13671.19,
+      "price": 390.46,
+      "value": 13722.5,
       "drawdown": 0,
-      "ret": 0.3671,
+      "ret": 0.3722,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1898
+      "weight": 0.1908
     },
     {
       "ticker": "DELL",
@@ -754,12 +762,12 @@
       "conviction": "momentum",
       "shares": 21.034,
       "avg_entry": 419.32,
-      "price": 467.27,
-      "value": 9828.45,
+      "price": 467.09,
+      "value": 9824.66,
       "drawdown": 0,
-      "ret": 0.1144,
+      "ret": 0.1139,
       "thesis": "Rotated in: hot momentum, +224% 6mo.",
-      "weight": 0.1365
+      "weight": 0.1366
     },
     {
       "ticker": "MU",
@@ -767,12 +775,12 @@
       "conviction": "momentum",
       "shares": 9.797,
       "avg_entry": 1020.76,
-      "price": 908.52,
-      "value": 8900.45,
-      "drawdown": 0.11,
-      "ret": -0.11,
+      "price": 903.7,
+      "value": 8853.21,
+      "drawdown": 0.1147,
+      "ret": -0.1147,
       "thesis": "Momentum leader in AI / Semis.",
-      "weight": 0.1236
+      "weight": 0.1231
     },
     {
       "ticker": "AMD",
@@ -780,12 +788,12 @@
       "conviction": "momentum",
       "shares": 15.294,
       "avg_entry": 515.69,
-      "price": 530.04,
-      "value": 8106.76,
+      "price": 531.28,
+      "value": 8125.65,
       "drawdown": 0,
-      "ret": 0.0278,
+      "ret": 0.0302,
       "thesis": "Rotated in: hot momentum, +144% 6mo.",
-      "weight": 0.1125
+      "weight": 0.113
     },
     {
       "ticker": "ANET",
@@ -793,12 +801,12 @@
       "conviction": "momentum",
       "shares": 39.47,
       "avg_entry": 167.18,
-      "price": 177.75,
-      "value": 7015.83,
+      "price": 177.24,
+      "value": 6995.7,
       "drawdown": 0,
-      "ret": 0.0632,
+      "ret": 0.0602,
       "thesis": "Rotated in: hot momentum, +30% 6mo.",
-      "weight": 0.0974
+      "weight": 0.0973
     },
     {
       "ticker": "TSM",
@@ -806,12 +814,12 @@
       "conviction": "momentum",
       "shares": 16.225,
       "avg_entry": 406.69,
-      "price": 427.39,
-      "value": 6934.47,
+      "price": 424.37,
+      "value": 6885.47,
       "drawdown": 0,
-      "ret": 0.0509,
+      "ret": 0.0435,
       "thesis": "Rotated in: hot momentum, +24% 6mo.",
-      "weight": 0.0963
+      "weight": 0.0957
     },
     {
       "ticker": "HOOD",
@@ -819,35 +827,44 @@
       "conviction": "momentum",
       "shares": 25.818,
       "avg_entry": 114.74,
-      "price": 93.69,
-      "value": 2418.91,
-      "drawdown": 0.1835,
-      "ret": -0.1835,
+      "price": 92.84,
+      "value": 2396.96,
+      "drawdown": 0.1909,
+      "ret": -0.1909,
       "thesis": "Rotated in: hot momentum, +56% 6mo.",
-      "weight": 0.0336
+      "weight": 0.0333
     }
   ],
   "themes": [
     {
       "theme": "AI / Semis",
-      "weight": 0.5662,
+      "weight": 0.5657,
       "min": null,
       "max": null
     },
     {
       "theme": "Other momentum",
-      "weight": 0.4002,
+      "weight": 0.401,
       "min": null,
       "max": null
     },
     {
       "theme": "Crypto / Fintech",
-      "weight": 0.0336,
+      "weight": 0.0333,
       "min": null,
       "max": null
     }
   ],
   "moves": [
+    {
+      "date": "2026-10-26",
+      "ticker": null,
+      "action": "NO_MOVE",
+      "rule": "Hold",
+      "rationale": "All holdings still trending up \u2014 holding. Let winners run.",
+      "judge": "momentum",
+      "price": null
+    },
     {
       "date": "2026-10-23",
       "ticker": null,
@@ -5035,78 +5052,133 @@
     },
     {
       "t": "2026-10-26 04:00",
-      "value": 69740.81,
+      "value": 69503.04,
       "benchmark": 99016.52
     },
     {
       "t": "2026-10-26 04:30",
-      "value": 70151.29,
+      "value": 69912.13,
       "benchmark": 99167.49
     },
     {
       "t": "2026-10-26 05:00",
-      "value": 70404.31,
+      "value": 70164.28,
       "benchmark": 99219.54
     },
     {
       "t": "2026-10-26 05:30",
-      "value": 70665.49,
+      "value": 70424.57,
       "benchmark": 99239.07
     },
     {
       "t": "2026-10-26 06:00",
-      "value": 70342.95,
+      "value": 70103.13,
       "benchmark": 99050.36
     },
     {
       "t": "2026-10-26 06:30",
-      "value": 70273.57,
+      "value": 70033.99,
       "benchmark": 98938.44
     },
     {
       "t": "2026-10-26 07:00",
-      "value": 70311.59,
+      "value": 70071.87,
       "benchmark": 99036.05
     },
     {
       "t": "2026-10-26 07:30",
-      "value": 70997.17,
+      "value": 70755.13,
       "benchmark": 99224.75
     },
     {
       "t": "2026-10-26 08:00",
-      "value": 71123.45,
+      "value": 70880.97,
       "benchmark": 99313.62
     },
     {
       "t": "2026-10-26 08:30",
-      "value": 71057.95,
+      "value": 70815.7,
       "benchmark": 99203.93
     },
     {
       "t": "2026-10-26 09:00",
-      "value": 70777.68,
+      "value": 70536.38,
       "benchmark": 99190.91
     },
     {
       "t": "2026-10-26 09:30",
-      "value": 70337.4,
+      "value": 70097.6,
       "benchmark": 99276.81
     },
     {
       "t": "2026-10-26 10:00",
-      "value": 71137.38,
+      "value": 70894.86,
       "benchmark": 99529.41
     },
     {
       "t": "2026-10-26 10:30",
-      "value": 72060.56,
+      "value": 71814.89,
       "benchmark": 99822.1
     },
     {
       "t": "2026-10-26 11:00",
-      "value": 72161.08,
-      "benchmark": 99835.76
+      "value": 72147.95,
+      "benchmark": 99794.77
+    },
+    {
+      "t": "2026-10-26 11:30",
+      "value": 71900.54,
+      "benchmark": 99586.54
+    },
+    {
+      "t": "2026-10-26 12:00",
+      "value": 71887.34,
+      "benchmark": 99634.7
+    },
+    {
+      "t": "2026-10-26 12:30",
+      "value": 71927.7,
+      "benchmark": 99616.48
+    },
+    {
+      "t": "2026-10-26 13:00",
+      "value": 72086.2,
+      "benchmark": 99663.32
+    },
+    {
+      "t": "2026-10-26 13:30",
+      "value": 72377.82,
+      "benchmark": 99676.34
+    },
+    {
+      "t": "2026-10-26 14:00",
+      "value": 72365.03,
+      "benchmark": 99641.2
+    },
+    {
+      "t": "2026-10-26 14:30",
+      "value": 72259.9,
+      "benchmark": 99564.42
+    },
+    {
+      "t": "2026-10-26 15:00",
+      "value": 72229.81,
+      "benchmark": 99609.97
+    },
+    {
+      "t": "2026-10-26 15:30",
+      "value": 71878.63,
+      "benchmark": 99587.19
+    },
+    {
+      "t": "2026-10-26 16:00",
+      "value": 71918.97,
+      "benchmark": 99591.75
+    },
+    {
+      "t": "2026-10-26 16:30",
+      "value": 71995.24,
+      "benchmark": 99582.64
     }
   ],
   "dividends": {
