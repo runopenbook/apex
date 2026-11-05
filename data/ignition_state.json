@@ -2,15 +2,15 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-18",
-    "last_date": "2026-11-04",
+    "last_date": "2026-11-05",
     "mode": "forward",
     "strategy": "Ignition \u00b7 generational-breakout moonshots",
-    "total_value": 52029.93,
-    "cash": 35450.1,
-    "total_return": -0.4797,
-    "benchmark_return": 0.0269,
-    "alpha": -0.5066,
-    "num_trades": 12,
+    "total_value": 50391.35,
+    "cash": 37286.24,
+    "total_return": -0.4961,
+    "benchmark_return": -0.002,
+    "alpha": -0.4941,
+    "num_trades": 13,
     "benchmark_label": "S&P 500",
     "risk": "High",
     "disclaimer": "Paper-tracked. Not investment advice. No brokerage connection \u2014 you execute your own trades."
@@ -791,6 +791,14 @@
       "benchmark": 102687.68,
       "benchmark_ret": 0.0269,
       "cash": 35450.1
+    },
+    {
+      "date": "2026-11-05",
+      "value": 50391.36,
+      "ret": -0.4961,
+      "benchmark": 99795.11,
+      "benchmark_ret": -0.002,
+      "cash": 37286.24
     }
   ],
   "positions": [
@@ -800,12 +808,12 @@
       "conviction": "anchor",
       "shares": 93.491,
       "avg_entry": 85.57,
-      "price": 57.7,
-      "value": 5394.41,
-      "drawdown": 0.3257,
-      "ret": -0.3257,
+      "price": 55.85,
+      "value": 5221.92,
+      "drawdown": 0.3473,
+      "ret": -0.3473,
       "thesis": "DC Cooling \u2014 anchor.",
-      "weight": 0.1037
+      "weight": 0.1036
     },
     {
       "ticker": "MTSI",
@@ -813,12 +821,12 @@
       "conviction": "anchor",
       "shares": 20.439,
       "avg_entry": 391.41,
-      "price": 233.13,
-      "value": 4764.93,
-      "drawdown": 0.4044,
-      "ret": -0.4044,
+      "price": 198.29,
+      "value": 4052.83,
+      "drawdown": 0.4934,
+      "ret": -0.4934,
       "thesis": "Photonics / RF \u2014 anchor.",
-      "weight": 0.0916
+      "weight": 0.0804
     },
     {
       "ticker": "OUST",
@@ -826,46 +834,38 @@
       "conviction": "moonshot",
       "shares": 128.838,
       "avg_entry": 46.57,
-      "price": 33.54,
-      "value": 4321.24,
-      "drawdown": 0.2798,
-      "ret": -0.2798,
+      "price": 29.73,
+      "value": 3830.36,
+      "drawdown": 0.3616,
+      "ret": -0.3616,
       "thesis": "Lidar \u2014 moonshot.",
-      "weight": 0.0831
-    },
-    {
-      "ticker": "RGTI",
-      "theme": "Quantum Compute",
-      "conviction": "lottery",
-      "shares": 187.266,
-      "avg_entry": 21.36,
-      "price": 11.21,
-      "value": 2099.25,
-      "drawdown": 0.4752,
-      "ret": -0.4752,
-      "thesis": "Quantum Compute \u2014 lottery.",
-      "weight": 0.0403
+      "weight": 0.076
     }
   ],
   "themes": [
     {
       "theme": "DC Cooling",
-      "weight": 0.1037
+      "weight": 0.1036
     },
     {
       "theme": "Photonics / RF",
-      "weight": 0.0916
+      "weight": 0.0804
     },
     {
       "theme": "Lidar",
-      "weight": 0.0831
-    },
-    {
-      "theme": "Quantum Compute",
-      "weight": 0.0403
+      "weight": 0.076
     }
   ],
   "moves": [
+    {
+      "date": "2026-11-05",
+      "ticker": "RGTI",
+      "action": "SELL",
+      "rule": "Thesis stop",
+      "rationale": "Cut RGTI \u2014 down -54.1% from entry, the thesis is dead. Lottery tickets that break get torn up.",
+      "judge": "thesis",
+      "price": 9.81
+    },
     {
       "date": "2026-11-04",
       "ticker": "GSIT",
@@ -985,6 +985,20 @@
     }
   ],
   "trade_days": [
+    {
+      "date": "2026-11-05",
+      "n": 1,
+      "theme": "Thesis stop",
+      "opened": [],
+      "changed": [],
+      "closed": [
+        {
+          "ticker": "RGTI",
+          "weight": 0.0364,
+          "theme": "Quantum Compute"
+        }
+      ]
+    },
     {
       "date": "2026-11-04",
       "n": 1,
@@ -7970,14 +7984,79 @@
       "benchmark": 102719.82
     },
     {
-      "t": "2026-11-04 19:00",
-      "value": 51962.8,
-      "benchmark": 102714.57
+      "t": "2026-11-05 04:00",
+      "value": 51785.78,
+      "benchmark": 102569.84
     },
     {
-      "t": "2026-11-04 19:30",
-      "value": 51934.7,
-      "benchmark": 102662.24
+      "t": "2026-11-05 04:30",
+      "value": 51886.5,
+      "benchmark": 102760.04
+    },
+    {
+      "t": "2026-11-05 05:00",
+      "value": 51873.62,
+      "benchmark": 102780.09
+    },
+    {
+      "t": "2026-11-05 05:30",
+      "value": 52027.46,
+      "benchmark": 102833.65
+    },
+    {
+      "t": "2026-11-05 06:00",
+      "value": 51775.26,
+      "benchmark": 102814.9
+    },
+    {
+      "t": "2026-11-05 06:30",
+      "value": 51781.43,
+      "benchmark": 102887.22
+    },
+    {
+      "t": "2026-11-05 07:00",
+      "value": 51673.38,
+      "benchmark": 102766.69
+    },
+    {
+      "t": "2026-11-05 07:30",
+      "value": 51582.34,
+      "benchmark": 102788.12
+    },
+    {
+      "t": "2026-11-05 08:00",
+      "value": 51340.6,
+      "benchmark": 102809.55
+    },
+    {
+      "t": "2026-11-05 08:30",
+      "value": 51434.61,
+      "benchmark": 102730.54
+    },
+    {
+      "t": "2026-11-05 09:00",
+      "value": 51243.02,
+      "benchmark": 102615.37
+    },
+    {
+      "t": "2026-11-05 09:30",
+      "value": 50462.18,
+      "benchmark": 100989.64
+    },
+    {
+      "t": "2026-11-05 10:00",
+      "value": 50234.86,
+      "benchmark": 100082.36
+    },
+    {
+      "t": "2026-11-05 10:30",
+      "value": 49943.3,
+      "benchmark": 99351.85
+    },
+    {
+      "t": "2026-11-05 11:00",
+      "value": 50391.36,
+      "benchmark": 99809.01
     }
   ],
   "dividends": {
