@@ -5,11 +5,11 @@
     "last_date": "2026-11-10",
     "mode": "forward",
     "strategy": "Slipstream \u00b7 momentum ETF rotation",
-    "total_value": 95006.95,
+    "total_value": 94593.65,
     "cash": 0.0,
-    "total_return": -0.0499,
-    "benchmark_return": 0.0258,
-    "alpha": -0.0757,
+    "total_return": -0.0541,
+    "benchmark_return": 0.0221,
+    "alpha": -0.0762,
     "num_trades": 76,
     "benchmark_label": "S&P 500",
     "risk": "Medium",
@@ -986,27 +986,14 @@
     },
     {
       "date": "2026-11-10",
-      "value": 95006.95,
-      "ret": -0.0499,
-      "benchmark": 102584.06,
-      "benchmark_ret": 0.0258,
+      "value": 94593.65,
+      "ret": -0.0541,
+      "benchmark": 102206.53,
+      "benchmark_ret": 0.0221,
       "cash": 0.0
     }
   ],
   "positions": [
-    {
-      "ticker": "EFA",
-      "theme": "Developed Intl",
-      "conviction": "core",
-      "shares": 85.852,
-      "avg_entry": 101.92,
-      "price": 104.96,
-      "value": 9010.99,
-      "drawdown": 0,
-      "ret": 0.0298,
-      "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0948
-    },
     {
       "ticker": "IEFA",
       "theme": "Developed Intl",
@@ -1018,7 +1005,20 @@
       "drawdown": 0,
       "ret": 0.0242,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0943
+      "weight": 0.0947
+    },
+    {
+      "ticker": "EFA",
+      "theme": "Developed Intl",
+      "conviction": "core",
+      "shares": 85.852,
+      "avg_entry": 101.92,
+      "price": 104.36,
+      "value": 8959.48,
+      "drawdown": 0,
+      "ret": 0.0239,
+      "thesis": "Developed Intl \u2014 core anchor.",
+      "weight": 0.0947
     },
     {
       "ticker": "VEA",
@@ -1026,12 +1026,12 @@
       "conviction": "core",
       "shares": 126.83,
       "avg_entry": 68.99,
-      "price": 69.89,
-      "value": 8864.15,
+      "price": 69.36,
+      "value": 8796.93,
       "drawdown": 0,
-      "ret": 0.013,
+      "ret": 0.0054,
       "thesis": "Developed Intl \u2014 core anchor.",
-      "weight": 0.0933
+      "weight": 0.093
     },
     {
       "ticker": "VXUS",
@@ -1039,12 +1039,12 @@
       "conviction": "core",
       "shares": 105.676,
       "avg_entry": 82.8,
-      "price": 83.22,
-      "value": 8794.38,
-      "drawdown": 0,
-      "ret": 0.0051,
+      "price": 82.66,
+      "value": 8735.21,
+      "drawdown": 0.0017,
+      "ret": -0.0017,
       "thesis": "Total Intl \u2014 core anchor.",
-      "weight": 0.0926
+      "weight": 0.0923
     },
     {
       "ticker": "IGV",
@@ -1052,12 +1052,12 @@
       "conviction": "rotation",
       "shares": 71.033,
       "avg_entry": 106.28,
-      "price": 101.46,
-      "value": 7206.98,
-      "drawdown": 0.0454,
-      "ret": -0.0454,
+      "price": 100.33,
+      "value": 7126.71,
+      "drawdown": 0.056,
+      "ret": -0.056,
       "thesis": "Software \u2014 momentum rotation.",
-      "weight": 0.0759
+      "weight": 0.0753
     },
     {
       "ticker": "EWS",
@@ -1065,12 +1065,12 @@
       "conviction": "rotation",
       "shares": 197.2,
       "avg_entry": 32.35,
-      "price": 30.41,
-      "value": 5996.86,
-      "drawdown": 0.06,
-      "ret": -0.06,
+      "price": 30.37,
+      "value": 5988.97,
+      "drawdown": 0.0612,
+      "ret": -0.0612,
       "thesis": "Singapore \u2014 momentum rotation.",
-      "weight": 0.0631
+      "weight": 0.0633
     },
     {
       "ticker": "GREK",
@@ -1078,12 +1078,12 @@
       "conviction": "rotation",
       "shares": 70.291,
       "avg_entry": 77.62,
-      "price": 82.07,
-      "value": 5768.82,
+      "price": 81.98,
+      "value": 5762.49,
       "drawdown": 0,
-      "ret": 0.0573,
+      "ret": 0.0562,
       "thesis": "Greece \u2014 momentum rotation.",
-      "weight": 0.0607
+      "weight": 0.0609
     },
     {
       "ticker": "XRT",
@@ -1091,12 +1091,12 @@
       "conviction": "rotation",
       "shares": 61.671,
       "avg_entry": 93.72,
-      "price": 92.78,
-      "value": 5721.83,
-      "drawdown": 0.01,
-      "ret": -0.01,
+      "price": 92.44,
+      "value": 5700.86,
+      "drawdown": 0.0137,
+      "ret": -0.0137,
       "thesis": "Retail \u2014 momentum rotation.",
-      "weight": 0.0602
+      "weight": 0.0603
     },
     {
       "ticker": "XLB",
@@ -1104,12 +1104,12 @@
       "conviction": "rotation",
       "shares": 107.853,
       "avg_entry": 53.75,
-      "price": 52.94,
-      "value": 5709.73,
-      "drawdown": 0.0151,
-      "ret": -0.0151,
+      "price": 52.85,
+      "value": 5700.02,
+      "drawdown": 0.0168,
+      "ret": -0.0168,
       "thesis": "Materials \u2014 momentum rotation.",
-      "weight": 0.0601
+      "weight": 0.0603
     },
     {
       "ticker": "IBB",
@@ -1117,12 +1117,12 @@
       "conviction": "rotation",
       "shares": 24.339,
       "avg_entry": 203.56,
-      "price": 219.57,
-      "value": 5344.18,
+      "price": 217.18,
+      "value": 5286.01,
       "drawdown": 0,
-      "ret": 0.0787,
+      "ret": 0.0669,
       "thesis": "Biotech \u2014 momentum rotation.",
-      "weight": 0.0563
+      "weight": 0.0559
     },
     {
       "ticker": "XLV",
@@ -1130,12 +1130,12 @@
       "conviction": "rotation",
       "shares": 27.16,
       "avg_entry": 181.17,
-      "price": 188.33,
-      "value": 5115.1,
+      "price": 188.88,
+      "value": 5130.04,
       "drawdown": 0,
-      "ret": 0.0395,
+      "ret": 0.0426,
       "thesis": "Health Care \u2014 momentum rotation.",
-      "weight": 0.0538
+      "weight": 0.0542
     },
     {
       "ticker": "XLP",
@@ -1143,12 +1143,12 @@
       "conviction": "rotation",
       "shares": 55.033,
       "avg_entry": 89.41,
-      "price": 90.89,
-      "value": 5001.91,
+      "price": 91.03,
+      "value": 5009.61,
       "drawdown": 0,
-      "ret": 0.0165,
+      "ret": 0.0181,
       "thesis": "Staples \u2014 momentum rotation.",
-      "weight": 0.0526
+      "weight": 0.053
     },
     {
       "ticker": "NORW",
@@ -1156,12 +1156,12 @@
       "conviction": "rotation",
       "shares": 134.265,
       "avg_entry": 37.58,
-      "price": 36.64,
-      "value": 4919.47,
-      "drawdown": 0.025,
-      "ret": -0.025,
+      "price": 36.28,
+      "value": 4871.14,
+      "drawdown": 0.0346,
+      "ret": -0.0346,
       "thesis": "Norway \u2014 momentum rotation.",
-      "weight": 0.0518
+      "weight": 0.0515
     },
     {
       "ticker": "SKYY",
@@ -1169,10 +1169,10 @@
       "conviction": "rotation",
       "shares": 29.766,
       "avg_entry": 167.73,
-      "price": 150.71,
-      "value": 4486.06,
-      "drawdown": 0.1015,
-      "ret": -0.1015,
+      "price": 149.95,
+      "value": 4463.44,
+      "drawdown": 0.106,
+      "ret": -0.106,
       "thesis": "Cloud \u2014 momentum rotation.",
       "weight": 0.0472
     },
@@ -1182,12 +1182,12 @@
       "conviction": "rotation",
       "shares": 93.733,
       "avg_entry": 44.78,
-      "price": 43.79,
-      "value": 4104.55,
-      "drawdown": 0.0221,
-      "ret": -0.0221,
+      "price": 43.75,
+      "value": 4100.8,
+      "drawdown": 0.023,
+      "ret": -0.023,
       "thesis": "Poland \u2014 momentum rotation.",
-      "weight": 0.0432
+      "weight": 0.0434
     }
   ],
   "themes": [
@@ -1197,43 +1197,43 @@
     },
     {
       "theme": "Total Intl",
-      "weight": 0.0926
+      "weight": 0.0923
     },
     {
       "theme": "Software",
-      "weight": 0.0759
+      "weight": 0.0753
     },
     {
       "theme": "Singapore",
-      "weight": 0.0631
+      "weight": 0.0633
     },
     {
       "theme": "Greece",
-      "weight": 0.0607
+      "weight": 0.0609
     },
     {
       "theme": "Retail",
-      "weight": 0.0602
+      "weight": 0.0603
     },
     {
       "theme": "Materials",
-      "weight": 0.0601
+      "weight": 0.0603
     },
     {
       "theme": "Biotech",
-      "weight": 0.0563
+      "weight": 0.0559
     },
     {
       "theme": "Health Care",
-      "weight": 0.0538
+      "weight": 0.0542
     },
     {
       "theme": "Staples",
-      "weight": 0.0526
+      "weight": 0.053
     },
     {
       "theme": "Norway",
-      "weight": 0.0518
+      "weight": 0.0515
     },
     {
       "theme": "Cloud",
@@ -1241,7 +1241,7 @@
     },
     {
       "theme": "Poland",
-      "weight": 0.0432
+      "weight": 0.0434
     }
   ],
   "moves": [
