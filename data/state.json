@@ -4,11 +4,11 @@
     "start_date": "2026-06-16",
     "last_date": "2026-11-19",
     "mode": "forward",
-    "total_value": 62682.48,
+    "total_value": 63460.29,
     "cash": -0.01,
-    "total_return": -0.3732,
+    "total_return": -0.3654,
     "benchmark_return": -0.0447,
-    "alpha": -0.3285,
+    "alpha": -0.3207,
     "num_trades": 39,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
@@ -866,8 +866,8 @@
     },
     {
       "date": "2026-11-19",
-      "value": 62682.48,
-      "ret": -0.3732,
+      "value": 63460.29,
+      "ret": -0.3654,
       "benchmark": 95533.16,
       "benchmark_ret": -0.0447,
       "cash": -0.01
@@ -880,12 +880,12 @@
       "conviction": "momentum",
       "shares": 57.728,
       "avg_entry": 173.23,
-      "price": 237.03,
-      "value": 13683.16,
+      "price": 243.46,
+      "value": 14054.35,
       "drawdown": 0,
-      "ret": 0.3683,
+      "ret": 0.4054,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.2183
+      "weight": 0.2215
     },
     {
       "ticker": "PANW",
@@ -893,12 +893,12 @@
       "conviction": "momentum",
       "shares": 35.144,
       "avg_entry": 284.54,
-      "price": 339.92,
-      "value": 11946.3,
+      "price": 361.73,
+      "value": 12712.8,
       "drawdown": 0,
-      "ret": 0.1946,
+      "ret": 0.2713,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.1906
+      "weight": 0.2003
     },
     {
       "ticker": "ANET",
@@ -906,12 +906,12 @@
       "conviction": "momentum",
       "shares": 39.47,
       "avg_entry": 167.18,
-      "price": 193.94,
-      "value": 7654.85,
+      "price": 189.59,
+      "value": 7483.15,
       "drawdown": 0,
-      "ret": 0.1601,
+      "ret": 0.1341,
       "thesis": "Rotated in: hot momentum, +30% 6mo.",
-      "weight": 0.1221
+      "weight": 0.1179
     },
     {
       "ticker": "AMD",
@@ -924,7 +924,7 @@
       "drawdown": 0.0514,
       "ret": -0.0514,
       "thesis": "Rotated in: hot momentum, +144% 6mo.",
-      "weight": 0.1194
+      "weight": 0.1179
     },
     {
       "ticker": "LMT",
@@ -937,7 +937,7 @@
       "drawdown": 0.0241,
       "ret": -0.0241,
       "thesis": "Rotated in: hot momentum, +16% 6mo.",
-      "weight": 0.0597
+      "weight": 0.0589
     },
     {
       "ticker": "CVX",
@@ -950,7 +950,7 @@
       "drawdown": 0.0244,
       "ret": -0.0244,
       "thesis": "Rotated in: hot momentum, +16% 6mo.",
-      "weight": 0.0597
+      "weight": 0.0589
     },
     {
       "ticker": "XOM",
@@ -963,7 +963,7 @@
       "drawdown": 0.0369,
       "ret": -0.0369,
       "thesis": "Rotated in: hot momentum, +11% 6mo.",
-      "weight": 0.0589
+      "weight": 0.0582
     },
     {
       "ticker": "META",
@@ -971,25 +971,12 @@
       "conviction": "momentum",
       "shares": 5.971,
       "avg_entry": 641.94,
-      "price": 616.38,
-      "value": 3680.63,
-      "drawdown": 0.0398,
-      "ret": -0.0398,
+      "price": 596.22,
+      "value": 3560.24,
+      "drawdown": 0.0712,
+      "ret": -0.0712,
       "thesis": "Rotated in: hot momentum, +7% 6mo.",
-      "weight": 0.0587
-    },
-    {
-      "ticker": "PLTR",
-      "theme": "AI / Semis",
-      "conviction": "momentum",
-      "shares": 22.676,
-      "avg_entry": 169.04,
-      "price": 156.67,
-      "value": 3552.67,
-      "drawdown": 0.0732,
-      "ret": -0.0732,
-      "thesis": "Rotated in: hot momentum, +23% 6mo.",
-      "weight": 0.0567
+      "weight": 0.0561
     },
     {
       "ticker": "MSFT",
@@ -1002,31 +989,44 @@
       "drawdown": 0.0841,
       "ret": -0.0841,
       "thesis": "Rotated in: hot momentum, +32% 6mo.",
-      "weight": 0.056
+      "weight": 0.0553
+    },
+    {
+      "ticker": "PLTR",
+      "theme": "AI / Semis",
+      "conviction": "momentum",
+      "shares": 22.676,
+      "avg_entry": 169.04,
+      "price": 153.68,
+      "value": 3484.87,
+      "drawdown": 0.0909,
+      "ret": -0.0909,
+      "thesis": "Rotated in: hot momentum, +23% 6mo.",
+      "weight": 0.0549
     }
   ],
   "themes": [
     {
-      "theme": "AI / Semis",
-      "weight": 0.4129,
+      "theme": "Other momentum",
+      "weight": 0.4218,
       "min": null,
       "max": null
     },
     {
-      "theme": "Other momentum",
-      "weight": 0.4089,
+      "theme": "AI / Semis",
+      "weight": 0.4022,
       "min": null,
       "max": null
     },
     {
       "theme": "Energy / Power",
-      "weight": 0.1186,
+      "weight": 0.1171,
       "min": null,
       "max": null
     },
     {
       "theme": "Defense / Nuclear",
-      "weight": 0.0597,
+      "weight": 0.0589,
       "min": null,
       "max": null
     }
@@ -5685,162 +5685,162 @@
     },
     {
       "t": "2026-11-19 04:00",
-      "value": 65914.34,
+      "value": 66732.26,
       "benchmark": 95630.68
     },
     {
       "t": "2026-11-19 04:30",
-      "value": 65840.26,
+      "value": 66657.26,
       "benchmark": 95750.06
     },
     {
       "t": "2026-11-19 05:00",
-      "value": 66059.84,
+      "value": 66879.56,
       "benchmark": 95862.96
     },
     {
       "t": "2026-11-19 05:30",
-      "value": 66162.58,
+      "value": 66983.58,
       "benchmark": 95917.47
     },
     {
       "t": "2026-11-19 06:00",
-      "value": 65989.44,
+      "value": 66808.29,
       "benchmark": 95977.16
     },
     {
       "t": "2026-11-19 06:30",
-      "value": 66203.57,
+      "value": 67025.07,
       "benchmark": 95955.1
     },
     {
       "t": "2026-11-19 07:00",
-      "value": 66037.22,
+      "value": 66856.66,
       "benchmark": 95899.3
     },
     {
       "t": "2026-11-19 07:30",
-      "value": 66100.1,
+      "value": 66920.32,
       "benchmark": 95921.36
     },
     {
       "t": "2026-11-19 08:00",
-      "value": 65846.18,
+      "value": 66663.25,
       "benchmark": 95844.8
     },
     {
       "t": "2026-11-19 08:30",
-      "value": 65727.67,
+      "value": 66543.27,
       "benchmark": 95763.04
     },
     {
       "t": "2026-11-19 09:00",
-      "value": 65252.99,
+      "value": 66062.7,
       "benchmark": 95805.87
     },
     {
       "t": "2026-11-19 09:30",
-      "value": 65769.01,
+      "value": 66585.12,
       "benchmark": 95542.43
     },
     {
       "t": "2026-11-19 10:00",
-      "value": 64436.74,
+      "value": 65236.32,
       "benchmark": 94822.22
     },
     {
       "t": "2026-11-19 10:30",
-      "value": 64167.56,
+      "value": 64963.79,
       "benchmark": 94617.18
     },
     {
       "t": "2026-11-19 11:00",
-      "value": 64670.38,
+      "value": 65472.85,
       "benchmark": 94666.49
     },
     {
       "t": "2026-11-19 11:30",
-      "value": 63664.37,
+      "value": 64454.36,
       "benchmark": 93926.81
     },
     {
       "t": "2026-11-19 12:00",
-      "value": 64004.86,
+      "value": 64799.08,
       "benchmark": 94098.1
     },
     {
       "t": "2026-11-19 12:30",
-      "value": 63462.97,
+      "value": 64250.47,
       "benchmark": 93664.68
     },
     {
       "t": "2026-11-19 13:00",
-      "value": 63284.35,
+      "value": 64069.63,
       "benchmark": 93649.1
     },
     {
       "t": "2026-11-19 13:30",
-      "value": 63085.63,
+      "value": 63868.45,
       "benchmark": 93472.62
     },
     {
       "t": "2026-11-19 14:00",
-      "value": 63400.15,
+      "value": 64186.86,
       "benchmark": 93547.89
     },
     {
       "t": "2026-11-19 14:30",
-      "value": 63006.51,
+      "value": 63788.34,
       "benchmark": 93185.83
     },
     {
       "t": "2026-11-19 15:00",
-      "value": 62821.48,
+      "value": 63601.02,
       "benchmark": 93015.84
     },
     {
       "t": "2026-11-19 15:30",
-      "value": 62965.45,
+      "value": 63746.77,
       "benchmark": 92886.07
     },
     {
       "t": "2026-11-19 16:00",
-      "value": 62682.48,
+      "value": 63460.29,
       "benchmark": 92773.16
     },
     {
       "t": "2026-11-19 16:30",
-      "value": 62652.9,
+      "value": 63430.35,
       "benchmark": 92757.59
     },
     {
       "t": "2026-11-19 17:00",
-      "value": 62748.99,
+      "value": 63527.63,
       "benchmark": 92805.61
     },
     {
       "t": "2026-11-19 17:30",
-      "value": 62752.12,
+      "value": 63530.79,
       "benchmark": 92851.03
     },
     {
       "t": "2026-11-19 18:00",
-      "value": 62417.46,
+      "value": 63191.98,
       "benchmark": 92795.43
     },
     {
       "t": "2026-11-19 18:30",
-      "value": 62508.18,
+      "value": 63283.83,
       "benchmark": 92848.43
     },
     {
       "t": "2026-11-19 19:00",
-      "value": 62464.8,
+      "value": 63239.9,
       "benchmark": 92810.8
     },
     {
       "t": "2026-11-19 19:30",
-      "value": 62042.98,
+      "value": 62812.85,
       "benchmark": 92783.55
     }
   ],
