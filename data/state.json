@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-11-23",
+    "last_date": "2026-11-24",
     "mode": "forward",
-    "total_value": 60218.41,
-    "cash": 0.0,
-    "total_return": -0.3978,
-    "benchmark_return": -0.0365,
-    "alpha": -0.3613,
-    "num_trades": 41,
+    "total_value": 59396.02,
+    "cash": 0.01,
+    "total_return": -0.406,
+    "benchmark_return": -0.041,
+    "alpha": -0.365,
+    "num_trades": 45,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
     "risk": "High",
@@ -887,6 +887,14 @@
       "benchmark": 96349.79,
       "benchmark_ret": -0.0365,
       "cash": 0.0
+    },
+    {
+      "date": "2026-11-24",
+      "value": 59396.02,
+      "ret": -0.406,
+      "benchmark": 95900.34,
+      "benchmark_ret": -0.041,
+      "cash": 0.01
     }
   ],
   "positions": [
@@ -896,12 +904,12 @@
       "conviction": "momentum",
       "shares": 35.144,
       "avg_entry": 284.54,
-      "price": 353.43,
-      "value": 12421.1,
+      "price": 351.08,
+      "value": 12338.51,
       "drawdown": 0,
-      "ret": 0.2421,
+      "ret": 0.2339,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.2063
+      "weight": 0.2077
     },
     {
       "ticker": "CRWD",
@@ -909,38 +917,38 @@
       "conviction": "momentum",
       "shares": 57.728,
       "avg_entry": 173.23,
-      "price": 208.97,
-      "value": 12063.33,
+      "price": 211.85,
+      "value": 12229.29,
       "drawdown": 0,
-      "ret": 0.2063,
+      "ret": 0.2229,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.2003
+      "weight": 0.2059
     },
     {
-      "ticker": "ANET",
-      "theme": "AI / Semis",
+      "ticker": "RTX",
+      "theme": "Defense / Nuclear",
       "conviction": "momentum",
-      "shares": 39.47,
-      "avg_entry": 167.18,
-      "price": 178.31,
-      "value": 7037.93,
+      "shares": 32.792,
+      "avg_entry": 196.73,
+      "price": 196.73,
+      "value": 6451.05,
       "drawdown": 0,
-      "ret": 0.0666,
-      "thesis": "Rotated in: hot momentum, +30% 6mo.",
-      "weight": 0.1169
+      "ret": 0.0,
+      "thesis": "Rotated in: hot momentum, +12% 6mo.",
+      "weight": 0.1086
     },
     {
-      "ticker": "AMD",
-      "theme": "AI / Semis",
+      "ticker": "TSLA",
+      "theme": "Other momentum",
       "conviction": "momentum",
-      "shares": 15.294,
-      "avg_entry": 515.69,
-      "price": 453.46,
-      "value": 6935.43,
-      "drawdown": 0.1207,
-      "ret": -0.1207,
-      "thesis": "Rotated in: hot momentum, +144% 6mo.",
-      "weight": 0.1152
+      "shares": 16.81,
+      "avg_entry": 383.75,
+      "price": 383.75,
+      "value": 6451.05,
+      "drawdown": 0,
+      "ret": 0.0,
+      "thesis": "Rotated in: hot momentum, +-13% 6mo.",
+      "weight": 0.1086
     },
     {
       "ticker": "LMT",
@@ -948,12 +956,12 @@
       "conviction": "momentum",
       "shares": 6.542,
       "avg_entry": 585.98,
-      "price": 571.67,
-      "value": 3739.63,
-      "drawdown": 0.0244,
-      "ret": -0.0244,
+      "price": 589.64,
+      "value": 3857.15,
+      "drawdown": 0,
+      "ret": 0.0062,
       "thesis": "Rotated in: hot momentum, +16% 6mo.",
-      "weight": 0.0621
+      "weight": 0.0649
     },
     {
       "ticker": "CVX",
@@ -961,12 +969,12 @@
       "conviction": "momentum",
       "shares": 18.11,
       "avg_entry": 211.66,
-      "price": 206.17,
-      "value": 3733.74,
-      "drawdown": 0.026,
-      "ret": -0.026,
+      "price": 209.91,
+      "value": 3801.57,
+      "drawdown": 0.0083,
+      "ret": -0.0083,
       "thesis": "Rotated in: hot momentum, +16% 6mo.",
-      "weight": 0.062
+      "weight": 0.064
     },
     {
       "ticker": "XOM",
@@ -974,12 +982,12 @@
       "conviction": "momentum",
       "shares": 23.228,
       "avg_entry": 165.03,
-      "price": 156.9,
-      "value": 3644.49,
-      "drawdown": 0.0492,
-      "ret": -0.0492,
+      "price": 158.84,
+      "value": 3689.55,
+      "drawdown": 0.0375,
+      "ret": -0.0375,
       "thesis": "Rotated in: hot momentum, +11% 6mo.",
-      "weight": 0.0605
+      "weight": 0.0621
     },
     {
       "ticker": "PLTR",
@@ -987,25 +995,12 @@
       "conviction": "momentum",
       "shares": 22.676,
       "avg_entry": 169.04,
-      "price": 159.36,
-      "value": 3613.67,
-      "drawdown": 0.0573,
-      "ret": -0.0573,
+      "price": 162.15,
+      "value": 3677.05,
+      "drawdown": 0.0408,
+      "ret": -0.0408,
       "thesis": "Rotated in: hot momentum, +23% 6mo.",
-      "weight": 0.06
-    },
-    {
-      "ticker": "TLN",
-      "theme": "Energy / Power",
-      "conviction": "momentum",
-      "shares": 9.756,
-      "avg_entry": 364.78,
-      "price": 364.83,
-      "value": 3559.15,
-      "drawdown": 0,
-      "ret": 0.0001,
-      "thesis": "Rotated in: hot momentum, +-7% 6mo.",
-      "weight": 0.0591
+      "weight": 0.0619
     },
     {
       "ticker": "MSFT",
@@ -1013,41 +1008,90 @@
       "conviction": "momentum",
       "shares": 7.046,
       "avg_entry": 544.07,
-      "price": 492.5,
-      "value": 3469.94,
-      "drawdown": 0.0948,
-      "ret": -0.0948,
+      "price": 494.77,
+      "value": 3485.94,
+      "drawdown": 0.0906,
+      "ret": -0.0906,
       "thesis": "Rotated in: hot momentum, +32% 6mo.",
-      "weight": 0.0576
+      "weight": 0.0587
+    },
+    {
+      "ticker": "TLN",
+      "theme": "Energy / Power",
+      "conviction": "momentum",
+      "shares": 9.756,
+      "avg_entry": 364.78,
+      "price": 350.04,
+      "value": 3414.86,
+      "drawdown": 0.0404,
+      "ret": -0.0404,
+      "thesis": "Rotated in: hot momentum, +-7% 6mo.",
+      "weight": 0.0575
     }
   ],
   "themes": [
     {
       "theme": "Other momentum",
-      "weight": 0.4066,
-      "min": null,
-      "max": null
-    },
-    {
-      "theme": "AI / Semis",
-      "weight": 0.3497,
+      "weight": 0.5222,
       "min": null,
       "max": null
     },
     {
       "theme": "Energy / Power",
-      "weight": 0.1816,
+      "weight": 0.1836,
       "min": null,
       "max": null
     },
     {
       "theme": "Defense / Nuclear",
-      "weight": 0.0621,
+      "weight": 0.1736,
+      "min": null,
+      "max": null
+    },
+    {
+      "theme": "AI / Semis",
+      "weight": 0.1206,
       "min": null,
       "max": null
     }
   ],
   "moves": [
+    {
+      "date": "2026-11-24",
+      "ticker": "TSLA",
+      "action": "BUY",
+      "rule": "Rotation",
+      "rationale": "Rotated into TSLA \u2014 hottest available in Other momentum (+-13% 6mo).",
+      "judge": "momentum",
+      "price": 383.7516682942708
+    },
+    {
+      "date": "2026-11-24",
+      "ticker": "RTX",
+      "action": "BUY",
+      "rule": "Rotation",
+      "rationale": "Rotated into RTX \u2014 hottest available in Defense / Nuclear (+12% 6mo).",
+      "judge": "momentum",
+      "price": 196.72832743326822
+    },
+    {
+      "date": "2026-11-24",
+      "ticker": "ANET",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "ANET broke its 200-day trend ($167.24 < $168.91 MA) \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 167.24000549316406
+    },
+    {
+      "date": "2026-11-24",
+      "ticker": "AMD",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "AMD broke its 200-day trend ($411.99 < $432.02 MA) \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 411.9850362141927
+    },
     {
       "date": "2026-11-23",
       "ticker": "TLN",
@@ -2229,6 +2273,35 @@
     }
   ],
   "trade_days": [
+    {
+      "date": "2026-11-24",
+      "opened": [
+        {
+          "ticker": "RTX",
+          "weight": 0.1086,
+          "theme": "Defense / Nuclear"
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 0.1086,
+          "theme": "Other momentum"
+        }
+      ],
+      "closed": [
+        {
+          "ticker": "AMD",
+          "weight": 0.1061,
+          "theme": "AI / Semis"
+        },
+        {
+          "ticker": "ANET",
+          "weight": 0.1111,
+          "theme": "AI / Semis"
+        }
+      ],
+      "n": 4,
+      "theme": "AI / Semis"
+    },
     {
       "date": "2026-11-23",
       "opened": [
@@ -5716,28 +5789,113 @@
       "benchmark": 94892.51
     },
     {
-      "t": "2026-11-23 19:00",
-      "value": 60475.91,
-      "benchmark": 95160.6
-    },
-    {
-      "t": "2026-11-23 19:30",
-      "value": 60509.18,
-      "benchmark": 95181.64
-    },
-    {
       "t": "2026-11-24 04:00",
-      "value": 59571.6,
+      "value": 60086.11,
       "benchmark": 94599.39
     },
     {
       "t": "2026-11-24 04:30",
-      "value": 59816.2,
-      "benchmark": 94676.94
+      "value": 60081.44,
+      "benchmark": 94513.96
+    },
+    {
+      "t": "2026-11-24 05:00",
+      "value": 60072.18,
+      "benchmark": 94471.9
+    },
+    {
+      "t": "2026-11-24 05:30",
+      "value": 59652.7,
+      "benchmark": 94194.57
+    },
+    {
+      "t": "2026-11-24 06:00",
+      "value": 59592.23,
+      "benchmark": 94102.57
+    },
+    {
+      "t": "2026-11-24 06:30",
+      "value": 59887.63,
+      "benchmark": 94273.43
+    },
+    {
+      "t": "2026-11-24 07:00",
+      "value": 59567.96,
+      "benchmark": 93913.31
+    },
+    {
+      "t": "2026-11-24 07:30",
+      "value": 59693.7,
+      "benchmark": 94074.97
+    },
+    {
+      "t": "2026-11-24 08:00",
+      "value": 59235.74,
+      "benchmark": 93746.7
+    },
+    {
+      "t": "2026-11-24 08:30",
+      "value": 59408.04,
+      "benchmark": 93683.3
+    },
+    {
+      "t": "2026-11-24 09:00",
+      "value": 59774.72,
+      "benchmark": 93918.56
+    },
+    {
+      "t": "2026-11-24 09:30",
+      "value": 59723.01,
+      "benchmark": 94598.07
+    },
+    {
+      "t": "2026-11-24 10:00",
+      "value": 58854.26,
+      "benchmark": 93946.49
+    },
+    {
+      "t": "2026-11-24 10:30",
+      "value": 58681.65,
+      "benchmark": 93917.25
+    },
+    {
+      "t": "2026-11-24 11:00",
+      "value": 58683.36,
+      "benchmark": 93922.5
+    },
+    {
+      "t": "2026-11-24 11:30",
+      "value": 58967.47,
+      "benchmark": 93859.42
+    },
+    {
+      "t": "2026-11-24 12:00",
+      "value": 59548.3,
+      "benchmark": 94466.64
+    },
+    {
+      "t": "2026-11-24 12:30",
+      "value": 59610.11,
+      "benchmark": 94544.19
+    },
+    {
+      "t": "2026-11-24 13:00",
+      "value": 59515.2,
+      "benchmark": 94477.16
+    },
+    {
+      "t": "2026-11-24 13:30",
+      "value": 59265.45,
+      "benchmark": 94243.2
+    },
+    {
+      "t": "2026-11-24 14:00",
+      "value": 59396.02,
+      "benchmark": 94473.87
     }
   ],
   "dividends": {
-    "total": 149.14,
+    "total": 197.01,
     "per": [
       {
         "ticker": "CVX",
@@ -5748,6 +5906,11 @@
         "ticker": "XOM",
         "amount": 48.78,
         "dps": 2.1
+      },
+      {
+        "ticker": "RTX",
+        "amount": 47.88,
+        "dps": 1.46
       },
       {
         "ticker": "LMT",

@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-18",
-    "last_date": "2026-11-23",
+    "last_date": "2026-11-24",
     "mode": "forward",
     "strategy": "Ignition \u00b7 generational-breakout moonshots",
-    "total_value": 50716.7,
+    "total_value": 50229.13,
     "cash": 41099.44,
-    "total_return": -0.4928,
-    "benchmark_return": -0.0327,
-    "alpha": -0.4601,
+    "total_return": -0.4977,
+    "benchmark_return": -0.0374,
+    "alpha": -0.4603,
     "num_trades": 14,
     "benchmark_label": "S&P 500",
     "risk": "High",
@@ -895,6 +895,14 @@
       "benchmark": 96725.77,
       "benchmark_ret": -0.0327,
       "cash": 41099.44
+    },
+    {
+      "date": "2026-11-24",
+      "value": 50229.13,
+      "ret": -0.4977,
+      "benchmark": 96262.42,
+      "benchmark_ret": -0.0374,
+      "cash": 41099.44
     }
   ],
   "positions": [
@@ -904,12 +912,12 @@
       "conviction": "anchor",
       "shares": 93.491,
       "avg_entry": 85.57,
-      "price": 64.42,
-      "value": 6022.67,
-      "drawdown": 0.2472,
-      "ret": -0.2472,
+      "price": 63.16,
+      "value": 5904.87,
+      "drawdown": 0.2619,
+      "ret": -0.2619,
       "thesis": "DC Cooling \u2014 anchor.",
-      "weight": 0.1188
+      "weight": 0.1176
     },
     {
       "ticker": "OUST",
@@ -917,22 +925,22 @@
       "conviction": "moonshot",
       "shares": 128.838,
       "avg_entry": 46.57,
-      "price": 27.9,
-      "value": 3594.59,
-      "drawdown": 0.4009,
-      "ret": -0.4009,
+      "price": 25.03,
+      "value": 3224.82,
+      "drawdown": 0.4625,
+      "ret": -0.4625,
       "thesis": "Lidar \u2014 moonshot.",
-      "weight": 0.0709
+      "weight": 0.0642
     }
   ],
   "themes": [
     {
       "theme": "DC Cooling",
-      "weight": 0.1188
+      "weight": 0.1176
     },
     {
       "theme": "Lidar",
-      "weight": 0.0709
+      "weight": 0.0642
     }
   ],
   "moves": [
@@ -7881,16 +7889,6 @@
       "benchmark": 96684.28
     },
     {
-      "t": "2026-11-23 19:00",
-      "value": 50765.1,
-      "benchmark": 96957.43
-    },
-    {
-      "t": "2026-11-23 19:30",
-      "value": 50765.1,
-      "benchmark": 96978.87
-    },
-    {
       "t": "2026-11-24 04:00",
       "value": 50574.97,
       "benchmark": 96385.62
@@ -7898,7 +7896,102 @@
     {
       "t": "2026-11-24 04:30",
       "value": 50574.97,
-      "benchmark": 96474.01
+      "benchmark": 96298.58
+    },
+    {
+      "t": "2026-11-24 05:00",
+      "value": 50599.45,
+      "benchmark": 96255.73
+    },
+    {
+      "t": "2026-11-24 05:30",
+      "value": 50545.34,
+      "benchmark": 95973.16
+    },
+    {
+      "t": "2026-11-24 06:00",
+      "value": 50538.9,
+      "benchmark": 95879.42
+    },
+    {
+      "t": "2026-11-24 06:30",
+      "value": 50554.36,
+      "benchmark": 96053.51
+    },
+    {
+      "t": "2026-11-24 07:00",
+      "value": 50549.89,
+      "benchmark": 95686.59
+    },
+    {
+      "t": "2026-11-24 07:30",
+      "value": 50536.32,
+      "benchmark": 95851.3
+    },
+    {
+      "t": "2026-11-24 08:00",
+      "value": 50536.32,
+      "benchmark": 95516.83
+    },
+    {
+      "t": "2026-11-24 08:30",
+      "value": 50519.57,
+      "benchmark": 95452.23
+    },
+    {
+      "t": "2026-11-24 09:00",
+      "value": 50554.36,
+      "benchmark": 95691.94
+    },
+    {
+      "t": "2026-11-24 09:30",
+      "value": 50368.13,
+      "benchmark": 96384.28
+    },
+    {
+      "t": "2026-11-24 10:00",
+      "value": 50189.14,
+      "benchmark": 95720.4
+    },
+    {
+      "t": "2026-11-24 10:30",
+      "value": 50155.77,
+      "benchmark": 95690.6
+    },
+    {
+      "t": "2026-11-24 11:00",
+      "value": 50139.74,
+      "benchmark": 95695.96
+    },
+    {
+      "t": "2026-11-24 11:30",
+      "value": 50172.49,
+      "benchmark": 95631.68
+    },
+    {
+      "t": "2026-11-24 12:00",
+      "value": 50221.92,
+      "benchmark": 96250.37
+    },
+    {
+      "t": "2026-11-24 12:30",
+      "value": 50246.44,
+      "benchmark": 96329.38
+    },
+    {
+      "t": "2026-11-24 13:00",
+      "value": 50252.76,
+      "benchmark": 96261.08
+    },
+    {
+      "t": "2026-11-24 13:30",
+      "value": 50220.48,
+      "benchmark": 96022.71
+    },
+    {
+      "t": "2026-11-24 14:00",
+      "value": 50229.13,
+      "benchmark": 96262.42
     }
   ],
   "dividends": {
