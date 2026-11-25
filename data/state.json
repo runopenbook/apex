@@ -2,14 +2,14 @@
   "meta": {
     "initial_deposit": 100000.0,
     "start_date": "2026-06-16",
-    "last_date": "2026-11-24",
+    "last_date": "2026-11-25",
     "mode": "forward",
-    "total_value": 59285.2,
-    "cash": 0.01,
-    "total_return": -0.4071,
-    "benchmark_return": -0.0413,
-    "alpha": -0.3658,
-    "num_trades": 45,
+    "total_value": 58812.21,
+    "cash": 0.0,
+    "total_return": -0.4119,
+    "benchmark_return": -0.046,
+    "alpha": -0.3659,
+    "num_trades": 48,
     "benchmark_label": "S&P 500",
     "strategy": "Concentrated thematic momentum",
     "risk": "High",
@@ -895,6 +895,14 @@
       "benchmark": 95869.45,
       "benchmark_ret": -0.0413,
       "cash": 0.01
+    },
+    {
+      "date": "2026-11-25",
+      "value": 58812.21,
+      "ret": -0.4119,
+      "benchmark": 95404.69,
+      "benchmark_ret": -0.046,
+      "cash": 0.0
     }
   ],
   "positions": [
@@ -904,12 +912,12 @@
       "conviction": "momentum",
       "shares": 35.144,
       "avg_entry": 284.54,
-      "price": 352.99,
-      "value": 12405.64,
+      "price": 350.69,
+      "value": 12324.8,
       "drawdown": 0,
-      "ret": 0.2406,
+      "ret": 0.2325,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.2093
+      "weight": 0.2096
     },
     {
       "ticker": "CRWD",
@@ -917,25 +925,25 @@
       "conviction": "momentum",
       "shares": 57.728,
       "avg_entry": 173.23,
-      "price": 210.86,
-      "value": 12172.43,
+      "price": 204.58,
+      "value": 11809.9,
       "drawdown": 0,
-      "ret": 0.2172,
+      "ret": 0.181,
       "thesis": "Momentum leader in Other momentum.",
-      "weight": 0.2053
+      "weight": 0.2008
     },
     {
-      "ticker": "TSLA",
-      "theme": "Other momentum",
+      "ticker": "GD",
+      "theme": "Defense / Nuclear",
       "conviction": "momentum",
-      "shares": 16.81,
-      "avg_entry": 383.75,
-      "price": 384.68,
-      "value": 6466.65,
+      "shares": 26.76,
+      "avg_entry": 359.85,
+      "price": 359.85,
+      "value": 9629.51,
       "drawdown": 0,
-      "ret": 0.0024,
-      "thesis": "Rotated in: hot momentum, +-13% 6mo.",
-      "weight": 0.1091
+      "ret": 0.0,
+      "thesis": "Rotated in: hot momentum, +4% 6mo.",
+      "weight": 0.1637
     },
     {
       "ticker": "RTX",
@@ -943,12 +951,12 @@
       "conviction": "momentum",
       "shares": 32.792,
       "avg_entry": 196.73,
-      "price": 195.33,
-      "value": 6405.19,
-      "drawdown": 0.0071,
-      "ret": -0.0071,
+      "price": 196.28,
+      "value": 6436.34,
+      "drawdown": 0.0023,
+      "ret": -0.0023,
       "thesis": "Rotated in: hot momentum, +12% 6mo.",
-      "weight": 0.108
+      "weight": 0.1094
     },
     {
       "ticker": "LMT",
@@ -956,12 +964,12 @@
       "conviction": "momentum",
       "shares": 6.542,
       "avg_entry": 585.98,
-      "price": 586.63,
-      "value": 3837.49,
+      "price": 599.67,
+      "value": 3922.82,
       "drawdown": 0,
-      "ret": 0.0011,
+      "ret": 0.0234,
       "thesis": "Rotated in: hot momentum, +16% 6mo.",
-      "weight": 0.0647
+      "weight": 0.0667
     },
     {
       "ticker": "CVX",
@@ -969,12 +977,12 @@
       "conviction": "momentum",
       "shares": 18.11,
       "avg_entry": 211.66,
-      "price": 208.73,
-      "value": 3780.11,
-      "drawdown": 0.0139,
-      "ret": -0.0139,
+      "price": 211.52,
+      "value": 3830.63,
+      "drawdown": 0.0007,
+      "ret": -0.0007,
       "thesis": "Rotated in: hot momentum, +16% 6mo.",
-      "weight": 0.0638
+      "weight": 0.0651
     },
     {
       "ticker": "XOM",
@@ -982,12 +990,12 @@
       "conviction": "momentum",
       "shares": 23.228,
       "avg_entry": 165.03,
-      "price": 158.23,
-      "value": 3675.38,
-      "drawdown": 0.0412,
-      "ret": -0.0412,
+      "price": 159.49,
+      "value": 3704.77,
+      "drawdown": 0.0335,
+      "ret": -0.0335,
       "thesis": "Rotated in: hot momentum, +11% 6mo.",
-      "weight": 0.062
+      "weight": 0.063
     },
     {
       "ticker": "PLTR",
@@ -995,12 +1003,12 @@
       "conviction": "momentum",
       "shares": 22.676,
       "avg_entry": 169.04,
-      "price": 161.18,
-      "value": 3654.94,
-      "drawdown": 0.0465,
-      "ret": -0.0465,
+      "price": 163.2,
+      "value": 3700.75,
+      "drawdown": 0.0346,
+      "ret": -0.0346,
       "thesis": "Rotated in: hot momentum, +23% 6mo.",
-      "weight": 0.0617
+      "weight": 0.0629
     },
     {
       "ticker": "MSFT",
@@ -1008,54 +1016,68 @@
       "conviction": "momentum",
       "shares": 7.046,
       "avg_entry": 544.07,
-      "price": 496.13,
-      "value": 3495.52,
-      "drawdown": 0.0881,
-      "ret": -0.0881,
+      "price": 490.05,
+      "value": 3452.68,
+      "drawdown": 0.0993,
+      "ret": -0.0993,
       "thesis": "Rotated in: hot momentum, +32% 6mo.",
-      "weight": 0.059
-    },
-    {
-      "ticker": "TLN",
-      "theme": "Energy / Power",
-      "conviction": "momentum",
-      "shares": 9.756,
-      "avg_entry": 364.78,
-      "price": 347.68,
-      "value": 3391.84,
-      "drawdown": 0.0469,
-      "ret": -0.0469,
-      "thesis": "Rotated in: hot momentum, +-7% 6mo.",
-      "weight": 0.0572
+      "weight": 0.0587
     }
   ],
   "themes": [
     {
       "theme": "Other momentum",
-      "weight": 0.5237,
-      "min": null,
-      "max": null
-    },
-    {
-      "theme": "Energy / Power",
-      "weight": 0.183,
+      "weight": 0.4104,
       "min": null,
       "max": null
     },
     {
       "theme": "Defense / Nuclear",
-      "weight": 0.1728,
+      "weight": 0.3399,
+      "min": null,
+      "max": null
+    },
+    {
+      "theme": "Energy / Power",
+      "weight": 0.1281,
       "min": null,
       "max": null
     },
     {
       "theme": "AI / Semis",
-      "weight": 0.1206,
+      "weight": 0.1216,
       "min": null,
       "max": null
     }
   ],
   "moves": [
+    {
+      "date": "2026-11-25",
+      "ticker": "GD",
+      "action": "BUY",
+      "rule": "Rotation",
+      "rationale": "Rotated into GD \u2014 hottest available in Defense / Nuclear (+4% 6mo).",
+      "judge": "momentum",
+      "price": 359.84999593098956
+    },
+    {
+      "date": "2026-11-25",
+      "ticker": "TSLA",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "TSLA broke its 200-day trend ($371.47 < $381.13 MA) \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 371.4683329264323
+    },
+    {
+      "date": "2026-11-25",
+      "ticker": "TLN",
+      "action": "SELL",
+      "rule": "Trend Break",
+      "rationale": "TLN broke its 200-day trend ($346.97 < $349.25 MA) \u2014 exit, lock it in.",
+      "judge": "momentum",
+      "price": 346.97332763671875
+    },
     {
       "date": "2026-11-24",
       "ticker": "TSLA",
@@ -2273,6 +2295,30 @@
     }
   ],
   "trade_days": [
+    {
+      "date": "2026-11-25",
+      "opened": [
+        {
+          "ticker": "GD",
+          "weight": 0.1637,
+          "theme": "Defense / Nuclear"
+        }
+      ],
+      "closed": [
+        {
+          "ticker": "TLN",
+          "weight": 0.0576,
+          "theme": "Energy / Power"
+        },
+        {
+          "ticker": "TSLA",
+          "weight": 0.1062,
+          "theme": "Other momentum"
+        }
+      ],
+      "n": 3,
+      "theme": "Defense / Nuclear"
+    },
     {
       "date": "2026-11-24",
       "opened": [
@@ -5939,19 +5985,114 @@
       "benchmark": 94201.15
     },
     {
-      "t": "2026-11-24 19:00",
-      "value": 59031.68,
-      "benchmark": 94132.8
+      "t": "2026-11-25 04:00",
+      "value": 57664.99,
+      "benchmark": 93173.33
     },
     {
-      "t": "2026-11-24 19:30",
-      "value": 59040.0,
-      "benchmark": 94155.14
+      "t": "2026-11-25 04:30",
+      "value": 57559.59,
+      "benchmark": 93199.62
+    },
+    {
+      "t": "2026-11-25 05:00",
+      "value": 57555.55,
+      "benchmark": 92972.14
+    },
+    {
+      "t": "2026-11-25 05:30",
+      "value": 57515.87,
+      "benchmark": 93132.59
+    },
+    {
+      "t": "2026-11-25 06:00",
+      "value": 57232.44,
+      "benchmark": 92819.78
+    },
+    {
+      "t": "2026-11-25 06:30",
+      "value": 57227.87,
+      "benchmark": 92752.75
+    },
+    {
+      "t": "2026-11-25 07:00",
+      "value": 57260.19,
+      "benchmark": 92639.39
+    },
+    {
+      "t": "2026-11-25 07:30",
+      "value": 57320.01,
+      "benchmark": 92715.95
+    },
+    {
+      "t": "2026-11-25 08:00",
+      "value": 57428.38,
+      "benchmark": 92727.77
+    },
+    {
+      "t": "2026-11-25 08:30",
+      "value": 57080.29,
+      "benchmark": 92501.71
+    },
+    {
+      "t": "2026-11-25 09:00",
+      "value": 57106.19,
+      "benchmark": 92542.45
+    },
+    {
+      "t": "2026-11-25 09:30",
+      "value": 57621.93,
+      "benchmark": 92468.19
+    },
+    {
+      "t": "2026-11-25 10:00",
+      "value": 56728.71,
+      "benchmark": 91820.88
+    },
+    {
+      "t": "2026-11-25 10:30",
+      "value": 56834.31,
+      "benchmark": 91880.03
+    },
+    {
+      "t": "2026-11-25 11:00",
+      "value": 56868.93,
+      "benchmark": 91969.4
+    },
+    {
+      "t": "2026-11-25 11:30",
+      "value": 57070.6,
+      "benchmark": 92220.44
+    },
+    {
+      "t": "2026-11-25 12:00",
+      "value": 57627.16,
+      "benchmark": 92898.64
+    },
+    {
+      "t": "2026-11-25 12:30",
+      "value": 57945.33,
+      "benchmark": 93436.21
+    },
+    {
+      "t": "2026-11-25 13:00",
+      "value": 58715.25,
+      "benchmark": 93977.71
+    },
+    {
+      "t": "2026-11-25 13:30",
+      "value": 58812.21,
+      "benchmark": 93938.27
     }
   ],
   "dividends": {
-    "total": 197.01,
+    "total": 282.11,
     "per": [
+      {
+        "ticker": "GD",
+        "amount": 85.1,
+        "dps": 3.18
+      },
       {
         "ticker": "CVX",
         "amount": 64.47,
